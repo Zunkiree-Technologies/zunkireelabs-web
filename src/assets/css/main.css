@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =====================================================
+   ZUNKIREE LABS - Light Theme Design System
+   Primary: #eb1600 (Zunkiree Red)
+   ===================================================== */
+
 /* Base Styles */
 @layer base {
   html {
@@ -9,91 +14,281 @@
   }
 
   body {
-    @apply bg-slate-950 text-white;
+    @apply bg-white text-gray-900 antialiased;
   }
 
   /* Selection */
   ::selection {
-    @apply bg-zunkiree-500/30 text-white;
+    @apply bg-zunkiree-100 text-zunkiree-900;
   }
 
-  /* Scrollbar */
+  /* Scrollbar - Light theme */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-slate-900;
+    @apply bg-gray-100;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-700 rounded-full;
+    @apply bg-gray-300 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-600;
+    @apply bg-gray-400;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-zunkiree-500 ring-offset-2;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold text-gray-900;
+  }
+
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
 /* Component Styles */
 @layer components {
-  /* Container */
+  /* =====================================================
+     Container
+     ===================================================== */
   .container-custom {
-    @apply max-w-7xl mx-auto px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Gradient Text */
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-zunkiree-200 to-zunkiree-400;
-  }
-
-  /* Glass Effect */
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
-  }
-
-  /* Button Base */
+  /* =====================================================
+     Buttons
+     ===================================================== */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-full transition-all duration-300 cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 cursor-pointer;
   }
 
+  /* Primary - Red filled */
   .btn-primary {
-    @apply btn bg-zunkiree-500 hover:bg-zunkiree-600 text-white hover:scale-105 hover:shadow-lg hover:shadow-zunkiree-500/25;
+    @apply btn px-6 py-3 bg-zunkiree-600 text-white hover:bg-zunkiree-700 shadow-sm hover:shadow-btn active:scale-[0.98];
   }
 
+  .btn-primary-lg {
+    @apply btn px-8 py-4 text-lg bg-zunkiree-600 text-white hover:bg-zunkiree-700 shadow-sm hover:shadow-btn active:scale-[0.98];
+  }
+
+  /* Secondary - Red outline */
   .btn-secondary {
-    @apply btn bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20;
+    @apply btn px-6 py-3 bg-white text-zunkiree-600 border-2 border-zunkiree-600 hover:bg-zunkiree-50 active:scale-[0.98];
   }
 
+  /* Outline - Gray */
   .btn-outline {
-    @apply btn bg-transparent border-2 border-zunkiree-500 text-zunkiree-400 hover:bg-zunkiree-500 hover:text-white;
+    @apply btn px-6 py-3 bg-transparent text-gray-700 border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98];
   }
 
-  /* Card */
+  /* Ghost - Text only */
+  .btn-ghost {
+    @apply btn px-4 py-2 text-zunkiree-600 hover:bg-zunkiree-50 rounded-lg;
+  }
+
+  /* Button with arrow */
+  .btn-arrow {
+    @apply inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200;
+  }
+
+  /* Button sizes */
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+
+  /* =====================================================
+     Cards
+     ===================================================== */
   .card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 transition-all duration-300;
+    @apply bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300;
   }
 
-  .card:hover {
-    @apply border-white/20 bg-white/[0.07];
+  .card-shadow {
+    @apply card shadow-card hover:shadow-card-hover;
   }
 
-  /* Section */
+  .card-hover {
+    @apply card shadow-card hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .card-bordered {
+    @apply card hover:border-zunkiree-200;
+  }
+
+  /* Service card with icon - use group class directly in HTML */
+  .card-service {
+    @apply card-hover p-8;
+  }
+
+  .card-icon {
+    @apply w-12 h-12 bg-zunkiree-100 rounded-lg flex items-center justify-center text-zunkiree-600 mb-6 transition-colors duration-300;
+  }
+
+  .group:hover .card-icon {
+    @apply bg-zunkiree-600 text-white;
+  }
+
+  /* Testimonial card */
+  .card-testimonial {
+    @apply card shadow-card p-8;
+  }
+
+  /* =====================================================
+     Sections
+     ===================================================== */
   .section {
+    @apply py-16 lg:py-24;
+  }
+
+  .section-lg {
     @apply py-20 lg:py-32;
   }
 
+  .section-alt {
+    @apply bg-gray-50;
+  }
+
+  .section-dark {
+    @apply bg-gray-900 text-white;
+  }
+
+  .section-dark p {
+    @apply text-gray-300;
+  }
+
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4;
+  }
+
+  .section-heading-dark {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4;
   }
 
   .section-subheading {
-    @apply text-lg md:text-xl text-slate-400 max-w-2xl;
+    @apply text-lg md:text-xl text-gray-600 max-w-2xl;
   }
 
-  /* Tag */
+  .section-subheading-dark {
+    @apply text-lg md:text-xl text-gray-400 max-w-2xl;
+  }
+
+  /* =====================================================
+     Tags / Badges
+     ===================================================== */
   .tag {
-    @apply inline-flex items-center px-3 py-1 text-xs font-medium bg-zunkiree-500/10 text-zunkiree-400 border border-zunkiree-500/20 rounded-full;
+    @apply inline-flex items-center px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .tag-primary {
+    @apply tag bg-zunkiree-100 text-zunkiree-700;
+  }
+
+  .tag-neutral {
+    @apply tag bg-gray-100 text-gray-700;
+  }
+
+  .tag-success {
+    @apply tag bg-green-100 text-green-700;
+  }
+
+  /* =====================================================
+     Form Elements
+     ===================================================== */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:border-zunkiree-500 focus:ring-2 focus:ring-zunkiree-500/20 outline-none transition-all;
+  }
+
+  .input-error {
+    @apply input border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  .textarea {
+    @apply input resize-none;
+  }
+
+  .select {
+    @apply input appearance-none bg-no-repeat bg-right pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-size: 1.5em 1.5em;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  /* =====================================================
+     Navigation
+     ===================================================== */
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900 font-medium transition-colors;
+  }
+
+  .nav-link-active {
+    @apply text-zunkiree-600 font-medium;
+  }
+
+  /* =====================================================
+     Stats
+     ===================================================== */
+  .stat-value {
+    @apply text-4xl md:text-5xl font-bold text-zunkiree-600 mb-2;
+  }
+
+  .stat-label {
+    @apply text-gray-600 font-medium;
+  }
+
+  /* =====================================================
+     Dividers
+     ===================================================== */
+  .divider {
+    @apply border-t border-gray-200;
+  }
+
+  .divider-dark {
+    @apply border-t border-gray-700;
+  }
+
+  /* =====================================================
+     Logo Cloud
+     ===================================================== */
+  .logo-cloud {
+    @apply flex flex-wrap items-center justify-center gap-8 md:gap-12;
+  }
+
+  .logo-cloud img {
+    @apply h-8 md:h-10 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300;
+  }
+
+  /* =====================================================
+     FAQ Accordion
+     ===================================================== */
+  .faq-item {
+    @apply border-b border-gray-200;
+  }
+
+  .faq-question {
+    @apply w-full flex items-center justify-between py-5 text-left text-lg font-semibold text-gray-900 hover:text-zunkiree-600 transition-colors;
+  }
+
+  .faq-answer {
+    @apply pb-5 text-gray-600 leading-relaxed;
   }
 }
 
@@ -127,62 +322,115 @@
     background: radial-gradient(ellipse at center, var(--tw-gradient-from), var(--tw-gradient-to));
   }
 
-  /* Text shadow for glow effect */
-  .text-glow {
-    text-shadow: 0 0 40px rgba(12, 140, 233, 0.5);
-  }
-
-  /* Hero gradient mesh */
+  /* Hero gradient - Light theme */
   .hero-gradient {
     background:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(12, 140, 233, 0.3), transparent),
-      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(34, 197, 94, 0.1), transparent),
-      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(12, 140, 233, 0.2), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(235, 22, 0, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(235, 22, 0, 0.05), transparent),
+      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(235, 22, 0, 0.03), transparent);
   }
 
-  /* Noise overlay */
-  .noise-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    opacity: 0.03;
-    pointer-events: none;
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-zunkiree-600 via-zunkiree-500 to-zunkiree-700;
   }
-}
 
-/* Hero Bars Animation - Altius-inspired */
-.hero-bar {
-  animation: barPulse 4s ease-in-out infinite;
-  transform-origin: bottom;
-  box-shadow: 0 0 30px rgba(12, 140, 233, 0.3);
-}
-
-@keyframes barPulse {
-  0%, 100% {
-    transform: scaleY(1);
-    opacity: var(--tw-opacity, 1);
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
   }
-  50% {
-    transform: scaleY(0.7);
-    opacity: calc(var(--tw-opacity, 1) * 0.6);
+
+  /* Smooth image loading */
+  .img-loading {
+    @apply bg-gray-100 animate-pulse;
+  }
+
+  /* Skip link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zunkiree-600 focus:text-white focus:rounded-lg;
   }
 }
 
-/* Staggered bar animations */
-.hero-bar:nth-child(odd) {
-  animation-duration: 3.5s;
+/* =====================================================
+   Hero Visual Element - Abstract shapes
+   ===================================================== */
+.hero-visual {
+  position: relative;
 }
 
-.hero-bar:nth-child(3n) {
-  animation-duration: 4.5s;
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
 }
 
-.hero-bar:nth-child(5n) {
-  animation-duration: 5s;
+.hero-shape-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(235, 22, 0, 0.2), rgba(255, 107, 92, 0.1));
+  top: -100px;
+  right: -100px;
+  animation: float 8s ease-in-out infinite;
 }
 
-/* Bar glow effect */
-.hero-bars {
-  filter: drop-shadow(0 0 20px rgba(12, 140, 233, 0.2));
+.hero-shape-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(235, 22, 0, 0.15), rgba(255, 61, 42, 0.08));
+  bottom: -50px;
+  left: -50px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+/* =====================================================
+   Scroll animations (GSAP triggers)
+   Note: GSAP handles these animations via JavaScript.
+   Initial states are set by GSAP, not CSS.
+   ===================================================== */
+
+/* =====================================================
+   Counter animation
+   ===================================================== */
+[data-counter] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =====================================================
+   Mobile menu animation
+   ===================================================== */
+.mobile-menu {
+  @apply fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu.closed {
+  @apply translate-x-full;
+}
+
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+
+/* =====================================================
+   Smooth scroll offset for fixed header
+   ===================================================== */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* =====================================================
+   Print styles
+   ===================================================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
