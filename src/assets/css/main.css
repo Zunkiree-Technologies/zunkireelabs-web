@@ -390,6 +390,44 @@
    ===================================================== */
 
 /* =====================================================
+   Hero Bar Animation (Equalizer effect)
+   ===================================================== */
+.hero-bar {
+  animation: barPulse 4s ease-in-out infinite;
+  transform-origin: bottom;
+  box-shadow: 0 0 30px rgba(235, 22, 0, 0.3);
+}
+
+@keyframes barPulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: var(--tw-opacity, 1);
+  }
+  50% {
+    transform: scaleY(0.7);
+    opacity: calc(var(--tw-opacity, 1) * 0.6);
+  }
+}
+
+/* Staggered bar animations */
+.hero-bar:nth-child(odd) {
+  animation-duration: 3.5s;
+}
+
+.hero-bar:nth-child(3n) {
+  animation-duration: 4.5s;
+}
+
+.hero-bar:nth-child(5n) {
+  animation-duration: 5s;
+}
+
+/* Bar glow effect */
+.hero-bars {
+  filter: drop-shadow(0 0 20px rgba(235, 22, 0, 0.2));
+}
+
+/* =====================================================
    Counter animation
    ===================================================== */
 [data-counter] {
