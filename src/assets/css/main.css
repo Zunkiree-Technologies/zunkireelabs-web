@@ -384,6 +384,32 @@
 }
 
 /* =====================================================
+   Duna-inspired Hero Section
+   ===================================================== */
+.hero-duna {
+  background-color: #FEFDFB;
+}
+
+.hero-duna .hero-bg {
+  pointer-events: none;
+}
+
+.hero-duna .hero-landscape svg {
+  filter: blur(0.5px);
+}
+
+.hero-duna .hero-headline {
+  text-wrap: balance;
+}
+
+/* Subtle parallax effect on scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-landscape {
+    will-change: transform;
+  }
+}
+
+/* =====================================================
    Scroll animations (GSAP triggers)
    Note: GSAP handles these animations via JavaScript.
    Initial states are set by GSAP, not CSS.

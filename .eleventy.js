@@ -13,14 +13,13 @@ export default function (eleventyConfig) {
           },
         },
       },
-      resolve: {
-        alias: {
-          '/assets': path.resolve(process.cwd(), 'src/assets'),
-        },
-      },
       server: {
         middlewareMode: true,
         host: '0.0.0.0',
+        fs: {
+          allow: [process.cwd()],
+          strict: false
+        },
         allowedHosts: [
           'zunkiree.com',
           'www.zunkiree.com',
@@ -32,12 +31,13 @@ export default function (eleventyConfig) {
     },
   });
 
-  // Copy static assets
-  eleventyConfig.addPassthroughCopy("src/assets/images");
-  eleventyConfig.addPassthroughCopy("src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("src/assets/css");
-  eleventyConfig.addPassthroughCopy("src/assets/js");
-  eleventyConfig.addPassthroughCopy("src/static");
+  // Copy static assets with proper path mapping
+  // Vite will process CSS through PostCSS/Tailwind during build
+  eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/static": "static" });
 
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");

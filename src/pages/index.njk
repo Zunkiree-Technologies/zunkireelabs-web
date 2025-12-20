@@ -6,128 +6,71 @@ permalink: /
 ---
 
 {# =====================================================
-   SECTION 1: HERO
+   SECTION 1: HERO (Duna-inspired)
    ===================================================== #}
-<section class="relative pt-12 pb-0 lg:pt-20 lg:pb-0 overflow-hidden">
-  {# Background decoration #}
-  <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+<section class="hero-duna relative min-h-screen flex items-center justify-center overflow-hidden">
+  {# Background Image #}
+  <div class="hero-bg absolute inset-0">
+    <img
+      src="/assets/images/hero-bg.avif"
+      alt=""
+      class="w-full h-full object-cover object-center"
+      loading="eager"
+    />
+    {# Subtle overlay for text readability #}
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+  </div>
 
-  <div class="container-custom relative z-10">
-    <div class="max-w-4xl mx-auto text-center">
-      {# Tag #}
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-zunkiree-50 border border-zunkiree-200 rounded-full mb-8" data-reveal>
-        <span class="w-2 h-2 bg-zunkiree-600 rounded-full animate-pulse"></span>
-        <span class="text-sm font-medium text-zunkiree-700">Now accepting new projects for 2026</span>
-      </div>
+  {# Content - vertically centered #}
+  <div class="relative z-10 max-w-[1200px] mx-auto px-5 md:px-10 text-center">
+    {# Headline - Duna style with tight letter-spacing #}
+    <h1 class="hero-headline text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-medium text-white tracking-[-0.04em] leading-[1.1] mb-6 drop-shadow-lg" data-reveal>
+      The new standard<br>
+      <span class="text-white/90">in digital products</span>
+    </h1>
 
-      {# Headline #}
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6" data-reveal>
-        Build Digital Products
-        <span class="block text-zunkiree-600">Without Complexity</span>
-      </h1>
+    {# Subheadline #}
+    <p class="text-lg md:text-xl text-white/85 max-w-xl mx-auto mb-10 leading-relaxed tracking-[-0.01em] drop-shadow-md" data-reveal>
+      Meet the studio that accelerates business growth, automates complexity, and builds products that scale.
+    </p>
 
-      {# Subheadline #}
-      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed" data-reveal>
-        Zunkiree Labs is a premium software studio that transforms ambitious ideas into exceptional digital products, maximizing the success of your business.
-      </p>
-
-      {# CTAs #}
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal>
-        <a href="/contact/" class="btn-primary btn-lg">
-          Start Your Project
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-        <a href="/projects/" class="btn-outline btn-lg">
-          View Our Work
-        </a>
-      </div>
-    </div>
-
-    {# Animated Bars Visual #}
-    <div class="relative mt-16 mb-0 min-h-[200px] md:min-h-[280px] overflow-hidden" data-reveal>
-      <div class="hero-bars absolute inset-x-0 bottom-0 flex items-end justify-center gap-[2px] md:gap-1 lg:gap-2 h-full">
-        {# Left fade out bars #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/40 to-zunkiree-500/30 rounded-t-sm" style="height: 15%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/50 to-zunkiree-500/40 rounded-t-sm" style="height: 20%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/60 to-zunkiree-500/50 rounded-t-sm" style="height: 28%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600/70 to-zunkiree-400/60 rounded-t-sm" style="height: 38%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600/80 to-zunkiree-400/70 rounded-t-sm" style="height: 50%;"></div>
-        {# Rising bars #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-80" style="height: 60%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-85" style="height: 72%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-90" style="height: 85%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-95" style="height: 92%;"></div>
-        {# Peak bars #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm" style="height: 100%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm" style="height: 95%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-95" style="height: 88%;"></div>
-        {# Falling bars #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-90" style="height: 78%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-85" style="height: 65%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-80" style="height: 55%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-75" style="height: 45%;"></div>
-        {# Second wave rise #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-80" style="height: 55%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-85" style="height: 68%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-90" style="height: 82%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-95" style="height: 90%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm" style="height: 98%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm" style="height: 100%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-95" style="height: 92%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-500 to-zunkiree-300 rounded-t-sm opacity-90" style="height: 80%;"></div>
-        {# Right fade out #}
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600 to-zunkiree-400 rounded-t-sm opacity-80" style="height: 65%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600/80 to-zunkiree-400/70 rounded-t-sm" style="height: 50%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-600/70 to-zunkiree-400/60 rounded-t-sm" style="height: 38%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/60 to-zunkiree-500/50 rounded-t-sm" style="height: 28%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/50 to-zunkiree-500/40 rounded-t-sm" style="height: 20%;"></div>
-        <div class="hero-bar flex-1 max-w-3 md:max-w-4 lg:max-w-6 bg-gradient-to-t from-zunkiree-700/40 to-zunkiree-500/30 rounded-t-sm" style="height: 15%;"></div>
-      </div>
+    {# Single CTA - Dark button like Duna #}
+    <div data-reveal>
+      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-warm-rich-black text-white font-medium text-base rounded-xl hover:bg-warm-black transition-all duration-200 hover:-translate-y-0.5 shadow-lg">
+        Get started
+      </a>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 2: CLIENTS / PARTNERS
+   SECTION 2: CLIENTS / PARTNERS (Duna-style)
    ===================================================== #}
-<section class="py-8 lg:py-10 border-y border-gray-200 bg-gray-50">
-  <div class="container-custom">
-    <div class="text-center mb-8">
-      <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">Trusted by forward-thinking companies</p>
-    </div>
-    <div class="logo-cloud">
-      {# Placeholder logos - replace with actual client logos #}
-      <div class="flex items-center justify-center h-12 px-6">
-        <span class="text-xl font-bold text-gray-400">TechStartup</span>
-      </div>
-      <div class="flex items-center justify-center h-12 px-6">
-        <span class="text-xl font-bold text-gray-400">InnovateCo</span>
-      </div>
-      <div class="flex items-center justify-center h-12 px-6">
-        <span class="text-xl font-bold text-gray-400">DigitalFirst</span>
-      </div>
-      <div class="flex items-center justify-center h-12 px-6 hidden md:flex">
-        <span class="text-xl font-bold text-gray-400">FutureLabs</span>
-      </div>
-      <div class="flex items-center justify-center h-12 px-6 hidden lg:flex">
-        <span class="text-xl font-bold text-gray-400">CloudNine</span>
-      </div>
+<section class="py-12 md:py-16 border-b border-warm-border">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
+    <p class="text-center text-sm font-medium text-warm-400 tracking-wide mb-10">Trusted by forward-thinking companies</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 md:gap-x-16">
+      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">TechStartup</span>
+      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">InnovateCo</span>
+      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">DigitalFirst</span>
+      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] hidden md:block">FutureLabs</span>
+      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] hidden lg:block">CloudNine</span>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 3: SERVICES
+   SECTION 3: SERVICES (Duna-style)
    ===================================================== #}
-<section id="services" class="section">
-  <div class="container-custom">
+<section id="services" class="py-16 md:py-24 lg:py-32">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     {# Section Header #}
-    <div class="max-w-3xl mb-16" data-reveal>
-      <span class="tag-primary mb-4">What We Do</span>
-      <h2 class="section-heading">Services that drive <span class="text-zunkiree-600">growth</span></h2>
-      <p class="section-subheading">
+    <div class="max-w-2xl mb-16" data-reveal>
+      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">What We Do</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
+        Services that drive growth
+      </h2>
+      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
         We offer end-to-end digital solutions tailored to your unique challenges and goals.
       </p>
     </div>
@@ -135,53 +78,44 @@ permalink: /
     {# Services Grid #}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {# Service Card 1 #}
-      <div class="group card-service" data-reveal>
-        <div class="card-icon">
+      <div class="group bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
+        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center text-warm-charcoal mb-6 group-hover:bg-warm-charcoal group-hover:text-white transition-colors duration-300">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Web Development</h3>
-        <p class="text-gray-600 mb-6">High-performance web applications built with modern technologies. From landing pages to complex platforms.</p>
-        <a href="/services/#web" class="btn-arrow">
-          Learn more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Web Development</h3>
+        <p class="text-warm-600 leading-relaxed mb-6">High-performance web applications built with modern technologies. From landing pages to complex platforms.</p>
+        <a href="/services/#web" class="inline-flex items-center gap-1 text-warm-charcoal font-medium hover:gap-2 transition-all duration-200">
+          Learn more <span>&rarr;</span>
         </a>
       </div>
 
       {# Service Card 2 #}
-      <div class="group card-service" data-reveal>
-        <div class="card-icon">
+      <div class="group bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
+        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center text-warm-charcoal mb-6 group-hover:bg-warm-charcoal group-hover:text-white transition-colors duration-300">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">AI Solutions</h3>
-        <p class="text-gray-600 mb-6">Intelligent automation and AI integration to streamline operations and enhance decision-making.</p>
-        <a href="/services/#ai" class="btn-arrow">
-          Learn more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">AI Solutions</h3>
+        <p class="text-warm-600 leading-relaxed mb-6">Intelligent automation and AI integration to streamline operations and enhance decision-making.</p>
+        <a href="/services/#ai" class="inline-flex items-center gap-1 text-warm-charcoal font-medium hover:gap-2 transition-all duration-200">
+          Learn more <span>&rarr;</span>
         </a>
       </div>
 
       {# Service Card 3 #}
-      <div class="group card-service" data-reveal>
-        <div class="card-icon">
+      <div class="group bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
+        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center text-warm-charcoal mb-6 group-hover:bg-warm-charcoal group-hover:text-white transition-colors duration-300">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Mobile Apps</h3>
-        <p class="text-gray-600 mb-6">Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
-        <a href="/services/#mobile" class="btn-arrow">
-          Learn more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Mobile Apps</h3>
+        <p class="text-warm-600 leading-relaxed mb-6">Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+        <a href="/services/#mobile" class="inline-flex items-center gap-1 text-warm-charcoal font-medium hover:gap-2 transition-all duration-200">
+          Learn more <span>&rarr;</span>
         </a>
       </div>
     </div>
@@ -189,100 +123,92 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 4: STATS
+   SECTION 4: STATS (Duna-style)
    ===================================================== #}
-<section class="section-lg section-alt">
-  <div class="container-custom">
+<section class="py-16 md:py-24 bg-warm-off-white">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
       {# Stat 1 #}
       <div class="text-center" data-reveal>
-        <div class="stat-value">
+        <div class="text-4xl md:text-5xl font-medium text-warm-black tracking-[-0.03em] mb-2">
           <span data-counter="50" data-suffix="+">0</span>
         </div>
-        <p class="stat-label">Projects Delivered</p>
+        <p class="text-warm-600 font-medium">Projects Delivered</p>
       </div>
 
       {# Stat 2 #}
       <div class="text-center" data-reveal>
-        <div class="stat-value">
+        <div class="text-4xl md:text-5xl font-medium text-warm-black tracking-[-0.03em] mb-2">
           <span data-counter="98" data-suffix="%">0</span>
         </div>
-        <p class="stat-label">Client Satisfaction</p>
+        <p class="text-warm-600 font-medium">Client Satisfaction</p>
       </div>
 
       {# Stat 3 #}
       <div class="text-center" data-reveal>
-        <div class="stat-value">
+        <div class="text-4xl md:text-5xl font-medium text-warm-black tracking-[-0.03em] mb-2">
           <span data-counter="5" data-suffix="+">0</span>
         </div>
-        <p class="stat-label">Years Experience</p>
+        <p class="text-warm-600 font-medium">Years Experience</p>
       </div>
 
       {# Stat 4 #}
       <div class="text-center" data-reveal>
-        <div class="stat-value">
+        <div class="text-4xl md:text-5xl font-medium text-warm-black tracking-[-0.03em] mb-2">
           <span data-counter="24" data-suffix="/7">0</span>
         </div>
-        <p class="stat-label">Support Available</p>
+        <p class="text-warm-600 font-medium">Support Available</p>
       </div>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 5: PROJECTS
+   SECTION 5: PROJECTS (Duna-style)
    ===================================================== #}
-<section class="section">
-  <div class="container-custom">
+<section class="py-16 md:py-24 lg:py-32">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     {# Section Header #}
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16" data-reveal>
       <div class="max-w-xl">
-        <span class="tag-primary mb-4">Our Work</span>
-        <h2 class="section-heading">Featured <span class="text-zunkiree-600">Projects</span></h2>
-        <p class="section-subheading">
+        <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Work</p>
+        <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
+          Featured projects
+        </h2>
+        <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
           Explore some of our recent work that showcases our expertise and creativity.
         </p>
       </div>
-      <a href="/projects/" class="btn-secondary self-start md:self-auto">
+      <a href="/projects/" class="inline-flex items-center gap-2 px-5 py-2.5 border border-warm-border text-warm-charcoal font-medium rounded-full hover:border-warm-charcoal hover:bg-warm-off-white transition-all duration-200">
         View All Projects
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
+        <span>&rarr;</span>
       </a>
     </div>
 
     {# Projects Grid #}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {# Project 1 #}
-      <div class="group relative overflow-hidden rounded-2xl bg-gray-900 aspect-[4/3] shadow-card hover:shadow-card-hover transition-all duration-300" data-reveal>
-        <div class="absolute inset-0 bg-gradient-to-br from-zunkiree-600/30 to-purple-600/30"></div>
-        <div class="absolute inset-0 bg-gray-900/50 group-hover:bg-gray-900/40 transition-colors duration-500"></div>
+      <div class="group relative overflow-hidden rounded-2xl bg-warm-surface aspect-[4/3] hover:shadow-lg transition-all duration-300" data-reveal>
+        <div class="absolute inset-0 bg-gradient-to-br from-warm-charcoal/80 to-warm-black/90"></div>
         <div class="absolute inset-0 p-8 flex flex-col justify-end">
-          <span class="text-xs font-semibold text-zunkiree-400 uppercase tracking-wider mb-2">Healthcare</span>
-          <h3 class="text-2xl font-bold text-white mb-2">Avantra</h3>
-          <p class="text-gray-300 mb-4">AI-powered dental clinic management system with advanced analytics.</p>
-          <a href="/projects/avantra/" class="inline-flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-            View Project
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+          <span class="text-xs font-medium text-white/60 uppercase tracking-wider mb-2">Healthcare</span>
+          <h3 class="text-2xl font-medium text-white tracking-[-0.02em] mb-2">Avantra</h3>
+          <p class="text-white/70 mb-4 leading-relaxed">AI-powered dental clinic management system with advanced analytics.</p>
+          <a href="/projects/avantra/" class="inline-flex items-center gap-1 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+            View Project <span>&rarr;</span>
           </a>
         </div>
       </div>
 
       {# Project 2 #}
-      <div class="group relative overflow-hidden rounded-2xl bg-gray-900 aspect-[4/3] shadow-card hover:shadow-card-hover transition-all duration-300" data-reveal>
-        <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-cyan-600/30"></div>
-        <div class="absolute inset-0 bg-gray-900/50 group-hover:bg-gray-900/40 transition-colors duration-500"></div>
+      <div class="group relative overflow-hidden rounded-2xl bg-warm-surface aspect-[4/3] hover:shadow-lg transition-all duration-300" data-reveal>
+        <div class="absolute inset-0 bg-gradient-to-br from-warm-charcoal/80 to-warm-black/90"></div>
         <div class="absolute inset-0 p-8 flex flex-col justify-end">
-          <span class="text-xs font-semibold text-green-400 uppercase tracking-wider mb-2">SaaS</span>
-          <h3 class="text-2xl font-bold text-white mb-2">BlueShark</h3>
-          <p class="text-gray-300 mb-4">Production management system for manufacturing operations.</p>
-          <a href="/projects/blueshark/" class="inline-flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-            View Project
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+          <span class="text-xs font-medium text-white/60 uppercase tracking-wider mb-2">SaaS</span>
+          <h3 class="text-2xl font-medium text-white tracking-[-0.02em] mb-2">BlueShark</h3>
+          <p class="text-white/70 mb-4 leading-relaxed">Production management system for manufacturing operations.</p>
+          <a href="/projects/blueshark/" class="inline-flex items-center gap-1 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+            View Project <span>&rarr;</span>
           </a>
         </div>
       </div>
@@ -291,86 +217,67 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 6: TESTIMONIALS
+   SECTION 6: TESTIMONIALS (Duna-style)
    ===================================================== #}
-<section class="section section-alt">
-  <div class="container-custom">
+<section class="py-16 md:py-24 lg:py-32 bg-warm-off-white">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     {# Section Header #}
-    <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
-      <span class="tag-primary mb-4">Testimonials</span>
-      <h2 class="section-heading">What Our <span class="text-zunkiree-600">Clients Say</span></h2>
-      <p class="section-subheading mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Testimonials</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
+        What our clients say
+      </h2>
+      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
         Don't just take our word for it. Here's what our clients have to say about working with us.
       </p>
     </div>
 
     {# Testimonials Grid #}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {# Testimonial 1 #}
-      <div class="card-testimonial" data-reveal>
-        <div class="flex items-center gap-1 mb-4">
-          {% for i in range(5) %}
-          <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          {% endfor %}
-        </div>
-        <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+      <div class="bg-white rounded-2xl p-8 border border-warm-border" data-reveal>
+        <blockquote class="text-warm-charcoal text-lg mb-8 leading-relaxed">
           "Zunkiree Labs transformed our vision into reality. Their expertise in web development and attention to detail exceeded our expectations."
         </blockquote>
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-zunkiree-100 rounded-full flex items-center justify-center">
-            <span class="text-zunkiree-600 font-bold">JD</span>
+          <div class="w-12 h-12 bg-warm-surface rounded-full flex items-center justify-center">
+            <span class="text-warm-charcoal font-medium">JD</span>
           </div>
           <div>
-            <p class="font-semibold text-gray-900">John Doe</p>
-            <p class="text-sm text-gray-500">CEO, TechStartup</p>
+            <p class="font-medium text-warm-black">John Doe</p>
+            <p class="text-sm text-warm-400">CEO, TechStartup</p>
           </div>
         </div>
       </div>
 
       {# Testimonial 2 #}
-      <div class="card-testimonial" data-reveal>
-        <div class="flex items-center gap-1 mb-4">
-          {% for i in range(5) %}
-          <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          {% endfor %}
-        </div>
-        <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+      <div class="bg-white rounded-2xl p-8 border border-warm-border" data-reveal>
+        <blockquote class="text-warm-charcoal text-lg mb-8 leading-relaxed">
           "The AI solutions they built have streamlined our operations significantly. Highly recommend their team for any tech project."
         </blockquote>
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-            <span class="text-green-600 font-bold">SJ</span>
+          <div class="w-12 h-12 bg-warm-surface rounded-full flex items-center justify-center">
+            <span class="text-warm-charcoal font-medium">SJ</span>
           </div>
           <div>
-            <p class="font-semibold text-gray-900">Sarah Johnson</p>
-            <p class="text-sm text-gray-500">CTO, InnovateCo</p>
+            <p class="font-medium text-warm-black">Sarah Johnson</p>
+            <p class="text-sm text-warm-400">CTO, InnovateCo</p>
           </div>
         </div>
       </div>
 
       {# Testimonial 3 #}
-      <div class="card-testimonial" data-reveal>
-        <div class="flex items-center gap-1 mb-4">
-          {% for i in range(5) %}
-          <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          {% endfor %}
-        </div>
-        <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+      <div class="bg-white rounded-2xl p-8 border border-warm-border" data-reveal>
+        <blockquote class="text-warm-charcoal text-lg mb-8 leading-relaxed">
           "Professional, responsive, and incredibly skilled. They delivered our mobile app on time and within budget. Outstanding work!"
         </blockquote>
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-            <span class="text-purple-600 font-bold">MR</span>
+          <div class="w-12 h-12 bg-warm-surface rounded-full flex items-center justify-center">
+            <span class="text-warm-charcoal font-medium">MR</span>
           </div>
           <div>
-            <p class="font-semibold text-gray-900">Mike Rodriguez</p>
-            <p class="text-sm text-gray-500">Founder, DigitalFirst</p>
+            <p class="font-medium text-warm-black">Mike Rodriguez</p>
+            <p class="text-sm text-warm-400">Founder, DigitalFirst</p>
           </div>
         </div>
       </div>
@@ -379,15 +286,17 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 7: TEAM
+   SECTION 7: TEAM (Duna-style)
    ===================================================== #}
-<section class="section">
-  <div class="container-custom">
+<section class="py-16 md:py-24 lg:py-32">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     {# Section Header #}
-    <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
-      <span class="tag-primary mb-4">Our Team</span>
-      <h2 class="section-heading">Meet the <span class="text-zunkiree-600">Experts</span></h2>
-      <p class="section-subheading mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Team</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
+        Meet the experts
+      </h2>
+      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
         Our talented team of developers, designers, and strategists ready to bring your vision to life.
       </p>
     </div>
@@ -395,137 +304,139 @@ permalink: /
     {# Team Grid #}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {# Team Member 1 #}
-      <div class="text-center group" data-reveal>
-        <div class="relative mb-6 mx-auto w-40 h-40 rounded-2xl overflow-hidden bg-gray-200">
-          <div class="absolute inset-0 bg-gradient-to-br from-zunkiree-400 to-zunkiree-600 flex items-center justify-center">
-            <span class="text-4xl font-bold text-white">AK</span>
+      <div class="text-center" data-reveal>
+        <div class="relative mb-6 mx-auto w-32 h-32 rounded-full overflow-hidden bg-warm-surface">
+          <div class="absolute inset-0 bg-warm-charcoal flex items-center justify-center">
+            <span class="text-3xl font-medium text-white">AK</span>
           </div>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-1">Alex Kumar</h3>
-        <p class="text-zunkiree-600 font-medium mb-3">Founder & CEO</p>
-        <p class="text-gray-600 text-sm">10+ years building digital products for startups and enterprises.</p>
+        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-1">Alex Kumar</h3>
+        <p class="text-warm-400 text-sm mb-2">Founder & CEO</p>
+        <p class="text-warm-600 text-sm leading-relaxed">10+ years building digital products for startups and enterprises.</p>
       </div>
 
       {# Team Member 2 #}
-      <div class="text-center group" data-reveal>
-        <div class="relative mb-6 mx-auto w-40 h-40 rounded-2xl overflow-hidden bg-gray-200">
-          <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-            <span class="text-4xl font-bold text-white">SM</span>
+      <div class="text-center" data-reveal>
+        <div class="relative mb-6 mx-auto w-32 h-32 rounded-full overflow-hidden bg-warm-surface">
+          <div class="absolute inset-0 bg-warm-charcoal flex items-center justify-center">
+            <span class="text-3xl font-medium text-white">SM</span>
           </div>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-1">Sarah Mitchell</h3>
-        <p class="text-zunkiree-600 font-medium mb-3">Lead Designer</p>
-        <p class="text-gray-600 text-sm">Creating beautiful and intuitive user experiences.</p>
+        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-1">Sarah Mitchell</h3>
+        <p class="text-warm-400 text-sm mb-2">Lead Designer</p>
+        <p class="text-warm-600 text-sm leading-relaxed">Creating beautiful and intuitive user experiences.</p>
       </div>
 
       {# Team Member 3 #}
-      <div class="text-center group" data-reveal>
-        <div class="relative mb-6 mx-auto w-40 h-40 rounded-2xl overflow-hidden bg-gray-200">
-          <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-            <span class="text-4xl font-bold text-white">JC</span>
+      <div class="text-center" data-reveal>
+        <div class="relative mb-6 mx-auto w-32 h-32 rounded-full overflow-hidden bg-warm-surface">
+          <div class="absolute inset-0 bg-warm-charcoal flex items-center justify-center">
+            <span class="text-3xl font-medium text-white">JC</span>
           </div>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-1">James Chen</h3>
-        <p class="text-zunkiree-600 font-medium mb-3">Tech Lead</p>
-        <p class="text-gray-600 text-sm">Full-stack expert specializing in scalable architectures.</p>
+        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-1">James Chen</h3>
+        <p class="text-warm-400 text-sm mb-2">Tech Lead</p>
+        <p class="text-warm-600 text-sm leading-relaxed">Full-stack expert specializing in scalable architectures.</p>
       </div>
 
       {# Team Member 4 #}
-      <div class="text-center group" data-reveal>
-        <div class="relative mb-6 mx-auto w-40 h-40 rounded-2xl overflow-hidden bg-gray-200">
-          <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
-            <span class="text-4xl font-bold text-white">EP</span>
+      <div class="text-center" data-reveal>
+        <div class="relative mb-6 mx-auto w-32 h-32 rounded-full overflow-hidden bg-warm-surface">
+          <div class="absolute inset-0 bg-warm-charcoal flex items-center justify-center">
+            <span class="text-3xl font-medium text-white">EP</span>
           </div>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-1">Emma Patel</h3>
-        <p class="text-zunkiree-600 font-medium mb-3">AI Specialist</p>
-        <p class="text-gray-600 text-sm">Machine learning and AI integration expert.</p>
+        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-1">Emma Patel</h3>
+        <p class="text-warm-400 text-sm mb-2">AI Specialist</p>
+        <p class="text-warm-600 text-sm leading-relaxed">Machine learning and AI integration expert.</p>
       </div>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 8: FAQ
+   SECTION 8: FAQ (Duna-style)
    ===================================================== #}
-<section class="section section-alt">
-  <div class="container-custom">
+<section class="py-16 md:py-24 lg:py-32 bg-warm-off-white">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     <div class="max-w-3xl mx-auto">
       {# Section Header #}
       <div class="text-center mb-12" data-reveal>
-        <span class="tag-primary mb-4">FAQ</span>
-        <h2 class="section-heading">Frequently Asked <span class="text-zunkiree-600">Questions</span></h2>
+        <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">FAQ</p>
+        <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2]">
+          Frequently asked questions
+        </h2>
       </div>
 
       {# FAQ Accordion #}
-      <div class="space-y-4" x-data="{ open: null }">
+      <div class="space-y-3" x-data="{ open: null }">
         {# FAQ Item 1 #}
-        <div class="bg-white rounded-xl shadow-card overflow-hidden" data-reveal>
+        <div class="bg-white rounded-2xl border border-warm-border overflow-hidden" data-reveal>
           <button
             class="w-full flex items-center justify-between p-6 text-left"
             @click="open = open === 1 ? null : 1"
           >
-            <span class="text-lg font-semibold text-gray-900">What services do you offer?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-lg font-medium text-warm-black tracking-[-0.01em]">What services do you offer?</span>
+            <svg class="w-5 h-5 text-warm-400 transition-transform duration-200" :class="{ 'rotate-180': open === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div x-show="open === 1" x-collapse>
-            <div class="px-6 pb-6 text-gray-600">
+            <div class="px-6 pb-6 text-warm-600 leading-relaxed">
               We offer comprehensive digital solutions including web development, mobile app development, AI/ML integration, UI/UX design, and ongoing maintenance and support. Each project is tailored to meet your specific business needs.
             </div>
           </div>
         </div>
 
         {# FAQ Item 2 #}
-        <div class="bg-white rounded-xl shadow-card overflow-hidden" data-reveal>
+        <div class="bg-white rounded-2xl border border-warm-border overflow-hidden" data-reveal>
           <button
             class="w-full flex items-center justify-between p-6 text-left"
             @click="open = open === 2 ? null : 2"
           >
-            <span class="text-lg font-semibold text-gray-900">How long does a typical project take?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-lg font-medium text-warm-black tracking-[-0.01em]">How long does a typical project take?</span>
+            <svg class="w-5 h-5 text-warm-400 transition-transform duration-200" :class="{ 'rotate-180': open === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div x-show="open === 2" x-collapse>
-            <div class="px-6 pb-6 text-gray-600">
+            <div class="px-6 pb-6 text-warm-600 leading-relaxed">
               Project timelines vary based on scope and complexity. Simple websites can be completed in 4-6 weeks, while complex applications may take 3-6 months. We provide detailed timelines during our initial consultation.
             </div>
           </div>
         </div>
 
         {# FAQ Item 3 #}
-        <div class="bg-white rounded-xl shadow-card overflow-hidden" data-reveal>
+        <div class="bg-white rounded-2xl border border-warm-border overflow-hidden" data-reveal>
           <button
             class="w-full flex items-center justify-between p-6 text-left"
             @click="open = open === 3 ? null : 3"
           >
-            <span class="text-lg font-semibold text-gray-900">Do you provide ongoing support?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-lg font-medium text-warm-black tracking-[-0.01em]">Do you provide ongoing support?</span>
+            <svg class="w-5 h-5 text-warm-400 transition-transform duration-200" :class="{ 'rotate-180': open === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div x-show="open === 3" x-collapse>
-            <div class="px-6 pb-6 text-gray-600">
+            <div class="px-6 pb-6 text-warm-600 leading-relaxed">
               Yes, we offer comprehensive maintenance and support packages. This includes bug fixes, security updates, performance monitoring, and feature enhancements to ensure your product stays current and competitive.
             </div>
           </div>
         </div>
 
         {# FAQ Item 4 #}
-        <div class="bg-white rounded-xl shadow-card overflow-hidden" data-reveal>
+        <div class="bg-white rounded-2xl border border-warm-border overflow-hidden" data-reveal>
           <button
             class="w-full flex items-center justify-between p-6 text-left"
             @click="open = open === 4 ? null : 4"
           >
-            <span class="text-lg font-semibold text-gray-900">How do you handle project communication?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" :class="{ 'rotate-180': open === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-lg font-medium text-warm-black tracking-[-0.01em]">How do you handle project communication?</span>
+            <svg class="w-5 h-5 text-warm-400 transition-transform duration-200" :class="{ 'rotate-180': open === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div x-show="open === 4" x-collapse>
-            <div class="px-6 pb-6 text-gray-600">
+            <div class="px-6 pb-6 text-warm-600 leading-relaxed">
               We maintain transparent communication throughout the project. You'll receive regular updates, have access to project management tools, and have direct contact with your dedicated project manager for any questions or concerns.
             </div>
           </div>
@@ -536,28 +447,23 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 9: CTA
+   SECTION 9: CTA (Duna-style)
    ===================================================== #}
-<section class="section-lg relative overflow-hidden bg-gray-900">
-  {# Background Pattern #}
-  <div class="absolute inset-0 bg-[linear-gradient(rgba(235,22,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(235,22,0,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-  <div class="container-custom relative z-10">
-    <div class="max-w-3xl mx-auto text-center" data-reveal>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-        Ready to Build Something <span class="text-zunkiree-400">Amazing?</span>
+<section class="py-20 md:py-28 lg:py-36 bg-warm-rich-black">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
+    <div class="max-w-2xl mx-auto text-center" data-reveal>
+      <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-white tracking-[-0.03em] leading-[1.15] mb-6">
+        Ready to build something amazing?
       </h2>
-      <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+      <p class="text-lg text-white/60 mb-10 leading-relaxed tracking-[-0.01em]">
         Let's discuss your project and see how we can help you achieve your goals. No obligations, just a conversation.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact/" class="btn px-8 py-4 text-lg bg-zunkiree-600 text-white font-semibold rounded-lg hover:bg-zunkiree-500 transition-all duration-200 shadow-btn hover:shadow-btn-hover">
+        <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200 hover:-translate-y-0.5">
           Start a Conversation
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+          <span>&rarr;</span>
         </a>
-        <a href="mailto:{{ site.email }}" class="inline-flex items-center gap-2 text-gray-400 hover:text-white font-medium transition-colors">
+        <a href="mailto:{{ site.email }}" class="inline-flex items-center gap-2 text-white/60 hover:text-white font-medium transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>

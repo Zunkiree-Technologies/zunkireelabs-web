@@ -20,24 +20,36 @@ export default {
           900: '#841815',
           950: '#480806',
         },
+        // Warm neutral palette (Duna-inspired)
+        'warm': {
+          'white': '#FFFFFF',
+          'off-white': '#F7F7F5',
+          'surface': '#EDECE7',
+          'border': '#DBD9CD',
+          400: '#898683',
+          600: '#5A5856',
+          'charcoal': '#222221',
+          'black': '#0D0D0D',
+          'rich-black': '#1A1816',
+        },
         // Semantic colors
         'success': {
           50: '#f0fdf4',
           100: '#dcfce7',
-          500: '#22c55e',
+          500: '#2D8A4E',
           600: '#16a34a',
           700: '#15803d',
         },
         'warning': {
           50: '#fffbeb',
           100: '#fef3c7',
-          500: '#f59e0b',
+          500: '#E5A000',
           600: '#d97706',
         },
         'info': {
           50: '#eff6ff',
           100: '#dbeafe',
-          500: '#3b82f6',
+          500: '#45848D',
           600: '#2563eb',
         }
       },
