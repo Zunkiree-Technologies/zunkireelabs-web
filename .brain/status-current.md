@@ -23,6 +23,20 @@
 ## Recent Session (December 30, 2025)
 
 ### Changes Made
+- **Auto-scroll animation** in "Complex to conversational" section
+  - Smooth scroll during user typing (every 10 characters)
+  - Scroll triggers after each message (user and AI)
+  - Scroll on typing indicator appearance
+- **Sources section** added to AI responses (matching "Reduce friction" style)
+- **Color consistency** - Changed all purple/indigo to blue-400:
+  - "Ask" → "Search" button with blue background
+  - User message bubbles, typing bubble, send button
+  - Progress bars, product rank badges
+  - "Powered by Zunkiree AI" text
+- **Customers page** - Changed red stats (47%, 62%, 10x, 89%) to black
+- **Git** - Pushed to ani-shh/zunkireelabs GitHub repository
+
+### Previous Session (December 30, 2025 - Earlier)
 - Restored typewriter animation for conversation demo (Tab 2: "Complex to conversational")
 - Restored engagement metrics with dark background and white text styling
 - Fixed homepage changes that were accidentally reverted during git checkout
