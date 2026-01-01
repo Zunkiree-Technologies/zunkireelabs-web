@@ -77,20 +77,36 @@ permalink: /customers/
 </section>
 
 {# =====================================================
-   CUSTOMER LOGOS
+   CUSTOMER LOGOS - Marquee Animation
    ===================================================== #}
-<section class="py-12 md:py-16 px-4 md:px-6">
+<section class="relative py-16 md:py-20 bg-gradient-to-b from-white/80 via-white to-white backdrop-blur-sm px-4 md:px-6">
   <div class="max-w-[1200px] mx-auto">
     <p class="text-center text-sm font-medium text-warm-400 tracking-wide mb-10" data-reveal>Trusted by forward-thinking companies</p>
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center" data-reveal>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">TechFlow</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">ScaleUp</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">InnovateCo</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">CloudNine</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">DataPrime</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">NextGen</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">FutureLabs</span>
-      <span class="text-lg font-medium text-warm-300 tracking-[-0.01em]">DigitalFirst</span>
+
+    {# Marquee container - same as homepage #}
+    <div class="marquee-fade">
+      <div class="marquee-container">
+        <div class="marquee-track">
+        {# First set of logos #}
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechFlow</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataPrime</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
+        {# Duplicate set for seamless loop #}
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechFlow</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataPrime</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
