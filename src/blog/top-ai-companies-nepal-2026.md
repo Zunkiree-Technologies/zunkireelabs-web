@@ -175,3 +175,18 @@ The key is matching your specific needs—technical requirements, communication 
 ---
 
 *Looking for an AI development partner in Nepal? [Contact Zunkiree Labs](/contact/) to discuss your project.*
+<!-- SEOAI:FAQ:START --><dl class="faq">
+  <dt>What services does the company offer related to AI?</dt>
+  <dd>The company offers a range of services including AI Development, AI Customer Experience with chatbots, Data Systems for AI-ready architecture, Custom Software development, SaaS Development, Web & App Development, and AEO & SEO services.</dd>
+  <dt>What is Zunkiree Search?</dt>
+  <dd>Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers, enhancing customer experience.</dd>
+  <dt>How does AI improve customer support according to the page?</dt>
+  <dd>AI can reduce support tickets by 45%, streamlining the customer support process.</dd>
+  <dt>What is the significance of the 'State of AI in Nepal 2026' report?</dt>
+  <dd>The 'State of AI in Nepal 2026' report is highlighted as a definitive guide to AI adoption across Nepali industries and is available for free download.</dd>
+  <dt>What industries are served by the AI solutions mentioned on the page?</dt>
+  <dd>The AI solutions cater to various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</dd>
+  <dt>Can I try Zunkiree Search for free?</dt>
+  <dd>Yes, the page mentions that you can start a free trial of Zunkiree Search.</dd>
+</dl>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What services does the company offer related to AI?","@type":"Question","acceptedAnswer":{"text":"The company offers a range of services including AI Development, AI Customer Experience with chatbots, Data Systems for AI-ready architecture, Custom Software development, SaaS Development, Web & App Development, and AEO & SEO services.","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers, enhancing customer experience.","@type":"Answer"}},{"name":"How does AI improve customer support according to the page?","@type":"Question","acceptedAnswer":{"text":"AI can reduce support tickets by 45%, streamlining the customer support process.","@type":"Answer"}},{"name":"What is the significance of the 'State of AI in Nepal 2026' report?","@type":"Question","acceptedAnswer":{"text":"The 'State of AI in Nepal 2026' report is highlighted as a definitive guide to AI adoption across Nepali industries and is available for free download.","@type":"Answer"}},{"name":"What industries are served by the AI solutions mentioned on the page?","@type":"Question","acceptedAnswer":{"text":"The AI solutions cater to various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}},{"name":"Can I try Zunkiree Search for free?","@type":"Question","acceptedAnswer":{"text":"Yes, the page mentions that you can start a free trial of Zunkiree Search.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
