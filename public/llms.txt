@@ -1,0 +1,25 @@
+Key Pages:
+- URL: https://zunkireelabs.com/locations/kathmandu/
+  Title: AI Development Company in Kathmandu | Zunkiree Labs
+  Meta Description: Zunkiree Labs is Kathmandu's leading AI development company. Custom AI systems, RAG pipelines, and enterprise software built by experienced engineers in Nepal's capital.
+- URL: https://zunkireelabs.com/resources/what-is-gaas/
+  Title: What is GaaS? The Complete Guide to Agentic as a Service (2026)
+  Meta Description: Learn what Agentic as a Service (GaaS) means, how it differs from SaaS, real-world use cases, and why businesses are adopting autonomous AI agents. Complete beginner's guide.
+- URL: https://zunkireelabs.com/blog/top-tech-companies-nepal-2026/
+  Title: Top 50 Tech, Software & AI Companies in Nepal 2026
+  Meta Description: The definitive guide to Nepal's leading technology companies. Discover top AI companies, software development firms, and rising tech startups in Kathmandu.
+- URL: https://zunkireelabs.com/
+  Title: AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs
+  Meta Description: Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation.
+- URL: https://zunkireelabs.com/blog/top-ai-companies-nepal-2026/
+  Title: Top AI Companies in Nepal 2026: Who's Building the Future
+  Meta Description: A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond.
+- URL: https://zunkireelabs.com/products/dental-ai/
+  Title: Dental AI Assistant: AI-Powered Dental Practice Management | Zunkiree Labs
+  Meta Description: Intelligent assistant for dental practices. Automates patient communication, scheduling, and follow-ups. Reduce no-shows by 35% and save 15+ hours weekly.
+- URL: https://zunkireelabs.com/about/
+  Title: About Zunkiree Labs | Top AI & Software Company in Nepal | Founded 2018
+  Meta Description: Zunkiree Labs is a leading AI company in Kathmandu, Nepal founded in 2018. We build custom AI systems, RAG pipelines, and enterprise software for global clients.
+- URL: https://zunkireelabs.com/blog/state-of-ai-nepal-2026/
+  Title: State of AI in Nepal 2026: Key Findings and Insights
+  Meta Description: An analysis of Nepal's AI landscape in 2026. Explore adoption trends, challenges, opportunities, and predictions for the future of artificial intelligence in Nepal.
