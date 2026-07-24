@@ -1,0 +1,32 @@
+{
+  "main": [
+    {
+      "label": "Industries",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Education", "url": "/solutions/education/", "description": "AI tutoring, admissions, and student support" },
+              { "label": "Agencies", "url": "#", "description": "AI-powered client delivery and workflow automation" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/", "description": "AI patient communication and clinical workflow automation" },
+              { "label": "Real Estate", "url": "#", "description": "AI-driven lead qualification and property workflows" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Platform",
+      "hasDropdown": false,
+      "url": "#"
+    }
+  ]
+}

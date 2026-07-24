@@ -23,6 +23,9 @@ import Lenis from 'lenis';
 // Import Three.js infinity loop
 import { initThreeInfinity, initThreeInfinityZoom } from './infinity-threejs.js';
 
+// Import Stripe WebGL Gradient
+import { StripeGradient } from './stripe-gradient.js';
+
 // Expose GSAP globally so Alpine x-data can reference it
 window.gsap = gsap;
 
@@ -202,6 +205,15 @@ function initHeroBackground() {
 
   // Blob 3 — large sweep
   gsap.to(b3, { x: 50, y: -30, duration: 10, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 2.5 });
+}
+
+// ─── Stripe WebGL Canvas Gradient ────────────────────────────────
+function initStripeCanvas() {
+  const canvas = document.querySelector('#gradient-canvas');
+  if (canvas) {
+    window.stripeGradient = new StripeGradient();
+    window.stripeGradient.initGradient('#gradient-canvas');
+  }
 }
 
 // ─── Split headline text into .hero-word spans ────────────────────
@@ -568,6 +580,7 @@ function boot() {
   initSmoothScroll();       // smooth scroll first — ScrollTrigger syncs to Lenis
   initPageBackground();
   initHeroBackground();
+  initStripeCanvas();
   initHeroCarousel();
   initScrollReveals();
   initBlueColorShift();

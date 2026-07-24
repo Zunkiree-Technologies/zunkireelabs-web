@@ -1,0 +1,413 @@
+{# =====================================================
+   NAVBAR — WEBSITE V2
+   Reuses header.njk's Alpine engine (scroll-hide/reveal,
+   dropdown state, navigation.json binding — PROJECT_AUDIT.md
+   §5 confirms this state logic as sound engineering, only the
+   markup/visual layer is rebuilt here per MASTER_DESIGN_SPEC §15).
+
+   Variants (COMPONENT_LIBRARY.md §1.1): transparent-over-hero
+   (no background, text stays navy since the v2 hero is a light
+   Sky/Cream/Mint ribbon, not a dark image) → background pops in
+   on hover, or once a dropdown/mobile menu is open.
+   ===================================================== #}
+<div
+  x-data="{
+    headerHidden: false,
+    lastScrollY: 0,
+    activeDropdown: null,
+    mobileMenuOpen: false,
+    navHovered: false,
+    get solid() { return this.navHovered || this.activeDropdown !== null || this.mobileMenuOpen; },
+    handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < 10) {
+        this.headerHidden = false;
+      } else if (currentScrollY > this.lastScrollY) {
+        this.headerHidden = true;
+        this.closeDropdown();
+      } else {
+        this.headerHidden = false;
+      }
+      this.lastScrollY = currentScrollY;
+    },
+    toggleDropdown(label) {
+      this.activeDropdown = this.activeDropdown === label ? null : label;
+    },
+    closeDropdown() {
+      this.activeDropdown = null;
+    }
+  }"
+  x-init="lastScrollY = window.scrollY; handleScroll();"
+  @scroll.window.throttle.50ms="handleScroll()"
+  @keydown.escape.window="closeDropdown(); mobileMenuOpen = false;"
+>
+  <!-- Scrim behind an open mega-menu -->
+  <div
+    class="hidden lg:block fixed inset-0 z-40 bg-navy-950/50 backdrop-blur-[2px]"
+    style="top: 72px;"
+    x-show="activeDropdown !== null"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    @click="closeDropdown()"
+    x-cloak
+  ></div>
+
+  <header
+    class="fixed top-0 inset-x-0 z-50 transition-transform duration-500"
+    :class="(headerHidden && !activeDropdown && !mobileMenuOpen) ? '-translate-y-full' : 'translate-y-0'"
+    @mouseenter="navHovered = true"
+    @mouseleave="navHovered = false"
+  >
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div
+        class="transition-all duration-300 backdrop-blur-md border rounded-b-2xl"
+        :class="solid ? 'bg-white/40 border-white/60 shadow-subtle' : 'bg-transparent border-transparent'"
+      >
+        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-[72px]">
+
+          <!-- Logo — always the dark-text mark; the v2 hero is light, never a dark image -->
+          <a href="/" class="flex-shrink-0 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 rounded-sm" aria-label="Zunkiree Labs home">
+            <img
+              src="/assets/images/zunkireelabs-logo-light.png"
+              alt="Zunkiree Labs"
+              class="h-6 w-auto"
+              width="200" height="24"
+            />
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+            {% for item in navigationV2.main %}
+              {% if item.hasDropdown %}
+                <button
+                  type="button"
+                  @click="toggleDropdown('{{ item.label }}')"
+                  class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+                  :class="activeDropdown === '{{ item.label }}' ? 'text-[#76B900]' : ''"
+                  :style="activeDropdown === '{{ item.label }}' ? '' : 'color: var(--foreground);'"
+                  aria-haspopup="true"
+                  :aria-expanded="activeDropdown === '{{ item.label }}'"
+                >
+                  {{ item.label }}
+                  <svg class="w-3.5 h-3.5 transition-transform duration-200" :class="activeDropdown === '{{ item.label }}' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              {% else %}
+                <a
+                  href="{{ item.url }}"
+                  class="px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 hover:text-[#76B900] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+                  style="color: var(--foreground);"
+                >
+                  {{ item.label }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </nav>
+
+          <!-- Right: Ask + Primary CTA -->
+          <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <button
+              type="button"
+              onclick="openZunkireeWidget()"
+              class="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium border transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+              style="border-color: rgba(15, 23, 42, 0.35); color: var(--foreground);"
+              aria-label="Ask Zunkiree AI"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+              </svg>
+              Ask
+            </button>
+            <a
+              href="/contact/"
+              class="inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+            >
+              Get in touch
+            </a>
+          </div>
+
+          <!-- Mobile Menu Trigger -->
+          <button
+            type="button"
+            class="lg:hidden p-2 -mr-2 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+            style="color: var(--foreground);"
+            @click="mobileMenuOpen = true"
+            aria-label="Open menu"
+            aria-controls="navbar-v2-mobile"
+            :aria-expanded="mobileMenuOpen"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu panels — always a light card surface (MASTER_DESIGN_SPEC §13/§15), independent of navbar transparency -->
+    {% for item in navigationV2.main %}
+      {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
+        <div
+          class="hidden lg:block absolute top-[72px] left-0 right-0 z-40"
+          x-show="activeDropdown === '{{ item.label }}'"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 -translate-y-2"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 translate-y-0"
+          x-transition:leave-end="opacity-0 -translate-y-2"
+          x-cloak
+          role="menu"
+          :aria-label="'{{ item.label }}' + ' menu'"
+        >
+          <div class="bg-white shadow-card border-t" style="border-color: #e2e8f0;">
+            <div class="max-w-content mx-auto px-6 lg:px-8 py-10">
+              {% set colCount = item.megamenu.columns | length %}
+              {% set hasFeature = item.megamenu.featured %}
+
+              <div class="grid gap-8 {% if colCount == 2 and hasFeature %}grid-cols-12{% elif colCount == 3 and hasFeature %}grid-cols-12{% else %}grid-cols-{{ colCount }}{% endif %}">
+
+                {% for column in item.megamenu.columns %}
+                  <div class="{% if colCount == 2 and hasFeature %}col-span-4{% elif colCount == 3 and hasFeature %}col-span-3{% else %}{% endif %}">
+
+                    {% if column.header %}
+                      <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zunkiree-700 mb-4">
+                        {{ column.header }}
+                      </span>
+                    {% endif %}
+
+                    <ul class="space-y-1">
+                      {% for link in column.items %}
+                        <li>
+                          <a
+                            href="{{ link.url }}"
+                            class="group flex items-start gap-3 p-2 -mx-2 rounded-md transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900]"
+                            role="menuitem"
+                            @click="closeDropdown()"
+                          >
+                            {% if column.type == 'descriptive' and link.icon %}
+                              <span class="mt-0.5 text-zunkiree-600">
+                                {% set iconName = link.icon %}
+                                {% include "components/nav-icon.njk" %}
+                              </span>
+                            {% endif %}
+
+                            <div class="flex-1 min-w-0">
+                              <div class="flex items-center gap-2">
+                                <span class="text-[15px] font-medium text-navy-900 transition-colors group-hover:text-zunkiree-600">
+                                  {{ link.label }}{% if link.subLabel %}<span class="text-[11px] font-normal text-navy-400 ml-1">{{ link.subLabel }}</span>{% endif %}
+                                </span>
+                                {% if link.badge %}
+                                  <span class="px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide bg-zunkiree-100 text-zunkiree-700 rounded">
+                                    {{ link.badge }}
+                                  </span>
+                                {% endif %}
+                              </div>
+                              {% if column.type == 'descriptive' and link.description %}
+                                <p class="mt-0.5 text-[13px] leading-snug text-navy-500">
+                                  {{ link.description }}
+                                </p>
+                              {% endif %}
+                            </div>
+                          </a>
+                        </li>
+                      {% endfor %}
+
+                      {% if column.seeAll %}
+                        <li class="pt-3">
+                          <a
+                            href="{{ column.seeAll.url }}"
+                            class="inline-flex items-center gap-1.5 text-sm font-medium text-zunkiree-600 hover:gap-2.5 transition-all"
+                            @click="closeDropdown()"
+                          >
+                            {{ column.seeAll.label }}
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        </li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                {% endfor %}
+
+                {% if item.megamenu.featured %}
+                  <div class="{% if colCount == 2 %}col-span-4{% elif colCount == 3 %}col-span-3{% else %}col-span-1{% endif %}">
+                    <div class="h-full p-5 rounded-lg border border-gray-100 bg-gray-50">
+                      <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-zunkiree-700 mb-3">
+                        {{ item.megamenu.featured.label }}
+                      </span>
+                      <h4 class="text-base font-semibold text-navy-900 mb-2">
+                        {{ item.megamenu.featured.title }}
+                      </h4>
+                      <p class="text-[13px] leading-relaxed text-navy-500 mb-4">
+                        {{ item.megamenu.featured.description }}
+                      </p>
+                      <a
+                        href="{{ item.megamenu.featured.cta.url }}"
+                        class="inline-flex items-center gap-1.5 text-sm font-medium text-zunkiree-600 hover:gap-2.5 transition-all"
+                        @click="closeDropdown()"
+                      >
+                        {{ item.megamenu.featured.cta.label }}
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                {% endif %}
+
+              </div>
+            </div>
+
+            {% if item.megamenu.cta %}
+              <div style="background-color: #76B900;">
+                <div class="max-w-content mx-auto px-6 lg:px-8 py-3">
+                  <div class="flex items-center gap-4">
+                    <span class="text-sm text-white/90">{{ item.megamenu.cta.prompt }}</span>
+                    <a
+                      href="{{ item.megamenu.cta.url }}"
+                      class="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:gap-2.5 transition-all"
+                      @click="closeDropdown()"
+                    >
+                      {{ item.megamenu.cta.button }}
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </header>
+
+  <!-- Mobile Navigation — full-screen overlay (MASTER_DESIGN_SPEC §15, not a narrow drawer) -->
+  <div
+    id="navbar-v2-mobile"
+    class="lg:hidden fixed inset-0 z-[60] bg-white overflow-y-auto"
+    x-show="mobileMenuOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    x-cloak
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobile navigation"
+  >
+    <div class="flex items-center justify-between h-[72px] px-4 sm:px-6 border-b border-gray-100">
+      <a href="/" class="flex items-center" @click="mobileMenuOpen = false" aria-label="Zunkiree Labs home">
+        <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="h-6 w-auto" width="200" height="24" />
+      </a>
+      <button
+        type="button"
+        class="p-2 -mr-2 rounded-md text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        @click="mobileMenuOpen = false"
+        aria-label="Close menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="px-4 sm:px-6 py-4">
+      <div class="flex flex-col">
+        {% for item in navigationV2.main %}
+          {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
+            <div x-data="{ open: false }" class="border-b border-gray-100">
+              <button
+                type="button"
+                @click="open = !open"
+                class="w-full flex items-center justify-between py-4 text-base font-medium text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900]"
+                :aria-expanded="open"
+              >
+                {{ item.label }}
+                <svg class="w-4 h-4 transition-transform duration-200 text-navy-400" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+              <div x-show="open" x-collapse class="pb-4">
+                {% for column in item.megamenu.columns %}
+                  {% if column.header %}
+                    <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-zunkiree-700 mt-3 mb-2">
+                      {{ column.header }}
+                    </span>
+                  {% endif %}
+                  {% for link in column.items %}
+                    <a
+                      href="{{ link.url }}"
+                      class="flex items-center gap-3 py-2.5 text-[15px] text-navy-600 hover:text-zunkiree-600 transition-colors"
+                      @click="mobileMenuOpen = false"
+                    >
+                      {% if link.icon %}
+                        <span class="text-zunkiree-600">
+                          {% set iconName = link.icon %}
+                          {% include "components/nav-icon.njk" %}
+                        </span>
+                      {% endif %}
+                      <span>{{ link.label }}{% if link.subLabel %}<span class="text-[11px] text-navy-400 ml-1">{{ link.subLabel }}</span>{% endif %}</span>
+                      {% if link.badge %}
+                        <span class="ml-auto px-1.5 py-0.5 text-[9px] font-medium uppercase bg-zunkiree-100 text-zunkiree-700 rounded">
+                          {{ link.badge }}
+                        </span>
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            <a
+              href="{{ item.url }}"
+              class="py-4 text-base font-medium text-navy-900 border-b border-gray-100"
+              @click="mobileMenuOpen = false"
+            >
+              {{ item.label }}
+            </a>
+          {% endif %}
+        {% endfor %}
+
+        <button
+          type="button"
+          onclick="openZunkireeWidget()"
+          class="flex items-center gap-2 py-4 text-base font-medium text-zunkiree-600 border-b border-gray-100"
+          @click="mobileMenuOpen = false"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+          </svg>
+          Ask AI
+        </button>
+
+        <div class="mt-6">
+          <a
+            href="/contact/"
+            class="flex items-center justify-center gap-2 w-full py-3.5 rounded-md bg-[#76B900] text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
+            @click="mobileMenuOpen = false"
+          >
+            Get in touch
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
