@@ -1,0 +1,25 @@
+Key Pages:
+- https://zunkireelabs.com/resources/
+  Title: Resources | Zunkiree Labs
+  Meta Description: Explore AI search guides, industry reports, case studies, and technical whitepapers from Zunkiree Labs. Learn how to build AI-native search experiences.
+- https://zunkireelabs.com/resources/ai-search-stack-guide/
+  Title: The AI Search Stack for the Modern Enterprise | Zunkiree Labs
+  Meta Description: Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. Free ebook with architecture patterns and implementation strategies.
+- https://zunkireelabs.com/resources/admizz-case-study/
+  Title: Admizz Case Study | Zunkiree Labs
+  Meta Description: How Admizz Education reduced response time by 45% with AI-powered student inquiry management. 3x improvement in satisfaction.
+- https://zunkireelabs.com/blog/
+  Title: AI & Technology Blog | Insights from Zunkiree Labs
+  Meta Description: Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company.
+- https://zunkireelabs.com/products/dental-ai/
+  Title: Dental AI Assistant: AI-Powered Dental Practice Management | Zunkiree Labs
+  Meta Description: Intelligent assistant for dental practices. Automates patient communication, scheduling, and follow-ups. Reduce no-shows by 35% and save 15+ hours weekly.
+- https://zunkireelabs.com/products/ai-booking-engine/
+  Title: Zenly: AI Booking Engine for Intelligent Scheduling | Zunkiree Labs
+  Meta Description: Smart scheduling that handles complex availability, multi-resource bookings, and conflict resolution. Reduce no-shows by 35% with AI-powered reminders.
+- https://zunkireelabs.com/blog/what-is-ai-native-search/
+  Title: What is AI-Native Search? How It Differs from Keyword Search
+  Meta Description: AI-native search understands intent and context, delivering direct answers instead of keyword matches. Learn how it works and why businesses are switching from traditional search.
+- https://zunkireelabs.com/about/
+  Title: About Zunkiree Labs | Top AI & Software Company in Nepal | Founded 2018
+  Meta Description: Zunkiree Labs is a leading AI company in Kathmandu, Nepal founded in 2018. We build custom AI systems, RAG pipelines, and enterprise software for global clients.
