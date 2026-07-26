@@ -1,0 +1,25 @@
+Key Pages:
+- URL: https://zunkireelabs.com/blog/top-ai-companies-nepal-2026/
+  Title: Top AI Companies in Nepal 2026: Who's Building the Future
+  Meta Description: A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond.
+- URL: https://zunkireelabs.com/solutions/customer-support/
+  Title: AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs
+  Meta Description: Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation.
+- URL: https://zunkireelabs.com/solutions/internal-search/
+  Title: AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs
+  Meta Description: Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation.
+- URL: https://zunkireelabs.com/contact/
+  Title: Contact Zunkiree Labs | AI Development Company Nepal | Free Consultation
+  Meta Description: Contact Zunkiree Labs in Kathmandu for AI development, custom software, and web solutions. Schedule a free discovery call with Nepal's leading AI company.
+- URL: https://zunkireelabs.com/customers/
+  Title: Customer Stories | Zunkiree Labs
+  Meta Description: See how leading companies are transforming their digital experiences with Zunkiree Labs. Real results from real customers.
+- URL: https://zunkireelabs.com/products/search/
+  Title: Zunkiree Search: AI-Native Search & Interaction Platform | Zunkiree Labs
+  Meta Description: Transform how users discover information with Zunkiree Search. Our AI-native platform delivers direct answers through natural language, reducing support queries by 45%. Get a demo.
+- URL: https://zunkireelabs.com/products/gaamma/
+  Title: Gaamma: Manufacturing ERP Platform | Zunkiree Labs
+  Meta Description: End-to-end manufacturing ERP that unifies production planning, inventory management, and quality control. See 30% less downtime and 25% better inventory turns.
+- URL: https://zunkireelabs.com/compare/zunkiree-vs-typesense/
+  Title: Zunkiree Search vs Typesense | Search Comparison | Zunkiree Labs
+  Meta Description: Compare Zunkiree Search and Typesense. See how AI-native search compares to open-source instant search.
