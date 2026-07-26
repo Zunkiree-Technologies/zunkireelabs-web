@@ -175,3 +175,18 @@ The key is matching your specific needs—technical requirements, communication 
 ---
 
 *Looking for an AI development partner in Nepal? [Contact Zunkiree Labs](/contact/) to discuss your project.*
+<!-- SEOAI:FAQ:START --><dl class="faq">
+  <dt>What are some AI products offered in Nepal?</dt>
+  <dd>Some AI products offered include Zunkiree Search, Dental AI for practice management, and Gaamma for business analytics.</dd>
+  <dt>How does Zunkiree Search work?</dt>
+  <dd>Zunkiree Search is an AI-native search that understands natural language and delivers direct answers, transforming the customer experience.</dd>
+  <dt>What industries are targeted by AI services in Nepal?</dt>
+  <dd>AI services in Nepal target various industries including healthcare, manufacturing, legal, professional services, education, and human resources.</dd>
+  <dt>What is 'Agentic as a Service'?</dt>
+  <dd>Agentic as a Service (GaaS) refers to autonomous AI agents deployed as managed services to assist in various business processes.</dd>
+  <dt>What is the State of AI in Nepal report?</dt>
+  <dd>The State of AI in Nepal 2026 is a featured report that provides insights into AI adoption across Nepali industries.</dd>
+  <dt>How can I try Zunkiree Search?</dt>
+  <dd>You can try Zunkiree Search for free by starting a free trial available on the website.</dd>
+</dl>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are some AI products offered in Nepal?","@type":"Question","acceptedAnswer":{"text":"Some AI products offered include Zunkiree Search, Dental AI for practice management, and Gaamma for business analytics.","@type":"Answer"}},{"name":"How does Zunkiree Search work?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search that understands natural language and delivers direct answers, transforming the customer experience.","@type":"Answer"}},{"name":"What industries are targeted by AI services in Nepal?","@type":"Question","acceptedAnswer":{"text":"AI services in Nepal target various industries including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is 'Agentic as a Service'?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to autonomous AI agents deployed as managed services to assist in various business processes.","@type":"Answer"}},{"name":"What is the State of AI in Nepal report?","@type":"Question","acceptedAnswer":{"text":"The State of AI in Nepal 2026 is a featured report that provides insights into AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial available on the website.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
