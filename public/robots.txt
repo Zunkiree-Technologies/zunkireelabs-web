@@ -1,5 +1,10 @@
 User-agent: *
-Allow: /
+Allow: /blog/
+Allow: /solutions/
+Allow: /contact/
+Allow: /customers/
+Allow: /products/
+Disallow: /?*page=
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot
