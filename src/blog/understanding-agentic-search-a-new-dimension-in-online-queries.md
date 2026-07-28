@@ -2,6 +2,8 @@
 title: "Understanding Agentic Search: A New Dimension in Online Queries"
 description: "Explore the concept of Agentic Search, its implications for AI development, and how it transforms the user experience in digital querying."
 date: "2026-07-14"
+featuredImage: /assets/images/blog/agentic-search.jpg
+featuredImageAlt: Abstract branching network of glowing paths extending from a central node representing autonomous agentic search
 ---
 
 ## Introduction to Agentic Search

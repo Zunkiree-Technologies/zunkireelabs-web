@@ -23,6 +23,9 @@ import Lenis from 'lenis';
 // Import Three.js infinity loop
 import { initThreeInfinity, initThreeInfinityZoom } from './infinity-threejs.js';
 
+// Import Stripe WebGL Gradient
+import { StripeGradient } from './stripe-gradient.js';
+
 // Expose GSAP globally so Alpine x-data can reference it
 window.gsap = gsap;
 
@@ -44,6 +47,10 @@ function initSmoothScroll() {
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smoothWheel: true,
   });
+
+  // Exposed so other components (e.g. the navbar-v2 mega-menu) can pause/resume
+  // page scroll via lenis.stop()/lenis.start() while an overlay is open.
+  window.__lenis = lenis;
 
   // Keep ScrollTrigger in sync with Lenis' scroll position
   lenis.on('scroll', ScrollTrigger.update);
@@ -202,6 +209,15 @@ function initHeroBackground() {
 
   // Blob 3 — large sweep
   gsap.to(b3, { x: 50, y: -30, duration: 10, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 2.5 });
+}
+
+// ─── Stripe WebGL Canvas Gradient ────────────────────────────────
+function initStripeCanvas() {
+  const canvas = document.querySelector('#gradient-canvas');
+  if (canvas) {
+    window.stripeGradient = new StripeGradient();
+    window.stripeGradient.initGradient('#gradient-canvas');
+  }
 }
 
 // ─── Split headline text into .hero-word spans ────────────────────
@@ -382,23 +398,101 @@ function initHeroCarousel() {
 
 // ─── Scroll Reveal Animations ─────────────────────────────────────
 function initScrollReveals() {
-  const reveals = document.querySelectorAll('[data-reveal]');
+  // Honour reduced-motion: don't animate opacity/y if user prefers reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('[data-reveal], [data-reveal-stagger] > *').forEach((el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.classList.add('revealed');
+    });
+    return;
+  }
+
+  // Single reveals (excluding containers or children of staggers to prevent double animation)
+  const reveals = document.querySelectorAll('[data-reveal]:not([data-reveal-stagger]):not([data-reveal-stagger] *)');
   reveals.forEach((el) => {
-    gsap.from(el, {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
+    gsap.fromTo(el,
+      { y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+        onComplete: () => {
+          el.classList.add('revealed');
+        }
+      }
+    );
+  });
+
+  // Staggered reveals (animate direct children of a container)
+  const staggers = document.querySelectorAll('[data-reveal-stagger]');
+  staggers.forEach((container) => {
+    const children = Array.from(container.children);
+    if (children.length === 0) return;
+    
+    gsap.fromTo(children,
+      { y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.12,
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+        onComplete: () => {
+          children.forEach(child => child.classList.add('revealed'));
+        }
+      }
+    );
+  });
+}
+
+
+
+// ─── Stat Counter Count-Up (data-counter="45%" etc.) ──────────────
+function initStatCounters() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('[data-counter]').forEach((el) => {
+    const raw = el.getAttribute('data-counter').trim();
+    const match = raw.match(/^([^\d]*)([\d,.]+)(.*)$/);
+    if (!match) return;
+
+    const [, prefix, numStr, suffix] = match;
+    const cleanNum = numStr.replace(/,/g, '');
+    const target = parseFloat(cleanNum);
+    if (isNaN(target)) return;
+    const decimals = cleanNum.includes('.') ? cleanNum.split('.')[1].length : 0;
+
+    const counter = { val: 0 };
+    gsap.to(counter, {
+      val: target,
+      duration: 1.6,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: el,
         start: 'top 88%',
         toggleActions: 'play none none none',
       },
+      onUpdate: () => {
+        el.textContent = `${prefix}${counter.val.toFixed(decimals)}${suffix}`;
+      },
+      onComplete: () => {
+        el.textContent = raw;
+      },
     });
   });
 }
-
-
 
 // ─── Blue Section Scroll-Driven Page Color Shift ──────────────────
 function initBlueColorShift() {
@@ -568,8 +662,10 @@ function boot() {
   initSmoothScroll();       // smooth scroll first — ScrollTrigger syncs to Lenis
   initPageBackground();
   initHeroBackground();
+  initStripeCanvas();
   initHeroCarousel();
   initScrollReveals();
+  initStatCounters();
   initBlueColorShift();
   initFaqGreenGlow();
   initSearchIcon();

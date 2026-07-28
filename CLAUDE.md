@@ -7,6 +7,62 @@
 
 ---
 
+## Website V2 Redesign
+
+This repository contains an existing SaaS marketing website.
+
+The goal of this project is to build **Website V2** — a complete visual redesign of the existing website.
+
+Website V2 is a new design layer built on top of the existing implementation.
+
+- Treat the current website as an implementation reference only.
+- Do not use the existing UI, layouts, spacing, typography, or visual patterns as design references.
+- Reuse existing engineering, routing, business logic, and functionality whenever appropriate.
+- The visual experience should reflect a premium enterprise SaaS product inspired by the quality of Kore.ai while maintaining the project's own brand identity.
+
+### Development Rules
+
+- Build only the requested section.
+- Work on Website V2 only.
+- Never modify unrelated files.
+- Preserve existing functionality unless instructed otherwise.
+- Treat the existing UI as an implementation reference, not a design reference.
+- Reuse existing project components whenever appropriate.
+- Use 21st.dev MCP as the first choice for foundational UI components.
+- Adapt imported components to match the project design system.
+- Build custom components only when necessary.
+- Produce production-ready, responsive, accessible, and performant code.
+- Keep components reusable and maintainable.
+- Return only the modified files.
+- Wait for approval before moving to the next section.
+
+---
+
+## Homepage V2 Working Formula (supersedes Automatic Skill Routing for this scope)
+
+**Scope**: `src/pages/homepage-v2.njk` and `src/_includes/partials/navbar-v2.njk` only. The old homepage (`index.njk` and whatever it currently includes) stays live and untouched — it is reference-only, never edited as part of this work.
+
+**Do NOT auto-invoke `/project-pm` for homepage-v2 work.** The orchestrator was built for the old homepage flow. Homepage V2 follows its own sequence instead:
+
+1. Pull the section's blueprint from `docs/PAGE_BLUEPRINTS.md` (homepage section order/IA).
+2. Check `docs/MASTER_DESIGN_SPEC.md` (design tokens + §25 Design Review Checklist) so the section is compliant by construction, not audited after the fact. This doc wins over `tailwind.config` on any conflict.
+3. Pick components per `docs/COMPONENT_LIBRARY.md`'s stated priority: reuse existing project components → adapt via 21st.dev MCP → build custom only if neither fits.
+4. Implement directly into `homepage-v2.njk` / `navbar-v2.njk` — no PM/orchestration layer in between.
+5. Invoke specialist skills (`/tailwind-ui`, `/animation-engineer`, `/perf-engineer`, etc.) manually, only when a section genuinely needs that expertise — never as a default gate.
+6. One section at a time. Wait for explicit approval before starting the next section.
+
+**Reference doc chain** (each builds on the last — read only what's relevant to the section at hand, don't fan out into the whole chain every time): `DESIGN_AUDIT.md` + `PROJECT_AUDIT.md` + `CONTENT_SUMMARY.md` → `REDESIGN_STRATEGY.md` (phased plan) → `MASTER_DESIGN_SPEC.md` (design system source of truth) → `COMPONENT_LIBRARY.md` (component definitions) → `PAGE_BLUEPRINTS.md` (per-page section order) → `color-system.html` (live token preview, not a spec).
+
+**Confirmed decisions** (do not re-litigate — build against these):
+- Nav (`navbar-v2.njk`): Industries (Education, Agencies, Healthcare, Real Estate) + Platform + Resources as the three top-level items (revised 2026-07-26 — Resources added back, since Industries/Platform alone read as an incomplete nav). No separate Products/Solutions/Services top-level menu — Products content is nested under Platform; Solutions/service content lives nested inside each industry page instead of the nav.
+- Homepage hero: centered single-column, no Hero Visual (§2.2) split — overrides `PAGE_BLUEPRINTS.md`'s general 50/50 hero-split guidance for this page specifically.
+
+**Still open** (flag before building anything that depends on these; do not assume an answer):
+- Dental AI Assistant's disposition (folded into Healthcare / kept separate / shelved).
+- Disposition of non-core-vertical content (Manufacturing, Legal, Professional Services, HR) — retire vs. keep as secondary pages.
+
+---
+
 ## CRITICAL: Deployment Rules
 
 **NEVER push directly to `main` or `stage` without explicit user instruction.**

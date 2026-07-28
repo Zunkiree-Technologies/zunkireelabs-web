@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 /* =====================================================
+   Homepage V2 preview only — clone kore.ai's actual typeface
+   (Inter, confirmed via Firecrawl scrape). Scoped to the
+   `v2-inter` body class (homepage-v2.njk only) so the live
+   site keeps DM Sans untouched. Higher specificity than the
+   .font-sans utility so it wins regardless of source order.
+   ===================================================== */
+.v2-inter.font-sans {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+/* Headings get their font-family set directly (main.css @layer base
+   `h1, h2, h3...` rule), which pre-empts inheriting Inter from body —
+   so headings need their own explicit override here too. */
+.v2-inter h1,
+.v2-inter h2,
+.v2-inter h3,
+.v2-inter h4,
+.v2-inter h5,
+.v2-inter h6 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* =====================================================
    Lenis Smooth Scroll (required base styles)
    ===================================================== */
 html.lenis,
@@ -1162,7 +1184,7 @@ html.lenis body {
    ===================================================== */
 html {
   scroll-padding-top: 60px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* =====================================================
@@ -1179,6 +1201,67 @@ html {
 
   a {
     text-decoration: underline;
+  }
+}
+
+/* =====================================================
+   HOMEPAGE V2 — page-wide diagonal ribbon background
+   Two-color (Sky Blue + Cream, no Mint) traced recreation of the
+   approved 21st.dev reference: the Cream region's real boundary was
+   sampled from the reference image and reproduced as smoothed SVG
+   paths, then softened with a single feGaussianBlur. No turbulence,
+   no grain. Markup: partials/hero-ribbon-bg.njk, included once near
+   the top of <body> (not inside the hero <section>) so it reads as
+   one continuous backdrop for the whole page, not just the hero.
+   `position: fixed` — it stays put behind every section as the page
+   scrolls, rather than scrolling away with the hero.
+   ===================================================== */
+.hero-ribbon-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  /* Must be negative, not 0/auto: sections below the hero (Platform
+     Teaser, Platform Pillars, etc.) have plain, non-positioned section
+     wrappers. A non-positioned element always paints above a sibling
+     that only has z-index:0/auto (positioning order beats DOM order
+     for that comparison) — with z-index:0 this fixed layer would have
+     painted OVER those sections' static content instead of behind it.
+     Negative z-index moves it behind all normal in-flow content while
+     staying above <body>'s own background, which is what we want. */
+  z-index: -1;
+  transform: translateZ(0); /* own compositor layer — static, painted once */
+}
+
+.hero-ribbon-bg__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gentle continuous sway — not a one-direction scroll. The traced
+   shape (hero-ribbon-bg.njk) was never built to repeat, and every
+   attempt to tile/loop it as a conveyor belt (mirroring copies,
+   rebuilding it as a periodic wave) either reversed its direction
+   or changed its silhouette. This animates the single, unmodified
+   shape back and forth within a small range instead — there's only
+   ever one copy on screen, so there's no seam between copies to get
+   wrong. `alternate` + `ease-in-out` keeps it reading as ambient
+   drift, not a mechanical bounce. */
+.hero-ribbon-bg__cream {
+  animation: heroRibbonSway 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroRibbonSway {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-42px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ribbon-bg__cream {
+    animation: none;
   }
 }
 

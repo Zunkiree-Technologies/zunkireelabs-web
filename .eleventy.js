@@ -58,6 +58,14 @@ export default function (eleventyConfig) {
   // Allow access from local network (phones, tablets on same WiFi)
   eleventyConfig.setServerOptions({ host: "0.0.0.0" });
 
+  // Debounce rebuilds: a single save can fire multiple near-simultaneous
+  // file-change events (editor atomic writes, overlapping watch targets),
+  // and with no throttle each one starts its own rebuild. Overlapping
+  // rebuilds racing to copy public/ into dist/public/ at the same time is
+  // what causes the intermittent "ENOENT: mkdir dist/public/..." passthrough
+  // copy failures that corrupt dist/ and require a manual server restart.
+  eleventyConfig.setWatchThrottleWaitTime(300);
+
   // Copy static assets with proper path mapping
   // Vite will process CSS through PostCSS/Tailwind during build
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
@@ -95,6 +103,18 @@ export default function (eleventyConfig) {
       return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
     }
     return d.toISOString();
+  });
+
+  // Checks a src-relative asset path (e.g. "/assets/images/blog/foo.jpg") actually
+  // exists on disk — several blog posts have a featuredImage frontmatter value
+  // pointing at a file that was never added, which otherwise renders a broken image.
+  eleventyConfig.addFilter("fileExists", function(relPath) {
+    if (!relPath) return false;
+    try {
+      return fs.existsSync(path.join(process.cwd(), "src", relPath.replace(/^\//, "")));
+    } catch (e) {
+      return false;
+    }
   });
 
   // Head filter - limit array to first N items
