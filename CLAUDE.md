@@ -54,7 +54,7 @@ Website V2 is a new design layer built on top of the existing implementation.
 **Reference doc chain** (each builds on the last — read only what's relevant to the section at hand, don't fan out into the whole chain every time): `DESIGN_AUDIT.md` + `PROJECT_AUDIT.md` + `CONTENT_SUMMARY.md` → `REDESIGN_STRATEGY.md` (phased plan) → `MASTER_DESIGN_SPEC.md` (design system source of truth) → `COMPONENT_LIBRARY.md` (component definitions) → `PAGE_BLUEPRINTS.md` (per-page section order) → `color-system.html` (live token preview, not a spec).
 
 **Confirmed decisions** (do not re-litigate — build against these):
-- Nav (`navbar-v2.njk`): Industries (Education, Agencies, Healthcare, Real Estate) + Platform as the only two top-level items, Kore.ai style. No separate Products/Solutions/Services top-level menu — that content lives nested inside each industry page.
+- Nav (`navbar-v2.njk`): Industries (Education, Agencies, Healthcare, Real Estate) + Platform + Resources as the three top-level items (revised 2026-07-26 — Resources added back, since Industries/Platform alone read as an incomplete nav). No separate Products/Solutions/Services top-level menu — Products content is nested under Platform; Solutions/service content lives nested inside each industry page instead of the nav.
 - Homepage hero: centered single-column, no Hero Visual (§2.2) split — overrides `PAGE_BLUEPRINTS.md`'s general 50/50 hero-split guidance for this page specifically.
 
 **Still open** (flag before building anything that depends on these; do not assume an answer):

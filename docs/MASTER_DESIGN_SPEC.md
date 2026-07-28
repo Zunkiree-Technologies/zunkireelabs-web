@@ -5,6 +5,8 @@
 **Design benchmark**: Kore.ai (adapted to Zunkiree's own brand — not copied)
 **Brand color**: `#76B900`
 **Date**: 2026-07-20
+**Updated**: 2026-07-26 — global single-background system adopted (Linear/Stripe/Vercel/GitHub/Kore.ai-inspired). Dark section punctuation and the page-wide SVG hero ribbon are retired in favor of one flat background everywhere. The sky-tinted glass-card technique is the one sanctioned exception, kept by explicit decision. Layout container widths and responsive spacing values are unchanged (kept at their kore.ai-measured values, not the generic 1280px/120px reference numbers from the global spec).
+**Updated**: 2026-07-28 — the "single flat background" token is corrected from `#F8FAFC` to **pure white `#ffffff`**, matching the actual shipped homepage-v2 implementation (`hideChrome: true` resolves to a `bg-white` `<body>`, and no section in `homepage-v2.njk` overrides it with a `#F8FAFC` tint). `#F8FAFC` was the originally *specced* value but was never the value actually built against — this doc now documents the real, shipped color so new pages don't reintroduce a background/card mismatch. Since page background and default card background are now the *same* white, card separation depends entirely on the hairline border + shadow (§3/§9/§13) — never on a background-tint step between page and card. See §4/§13 for the corrected card-color guidance.
 
 > This document defines the *system*: principles, tokens, and rules. It does not contain UI mockups or code. Every future page, component, or visual decision should be checkable against this document. If a decision isn't covered here, it should be added here before it's implemented — not decided ad hoc in a template.
 
@@ -49,26 +51,28 @@ A visitor should feel like they've landed on a system that already works — cal
 
 ### Visual identity
 
-- **One accent color** (`#76B900`) used deliberately and sparingly — never as a full-section wash, always as a signal (CTA, active state, key highlight, data visualization accent).
-- **One recurring signature motif**: a dark card with a soft blurred accent-gradient bloom behind it, used for the platform/flagship framing strip and reused at a controlled frequency (2–4 instances per major page) so it reads as a brand device, not a random effect.
+- **One accent color** (`#76B900`) used deliberately and sparingly — roughly **5–10% of the interface**, never as a full-section wash, large heading, or paragraph text; always as a signal (CTA, active nav state, badge, checkmark, success indicator, link/interactive state). The interface stays 90–95% neutral.
+- **One recurring signature motif** *(revised 2026-07-26 — supersedes the dark-card-with-gradient-bloom motif below)*: the **glass surface** (§3 technique 3) — a translucent, sky-tinted card lifted off the flat page background — is now the platform/flagship framing device, reused at a controlled frequency (2–4 instances per major page) so it reads as a brand device, not a random effect. The dark-card + gradient-bloom motif is retired; see §3/§4/§10 for the retirement of dark section backgrounds sitewide.
 - **Real software, shown politely** — actual product screenshots in soft device frames wherever the product is being proven, never raw unframed screenshots and never generic stock illustration standing in for product truth.
 
 ---
 
 ## 3. Visual Language
 
-### Overall aesthetic
+### Overall aesthetic — REVISED 2026-07-26, background value corrected 2026-07-28
 
-Light-dominant surfaces (near-white / very pale neutral) for 80–85% of page real estate, punctuated by dark sections (10–20%) used as premium accents — the platform strip, partner/proof cards, and the final CTA. This ratio is deliberate: dark-as-punctuation reads as considered; dark-as-default reads as heavy.
+**One flat background color across the entire site: pure white `#ffffff`** *(corrected 2026-07-28 — the originally-specced `#F8FAFC` was never what shipped; homepage-v2's actual `<body>` resolves to `bg-white`, and this doc now matches the built site rather than an unbuilt intent)*. This supersedes the prior 80–85% light / 10–20% dark punctuation ratio — dark section backgrounds (platform strip, partner/proof cards, final CTA) are retired sitewide. No gradients, mesh gradients, colorful blobs, glowing backgrounds, noisy textures, or per-section color washes. The background stays identical from hero to footer; depth and "new section" signaling now come entirely from spacing (§7), typography (§5), and component hierarchy (cards, elevation, glass surfaces) — never from a background color/tint change.
 
-### Depth and layering
+Because page background and default card background are now the **same white**, card separation is carried entirely by the hairline border + shadow pair below — there is no background-tint step between "page" and "card" to lean on. Do not reach for a pale off-white (`#F8FAFC`, `#f9fafb`, etc.) as a card or section surface "for contrast" — that reintroduces the alternating-background pattern this spec retires. If a surface needs to visually separate from the page, use `elevation-1`/`elevation-2` (§9) or the glass-surface technique below, not a bg-color shift.
+
+### Depth and layering — REVISED 2026-07-26, background value corrected 2026-07-28
 
 Depth comes from two techniques only, applied consistently:
 
-1. **Soft elevation** — hairline border + low-opacity, large-blur shadow, used to lift cards a few pixels off light backgrounds. Never a hard, tight drop shadow.
-2. **Ambient gradient blur** — soft, out-of-focus color blooms behind dark sections/cards, used instead of shadow to create depth on dark backgrounds.
+1. **Soft elevation** — hairline border (`border-navy-100` or `warm-border`, ~`#e4ecf1`) + low-opacity, large-blur shadow (`shadow-subtle` default, `shadow-card`/`shadow-md` for larger feature cards), used to lift opaque white cards a few pixels off the flat white page background. Since card and page are the same white, the border is load-bearing here — never omit it in favor of shadow alone. Never a hard, tight drop shadow.
+2. **Glass surface** *(added 2026-07-26, confirmed in homepage-v2 build; retained by explicit decision as the one sanctioned exception to the flat-background rule)* — a translucent white card (`bg-white/10`–`/40`, hairline `border-white/60`, `backdrop-blur-md`) over a soft sky-tinted gradient fill (`from-sky-100/70 via-sky-50/30 to-white/40`), used for feature/dashboard cards that need to feel "lifted off" the page's flat background without a shadow. The sky tint is scoped strictly to *inside* the card surface — it never extends to a full-bleed section background (see §10, "Industry Showcase full-bleed wash" retirement). Always pairs with `shadow-subtle` (`elevation-1`), never a heavier elevation.
 
-No other depth technique (skeuomorphic bevels, hard drop shadows, harsh borders) is permitted — depth must always resolve to one of these two.
+**Retired 2026-07-26**: the prior "ambient gradient blur behind dark sections/cards" technique — dark sections no longer exist, so this technique has no surface to apply to. No other depth technique (skeuomorphic bevels, hard drop shadows, harsh borders, ambient background blooms) is permitted — depth must always resolve to one of the two techniques above.
 
 ### Balance
 
@@ -90,31 +94,41 @@ Whitespace is the single largest lever for the "premium" feel (DESIGN_AUDIT.md �
 
 ## 4. Color System
 
-Brand accent `#76B900` replaces the prior "zunkiree sage" token as the system's single accent color. The existing `navy` scale becomes the primary dark/text-neutral family; the existing `sky` blue accent is retired from primary use (it competed with the sage token and created a two-accent system — see PROJECT_AUDIT.md §9). One accent color, full stop.
+Brand accent `#76B900` replaces the prior "zunkiree sage" token as the system's single **action/persuasion** accent color. The existing `navy` scale is the primary dark/text-neutral family. One *persuasion* accent color, full stop, used for roughly **5–10% of the interface** — primary CTAs, active nav states, small badges, icons, checkmarks, success indicators, links/interactive states. Never for large backgrounds, section backgrounds, hero backgrounds, large headings, paragraph text, or decorative elements. The interface stays **90–95% neutral**.
+
+**Sky — reinstated as a sanctioned secondary tonal token, scope narrowed 2026-07-26:** `sky` is used in one specific, non-persuasive role and must stay scoped to it:
+1. **Glass-surface tint only** — the gradient fill *inside* every glass card (§3 technique 3: `from-sky-100/70 via-sky-50/30 to-white/40`). This is atmosphere/surface for a card, not a call-to-action color — it never appears on a button, link, or anything meant to be clicked.
+2. **Secondary data/status differentiation** — distinguishing a second data series or non-primary status state from the brand-green one in dashboards and badges (e.g. the "Agent" scatter-plot series vs. the "Search" series, a `Running` status badge vs. a `Completed` one). Brand green always remains the "this is the important/active one" signal; sky marks "this is the other one," never the primary action.
+
+**Retired 2026-07-26**: the full-bleed pale section wash (`bg-sky-50`) previously used behind the Industry Showcase. A full-section background tint — even a pale, non-persuasive one — conflicts with the single flat `#ffffff` background rule (§3/§10). The Industry Showcase now sits on the same flat background as every other section; sky is confined to the inside of glass-card surfaces only.
+
+This does not reopen the door to arbitrary second accents — sky is the *one* permitted exception, reserved strictly for glass-card-surface tint and secondary data/status differentiation, and no other new hue may be introduced the same way without amending this document first.
 
 | Semantic role | Token | Usage guidance |
 |---|---|---|
 | **Primary** | `#76B900` (brand green) | Primary CTA buttons, active tab/nav states, key data highlights, focus rings, links on dark backgrounds. Never a full-section background wash — always foreground or accent-scale use. |
 | **Primary (hover/pressed)** | Darkened step of primary (~15–20% darker) | Hover/active states on primary buttons and links only. |
-| **Secondary** | Navy-900 / near-black (`#1b3139`-family) | Dark section backgrounds (platform strip, proof cards, final CTA), primary heading text on light backgrounds. |
+| **Secondary** | Navy-900 / near-black (`#1b3139`-family) | Primary heading text on light backgrounds only. *(Retired 2026-07-26: "dark section backgrounds" use case — platform strip, proof cards, and final CTA no longer use dark backgrounds; see §3/§10.)* |
 | **Accent (supporting)** | One neutral-cool gray, used only as a tint inside the primary green family (e.g., a pale green-50/100 tint) for badges, pills, subtle highlight backgrounds — not a second hue. | Category label pills, subtle info highlights. Must always derive from the primary green scale, not introduce a new hue. |
 | **Success** | Existing `success` scale (`#10b981` family) | Form success states, confirmation messaging only. Distinct from primary green — do not conflate "brand green" with "success green" in the same component; differentiate by context (a filled CTA vs. a status badge). |
 | **Warning** | Existing `warning` scale (`#f59e0b` family) | Form/validation warnings only. |
 | **Error** | Existing `error` scale (`#ef4444` family) | Form/validation errors only. Never used decoratively. |
-| **Background (page)** | Near-white (`warm-off-white` / `#f9fafb`-family) | Default page background. |
-| **Background (section alt)** | Very pale neutral tint (`warm-gray` / `warm-surface` family) | Alternates with page background to signal a new section without borders — mirrors Kore.ai's white → pale → white rhythm. Never a saturated color wash. |
-| **Surface** | White (`#ffffff`) | Card, modal, input, dropdown surfaces sitting on top of a page/section background. |
-| **Border** | `warm-border` / `cool-border` (pale blue-gray, ~`#e4ecf1`) | Card hairlines, input borders, dividers between unrelated elements. Always low-contrast — borders differentiate, they don't decorate. |
-| **Divider** | Same family as Border, lighter weight/opacity | Used only inside a single component (e.g., separating list rows), never between major sections — section separation is whitespace + background-tint, not a rule line. |
-| **Text Primary** | Near-black / navy-900 (`#111827`–`#1b3139` range) | Headlines, primary body copy. |
-| **Text Secondary** | Warm-charcoal (`#374151`-family) | Subheads, secondary body copy, card descriptions. |
-| **Text Muted** | `warm-muted` (`#5a6f77`-family) | Captions, metadata, timestamps, placeholder text, disabled states. Must still meet WCAG AA against its background (see §22). |
+| **Background (page)** | **`#ffffff`** *(corrected 2026-07-28 — was specced as `#F8FAFC` on 2026-07-26, but the shipped homepage-v2 `<body>` is `bg-white`; this row now documents the actual built value, not the unbuilt intent)* | The **only** background color used anywhere on the site — hero through footer, every section, every page. No exceptions, no alternate tint, no gradient. |
+| ~~Background (section alt)~~ | *(Retired 2026-07-26)* | Section alternation (white ↔ pale ↔ dark) is retired. New sections are signaled by spacing/typography/component hierarchy only (§3, §7) — never a background-color change. |
+| **Surface (card)** | White (`#ffffff`) *(clarified 2026-07-28 — identical to page background by design, not a distinct "off-white" tone)* | Card, modal, input, dropdown surfaces sitting on top of the flat page background. Since surface and page share the same white, a card is **never** identifiable by background color alone — it must always carry the Border token below plus an elevation shadow (§9). A card built with white-on-white and no border/shadow is a defect, not a valid "flat" variant. |
+| **Surface (hover)** | `#f8fafc` (`--card-hover` in `main.css`) | Reserved narrowly for a card's own hover/active background shift (e.g. a clickable list-row card darkening slightly on hover) — this is a state change on one component instance, not a base page/section/card background. Do not use this value as a resting-state background for any new surface. |
+| **Border** | `warm-border` / `cool-border` (pale blue-gray, ~`#e4ecf1`) / `border-navy-100` | Card hairlines, input borders, dividers between unrelated elements. Always low-contrast — borders differentiate, they don't decorate. On a white-on-white card, this border is the primary separation signal, not a secondary one — never drop it to `border-transparent` for a "cleaner" look. |
+| **Divider** | Same family as Border, lighter weight/opacity | Used only inside a single component (e.g., separating list rows), never between major sections — section separation is whitespace alone now (background-tint separation is retired, see above). |
+| **Text Primary (Heading)** | `#111827` | Headlines only (H1–H3). |
+| **Text Body** | `#374151` *(updated 2026-07-26 — reassigned from the retired "Text Secondary" role to primary paragraph/body copy, per the new global type-color spec)* | Primary paragraph/body copy. |
+| **Text Secondary** | `#6B7280` *(new tier, added 2026-07-26)* | Subheads, secondary/supporting copy, card descriptions — one step down from body text. |
+| **Text Muted / Caption** | `#9CA3AF` *(updated 2026-07-26 — replaces the prior `#5a6f77`-family "warm-muted" value)* | Captions, metadata, timestamps, placeholder text, disabled states. Must still meet WCAG AA against its background (see §22) — verify at this lighter value, especially on white card surfaces. |
 
 **Usage guardrails (apply to every future component):**
-- Exactly one accent hue exists in the system: brand green. Any new "second accent" proposal must be rejected or converted into a green-scale tint.
-- Color differentiates sections via background tint (white ↔ pale-neutral ↔ dark), never via full-saturation color blocks.
-- Dark sections should stay in the 10–20% of total page-surface range described in §3 — if a page is trending darker than that, that's a signal to convert a section back to light rather than "balance" with more dark sections elsewhere.
-- Gradients (see §10) are the only place color is allowed to blend/transition — solid fills stay solid.
+- Exactly one *persuasion* accent hue exists in the system: brand green, at ~5–10% of the interface. `sky` (above) is the one sanctioned non-persuasion exception, scoped strictly to glass-card-surface tint and secondary data/status differentiation; any other new "second accent" proposal must be rejected or converted into a green-scale tint.
+- **Single flat background, sitewide** *(2026-07-26; value corrected 2026-07-28)*: `#ffffff` is the only background color, from hero to footer. Section differentiation comes from spacing, typography, and component hierarchy — never from a background-color or tint change, and never from a dark section.
+- **Card-on-white requires border + shadow, always** *(added 2026-07-28)*: because card surface and page background are the same white, a new card is never "done" until it has both a hairline border and an elevation shadow (§9/§13). Skipping either makes the card invisible against the page.
+- Gradients (see §10) are retired except for the one sanctioned glass-card sky tint (§3 technique 3) — solid fills stay solid everywhere else.
 
 ---
 
@@ -139,13 +153,18 @@ Firecrawl's branding extraction returned exact computed sizes from the live page
 
 | Style | Size (desktop) | Weight | Line height | When to use |
 |---|---|---|---|---|
-| Display / H1 | **57px** (measured, kore.ai `h1`) | 600 | 1.1 (tight) | Hero headlines only — max one per page. Homepage-v2 hero uses `lg:text-[57px]`. |
-| H2 | **~33px** (measured, kore.ai `h2`; use 32px to stay on the 4px-friendly scale) | 600 | 1.2 | Sub-section headline within a page. |
+| Display / H1 | **57px** (measured, kore.ai `h1`), 38–48px responsive steps | **500** *(revised 2026-07-26 — was 600; homepage-v2 hero ships at `font-medium` to keep the hero's two-line headline visually lighter than the platform-teaser H2 below it)* | 1.1–1.15 (tight) | Hero headlines only — max one per page. |
+| Subhead | 24–26px *(added 2026-07-26 — homepage-v2 hero support line ships at 26px, not the 14px Body size originally specced here)* | 500 | 1.5 (relaxed) | The single support line directly under a Display/H1 hero headline only — not a general body-copy substitute. |
+| H2 | **~33px** (measured, kore.ai `h2`; use 28–32px responsive to stay on the 4px-friendly scale) | 600 | 1.2 | Sub-section headline within a page. |
 | H3 | ~20–22px (not directly measured — estimated per DESIGN_AUDIT.md ratio) | 500 | 1.3 | Card titles, minor headings. |
 | Body (default) | **14px** (measured, kore.ai `body`) — down from this doc's earlier 16–18px estimate | 400 | 1.6 (loose) | All paragraph copy. Loose line-height is deliberate — it's a major contributor to the "unhurried" premium read. |
 | Small / Caption | 12–14px | 500 | 1.4–1.5 | Metadata, labels, category pills, timestamps. Caption weight is medium, not regular, since it's small enough to need slightly more visual weight to stay legible. |
 
 **Note on scope**: these exact px values are applied in `homepage-v2.njk`/`navbar-v2.njk` only. The shared `tailwind.config.js` font-size tokens (`h1`, `h2`, `body`, etc.) are untouched since they're used by the live site.
+
+### Mono usage — REVISED 2026-07-26 (supersedes the "reserved for stat numeral only" rule below and in §12)
+
+The built homepage-v2 uses DM Mono for every uppercase micro-label, not just stat numerals: button labels, tab labels, eyebrow/category labels, and status badges all ship in mono, uppercase, with wide tracking (`font-mono text-[11–13px] uppercase tracking-wide`). This is now the confirmed rule — **DM Mono is the required typeface for any short, uppercase, micro-scale label**, alongside its original stat-numeral role. It is never used for headline, subhead, or body-copy sentences — that boundary is unchanged.
 
 ### Letter spacing
 
@@ -172,9 +191,11 @@ Never skip a level for stylistic reasons (no H3 styled larger than an H2 "becaus
 - **40/60 or 60/40** (text + visual pairing with a dominant side — used when one side is denser, e.g., a longer copy block next to a compact stat card)
 - **3-column or 4-column repeaters** (card grids, logo walls, stat rows)
 
+**Note (2026-07-26)**: a generic global-design-language reference recommended a flat 1280px max-width and flat 120px section spacing. Evaluated and **not adopted** — the container widths and responsive spacing below are calibrated from actual Kore.ai measurements (DESIGN_AUDIT.md Firecrawl scrape) and remain the system of record; kept as-is by explicit decision.
+
 ### Container widths
 
-- **Outer bleed**: backgrounds (gradients, ambient blooms, dark section fills) run full viewport width.
+- **Outer bleed**: the single flat `#ffffff` background (§10) runs full viewport width; no gradients or ambient blooms exist to bleed anymore.
 - **Content container**: capped at the existing `max-w-content` (~1536px) for wide layouts (card grids, full feature blocks) — do not introduce a second content-width token.
 - **Narrow text container**: headline + subhead pairs, and any single-column prose block, further constrain to the existing `max-w-narrow` (~1152px) or tighter (~600–700px for hero headline/subhead specifically) to keep line length readable, per DESIGN_AUDIT.md §4.
 
@@ -222,7 +243,7 @@ One radius family, three values only — matching DESIGN_AUDIT.md §10's finding
 | Token | Value | Use |
 |---|---|---|
 | `radius-md` | 8–10px | Default for cards, inputs, images, modals, badges, **and buttons** — the system default. Buttons switched to this value from full-round per the Kore.ai-inspired hero revamp (2026-07-21): small-radius rectangular buttons read as more technical/engineered, matching the reference this redesign is directly modeled on. |
-| `radius-lg` | 14–16px | Larger surfaces where `radius-md` reads as too tight relative to size — big feature cards, the dark platform-strip card, large modals. |
+| `radius-lg` | 14–28px *(range widened 2026-07-26 — the homepage-v2 dashboard's outer wrapper card ships at `rounded-[28px]` to visually contain two nested glass cards; 28px is the upper bound of this token, not a new one-off value)* | Larger surfaces where `radius-md` reads as too tight relative to size — big feature cards, the dark platform-strip card, large modals, outer "frame" containers wrapping nested cards. |
 | `radius-pill` | 999px (full) | Pill-shaped category/eyebrow labels only (badges, tags) — no longer used for buttons (see `radius-md` above). |
 
 No sharp 0px corners anywhere in the new system, and no radius values outside this set (no per-component custom rounding).
@@ -240,7 +261,7 @@ Two elevation techniques total (see §3) — resist adding a third.
 | `elevation-2` (card) | Low opacity, larger blur, no hard edge | Cards that need to visually separate from a busier background (e.g., a card over a pale gradient section). |
 | `elevation-3` (hover) | Slightly increased blur/opacity vs. `elevation-2` | Hover/active state only — never a resting state. |
 
-**Dark sections never use shadow for depth** — they use ambient gradient blur instead (§10). Mixing shadow-based and glow-based depth techniques within the same section is not allowed.
+*(Retired 2026-07-26: "dark sections never use shadow" rule — dark sections no longer exist in the system. All elevation now resolves to shadow-based technique 1 or glass-surface technique 2, per §3.)*
 
 **Elevation hierarchy**: higher elevation = closer to the user = more interactive/important. Modals and dropdowns sit above cards; cards sit above page background. Don't invert this (e.g., a resting card should never out-elevate an active modal).
 
@@ -248,37 +269,27 @@ Two elevation techniques total (see §3) — resist adding a third.
 
 ## 10. Background & Gradient System
 
-### Page backgrounds
+### Page backgrounds — REVISED 2026-07-26 (single global background, sitewide); value corrected 2026-07-28
 
-Default: near-white / pale-neutral (§4). No page opens on a saturated color background.
+Default and **only** background: `#ffffff`, flat, unbroken, from the hero through the footer, on every page and every template *(corrected 2026-07-28 — `#F8FAFC` was the original 2026-07-26 spec value, but homepage-v2 shipped on plain white `bg-white`; this section now matches the built site)*. No gradients, mesh gradients, colorful blobs, glowing backgrounds, noisy textures, or per-section color variation. This supersedes the prior "near-white / pale-neutral, no page opens on a saturated background" wording — it is now stricter: no page opens on, or transitions to, *any* background other than `#ffffff`.
 
-### Section backgrounds
+### Section backgrounds — REVISED 2026-07-26
 
-Alternate deliberately between: white → pale-neutral tint → white → dark (per DESIGN_AUDIT.md §12). This alternation is the primary "new section" signal — it replaces the need for visible borders/dividers between sections.
+The white → pale-neutral → white → dark alternation rule is **retired sitewide**. What was previously homepage-v2's scoped exception (one flat background reused identically across every section) is now the standard for the entire site. New sections signal themselves via whitespace/spacing (§7) and typography/component hierarchy — never via a background-tint or background-color change.
 
-### Gradient usage — exactly two treatments, no others
+### Gradient usage — RETIRED 2026-07-26, one exception only
 
-1. **Ambient light gradient** — pale, low-saturation radial blends (neutral/navy, no blue per the one-accent rule) used as atmosphere behind hero and top-of-page content only — matching the Kore.ai reference's own scoping (its ripple effect doesn't continue past the hero either). Purpose is texture, not attention — must never reduce text contrast below AA (§22).
+Both previously-sanctioned page-background gradient treatments are retired:
 
-   **Approved palette — confirmed hero color stops** (supersedes any earlier "Soft Aurora Mint" derivation — do not re-derive/reinvent per section):
-   | Role | Hex | Weight in composition |
-   |------|-----|------|
-   | Green Tea | `#EEF6E3` | Dominant — solid page base underneath everything |
-   | Sky | `#CFE9F0` | Dominant secondary — large blurred glow, top-left |
-   | Matcha | `#9BCC94` | Accent only — ~1% of canvas, tiny corner glow (bottom-right), never sized/opacity-matched to Sky |
+1. ~~**Ambient light gradient** (radial blooms)~~ — retired; radial glow blooms behind hero/top-of-page content are no longer part of the system.
+2. ~~**Pixel-matched SVG hero ribbon**~~ *(the Sky Blue / Warm Cream / Mint Green diagonal band treatment introduced 2026-07-23 for homepage-v2, `partials/hero-ribbon-bg.njk`)* — retired. The page-wide ribbon backdrop conflicts with the single flat `#ffffff` background rule above. Do not reintroduce this treatment or the prior radial-bloom palette (Green Tea `#EEF6E3`, Sky `#CFE9F0`, Matcha `#9BCC94`) — both are historical reference only.
+3. ~~**Saturated accent gradient (bloom) inside dark cards**~~ — retired along with dark sections (§3/§4). The platform/flagship framing strip now uses the glass-surface technique (§3 technique 2) as its signature device instead.
 
-   **Confirmed hero ratio (2026-07-23):** Green Tea + Sky must read as the dominant colors of the hero at a glance; Matcha is a small hint of brand green in one corner, not a second co-equal blob. If a future tweak makes Matcha visually comparable in size/opacity to Sky, that's a regression — shrink it back down rather than asking the user again.
-
-   Rendered as soft, low-opacity radial blooms (not linear/banded, not hard-edged) blended with the site's grain texture — same technique as the shared page backdrop.
-2. **Saturated accent gradient (bloom)** — a contained, multi-stop blend anchored in the brand green (green → adjacent cool tone, e.g., green→teal→navy) used *only* inside dark cards, to mark the single most important element on a page (the platform/flagship strip). This is the recurring "signature motif" from §2 — deliberately rare (2–4 uses per page max) so it stays a signature rather than wallpaper.
+**The one remaining exception**: the glass-card sky-tint gradient (§3 technique 2, §4) — `from-sky-100/70 via-sky-50/30 to-white/40`, used only *inside* an individual glass-card surface, never as a section or page background. This is a deliberate, explicitly-approved carve-out from the "no gradients" rule, not a reopening of the broader gradient system.
 
 **Rules:**
 - Gradients are never applied directly to text or buttons — text and interactive elements stay flat/solid for legibility and consistent hit-state styling.
-- No gradient introduces a hue outside the green/navy/neutral family — a purple or orange gradient bloom would break the one-accent-color rule even if it's "just a background."
-
-### Ambient lighting / blur effects
-
-Blur radius on ambient shapes should be large enough that the shape itself is unrecognizable (pure atmosphere, not a visible blob outline). Where animated (see §18), motion is slow ambient drift only — never fast, never looping in a way that draws the eye away from foreground content.
+- Outside the one sanctioned glass-card tint, no gradient, blob, glow, or ambient background effect is permitted anywhere on the site.
 
 ---
 
@@ -297,7 +308,7 @@ Universal rules every component — present or future — must satisfy:
 
 ## 12. Button System
 
-**Revision note (2026-07-21)**: Button shape changed from `radius-pill` to `radius-md` (small-radius rectangle) to match the Kore.ai reference this redesign is directly modeled on (see hero revamp) — pill-shaped buttons read as too soft/consumer-SaaS next to that reference's more technical, engineered feel. Labels are uppercase with wide tracking (the same allowance §5 already grants pill/caption labels) at weight 500 — **not** DM Mono, which stays reserved for data/stat callouts only (§5).
+**Revision note (2026-07-21)**: Button shape changed from `radius-pill` to `radius-md` (small-radius rectangle) to match the Kore.ai reference this redesign is directly modeled on (see hero revamp) — pill-shaped buttons read as too soft/consumer-SaaS next to that reference's more technical, engineered feel. Labels are uppercase with wide tracking, weight 500, set in **DM Mono** — per §5's 2026-07-26 revision, mono is now the standard typeface for uppercase micro-labels including button/tab/eyebrow labels, not just stat numerals.
 
 | Variant | Visual | Use |
 |---|---|---|
@@ -319,6 +330,12 @@ Universal rules every component — present or future — must satisfy:
 
 All cards share: `radius-md` (or `radius-lg` for large feature cards), `elevation-1` default / `elevation-3` on hover if interactive, internal padding from `space-3`–`space-4`, and consistent internal structure (label/eyebrow → title → body → optional CTA).
 
+**Card-on-white rule (2026-07-28)**: default card surface (`#ffffff`) is identical to the page background (`#ffffff`, §4/§10) — there is no pale off-white step between them. Every opaque card must therefore always ship with **both**:
+1. A hairline border (`border-navy-100`, `warm-border`, or `cool-border` — never `border-transparent`).
+2. An elevation shadow (`shadow-subtle` default, `shadow-card`/`shadow-md` for larger feature cards — never "no shadow" as a resting state for a bounded card).
+
+A card missing either is effectively invisible against the page and should be treated as a build defect, not a stylistic variant. The **glass card** (below) is the one exception — its translucency + `backdrop-blur-md` provides separation without needing an opaque white fill.
+
 | Card type | Structure | Notes |
 |---|---|---|
 | **Feature card** | Icon/label → title → short body → optional link | Used in repeaters (3–4 column grids) for capability/benefit lists. |
@@ -327,6 +344,7 @@ All cards share: `radius-md` (or `radius-lg` for large feature cards), `elevatio
 | **Testimonial card** | Logo/name header → quote body → minimal chrome | Content-forward; no decorative imagery competing with the quote. Used in the tabbed/logo-navigated pattern (§15), never a static uncredited quote. |
 | **Pricing card** | Tier name → price → feature list → single CTA | If used, exactly one tier gets visual emphasis (border/elevation bump) — never more than one "recommended" card per row. |
 | **CTA card** | Short headline → one-line support copy → one or two buttons | Used for the closing dual-CTA pattern (§ below) and mid-page soft conversions. |
+| **Glass card** *(added 2026-07-26)* | Same internal structure as Feature/Stats cards | Uses the §3 "Glass surface" depth technique (translucent white + sky-tinted gradient + `backdrop-blur-md`) instead of opaque white + shadow. `radius-lg`, `elevation-1` (`shadow-subtle`) only — never a heavier elevation, since the translucency itself already provides visual separation. Used for the Platform Pillars and Outcome/dashboard cards in homepage-v2. |
 
 **Interaction rule**: cards that are fully clickable get a hover elevation bump (`elevation-1` → `elevation-3`) and nothing else flashy — no scale/zoom transforms, no color inversion. Cards that contain their own internal CTA button are not also globally clickable (avoids nested-link ambiguity).
 
@@ -397,7 +415,7 @@ Motion philosophy, stated once and applied everywhere: **motion supports credibi
 - **Hover interactions**: elevation bump on cards (§9), color/border shift on buttons (§12) — no scale/zoom, no rotation, no color-inverting hover states. Hover feedback should be felt, not noticed.
 - **Focus states**: visible, high-contrast focus ring (brand green, 2px, offset from the element) on every interactive element — never suppressed for aesthetic reasons (hard accessibility requirement, §22).
 - **Loading states**: inline, contextual (button spinner, skeleton block matching the final content's shape/radius) — never a full-page blocking spinner for content that could progressively render.
-- **Micro-interactions**: reserved for ambient gradient-bloom drift (§10) — slow (10s+ cycle), continuous, low-amplitude. Covers dark-card blooms and hero-scoped ambient blooms (a slow breathing-scale drift on the hero's concentric-ring bloom, per the homepage-v2 Kore.ai-matched revamp) — never a page-wide/multi-section background, since the Kore.ai reference itself scopes its ripple effect to the hero only. Everywhere else, motion stays a one-time response to a scroll/hover/focus event, not an idle-state animation.
+- **Micro-interactions** *(revised 2026-07-26)*: ambient gradient-bloom drift and the SVG hero ribbon are both retired along with the background/gradient system they belonged to (§10) — there is no longer a sanctioned idle-loop background animation. Motion stays a one-time response to a scroll/hover/focus event only.
 - **Reduced motion**: every animation must respect `prefers-reduced-motion` — carries forward the existing Lenis implementation's handling of this (PROJECT_AUDIT.md §10) as the standard, non-negotiable for new motion work.
 - **Performance bar**: 60fps target for all animation (per CLAUDE.md's existing Quality Standards) — scroll-scrubbed effects in particular must be profiled, not just visually approved.
 
@@ -408,9 +426,9 @@ Motion philosophy, stated once and applied everywhere: **motion supports credibi
 Every template below follows the trust-ladder ordering from §1/§8 unless noted. These are structural recommendations (section order and purpose), not layout mockups.
 
 ### Homepage
-1. Hero — short headline + subhead + dual CTA, ambient gradient backdrop (no dense carousel of competing messages).
+1. Hero — short headline + subhead + dual CTA, flat `#ffffff` background *(revised 2026-07-26 — ambient gradient backdrop retired, see §10; value corrected 2026-07-28)* (no dense carousel of competing messages).
 2. Industry self-identification — tab/card switcher across the four verticals (Education / Agencies / Healthcare / Real Estate).
-3. Platform framing strip — dark gradient-bloom card introducing the shared platform layer (multi-tenant CRM / Search / Orca) as the "why this scales" answer.
+3. Platform framing strip — glass-surface card *(revised 2026-07-26 — was a dark gradient-bloom card; now uses the sky-tinted glass-surface technique, §3 technique 2, as the signature device)* introducing the shared platform layer (multi-tenant CRM / Search / Orca) as the "why this scales" answer.
 4. Proof — real client logos/case-study cards, grouped by vertical where possible.
 5. Outcome feature block — one real product screenshot + outcome-oriented copy (50/50 split).
 6. Testimonial (tabbed by real client, once enough real quotes exist).
@@ -510,23 +528,26 @@ This carries forward and formalizes the "Accessibility (semantic HTML, alt text)
 ## 24. Design Dos & Don'ts
 
 **Always:**
-- Use exactly one accent color (brand green) system-wide.
+- Use exactly one accent color (brand green) system-wide, at ~5–10% of the interface — 90–95% neutral.
+- Use a **single flat background color (`#ffffff`) across the entire site** *(2026-07-26; value corrected 2026-07-28 to match the shipped homepage-v2 `bg-white`)* — hero through footer, every section, every page.
+- Give every opaque card **both** a hairline border and an elevation shadow *(2026-07-28)* — card and page share the same white, so neither can be dropped for the card to remain visible.
 - Trace every spacing, radius, shadow, and type value back to a token defined in this document.
 - Pair every hard CTA with a soft CTA.
 - Show real proof (client names, real screenshots, sourced stats) wherever a page claims capability.
-- Alternate section backgrounds (white/pale/dark) to signal new sections instead of adding borders.
+- Signal new sections with whitespace/spacing and typography/component hierarchy *(2026-07-26 — supersedes the background-alternation rule below)*.
 - Respect `prefers-reduced-motion` and WCAG AA contrast on every new component.
 - Build components as reusable/parameterized, not page-specific forks.
 
 **Never:**
-- Introduce a second accent hue "just for this section."
-- Use full-saturation color washes across an entire section background.
+- Introduce a second *persuasion/action* accent hue "just for this section." (`sky`, per §4, is the one sanctioned exception, reserved strictly for glass-card-surface tint and secondary data/status differentiation — never for CTAs, links, or section/page backgrounds.)
+- Use full-saturation color washes, gradients, blobs, glows, or dark backgrounds across any section — *(2026-07-26)* this now includes what were previously the platform strip, proof cards, and final CTA's dark backgrounds, and the homepage-v2 SVG hero ribbon — all retired.
+- ~~Alternate section backgrounds (white/pale/dark) to signal new sections~~ *(retired 2026-07-26 — see "Always" above)*.
 - Use hard drop shadows or heavy skeuomorphic elevation.
 - Use bold (700+) headline weight — medium/semibold only.
 - Fabricate a client logo, quote, or statistic to fill a proof section (hard content guardrail from CONTENT_SUMMARY.md, enforced visually by never designing a "logo wall" or "testimonial" slot that could tempt a placeholder fill).
 - Use "coming soon / pilot / demo" framing on any of the four core vertical pages.
 - Let a component's visual treatment drift from its category's defined rules (§12–§17) to solve a one-off layout problem — solve it by extending the token/rule set instead.
-- Animate anything on an idle loop except the one sanctioned ambient-gradient-bloom drift (§18).
+- Animate anything on an idle loop *(2026-07-26 — the prior ambient-gradient-bloom exception is retired along with the background/gradient system; there is no longer any sanctioned idle-loop animation)*.
 
 **Common mistakes to avoid** (drawn directly from PROJECT_AUDIT.md's findings — do not repeat):
 - Letting Tailwind tokens, CSS custom properties, and raw inline hex coexist in the same template (§9 of PROJECT_AUDIT.md) — this system must be enforced as Tailwind-tokens-only, no exceptions, no inline hex.
@@ -575,9 +596,10 @@ Every new page or component must satisfy all of the following before it is consi
 - [ ] No idle-loop animation except the sanctioned ambient-gradient drift.
 
 **Brand consistency**
-- [ ] Only the brand green accent hue appears; no second accent color introduced.
-- [ ] Dark-section surface area stays within the ~10–20% page-total guidance (§3/§4).
-- [ ] Radius, shadow, and gradient treatments match §8/§9/§10 exactly.
+- [ ] Only the brand green persuasion accent appears on CTAs/links, at ~5–10% of the interface; `sky` (if used) is confined to glass-card-surface tint or secondary data/status differentiation only (§4) — no other second accent color introduced.
+- [ ] **Single flat `#ffffff` background used everywhere** — no dark section, no section-background tint change, no page-wide gradient/ribbon (§3/§4/§10, 2026-07-26; value corrected 2026-07-28).
+- [ ] **Every opaque card ships with both a hairline border and an elevation shadow** — card and page share the same white, so a card with only one (or neither) is invisible against the page (§13, 2026-07-28).
+- [ ] Radius and shadow treatments match §8/§9 exactly; the only gradient present anywhere on the page is the glass-card sky tint (§3 technique 2), if used.
 
 **Component consistency**
 - [ ] New UI reuses an existing component definition (§12–§17) rather than forking a new one, unless a genuine new category is justified and should be added to this document.
@@ -593,6 +615,8 @@ Every new page or component must satisfy all of the following before it is consi
 
 ## Notes on Precedence
 
-Where this document's guidance and an existing implementation detail (e.g., current `tailwind.config.js` tokens) disagree, **this document wins** — existing tokens are a starting point to be reconciled during Phase 1 (per REDESIGN_STRATEGY.md's action plan), not a constraint on this spec. Specifically: the current `sky` blue accent is retired, the current `borderRadius.none` "sharp edges" token is retired, and current 700-weight heading tokens are retired in favor of the values defined here.
+Where this document's guidance and an existing implementation detail (e.g., current `tailwind.config.js` tokens) disagree, **this document wins** — existing tokens are a starting point to be reconciled during Phase 1 (per REDESIGN_STRATEGY.md's action plan), not a constraint on this spec. Specifically: the current `sky` blue accent is retired except for its narrow glass-card-tint/secondary-data role (§4), the current `borderRadius.none` "sharp edges" token is retired, and current 700-weight heading tokens are retired in favor of the values defined here.
+
+**2026-07-26 global background update**: a generic global-design-language reference (Linear/Stripe/Vercel/GitHub/Kore.ai-inspired, single flat `#F8FAFC` background, 90–95% neutral / 5–10% brand accent) was adopted sitewide, superseding the previously-confirmed homepage-v2 dark-section punctuation (§3/§4) and the pixel-matched SVG hero ribbon (§10) — both are now retired everywhere, including homepage-v2, by explicit decision. The sky-tinted glass-card surface technique (§3 technique 2) was kept as the one sanctioned exception, also by explicit decision — it is not a gap in adoption, it's a deliberate carve-out. Layout container widths (§6) and responsive section-spacing values (§7/§21) were evaluated against the same reference's generic 1280px/120px numbers and **not changed** — the existing Kore.ai-measured values remain authoritative.
 
 Content, IA, and messaging decisions remain governed by CONTENT_SUMMARY.md and the underlying industry-context source document — this spec defines *how things look*, not *what they say* or *how pages are organized*, except where layout/structure is inherently a design decision (page templates, §19).

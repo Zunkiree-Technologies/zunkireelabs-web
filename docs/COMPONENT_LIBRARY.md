@@ -4,6 +4,7 @@
 **Inputs**: [MASTER_DESIGN_SPEC.md](./MASTER_DESIGN_SPEC.md) (design system/tokens), [PROJECT_AUDIT.md](./PROJECT_AUDIT.md) (engineering architecture), [REDESIGN_STRATEGY.md](./REDESIGN_STRATEGY.md) (sequencing), [CONTENT_SUMMARY.md](./CONTENT_SUMMARY.md) (content/IA)
 **Scope**: Component definitions only. No UI, no code, no mockups.
 **Date**: 2026-07-20
+**Updated**: 2026-07-26 — synced with MASTER_DESIGN_SPEC.md's global single-background update. Every reference to the retired dark-section/gradient-bloom system (Hero's ambient gradient backdrop, CTA Banner/CTA Card's `dark` variant, the Platform Framing Strip's dark-card framing) is updated to the flat `#F8FAFC` background + glass-surface system. Tooltip's dark popover surface is unaffected — it was never part of the retired page-section system.
 
 > Every component below traces back to a rule in MASTER_DESIGN_SPEC.md. Where a 21st.dev MCP component is recommended, it was located live in the 21st.dev catalog (name/author/URL cited) — not assumed. Component names are role-based, addressing PROJECT_AUDIT.md §5's finding that current partials are named for their page, not their function.
 
@@ -95,13 +96,13 @@ Each component entry defines:
 
 - **Purpose**: Above-the-fold framing statement + primary conversion pair; the page's single Display-type moment.
 - **Priority**: Core
-- **Variants**: `homepage-hero` (industry self-identification framing, ambient gradient backdrop) / `vertical-hero` (industry-specific live-production claim) / `simple-hero` (About/Pricing/Contact — short framing statement, no dual visual).
+- **Variants** *(revised 2026-07-26 — ambient gradient backdrop retired, see MASTER_DESIGN_SPEC.md §10)*: `homepage-hero` (industry self-identification framing, flat `#F8FAFC` background) / `vertical-hero` (industry-specific live-production claim) / `simple-hero` (About/Pricing/Contact — short framing statement, no dual visual).
 - **When to use**: Exactly once per page, always the first section.
-- **Composition**: Label Pill (optional eyebrow) + Display headline + Body subhead + Button Primary + Button Secondary (§12 dual-CTA rule) + Ambient Light Gradient (§10.1) background.
+- **Composition** *(revised 2026-07-26)*: Label Pill (optional eyebrow) + Display headline + Body subhead + Button Primary + Button Secondary (§12 dual-CTA rule), on the flat page background — no gradient background layer.
 - **Responsive behavior**: Type steps down one tier on mobile (Display ≈ desktop H1 size per §21); dual CTA stacks vertically below tablet.
-- **Accessibility**: Single `h1` per page lives here; gradient background must not drop text below AA contrast (§22) — verify per-instance, not just per-token.
-- **Dependencies**: Ambient Gradient system (§10), Button system (§9.1).
-- **Implementation approach**: **Adapt a 21st.dev MCP component.** "Hero Static Radial Gradient" (`cult-ui`, id 19151) is the closest structural match — split-layout hero with a responsive gradient visual, headline, and CTA button, which maps directly to §10's "ambient light gradient behind hero" rule. *Why*: solves the gradient-hero layout mechanics (responsive shader/gradient positioning) that are easy to get wrong when hand-built. *What to customize*: replace the shader visual with MASTER_DESIGN_SPEC.md §10's pale/low-saturation radial bloom (never a hard-edged shader shape), cap headline to the 6-step type scale (§5), add the mandatory secondary/soft CTA (source component appears single-CTA), and remove any "tech stack badges" default content not applicable here. Reject "Hero Section 1/4/6" (`meschacirung`) as alternates — reviewed but visually denser/more decorative than the "calm confidence" bar in §1.
+- **Accessibility**: Single `h1` per page lives here; contrast is verified against the flat `#F8FAFC` background (§22) — no longer a per-instance gradient-contrast check since the background no longer varies.
+- **Dependencies**: Button system (§9.1). *(Ambient Gradient system dependency removed 2026-07-26 — retired.)*
+- **Implementation approach** *(revised 2026-07-26)*: **Adapt a 21st.dev MCP component**, restyled to the flat-background system. The originally-sourced "Hero Static Radial Gradient" (`cult-ui`, id 19151) is no longer the right base since its defining feature — a responsive gradient visual — is exactly what's retired; use it only for the split-layout headline/CTA mechanics and **strip the gradient/shader visual entirely**, replacing that half with a Hero Visual (§2.2) or nothing at all on `simple-hero`. *What to customize*: cap headline to the 6-step type scale (§5), add the mandatory secondary/soft CTA (source component appears single-CTA), remove any "tech stack badges" default content, and remove the shader/gradient layer per §10's flat-background rule. Reject "Hero Section 1/4/6" (`meschacirung`) as alternates — reviewed but visually denser/more decorative than the "calm confidence" bar in §1.
 
 ## 2.2 Hero Visual
 
@@ -155,12 +156,12 @@ Each component entry defines:
 
 - **Purpose**: The dual-CTA closing pattern used at the bottom of nearly every page template (§19).
 - **Priority**: Core
-- **Variants**: `light` (on pale-neutral background) / `dark` (gradient-bloom card, the signature motif per §2 of the design spec).
+- **Variants** *(revised 2026-07-26 — supersedes the dark gradient-bloom variant)*: `light` (flat `#F8FAFC` background, the standard everywhere) / `glass` (sky-tinted glass-surface card per MASTER_DESIGN_SPEC.md §3 technique 2 — now the signature motif per §2 of the design spec, replacing the retired dark gradient-bloom card).
 - **When to use**: End of homepage, end of every vertical page, mid-page soft-conversion moments.
 - **Composition**: Headline + one-line support copy + Button Primary + Button Secondary (mandatory pair per §12/§24).
-- **Responsive behavior**: Buttons stack vertically below tablet; dark variant's gradient bloom simplifies/reduces on mobile for performance (§21 exception for decorative elements).
-- **Accessibility**: Text over the gradient-bloom `dark` variant must independently verify AA contrast (§22 — gradients vary contrast across their surface).
-- **Dependencies**: Ambient/Accent Gradient system (§10) for the `dark` variant.
+- **Responsive behavior**: Buttons stack vertically below tablet; `glass` variant's `backdrop-blur-md` may be simplified on lower-end mobile devices for performance (§21 exception for decorative elements).
+- **Accessibility**: Text over the `glass` variant must independently verify AA contrast against the sky-tinted translucent surface (§22 — translucent surfaces vary contrast depending on what's beneath them).
+- **Dependencies**: Glass-surface technique (§3 technique 2, §4 `sky` token) for the `glass` variant. *(Ambient/Accent Gradient system dependency removed 2026-07-26 — retired.)*
 - **Implementation approach**: **Reuse existing project component**, restyled. `cta-band.njk` exists today but is flagged in PROJECT_AUDIT.md §5/§20 as DOM-id-coupled to `main.js`'s `initFaqGreenGlow()` — a textbook case of the "homepage-specific fork instead of a parameterized general component" anti-pattern §20 explicitly warns against. The fix is architectural (decouple from the hardcoded DOM id, parameterize headline/copy/CTAs/variant), not a re-source from 21st.dev, since the existing partial's underlying two-row glass-panel layout is close to spec already. As a visual reference only, "CTA Section" (`shadcnstore`, id 19355) confirms the headline+badge+buttons structure is a standard, low-risk pattern to rebuild against.
 
 ---
@@ -232,7 +233,7 @@ Each component entry defines:
 - **Purpose**: Explains the platform's capability model (e.g., the homepage's existing Build/Find/Ground/Act tabbed capability section) — "how the platform works" supporting content, secondary to industry framing per CONTENT_SUMMARY.md §7's homepage analysis.
 - **Priority**: Optional
 - **Variants**: Reuses the Tabs (§1.5) + content-panel pattern.
-- **When to use**: Homepage or Platform page, as supporting depth beneath the Platform Framing Strip (§4.6/§13 dark card).
+- **When to use**: Homepage or Platform page, as supporting depth beneath the Platform Framing Strip (§2.6 `glass` variant, revised 2026-07-26 — was `§4.6/§13 dark card`).
 - **Composition**: Tabs (§1.5) + per-tab content panel (could itself contain a Feature Grid or Hero Visual).
 - **Responsive behavior**: Same as Tabs (§1.5).
 - **Accessibility**: Same as Tabs (§1.5).
@@ -395,7 +396,7 @@ All cards inherit the shared rules in MASTER_DESIGN_SPEC.md §13 (radius, elevat
 
 - **Purpose**: Compact mid-page soft-conversion card (distinct from the full-width CTA Banner, §2.6 — used inline within a denser content flow, e.g., a sidebar or end-of-article prompt).
 - **Priority**: Optional
-- **Variants**: `light` / `dark`.
+- **Variants** *(revised 2026-07-26)*: `light` / `glass` — matches CTA Banner's variant set (§2.6); the prior `dark` variant is retired.
 - **When to use**: Mid-article (blog/resources), sidebar contexts, or anywhere a full-bleed CTA Banner would be too heavy.
 - **Composition**: Short headline + one-line support copy + one or two Buttons — same content contract as CTA Banner but bounded to card width rather than full-bleed.
 - **Responsive behavior**: Full-width on mobile.
@@ -455,7 +456,7 @@ All cards inherit the shared rules in MASTER_DESIGN_SPEC.md §13 (radius, elevat
 - **Responsive behavior**: On touch devices, triggers on tap rather than hover; must not require hover to access critical info (§22).
 - **Accessibility**: `role="tooltip"`, associated via `aria-describedby`, dismissible via `Escape`, keyboard-focusable trigger.
 - **Dependencies**: None.
-- **Implementation approach**: **Adapt a 21st.dev MCP component.** The base "Tooltip" (`shadcn`, id 1277) — genuinely minimal, unopinionated, no reason to build from scratch. *What to customize*: apply `Text Primary`-on-`Navy-900` surface treatment matching the dark-card system (§4/§13), `radius-md`.
+- **Implementation approach**: **Adapt a 21st.dev MCP component.** The base "Tooltip" (`shadcn`, id 1277) — genuinely minimal, unopinionated, no reason to build from scratch. *What to customize*: apply a `Text Primary`-on-`Navy-900` surface treatment — a small, isolated dark popover, distinct from the retired page-section dark-card system (§4, 2026-07-26); tooltips are the one place a dark surface remains standard, since they're a floating micro-UI element, not a section background — `radius-md`.
 
 ## 5.6 Search
 
@@ -769,7 +770,7 @@ Homepage
 │   ├── Tabs (§1.5, pill-tabs)
 │   └── Industry/Vertical Card (§4.2) × 4
 │       └── Statistic Card (§4.4)
-├── Platform Framing Strip — dark CTA Banner variant (§2.6)
+├── Platform Framing Strip — CTA Banner `glass` variant (§2.6, revised 2026-07-26 — was `dark`)
 ├── Trust Bar (§2.4) / Logo Cloud (§2.5)
 ├── Case Studies (§3.11, carousel variant)
 │   └── Statistic Card (§4.4)
@@ -823,9 +824,9 @@ Universal implementation rules, restating MASTER_DESIGN_SPEC.md's tokens as enfo
 
 - **Spacing**: every margin/padding/gap value must map to a `space-*` token (§7 of the design spec). No arbitrary pixel values — this includes values inherited from an adapted 21st.dev component, which must be re-mapped to the token scale during customization, not left at the source's own spacing.
 - **Typography**: only the 6-step type scale (§5) and weights 400/500/600 — any adapted component shipping a 700+ weight heading (several 21st.dev sources default to bold) must be downgraded during adaptation.
-- **Colors**: exactly one accent hue (brand green `#76B900`) system-wide (§4) — any adapted component's multi-color variant set (destructive reds, warning yellows used decoratively rather than for real form validation, secondary blue/purple accents) must be stripped to the sanctioned token set before shipping.
-- **Border Radius**: `radius-md` (8–10px) default, `radius-lg` (14–16px) for large surfaces, `radius-pill` (999px) for buttons/pills only (§8) — no component ships with a different radius value, including 21st.dev sources' own defaults.
-- **Shadows**: only `elevation-0` through `elevation-3` (§9) — dark-background components use ambient gradient blur instead of shadow, never both in the same component (§9's explicit "don't mix" rule).
+- **Colors**: one brand-green (`#76B900`) persuasion accent system-wide, plus `sky` as the one sanctioned non-persuasion exception (glass-surface tint / secondary data-status differentiation only — never CTAs or links) per MASTER_DESIGN_SPEC.md §4 (2026-07-26 revision) — any adapted component's other multi-color variant set (destructive reds, warning yellows used decoratively rather than for real form validation, secondary purple/orange accents) must be stripped to the sanctioned token set before shipping.
+- **Border Radius**: `radius-md` (8–10px) default and for **buttons** (§8/§12 — buttons moved off `radius-pill` in the 2026-07-21 hero revamp), `radius-lg` (14–28px) for large surfaces/outer frame containers, `radius-pill` (999px) reserved for pill-shaped labels/tags only, not buttons (§8) — no component ships with a different radius value, including 21st.dev sources' own defaults.
+- **Shadows**: only `elevation-0` through `elevation-3` (§9) — glass-surface components (§3 technique 2) rely on their own translucency/blur for separation and stay at `elevation-1` max, never a heavier shadow layered on top (§9's revised 2026-07-26 rule, superseding the retired "dark-background components use ambient gradient blur instead of shadow" guidance).
 - **Motion**: every animation justifies itself against "supports credibility, doesn't perform for attention" (§18) — this is the single most common adaptation point across the "Adapt a 21st.dev" entries above, since many source components default to scale/hover/shimmer effects the design spec explicitly forbids.
 - **Responsiveness**: every component must be verified at all four breakpoints in §21, with the specific step-down behavior defined per component category (single-column stack, 4→3→2→1 repeaters, etc.) rather than an ad hoc collapse.
 - **Accessibility**: every component meets §22 in full before being considered complete — this is not optional per-component; the Design Review Checklist in §25 of the design spec applies to every entry in this library without exception.

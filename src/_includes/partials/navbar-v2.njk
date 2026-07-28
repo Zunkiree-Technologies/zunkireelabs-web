@@ -16,24 +16,38 @@
     lastScrollY: 0,
     activeDropdown: null,
     mobileMenuOpen: false,
-    navHovered: false,
-    get solid() { return this.navHovered || this.activeDropdown !== null || this.mobileMenuOpen; },
+    scrolled: false,
     handleScroll() {
+      // While a mega-menu is open, background scroll is locked (see toggleDropdown/
+      // closeDropdown) — leave the header/dropdown state alone entirely so a stray
+      // wheel tick over the panel can't dismiss it.
+      if (this.activeDropdown !== null) return;
       const currentScrollY = window.scrollY;
+      this.scrolled = currentScrollY > 10;
       if (currentScrollY < 10) {
         this.headerHidden = false;
       } else if (currentScrollY > this.lastScrollY) {
         this.headerHidden = true;
-        this.closeDropdown();
       } else {
         this.headerHidden = false;
       }
       this.lastScrollY = currentScrollY;
     },
+    lockPageScroll() {
+      document.documentElement.style.overflow = 'hidden';
+      if (window.__lenis) window.__lenis.stop();
+    },
+    unlockPageScroll() {
+      document.documentElement.style.overflow = '';
+      if (window.__lenis) window.__lenis.start();
+    },
     toggleDropdown(label) {
       this.activeDropdown = this.activeDropdown === label ? null : label;
+      if (this.activeDropdown !== null) this.lockPageScroll();
+      else this.unlockPageScroll();
     },
     closeDropdown() {
+      if (this.activeDropdown !== null) this.unlockPageScroll();
       this.activeDropdown = null;
     }
   }"
@@ -41,9 +55,9 @@
   @scroll.window.throttle.50ms="handleScroll()"
   @keydown.escape.window="closeDropdown(); mobileMenuOpen = false;"
 >
-  <!-- Scrim behind an open mega-menu -->
+  <!-- Full-viewport glass scrim behind an open mega-menu — blurs the entire page, not just the area behind the panel -->
   <div
-    class="hidden lg:block fixed inset-0 z-40 bg-navy-950/50 backdrop-blur-[2px]"
+    class="hidden lg:block fixed inset-0 z-30 bg-sky-100/30 backdrop-blur-2xl"
     style="top: 72px;"
     x-show="activeDropdown !== null"
     x-transition:enter="transition ease-out duration-200"
@@ -57,17 +71,13 @@
   ></div>
 
   <header
-    class="fixed top-0 inset-x-0 z-50 transition-transform duration-500"
-    :class="(headerHidden && !activeDropdown && !mobileMenuOpen) ? '-translate-y-full' : 'translate-y-0'"
-    @mouseenter="navHovered = true"
-    @mouseleave="navHovered = false"
+    class="fixed top-0 inset-x-0 z-50 transition-transform duration-500 translate-y-0"
   >
-    <div class="px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        class="transition-all duration-300 backdrop-blur-md border rounded-b-2xl"
-        :class="solid ? 'bg-white/40 border-white/60 shadow-subtle' : 'bg-transparent border-transparent'"
+        class="transition-all duration-300 backdrop-blur-md border rounded-b-2xl bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 border-white/60 shadow-card"
       >
-        <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-[72px]">
 
           <!-- Logo — always the dark-text mark; the v2 hero is light, never a dark image -->
@@ -86,10 +96,12 @@
               {% if item.hasDropdown %}
                 <button
                   type="button"
+                  x-data="{ hovered: false }"
+                  @mouseenter="hovered = true"
+                  @mouseleave="hovered = false"
                   @click="toggleDropdown('{{ item.label }}')"
                   class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-                  :class="activeDropdown === '{{ item.label }}' ? 'text-[#76B900]' : ''"
-                  :style="activeDropdown === '{{ item.label }}' ? '' : 'color: var(--foreground);'"
+                  :style="(hovered || activeDropdown === '{{ item.label }}') ? 'color: #76B900;' : 'color: var(--foreground);'"
                   aria-haspopup="true"
                   :aria-expanded="activeDropdown === '{{ item.label }}'"
                 >
@@ -101,8 +113,11 @@
               {% else %}
                 <a
                   href="{{ item.url }}"
-                  class="px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 hover:text-[#76B900] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-                  style="color: var(--foreground);"
+                  x-data="{ hovered: false }"
+                  @mouseenter="hovered = true"
+                  @mouseleave="hovered = false"
+                  class="px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+                  :style="hovered ? 'color: #76B900;' : 'color: var(--foreground);'"
                 >
                   {{ item.label }}
                 </a>
@@ -156,7 +171,8 @@
     {% for item in navigationV2.main %}
       {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
         <div
-          class="hidden lg:block absolute top-[72px] left-0 right-0 z-40"
+          class="hidden lg:block fixed top-[72px] left-0 right-0 z-40 overflow-y-auto"
+          style="max-height: calc(100vh - 72px);"
           x-show="activeDropdown === '{{ item.label }}'"
           x-transition:enter="transition ease-out duration-200"
           x-transition:enter-start="opacity-0 -translate-y-2"
@@ -168,64 +184,82 @@
           role="menu"
           :aria-label="'{{ item.label }}' + ' menu'"
         >
-          <div class="bg-white shadow-card border-t" style="border-color: #e2e8f0;">
-            <div class="max-w-content mx-auto px-6 lg:px-8 py-10">
-              {% set colCount = item.megamenu.columns | length %}
-              {% set hasFeature = item.megamenu.featured %}
+          <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border rounded-2xl shadow-card-hover px-4 sm:px-6 lg:px-8 py-8" style="border-color: #e2e8f0;">
+              {% set mergeColumns = not item.megamenu.columns[0].header %}
 
-              <div class="grid gap-8 {% if colCount == 2 and hasFeature %}grid-cols-12{% elif colCount == 3 and hasFeature %}grid-cols-12{% else %}grid-cols-{{ colCount }}{% endif %}">
+              <div class="grid grid-cols-12 gap-5 items-stretch">
 
-                {% for column in item.megamenu.columns %}
-                  <div class="{% if colCount == 2 and hasFeature %}col-span-4{% elif colCount == 3 and hasFeature %}col-span-3{% else %}{% endif %}">
-
-                    {% if column.header %}
-                      <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zunkiree-700 mb-4">
-                        {{ column.header }}
-                      </span>
-                    {% endif %}
-
-                    <ul class="space-y-1">
-                      {% for link in column.items %}
-                        <li>
-                          <a
-                            href="{{ link.url }}"
-                            class="group flex items-start gap-3 p-2 -mx-2 rounded-md transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900]"
-                            role="menuitem"
-                            @click="closeDropdown()"
-                          >
-                            {% if column.type == 'descriptive' and link.icon %}
-                              <span class="mt-0.5 text-zunkiree-600">
-                                {% set iconName = link.icon %}
-                                {% include "components/nav-icon.njk" %}
-                              </span>
-                            {% endif %}
-
-                            <div class="flex-1 min-w-0">
-                              <div class="flex items-center gap-2">
-                                <span class="text-[15px] font-medium text-navy-900 transition-colors group-hover:text-zunkiree-600">
-                                  {{ link.label }}{% if link.subLabel %}<span class="text-[11px] font-normal text-navy-400 ml-1">{{ link.subLabel }}</span>{% endif %}
+                <!-- Main area (~2/3): stacked card sections, Kore.ai-style -->
+                <div class="col-span-8 flex flex-col gap-4">
+                  {% if mergeColumns %}
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
+                      <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                        <div class="sm:w-56 flex-shrink-0 sm:border-r sm:border-gray-100 sm:pr-8">
+                          {% if item.megamenu.title %}
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">{{ item.megamenu.title }}</h4>
+                          {% endif %}
+                          {% if item.megamenu.description %}
+                            <p class="text-sm leading-relaxed text-navy-500">{{ item.megamenu.description }}</p>
+                          {% endif %}
+                        </div>
+                        <div class="flex-1 grid grid-cols-2 gap-x-6 gap-y-1">
+                          {% for column in item.megamenu.columns %}
+                            {% for link in column.items %}
+                              <a
+                                href="{{ link.url }}"
+                                class="group flex items-start justify-between gap-2 px-3 py-2.5 -mx-3 rounded-md transition-colors hover:bg-zunkiree-50"
+                                role="menuitem"
+                                @click="closeDropdown()"
+                              >
+                                <span class="min-w-0">
+                                  <span class="block text-[15px] font-medium text-navy-900 transition-colors group-hover:text-zunkiree-600">{{ link.label }}</span>
+                                  {% if link.description %}
+                                    <span class="block mt-0.5 text-[13px] leading-snug text-navy-500">{{ link.description }}</span>
+                                  {% endif %}
                                 </span>
-                                {% if link.badge %}
-                                  <span class="px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide bg-zunkiree-100 text-zunkiree-700 rounded">
-                                    {{ link.badge }}
-                                  </span>
-                                {% endif %}
-                              </div>
-                              {% if column.type == 'descriptive' and link.description %}
-                                <p class="mt-0.5 text-[13px] leading-snug text-navy-500">
-                                  {{ link.description }}
-                                </p>
-                              {% endif %}
-                            </div>
-                          </a>
-                        </li>
-                      {% endfor %}
+                                <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zunkiree-500 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true"></span>
+                              </a>
+                            {% endfor %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
 
-                      {% if column.seeAll %}
-                        <li class="pt-3">
+                    {% if item.megamenu.cta %}
+                      <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6 flex items-center justify-between gap-6">
+                        <p class="text-sm font-medium text-navy-900">{{ item.megamenu.cta.prompt }}</p>
+                        <a
+                          href="{{ item.megamenu.cta.url }}"
+                          class="inline-flex flex-shrink-0 items-center gap-2 rounded-md bg-zunkiree-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zunkiree-700"
+                          @click="closeDropdown()"
+                        >
+                          {{ item.megamenu.cta.button }}
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% else %}
+                    {% for column in item.megamenu.columns %}
+                      <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
+                        {% if column.header %}
+                          <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zunkiree-700 mb-4">
+                            {{ column.header }}
+                          </span>
+                        {% endif %}
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
+                          {% for link in column.items %}
+                            {% include "partials/navbar-v2-megamenu-link.njk" %}
+                          {% endfor %}
+                        </div>
+
+                        {% if column.seeAll %}
                           <a
                             href="{{ column.seeAll.url }}"
-                            class="inline-flex items-center gap-1.5 text-sm font-medium text-zunkiree-600 hover:gap-2.5 transition-all"
+                            class="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-zunkiree-600 hover:gap-2.5 transition-all"
                             @click="closeDropdown()"
                           >
                             {{ column.seeAll.label }}
@@ -233,15 +267,16 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                           </a>
-                        </li>
-                      {% endif %}
-                    </ul>
-                  </div>
-                {% endfor %}
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
 
-                {% if item.megamenu.featured %}
-                  <div class="{% if colCount == 2 %}col-span-4{% elif colCount == 3 %}col-span-3{% else %}col-span-1{% endif %}">
-                    <div class="h-full p-5 rounded-lg border border-gray-100 bg-gray-50">
+                <!-- Sidebar (~1/3): featured resource card + CTA card, Kore.ai "Top Resources" pattern -->
+                <div class="col-span-4 flex flex-col gap-4">
+                  {% if item.megamenu.featured %}
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
                       <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-zunkiree-700 mb-3">
                         {{ item.megamenu.featured.label }}
                       </span>
@@ -262,31 +297,55 @@
                         </svg>
                       </a>
                     </div>
-                  </div>
-                {% endif %}
+                  {% endif %}
+
+                  {% if item.megamenu.resources %}
+                    <div class="flex-1 bg-white rounded-2xl border border-gray-100 shadow-card p-6">
+                      <span class="inline-flex items-center rounded-full bg-zunkiree-50 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-zunkiree-700 mb-4">
+                        {{ item.megamenu.resources.label }}
+                      </span>
+                      <div class="flex flex-col gap-5">
+                        {% for resource in item.megamenu.resources.items %}
+                          <a
+                            href="{{ resource.url }}"
+                            class="group flex items-center gap-3.5"
+                            @click="closeDropdown()"
+                          >
+                            <img
+                              src="{{ resource.image }}"
+                              alt=""
+                              class="w-12 h-12 flex-shrink-0 rounded-lg object-cover"
+                              width="48" height="48"
+                              loading="lazy"
+                            />
+                            <span class="flex-1 min-w-0 text-sm font-medium leading-snug text-navy-900 transition-colors group-hover:text-zunkiree-600 line-clamp-2">
+                              {{ resource.title }}
+                            </span>
+                          </a>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+
+                  {% if item.megamenu.cta and not mergeColumns %}
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
+                      <p class="text-sm font-medium text-navy-900 mb-3">{{ item.megamenu.cta.prompt }}</p>
+                      <a
+                        href="{{ item.megamenu.cta.url }}"
+                        class="inline-flex items-center gap-2 rounded-md bg-zunkiree-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zunkiree-700"
+                        @click="closeDropdown()"
+                      >
+                        {{ item.megamenu.cta.button }}
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
 
               </div>
             </div>
-
-            {% if item.megamenu.cta %}
-              <div style="background-color: #76B900;">
-                <div class="max-w-content mx-auto px-6 lg:px-8 py-3">
-                  <div class="flex items-center gap-4">
-                    <span class="text-sm text-white/90">{{ item.megamenu.cta.prompt }}</span>
-                    <a
-                      href="{{ item.megamenu.cta.url }}"
-                      class="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:gap-2.5 transition-all"
-                      @click="closeDropdown()"
-                    >
-                      {{ item.megamenu.cta.button }}
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            {% endif %}
           </div>
         </div>
       {% endif %}
