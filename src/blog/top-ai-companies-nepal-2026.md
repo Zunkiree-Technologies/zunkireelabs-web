@@ -175,18 +175,96 @@ The key is matching your specific needs—technical requirements, communication 
 ---
 
 *Looking for an AI development partner in Nepal? [Contact Zunkiree Labs](/contact/) to discuss your project.*
-<!-- SEOAI:FAQ:START --><dl class="faq">
-  <dt>What are some AI products offered in Nepal?</dt>
-  <dd>Some AI products offered include Zunkiree Search, Dental AI for practice management, and Gaamma for business analytics.</dd>
-  <dt>How does Zunkiree Search work?</dt>
-  <dd>Zunkiree Search is an AI-native search that understands natural language and delivers direct answers, transforming the customer experience.</dd>
-  <dt>What industries are targeted by AI services in Nepal?</dt>
-  <dd>AI services in Nepal target various industries including healthcare, manufacturing, legal, professional services, education, and human resources.</dd>
-  <dt>What is 'Agentic as a Service'?</dt>
-  <dd>Agentic as a Service (GaaS) refers to autonomous AI agents deployed as managed services to assist in various business processes.</dd>
-  <dt>What is the State of AI in Nepal report?</dt>
-  <dd>The State of AI in Nepal 2026 is a featured report that provides insights into AI adoption across Nepali industries.</dd>
-  <dt>How can I try Zunkiree Search?</dt>
-  <dd>You can try Zunkiree Search for free by starting a free trial available on the website.</dd>
-</dl>
-<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are some AI products offered in Nepal?","@type":"Question","acceptedAnswer":{"text":"Some AI products offered include Zunkiree Search, Dental AI for practice management, and Gaamma for business analytics.","@type":"Answer"}},{"name":"How does Zunkiree Search work?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search that understands natural language and delivers direct answers, transforming the customer experience.","@type":"Answer"}},{"name":"What industries are targeted by AI services in Nepal?","@type":"Question","acceptedAnswer":{"text":"AI services in Nepal target various industries including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is 'Agentic as a Service'?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to autonomous AI agents deployed as managed services to assist in various business processes.","@type":"Answer"}},{"name":"What is the State of AI in Nepal report?","@type":"Question","acceptedAnswer":{"text":"The State of AI in Nepal 2026 is a featured report that provides insights into AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial available on the website.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What products does the company offer related to AI?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is Zunkiree Search?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What services does the company provide?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web &amp; App Development.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Is there any information available on AI adoption in Nepal?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can I start using Zunkiree Search?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What industries does the company serve?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 6 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 6 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does the company offer related to AI?","@type":"Question","acceptedAnswer":{"text":"The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.","@type":"Answer"}},{"name":"What services does the company provide?","@type":"Question","acceptedAnswer":{"text":"The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web & App Development.","@type":"Answer"}},{"name":"Is there any information available on AI adoption in Nepal?","@type":"Question","acceptedAnswer":{"text":"Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How can I start using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.","@type":"Answer"}},{"name":"What industries does the company serve?","@type":"Question","acceptedAnswer":{"text":"The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
