@@ -2,15 +2,15 @@
 layout: base.njk
 title: "AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs"
 description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
-permalink: /homepage-v2/
+permalink: /
 hideChrome: true
 bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   HOMEPAGE V2 — REDESIGN DRAFT
-   Preview only at /homepage-v2/ — current live homepage
-   (src/pages/index.njk, permalink: /) is untouched.
+   HOMEPAGE V2 — now the live homepage at /.
+   Previous homepage (src/pages/index.njk) moved to
+   /home-legacy/ for reference only.
    ===================================================== #}
 
 {% include "partials/navbar-v2.njk" %}
@@ -63,16 +63,18 @@ bodyClass: "v2-inter"
       id="hero-v2-heading"
       class="mt-[20px] text-center text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
     >
-      We already run this live,<br />for your industry.
+      Building AI to make lives better.
     </h1>
 
-    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size).
-         Line 1 needed to be narrower ("Not a prototype. Not a pilot. Already"
-         measured ~545px — too wide), so "Already" moves back to line 2. -->
+    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size). Manual
+         two-row break (not text-balance, which was wrapping to 3 uneven rows) so
+         each row centers independently under the hero title. -->
     <p
-      class="mt-4 max-w-[500px] px-4 text-center text-balance text-[26px] font-medium leading-relaxed text-[#6B7280]"
+      class="mt-4 max-w-[520px] px-4 text-center text-[26px] font-medium leading-relaxed tracking-tight text-[#6B7280] sm:max-w-none"
     >
-      Not a prototype. Not a pilot.<br />Already running in production today.
+      Launch AI workflows across your business in days,
+      <br class="hidden sm:block" />
+      already proven in production.
     </p>
 
     <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs) -->
@@ -107,8 +109,12 @@ bodyClass: "v2-inter"
    productsDetails.json.search.description, the same copy powering
    /products/search/) → circular arrow CTA on the right, on a dark
    navy-950 surface with the existing green/navy gradient bloom.
-   No new image asset for now — text-only card, per explicit
-   direction.
+   Text-only card, per explicit direction — no photographic/render
+   asset (that's Kore's approach, deliberately not copied here).
+   ASCII/glyph texture was tried and rejected (didn't read well) —
+   visual richness now comes from just the enlarged, slow-drifting
+   version of the existing green/slate bloom, behind the text, no
+   layout or DOM structure change.
 
    Links to /products/search/ — Search already has a real, fully
    built product page, so the CTA now goes straight there instead
@@ -121,11 +127,10 @@ bodyClass: "v2-inter"
       class="group relative flex flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl bg-navy-950 p-8 transition-colors duration-200 hover:bg-navy-900 sm:p-10 md:flex-row md:items-center lg:p-12"
       style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
     >
-      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10) -->
+      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10). Enlarged + slow drift vs. the original static version. -->
       <div
-        class="pointer-events-none absolute inset-0 z-0"
+        class="search-card-bloom pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
       ></div>
 
       <div class="relative z-10 min-w-0 max-w-xl">
@@ -155,6 +160,22 @@ bodyClass: "v2-inter"
     </a>
   </div>
 </section>
+
+<style>
+  .search-card-bloom {
+    background:
+      radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
+      radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
+    animation: search-card-bloom-drift 14s ease-in-out infinite;
+  }
+  @keyframes search-card-bloom-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .search-card-bloom { animation: none; }
+  }
+</style>
 
 {# =====================================================
    PLATFORM PILLARS — Website V2
@@ -626,18 +647,18 @@ app = platform.init(
    Continuous scrolling client track placed immediately below mockups.
    ===================================================== #}
 {% set provenClients = [
-  { name: "Admizz", logo: "/images/clients/admizz.webp" },
-  { name: "CoreCloud365", logo: "/images/clients/corecloud365.webp" },
-  { name: "Rapid Investment", logo: "/images/clients/rapid-investment.webp" },
-  { name: "CMS Group", logo: "/images/clients/cms-group.webp" },
-  { name: "Mach24 Orbital", logo: "/images/clients/mach24orbital.webp" },
-  { name: "Khushbu Nirman Sewa", logo: "/images/clients/khushbu-nirman-sewa.webp" },
-  { name: "Prime Tiles", logo: "/images/clients/prime-tiles.webp" },
-  { name: "Khems Cleaning", logo: "/images/clients/khems-cleaning.webp" }
+  { name: "Admizz", logo: "/assets/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/assets/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/assets/images/clients/rapid-investment.webp" },
+  { name: "CMS Group", logo: "/assets/images/clients/cms-group.webp" },
+  { name: "Mach24 Orbital", logo: "/assets/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/assets/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/assets/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" }
 ] %}
 <div class="w-full pb-12 sm:pb-16 lg:pb-20 overflow-hidden relative" data-reveal>
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] mb-8">Proven with clients running in production</p>
+    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] mb-8">Trusted by teams modernizing operations with AI</p>
     <div class="w-full overflow-hidden relative py-2">
       <!-- Gradient Fade Edge Masks -->
       <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-warm-off-white/30 to-transparent z-10"></div>
@@ -771,7 +792,7 @@ app = platform.init(
           Find the industry that looks like yours
         </h2>
         <p class="text-body-lg text-[#6B7280]">
-          Four verticals, one shared platform, already running in production.
+          Real AI systems already running in production across different industries.
         </p>
       </div>
 

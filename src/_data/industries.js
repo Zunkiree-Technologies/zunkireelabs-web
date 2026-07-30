@@ -40,18 +40,32 @@ export default [
       image: null
     },
     accelerators: {
-      style: "steps",
+      style: "agent-grid",
       heading: "How the pipeline runs",
-      items: [
-        { title: "Document collection & intake", description: "Structured intake replaces scattered email attachments." },
-        { title: "Application submission tracking", description: "Every application's status visible in one place." },
-        { title: "Offer management", description: "Offers tracked from issue to acceptance." },
-        { title: "Visa application tracking", description: "Visa stage tracked alongside the enrollment record." },
-        { title: "Enrollment confirmation", description: "The pipeline closes with a confirmed enrollment, not a dropped thread." }
-      ],
-      supporting: [
-        { title: "Partner-college relationship management", description: "Manage partner-college relationships alongside the pipeline." },
-        { title: "Campaign tracking", description: "Track recruitment campaigns against real enrollment outcomes." }
+      eyebrow: "Runs as connected AI agents, not static features.",
+      columns: [
+        {
+          title: "Application Intake",
+          groups: [
+            { name: "Intake Agent", tasks: ["Document collection", "Application status tracking"] },
+            { name: "Offer Agent", tasks: ["Offer management", "Issued → awaiting acceptance"] }
+          ]
+        },
+        {
+          title: "Compliance & Enrollment",
+          groups: [
+            { name: "Visa Tracking Agent", tasks: ["Visa stage tracking", "Alongside the enrollment record"] },
+            { name: "Enrollment Agent", tasks: ["Enrollment confirmation", "Closes the pipeline — no dropped thread"] }
+          ]
+        },
+        {
+          title: "Partners & Campaigns",
+          groups: [
+            { name: "Partner Relationship Agent", tasks: ["Partner-college relationship management"] },
+            { name: "Campaign Tracking Agent", tasks: ["Recruitment campaign tracking", "Tied to real enrollment outcomes"] }
+          ],
+          connectsTo: "Application Intake"
+        }
       ]
     },
     platformTieIn: {
@@ -119,15 +133,32 @@ export default [
       image: null
     },
     accelerators: {
-      style: "grid",
+      style: "agent-grid",
       heading: "What runs inside it",
-      items: [
-        { title: "Deal pipeline management", description: "Track every deal from first contact to signed contract." },
-        { title: "Proposal builder", description: "Public share and print views, built for client-facing polish." },
-        { title: "Project cockpit", description: "Milestones, issues, change requests, and a RAID log in one view." },
-        { title: "Time tracking with approvals", description: "Logged time routes through approval before it hits billing." },
-        { title: "Resourcing & utilization dashboards", description: "See who's overbooked and who has capacity, in real time." },
-        { title: "Sales/delivery/overview dashboards", description: "One dashboard suite spanning sales through delivery." }
+      eyebrow: "Runs as connected AI agents, not static features.",
+      columns: [
+        {
+          title: "Sales & Proposals",
+          groups: [
+            { name: "Deal Pipeline Agent", tasks: ["Deal pipeline management", "First contact to signed contract"] },
+            { name: "Proposal Agent", tasks: ["Proposal builder", "Public share & print views"] }
+          ]
+        },
+        {
+          title: "Delivery & Execution",
+          groups: [
+            { name: "Project Cockpit Agent", tasks: ["Milestones, issues & change requests", "RAID log in one view"] },
+            { name: "Time Tracking Agent", tasks: ["Time tracking with approvals", "Approval routing to billing"] }
+          ]
+        },
+        {
+          title: "Resourcing & Insights",
+          groups: [
+            { name: "Utilization Agent", tasks: ["Resourcing & utilization dashboards", "Overbooked vs. capacity, real time"] },
+            { name: "Reporting Agent", tasks: ["Sales/delivery/overview dashboards"] }
+          ],
+          connectsTo: "Delivery & Execution"
+        }
       ]
     },
     platformTieIn: {
@@ -176,16 +207,32 @@ export default [
       image: null
     },
     accelerators: {
-      style: "grid",
+      style: "agent-grid",
       heading: "What runs inside it",
-      items: [
-        { title: "Credential & licensure tracking", description: "Every credential tracked against its expiry and scope." },
-        { title: "Compliance-gated shift assignment", description: "Unsafe rostering is blocked automatically, not flagged after." },
-        { title: "3-axis staff classification", description: "Staff classified across the axes that matter for safe assignment." },
-        { title: "Shift & roster scheduling", description: "Scheduling that respects compliance constraints by default." },
-        { title: "Time & attendance", description: "Attendance tracked against the roster it was scheduled against." },
-        { title: "Leave management", description: "Leave requests resolved without breaking roster compliance." },
-        { title: "Recruitment & job-matching", description: "A connected second product matching professionals to employers." }
+      eyebrow: "Runs as connected AI agents, not static features.",
+      columns: [
+        {
+          title: "Compliance & Credentialing",
+          groups: [
+            { name: "Credentialing Agent", tasks: ["Licensure tracking", "Expiry & scope checks"] },
+            { name: "Rostering Safeguard Agent", tasks: ["Compliance-gated shift assignment", "3-axis staff classification"] }
+          ]
+        },
+        {
+          title: "Scheduling & Workforce",
+          groups: [
+            { name: "Scheduling Agent", tasks: ["Shift & roster scheduling", "Compliance-aware rostering"] },
+            { name: "Time & Leave Agent", tasks: ["Time & attendance", "Leave management"] }
+          ]
+        },
+        {
+          title: "Recruitment",
+          groups: [
+            { name: "Job-Matching Agent", tasks: ["Recruitment & job-matching platform"] },
+            { name: "Integration Agent", tasks: ["Connects directly to the workforce platform"] }
+          ],
+          connectsTo: "Scheduling & Workforce"
+        }
       ]
     },
     platformTieIn: {
@@ -234,13 +281,30 @@ export default [
       image: null
     },
     accelerators: {
-      style: "grid",
+      style: "agent-grid",
       heading: "What runs inside it",
-      items: [
-        { title: "Offerings management", description: "Manage every offering's structure and status in one place." },
-        { title: "Investor commitments tracking", description: "Track commitments against each offering in real time." },
-        { title: "Capital-raise workflow orchestration", description: "Coordinate the raise from open to close." },
-        { title: "Secure data room", description: "Share offering documents without losing control of who sees what." }
+      eyebrow: "Runs as connected AI agents, not static features.",
+      columns: [
+        {
+          title: "Offerings & Capital Raise",
+          groups: [
+            { name: "Offerings Agent", tasks: ["Offerings management", "Structure & status tracking"] },
+            { name: "Capital-Raise Agent", tasks: ["Capital-raise workflow orchestration", "Coordinates open to close"] }
+          ]
+        },
+        {
+          title: "Investor Relations",
+          groups: [
+            { name: "Commitment Tracking Agent", tasks: ["Investor commitments tracking", "Real-time commitment status"] }
+          ]
+        },
+        {
+          title: "Data Room & Security",
+          groups: [
+            { name: "Data Room Agent", tasks: ["Secure data room", "Document access control"] }
+          ],
+          connectsTo: "Investor Relations"
+        }
       ]
     },
     platformTieIn: {

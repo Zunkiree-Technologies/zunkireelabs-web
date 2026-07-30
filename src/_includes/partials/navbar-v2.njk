@@ -125,20 +125,8 @@
             {% endfor %}
           </nav>
 
-          <!-- Right: Ask + Primary CTA -->
+          <!-- Right: Primary CTA -->
           <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <button
-              type="button"
-              onclick="openZunkireeWidget()"
-              class="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium border transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-              style="border-color: rgba(15, 23, 42, 0.35); color: var(--foreground);"
-              aria-label="Ask Zunkiree AI"
-            >
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-              </svg>
-              Ask
-            </button>
             <a
               href="/contact/"
               class="inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
@@ -195,7 +183,7 @@
                   {% if mergeColumns %}
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
                       <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
-                        <div class="sm:w-56 flex-shrink-0 sm:border-r sm:border-gray-100 sm:pr-8">
+                        <div class="sm:w-44 flex-shrink-0 sm:border-r sm:border-gray-100 sm:pr-6">
                           {% if item.megamenu.title %}
                             <h4 class="text-lg font-semibold text-navy-900 mb-2">{{ item.megamenu.title }}</h4>
                           {% endif %}
@@ -441,18 +429,6 @@
             </a>
           {% endif %}
         {% endfor %}
-
-        <button
-          type="button"
-          onclick="openZunkireeWidget()"
-          class="flex items-center gap-2 py-4 text-base font-medium text-zunkiree-600 border-b border-gray-100"
-          @click="mobileMenuOpen = false"
-        >
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-          </svg>
-          Ask AI
-        </button>
 
         <div class="mt-6">
           <a

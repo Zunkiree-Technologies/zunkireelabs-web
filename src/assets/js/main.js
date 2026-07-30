@@ -1,6 +1,3 @@
-// Import CSS (required for Vite bundling)
-import '../css/main.css';
-
 // Import GA4 analytics tracking
 import './analytics.js';
 
