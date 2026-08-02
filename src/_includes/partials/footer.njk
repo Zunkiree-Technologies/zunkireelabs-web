@@ -1,7 +1,7 @@
 <footer class="bg-black text-white pt-16 lg:pt-24 pb-8">
   <div class="container-custom">
     <!-- Main Footer Content -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 mb-12">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6 mb-12">
       <!-- Brand Column -->
       <div class="col-span-2 md:col-span-3 lg:col-span-2">
         <a href="/" class="flex items-center mb-6">
@@ -23,18 +23,6 @@
         <h4 class="text-white font-semibold mb-5 text-small uppercase tracking-wider">Products</h4>
         <ul class="space-y-3">
           {% for item in navigation.footer.products %}
-            <li>
-              <a href="{{ item.url }}" class="text-navy-200 hover:text-white text-small transition-colors duration-200">{{ item.label }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <!-- Solutions Links -->
-      <div>
-        <h4 class="text-white font-semibold mb-5 text-small uppercase tracking-wider">Solutions</h4>
-        <ul class="space-y-3">
-          {% for item in navigation.footer.solutions %}
             <li>
               <a href="{{ item.url }}" class="text-navy-200 hover:text-white text-small transition-colors duration-200">{{ item.label }}</a>
             </li>
