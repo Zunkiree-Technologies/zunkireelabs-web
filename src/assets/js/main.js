@@ -57,6 +57,14 @@ function initSmoothScroll() {
   gsap.ticker.lagSmoothing(0);
 }
 
+// Recompute ScrollTrigger's cached trigger positions. Needed whenever Alpine
+// toggles an x-show panel of a different height (e.g. the Platform tabs) —
+// that reflows everything below it, but ScrollTrigger only knows about the
+// layout as it was at initial page load, so reveals below the toggled panel
+// (FAQ, CTA, News & Insights, etc.) would otherwise never re-trigger and
+// stay stuck at their pre-reveal opacity: 0.
+window.refreshScrollTriggers = () => ScrollTrigger.refresh();
+
 // Lenis-aware programmatic scroll (target = px number or element/selector)
 function scrollTo(target, immediate = false) {
   if (lenis) {

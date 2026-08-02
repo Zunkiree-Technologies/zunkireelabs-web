@@ -3,277 +3,343 @@ layout: base.njk
 ---
 
 {# =====================================================
-   SHARED CATALOG LAYOUT
-   Used for: Services page, Products page
-   Inner pages — white/light bg, homepage brand colors as accents
+   SHARED CATALOG LAYOUT — Website V2
+   Used for: Services page only (see grep — no other page sets
+   `layout: catalog.njk`). Rebuilt to match homepage-v2.njk /
+   industry.njk's visual language exactly (same tokens, same
+   component recipes, navbar-v2 + footer-v2 chrome) per explicit
+   2026-08-02 direction: Homepage V2 is the single source of truth
+   for this page. Content, data bindings, category-filter logic,
+   and schema markup are unchanged from the prior version — this
+   is a visual/structural reskin only.
    ===================================================== #}
 
 {% set items = products if catalogType == "products" else services %}
 {% set categories = catalogCategories | default([]) %}
 
-{# =====================================================
-   SECTION 1: HERO — Dark split layout with hero image (matches stage)
-   ===================================================== #}
-<section class="relative overflow-hidden" style="background: #0a1f2b; min-height: 340px;">
+{% include "partials/navbar-v2.njk" %}
 
-  {# Hero image — right half, fills the section #}
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO — centered single-column (homepage-v2/industry.njk
+   typography), on top of the existing heroImage as a full-bleed
+   background (homepage-v2's own hero recipe) instead of the old
+   dark split-panel layout. A light wash keeps the centered text
+   legible over any photo.
+   ===================================================== #}
+<div class="relative overflow-x-clip">
   {% if heroImage %}
-  <div class="absolute inset-y-0 right-0 w-1/2 pointer-events-none" aria-hidden="true">
-    <img
-      src="{{ heroImage }}"
-      alt=""
-      class="w-full h-full object-cover object-center"
-      style="opacity: 0.55;"
-    />
-    {# Left fade so image blends into dark bg #}
-    <div style="position:absolute;inset:0;background:linear-gradient(to right, #0a1f2b 0%, transparent 55%);"></div>
-  </div>
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="{{ heroImage }}" alt="" class="h-full w-full object-cover object-center" width="1600" height="900" fetchpriority="high" />
+      <div class="absolute inset-0 bg-gradient-to-b from-white/85 via-white/90 to-[#F8FAFC]"></div>
+    </div>
   {% endif %}
 
-  {# Subtle sage/blue blobs for depth #}
-  <div aria-hidden="true" style="position:absolute;bottom:-20%;left:-5%;width:420px;height:420px;background:radial-gradient(ellipse,rgba(144,169,89,0.18) 0%,transparent 70%);filter:blur(48px);border-radius:50%;pointer-events:none;"></div>
+  <section class="relative z-10 flex flex-col items-center justify-center px-4 pb-12 pt-40 sm:px-6 sm:pt-44 lg:px-8 lg:pt-48" aria-labelledby="hero-heading">
+    <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
 
-  {# Hero content — left aligned #}
-  <div
-    class="catalog-hero-content relative z-10 max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-10 pt-32 pb-16 md:pt-36 md:pb-20"
-    style="opacity: 0; transform: translateY(36px);"
-  >
-    <nav class="sr-only" aria-label="Breadcrumb">
-      <ol class="flex items-center gap-2 text-sm">
-        <li><a href="/" class="text-zunkiree-400 hover:text-zunkiree-300 transition-colors">Home</a></li>
-        <li style="color:rgba(255,255,255,0.3)">/</li>
-        <li style="color:rgba(255,255,255,0.55)">{{ heroLabel | default(heroTitle) }}</li>
-      </ol>
-    </nav>
+      <nav aria-label="Breadcrumb" class="mb-5">
+        <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+          <li><a href="/" class="transition-colors hover:text-navy-700">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-navy-600">{{ heroLabel | default(heroTitle) }}</li>
+        </ol>
+      </nav>
 
-    <h1 class="text-4xl md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-white max-w-xl">
-      {{ heroTitle }}
-    </h1>
+      <h1 id="hero-heading" class="text-center text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+        {{ heroTitle }}
+      </h1>
 
-    <p class="text-lg md:text-xl max-w-lg mt-5 leading-relaxed font-light" style="color:rgba(255,255,255,0.65);">
-      {{ heroTagline }}
-    </p>
-  </div>
-
-</section>
-
-{# Hero entrance animation #}
-<script>
-(function () {
-  var _ran = false;
-  function runHero() {
-    if (_ran || !window.gsap) return;
-    _ran = true;
-    window.gsap.to('.catalog-hero-content', { y: 0, opacity: 1, duration: 0.85, delay: 0.1, ease: 'power2.out' });
-  }
-  function tryRun() {
-    if (_ran) return;
-    if (window.gsap) { runHero(); return; }
-    setTimeout(tryRun, 80);
-  }
-  document.addEventListener('DOMContentLoaded', tryRun);
-  window.addEventListener('load', tryRun);
-})();
-</script>
+      {% if heroTagline %}
+      <p class="mt-4 max-w-[640px] text-center text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+        {{ heroTagline }}
+      </p>
+      {% endif %}
+    </div>
+  </section>
+</div>
 
 {# =====================================================
-   SECTION 2: SIMPLE INTRO — white bg, heading + subtitle
+   INTRO — eyebrow + headline + description, matches homepage-v2's
+   section-header recipe. AEO definition block (already authored in
+   frontmatter, never previously rendered) now surfaces as a compact
+   glass card directly beneath it — CLAUDE.md's AEO requirement for
+   a 40-60 word "What is X" block, no new copy written.
    ===================================================== #}
-<section class="pt-10 pb-4 px-4 sm:px-6 lg:px-8 bg-white" data-reveal>
-  <div class="max-w-screen-2xl mx-auto">
-    <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight mb-4" style="color:#032D42;">
+<section class="px-4 pt-12 pb-4 sm:px-6 sm:pt-16 lg:px-8" data-reveal>
+  <div class="mx-auto max-w-3xl text-center">
+    <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+      Overview
+    </span>
+    <h2 class="mx-auto text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
       {{ introHeadline }}
     </h2>
     {% if introDescription %}
-    <p class="text-base md:text-lg leading-relaxed" style="color:#1d1d1d;">
+    <p class="mx-auto mt-4 text-body-lg leading-relaxed text-[#6B7280]">
       {{ introDescription }}
     </p>
     {% endif %}
+
+    {% if definitionBlock %}
+      <div class="mx-auto mt-8 rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 text-left shadow-subtle backdrop-blur-md sm:p-7">
+        <p class="mb-2 text-[15px] font-semibold leading-snug text-[#111827]">{{ definitionBlock.question }}</p>
+        <p class="text-[14px] leading-relaxed text-[#6B7280]">{{ definitionBlock.answer }}</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 
 {# =====================================================
-   SECTION 4: TAB NAV + CATALOG CARDS — white bg
+   CATALOG TABS + CARD GRID — category filter (unchanged Alpine
+   logic) restyled as homepage-v2's pillar-tab buttons; cards
+   restyled as homepage-v2's glass-surface card, image on top
+   (every service keeps its existing mockup image; the icon
+   fallback path is preserved for any future item without one).
    ===================================================== #}
 <section
-  class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
-  x-data="{ activeTab: 'all' }"
+  class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+  x-data="{
+    activeTab: 'all',
+    pillTop: 0,
+    pillLeft: 0,
+    pillWidth: 0,
+    pillHeight: 0,
+    updatePill() {
+      const el = this.$refs['filterTab-' + this.activeTab];
+      if (el) { this.pillTop = el.offsetTop; this.pillLeft = el.offsetLeft; this.pillWidth = el.offsetWidth; this.pillHeight = el.offsetHeight; }
+    }
+  }"
+  x-init="$nextTick(() => updatePill())"
+  @resize.window="updatePill()"
   data-reveal
 >
-  <div class="max-w-screen-2xl mx-auto">
+  <div class="mx-auto max-w-5xl">
 
     {% if categories.length > 0 %}
-    <div class="border-b border-gray-200 mb-0">
-      <nav class="flex gap-8 -mb-px overflow-x-auto" aria-label="{{ catalogType | capitalize }} categories">
+    <div class="sticky top-[88px] z-20 mb-10 flex justify-center py-4">
+      <div role="tablist" aria-label="Filter by category" class="relative flex flex-wrap items-center justify-center gap-2 rounded-3xl border border-navy-100/50 bg-white p-2 shadow-subtle">
+        <span
+          class="absolute rounded-full border border-sky-200/60 bg-sky-100/80 transition-all duration-300 ease-out"
+          :style="`top: ${pillTop}px; left: ${pillLeft}px; width: ${pillWidth}px; height: ${pillHeight}px;`"
+          aria-hidden="true"
+        ></span>
+
         <button
-          @click="activeTab = 'all'"
-          class="pb-4 text-base font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === 'all' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent text-gray-400 hover:text-gray-700 hover:border-gray-300'"
+          type="button"
+          role="tab"
+          :aria-selected="activeTab === 'all' ? 'true' : 'false'"
+          @click="activeTab = 'all'; updatePill()"
+          x-ref="filterTab-all"
+          class="relative z-10 flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 font-mono text-[11px] uppercase tracking-wide text-navy-700 transition-colors duration-200 hover:text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          :class="activeTab === 'all' ? 'text-navy-900' : ''"
         >
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full transition-colors duration-200" :class="activeTab === 'all' ? 'bg-[#76B900]' : 'bg-sky-300'" aria-hidden="true"></span>
           All {{ catalogType | capitalize }}
         </button>
+
         {% for category in categories %}
         <button
-          @click="activeTab = '{{ category.id }}'"
-          class="pb-4 text-base font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent text-gray-400 hover:text-gray-700 hover:border-gray-300'"
+          type="button"
+          role="tab"
+          :aria-selected="activeTab === '{{ category.id }}' ? 'true' : 'false'"
+          @click="activeTab = '{{ category.id }}'; updatePill()"
+          x-ref="filterTab-{{ category.id }}"
+          class="relative z-10 flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 font-mono text-[11px] uppercase tracking-wide text-navy-700 transition-colors duration-200 hover:text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          :class="activeTab === '{{ category.id }}' ? 'text-navy-900' : ''"
         >
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full transition-colors duration-200" :class="activeTab === '{{ category.id }}' ? 'bg-[#76B900]' : 'bg-sky-300'" aria-hidden="true"></span>
           {{ category.label }}
         </button>
         {% endfor %}
-      </nav>
+      </div>
     </div>
     {% endif %}
 
-    {# 3-col card grid — ServiceNow-style image-first cards #}
-    <div class="{% if categories.length > 0 %}mt-10{% else %}mt-8{% endif %}">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" style="gap: 40px;">
-        {% for item in items %}
-          <article
-            class="group flex flex-col"
-            {% if categories.length > 0 %}
-            x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            {% endif %}
-          >
-            {# Mockup image area — rounded image block sits directly on page #}
-            <a href="{{ item.url }}" class="block relative overflow-hidden" style="border-radius: 32px; background: linear-gradient(135deg, #0d2137 0%, #1a3a5c 50%, #0f2d4a 100%); min-height: 260px;">
-              {% if item.mockup %}
-              <img
-                src="{{ item.mockup }}"
-                alt="{{ item.title }} interface"
-                class="w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                style="height: 260px;"
-                loading="lazy"
-              />
-              {% else %}
-              {# Icon placeholder when no mockup image #}
-              <div class="flex items-center justify-center" style="min-height: 200px;">
-                <div class="w-20 h-20 rounded-2xl flex items-center justify-center" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
-                  {% if item.icon == "search" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35"/></svg>
-                  {% elif item.icon == "cart" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  {% elif item.icon == "calendar" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  {% elif item.icon == "users" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
-                  {% elif item.icon == "factory" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
-                  {% elif item.icon == "tooth" %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2C9.5 2 7 4 7 6.5c0 1.5.5 3 .5 4.5 0 3-1 5-1 8 0 1.5.5 3 2 3s2-2 3.5-2 2 2 3.5 2 2-1.5 2-3c0-3-1-5-1-8 0-1.5.5-3 .5-4.5C17 4 14.5 2 12 2z"/></svg>
-                  {% else %}
-                  <svg class="w-10 h-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path stroke-linecap="round" stroke-width="1.5" d="M8 21h8M12 17v4"/></svg>
-                  {% endif %}
-                </div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+      {% for item in items %}
+        <article
+          class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-card-hover"
+          {% if categories.length > 0 %}
+          x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          {% endif %}
+        >
+          <a href="{{ item.url }}" class="relative block h-[220px] flex-shrink-0 overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-950">
+            {% if item.mockup %}
+            <img
+              src="{{ item.mockup }}"
+              alt="{{ item.title }} interface"
+              class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+              loading="lazy"
+            />
+            {% else %}
+            <div class="flex h-full items-center justify-center">
+              <div class="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10">
+                {% if item.icon == "search" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35"/></svg>
+                {% elif item.icon == "cart" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                {% elif item.icon == "calendar" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                {% elif item.icon == "users" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
+                {% elif item.icon == "factory" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+                {% elif item.icon == "tooth" %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2C9.5 2 7 4 7 6.5c0 1.5.5 3 .5 4.5 0 3-1 5-1 8 0 1.5.5 3 2 3s2-2 3.5-2 2 2 3.5 2 2-1.5 2-3c0-3-1-5-1-8 0-1.5.5-3 .5-4.5C17 4 14.5 2 12 2z"/></svg>
+                {% else %}
+                <svg class="h-10 w-10 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path stroke-linecap="round" stroke-width="1.5" d="M8 21h8M12 17v4"/></svg>
+                {% endif %}
               </div>
-              {% endif %}
-              {# Subtle bottom fade #}
-              <div style="position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to top,rgba(13,33,55,0.4),transparent);pointer-events:none;"></div>
-            </a>
-
-            {# Card body — no container, text sits directly below image #}
-            <div class="flex flex-col flex-1 pt-5 pb-2">
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-zunkiree-700 transition-colors" style="color:#032D42;">{{ item.title }}</h3>
-              <p class="text-lg line-clamp-3 flex-grow mb-6" style="color:#1d1d1d;line-height:1.5;">{{ item.description }}</p>
-              <a href="{{ item.url }}" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-zunkiree-700 transition-colors mt-auto">
-                {{ item.cta | default('Learn More') }}
-                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
             </div>
-          </article>
-        {% endfor %}
-      </div>
-    </div>
+            {% endif %}
+            {% if item.category %}
+              <span class="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-navy-700 backdrop-blur-sm">
+                {{ item.category }}
+              </span>
+            {% endif %}
+          </a>
 
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-[18px] font-semibold leading-snug text-[#111827] transition-colors group-hover:text-[#4d7a00]">{{ item.title }}</h3>
+            {% if item.tagline %}
+              <p class="mt-1 text-[13px] font-medium leading-snug text-[#76B900]">{{ item.tagline }}</p>
+            {% endif %}
+            <p class="mt-2.5 flex-grow text-[14px] leading-relaxed text-[#6B7280] line-clamp-3">{{ item.description }}</p>
+            <a href="{{ item.url }}" class="mt-5 inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-wide text-navy-900 transition-colors group-hover:text-[#4d7a00]">
+              {{ item.cta | default('Learn More') }}
+              <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 5: CTA BAND — homepage design style
+   CLOSING DUAL CTA — same dark navy + green-glow shell as
+   homepage-v2/industry.njk's closing CTA (COMPONENT_LIBRARY.md
+   §2.6 dark variant). Primary CTA and copy come from the existing
+   ctaHeadline/ctaDescription/ctaButtonText/ctaButtonUrl frontmatter;
+   secondary CTA preserves the prior "See all services" link exactly.
    ===================================================== #}
-<section class="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style="background:#0a1228;" data-reveal>
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
 
-  {# Purple glow — top right #}
-  <div aria-hidden="true" style="position:absolute;top:-20%;right:-5%;width:520px;height:520px;background:radial-gradient(ellipse,rgba(110,60,200,0.45) 0%,transparent 65%);filter:blur(72px);border-radius:50%;pointer-events:none;"></div>
-  {# Purple glow — bottom left #}
-  <div aria-hidden="true" style="position:absolute;bottom:-25%;left:-8%;width:460px;height:460px;background:radial-gradient(ellipse,rgba(90,40,180,0.35) 0%,transparent 65%);filter:blur(72px);border-radius:50%;pointer-events:none;"></div>
-
-  <div class="relative z-10 max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-      {# Left — eyebrow + headline + description #}
-      <div>
-        <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color:#76b900;">Custom Engagements</p>
-        <h2 class="text-4xl md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] mb-5" style="color:#ffffff;">
-          {{ ctaHeadline | default('Ready to get started?') | replace('. ', '.<br>') | safe }}
-        </h2>
-        <p class="text-base md:text-lg leading-relaxed" style="color:#ffffff;">
-          {{ ctaDescription | default('Let\'s discuss how we can help you achieve your goals.') }}
-        </p>
-      </div>
-
-      {# Right — glass panel with two action rows #}
-      <div class="cta-band-panel">
-
-        <a href="{{ ctaButtonUrl | default('/contact/') }}" class="cta-band-row group">
-          <div class="cta-band-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 18v-6a9 9 0 0118 0v6"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/>
-            </svg>
-          </div>
-          <div class="flex-1 min-w-0">
-            <p class="text-base font-semibold text-white mb-1">{{ ctaButtonText | default('Schedule a Call') }}</p>
-            <p class="text-sm leading-snug" style="color:rgba(255,255,255,0.60);">Tell us what you're trying to solve — we'll tell you exactly whether we can help, and what it would take.</p>
-          </div>
-          <div class="cta-band-arrow">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </div>
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+        Custom Engagements
+      </span>
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        {{ ctaHeadline | default('Ready to get started?') }}
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        {{ ctaDescription | default('Let\'s discuss how we can help you achieve your goals.') }}
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="{{ ctaButtonUrl | default('/contact/') }}"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          {{ ctaButtonText | default('Schedule a Call') }}
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
-
-        <div class="mx-5 border-t border-white/10" aria-hidden="true"></div>
-
-        <a href="/services/" class="cta-band-row group">
-          <div class="cta-band-icon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-            </svg>
-          </div>
-          <div class="flex-1 min-w-0">
-            <p class="text-base font-semibold text-white mb-1">See all services</p>
-            <p class="text-sm leading-snug" style="color:rgba(255,255,255,0.60);">Browse our full catalogue — AI systems, custom software, SaaS, web, mobile, and AEO.</p>
-          </div>
-          <div class="cta-band-arrow">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </div>
+        <a
+          href="/services/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          See all services
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
-
       </div>
     </div>
   </div>
-  </div>
 </section>
 
-
 {# =====================================================
-   SECTION 7: CTA + FAQ partial
+   FAQ — servicesFaq.json already existed and already powers the
+   FAQPage schema below, but had no visible on-page counterpart
+   (a structured-data/visible-content mismatch Google flags).
+   Same accordion recipe as homepage-v2's FAQ section; no new copy.
    ===================================================== #}
 {% set pageFaqData = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% set faq = pageFaqData if pageFaqData else faq %}
-{# {% set ctaLightTheme = true %}
-{% include "partials/cta-faq.njk" %} #}
+{% if faq and faq.length > 0 %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mx-auto mb-10 max-w-2xl text-center md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in faq %}
+          <div class="py-3">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="group flex w-full items-center justify-between gap-4 py-2 text-left"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="faq-answer-{{ loop.index }}"
+            >
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              id="faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="overflow-hidden"
+            >
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% include "partials/footer-v2.njk" %}
 
 {# =====================================================
-   SCHEMA MARKUP
+   SCHEMA MARKUP — unchanged from the prior version.
    ===================================================== #}
 {% if schemaType %}
 <script type="application/ld+json">

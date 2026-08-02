@@ -93,6 +93,7 @@ export default function (eleventyConfig) {
   // Date filter with multiple format support
   eleventyConfig.addFilter("date", function(date, format) {
     const d = new Date(date);
+    if (isNaN(d.getTime())) return "";
     if (format === "%Y-%m-%d") {
       return d.toISOString().split('T')[0];
     }

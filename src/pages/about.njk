@@ -71,47 +71,59 @@ bodyClass: "v2-inter"
 </style>
 
 {# =====================================================
-   HERO — centered single-column, same shell as
-   contact.njk/industry.njk's secondary-page hero. Adds a
-   small round brand mark above the eyebrow (Kore.ai's
-   about-page icon-in-circle motif, restyled to the flat
-   white/hairline-border system — no gradient backdrop per
-   MASTER_DESIGN_SPEC.md §10).
+   HERO — two-column header (left: eyebrow + headline, right:
+   supporting copy + CTAs) over a full-width photo, per the
+   reference layout supplied 2026-07-31. Photo reuses the
+   "Founded in Kathmandu" image from the Origin/Timeline section
+   below (aboutJourney[0]) instead of a new asset. Brand-mark chip
+   removed per request. Supporting copy restored to the fuller
+   two-paragraph version this hero carried before the 2026-07-30
+   trim (git d31b180) — same wording, not new copy.
    ===================================================== #}
-<section class="relative flex flex-col items-center justify-center px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40" aria-labelledby="hero-heading">
-  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
+<section class="relative px-4 pb-12 pt-32 sm:px-6 sm:pt-36 sm:pb-16 lg:px-8 lg:pt-40 lg:pb-20" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto max-w-5xl">
 
-    <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-navy-100/60 bg-white shadow-subtle" aria-hidden="true">
-      <img src="/assets/images/zunkireelabs-logo-round.svg" alt="" class="h-6 w-6" />
-    </span>
+    <div class="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" data-reveal-stagger>
+      <div>
+        <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+          About
+        </span>
+        <h1 id="hero-heading" class="text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+          The AI infrastructure company
+        </h1>
+      </div>
 
-    <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
-      About
-    </span>
+      <div class="flex flex-col justify-end lg:pb-2">
+        <p class="text-[19px] leading-relaxed text-[#6B7280] sm:text-[20px]">
+          We build intelligent software platforms that connect data, systems, and human interaction through AI, on an AI-native architecture that unifies search, automation, and data intelligence. Founded in Nepal in 2018 with a global mindset, we're building the next generation of AI-native platforms for businesses worldwide.
+        </p>
 
-    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
-      The AI infrastructure company
-    </h1>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row" data-reveal>
+          <a
+            href="/products/"
+            class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          >
+            Explore Our Products
+            <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+          </a>
+          <a
+            href="/contact/"
+            class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          >
+            Talk to Us
+            <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <p class="mt-4 max-w-[640px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
-      We build intelligent software platforms that connect data, systems, and human interaction through AI&mdash;from Kathmandu, for businesses worldwide.
-    </p>
-
-    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" data-reveal>
-      <a
-        href="/products/"
-        class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-      >
-        Explore Our Products
-        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
-      </a>
-      <a
-        href="/contact/"
-        class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-      >
-        Talk to Us
-        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
-      </a>
+    <div class="overflow-hidden rounded-2xl border border-navy-100/60 shadow-card" data-reveal>
+      <img
+        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&h=900&fit=crop"
+        alt="Founding team"
+        class="h-[360px] w-full object-cover sm:h-[440px] lg:h-[500px]"
+        loading="eager"
+      />
     </div>
   </div>
 </section>
@@ -141,7 +153,7 @@ bodyClass: "v2-inter"
         <div class="pointer-events-none absolute inset-0 bg-gradient-to-bl from-sky-100/60 via-sky-50/20 to-transparent" aria-hidden="true"></div>
         <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background-image: radial-gradient(circle at 15% 85%, rgba(118, 185, 0, 0.08) 0%, transparent 55%);"></div>
         <div class="relative z-10">
-          <p class="text-[16px] leading-relaxed text-[#374151] sm:text-[17px]">
+          <p class="text-[14px] leading-relaxed text-[#374151] sm:text-[17px]">
             Zunkiree Labs combines AI engineering, data systems, and modern software architecture to transform how organizations operate. We don't retrofit AI onto existing systems. We design with intelligence at the core, creating platforms that serve businesses internationally while staying rooted in Nepal's growing tech ecosystem.
           </p>
           <div class="mt-6 flex items-center gap-3">
@@ -326,7 +338,7 @@ bodyClass: "v2-inter"
             </span>
             <div class="min-w-0">
               <h3 class="mb-1 text-[15px] font-semibold text-[#111827] transition-colors group-hover:text-navy-600">{{ item.title }}</h3>
-              <p class="text-[13px] leading-relaxed text-[#6B7280]">{{ item.description | safe }}</p>
+              <p class="text-[14px] leading-relaxed text-[#6B7280]">{{ item.description | safe }}</p>
             </div>
           </div>
         {% endfor %}
@@ -403,7 +415,7 @@ bodyClass: "v2-inter"
         <h2 id="journey-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
           Our journey
         </h2>
-        <p class="text-[15px] leading-relaxed text-[#6B7280] sm:text-[16px]">
+        <p class="text-[14px] leading-relaxed text-[#6B7280] sm:text-[16px]">
           From a founding team in Kathmandu to AI infrastructure running in production for clients worldwide&mdash;here's how we got here, one product at a time.
         </p>
       </div>
@@ -424,7 +436,7 @@ bodyClass: "v2-inter"
 
             <span class="mb-3 inline-flex items-center rounded-full bg-[#76B900]/10 px-2.5 py-1 font-mono text-[12px] font-semibold uppercase tracking-wider text-[#5a9100]">{{ entry.year }}</span>
             <h3 class="mb-4 text-[22px] font-semibold tracking-tight text-[#111827] sm:text-[24px]">{{ entry.title }}</h3>
-            <p class="mb-6 max-w-2xl text-[15px] leading-relaxed text-[#6B7280] sm:text-[16px]">{{ entry.description | safe }}</p>
+            <p class="mb-6 max-w-2xl text-[14px] leading-relaxed text-[#6B7280] sm:text-[16px]">{{ entry.description | safe }}</p>
 
             <ul class="mb-6 space-y-3">
               {% for bullet in entry.bullets %}
@@ -540,7 +552,7 @@ bodyClass: "v2-inter"
       </h2>
     </div>
 
-    <p class="mb-10 max-w-3xl text-[17px] leading-relaxed text-[#374151] sm:text-[18px] md:mb-12" data-reveal>
+    <p class="mb-10 max-w-3xl text-[14px] leading-relaxed text-[#374151] sm:text-[18px] md:mb-12" data-reveal>
       Our long-term vision is to grow from a services-supported startup into a product-led technology company&mdash;developing a portfolio of AI-native software platforms that serve multiple industries worldwide.
     </p>
 
@@ -555,7 +567,7 @@ bodyClass: "v2-inter"
       </div>
 
       <div class="flex flex-col gap-5 lg:col-span-5">
-        <div class="rounded-xl border border-navy-100 bg-white p-6 shadow-subtle sm:p-7">
+        <div class="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle sm:p-7">
           <span class="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -563,11 +575,11 @@ bodyClass: "v2-inter"
             </svg>
           </span>
           <h3 class="mb-1 text-[17px] font-semibold text-[#111827]">Kathmandu, Nepal</h3>
-          <p class="text-[13.5px] leading-relaxed text-[#6B7280]">Headquarters&mdash;engineering, product, and delivery, all under one roof.</p>
+          <p class="text-[14px] leading-relaxed text-[#6B7280]">Headquarters&mdash;engineering, product, and delivery, all under one roof.</p>
         </div>
 
-        <div class="flex-1 rounded-xl border border-navy-100 bg-white p-6 shadow-subtle sm:p-7">
-          <p class="mb-4 text-[15px] leading-relaxed text-[#374151]">
+        <div class="flex-1 rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle sm:p-7">
+          <p class="mb-4 text-[14px] leading-relaxed text-[#374151]">
             One team, one office&mdash;serving clients across Education, Agencies, Healthcare, and Real Estate, with production systems running for organizations from Nepal to Australia.
           </p>
           <ul class="flex flex-wrap gap-2">
