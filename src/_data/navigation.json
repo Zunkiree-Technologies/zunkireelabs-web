@@ -144,49 +144,6 @@
               }
             ],
             "seeAll": { "label": "See all services", "url": "/services/" }
-          },
-          {
-            "header": "USE CASES",
-            "type": "descriptive",
-            "items": [
-              {
-                "label": "Customer Support",
-                "url": "/solutions/customer-support/",
-                "icon": "headset",
-                "description": "Reduce support tickets 45% with AI"
-              },
-              {
-                "label": "Internal Search",
-                "url": "/solutions/internal-search/",
-                "icon": "search-doc",
-                "description": "Find answers in seconds, not hours"
-              },
-              {
-                "label": "Knowledge Management",
-                "url": "/solutions/knowledge-management/",
-                "icon": "book",
-                "description": "Organize & surface institutional knowledge"
-              },
-              {
-                "label": "Digital Transformation",
-                "url": "/solutions/digital-transformation/",
-                "icon": "transform",
-                "description": "Modernize legacy systems with AI"
-              }
-            ]
-          },
-          {
-            "header": "BY INDUSTRY",
-            "type": "simple",
-            "items": [
-              { "label": "Healthcare", "url": "/solutions/healthcare/" },
-              { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
-              { "label": "Legal", "url": "/solutions/legal/" },
-              { "label": "Professional Services", "url": "/solutions/services/" },
-              { "label": "Education", "url": "/solutions/education/" },
-              { "label": "Human Resources", "url": "/solutions/human-resources/" }
-            ],
-            "seeAll": { "label": "See all industries", "url": "/solutions/" }
           }
         ],
         "featured": {
@@ -324,14 +281,6 @@
       { "label": "App Development", "url": "/services/app-development/" },
       { "label": "AEO & SEO", "url": "/services/aeo-seo/" },
       { "label": "Agentic as a Service (GaaS)", "url": "/agentic-as-a-service/" }
-    ],
-    "solutions": [
-      { "label": "Healthcare", "url": "/solutions/healthcare/" },
-      { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
-      { "label": "Legal", "url": "/solutions/legal/" },
-      { "label": "Professional Services", "url": "/solutions/services/" },
-      { "label": "Education", "url": "/solutions/education/" },
-      { "label": "Human Resources", "url": "/solutions/human-resources/" }
     ],
     "resources": [
       { "label": "What is GaaS?", "url": "/resources/what-is-gaas/" },
