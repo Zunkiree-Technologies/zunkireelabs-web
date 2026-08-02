@@ -1,5 +1,5 @@
 ---
-title: "State of AI in Nepal 2026: Key Findings and Insights"
+title: "State of AI in Nepal: Overview as of Today" # SEOAI:TITLE
 description: "An analysis of Nepal's AI landscape in 2026. Explore adoption trends, challenges, opportunities, and predictions for the future of artificial intelligence in Nepal."
 date: 2026-03-30
 lastUpdated: 2026-03-30
