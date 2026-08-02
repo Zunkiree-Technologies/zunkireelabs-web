@@ -11,15 +11,15 @@
           {
             "type": "descriptive",
             "items": [
-              { "label": "Education", "url": "/industries/education/", "description": "Application pipeline, partner-college management, and campaign tracking" },
-              { "label": "Agencies", "url": "/industries/agencies/", "description": "Deal pipeline, proposals, delivery, and utilization management" }
+              { "label": "AI for Education", "url": "/industries/education/", "description": "Admissions pipeline and campaign management" },
+              { "label": "AI for Agencies", "url": "/industries/agencies/", "description": "Deal pipeline and delivery management" }
             ]
           },
           {
             "type": "descriptive",
             "items": [
-              { "label": "Healthcare", "url": "/industries/healthcare/", "description": "Credential tracking, compliance-gated scheduling, and workforce management" },
-              { "label": "Real Estate", "url": "/industries/real-estate/", "description": "Built for CRE sponsor firms raising capital from investors" }
+              { "label": "AI for Healthcare", "url": "/industries/healthcare/", "description": "Credential tracking and scheduling" },
+              { "label": "AI for Real Estate", "url": "/industries/real-estate/", "description": "Capital raising for CRE sponsors" }
             ]
           }
         ],
@@ -127,6 +127,11 @@
           "url": "/contact/"
         }
       }
+    },
+    {
+      "label": "GaaS",
+      "hasDropdown": false,
+      "url": "/agentic-as-a-service/"
     },
     {
       "label": "Resources",

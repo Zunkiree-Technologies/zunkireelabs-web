@@ -292,6 +292,13 @@ layout: base.njk
 
   <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
 
+    {% if product.hero.statusBadge %}
+      <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3.5 py-1.5">
+        <span class="h-2 w-2 flex-shrink-0 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="font-mono text-[11px] uppercase tracking-wider text-amber-700">{{ product.hero.statusBadge }}</span>
+      </span>
+    {% endif %}
+
     <span class="mb-4 inline-flex items-center rounded-full border border-sky-200/60 bg-gradient-to-br from-sky-50 to-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
       {{ product.eyebrow }}
     </span>
@@ -301,8 +308,8 @@ layout: base.njk
     </h1>
 
     {% if product.hero.subhead %}
-      <p class="mt-4 max-w-[560px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
-        {{ product.hero.subhead }}
+      <p class="mt-4 max-w-[560px] px-4 text-center text-[18px] font-medium leading-relaxed tracking-tight text-[#6B7280] sm:max-w-none sm:text-[20px]">
+        {{ product.hero.subhead | safe }}
       </p>
     {% endif %}
 
@@ -859,6 +866,14 @@ layout: base.njk
         class="pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
         style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
+      ></div>
+      {# Same background-pattern treatment as the "AI & Machine Learning" capability card on
+         about.njk — a different asset (card-info-01, not card-info-02) so this card doesn't
+         repeat that card's exact texture. Applied to the whole card, not just the pillars. #}
+      <div
+        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center opacity-[0.1]"
+        style="background-image: url('/assets/images/card-info-01.avif');"
+        aria-hidden="true"
       ></div>
 
       <div class="relative z-10">

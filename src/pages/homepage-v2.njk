@@ -2,15 +2,15 @@
 layout: base.njk
 title: "AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs"
 description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
-permalink: /homepage-v2/
+permalink: /
 hideChrome: true
 bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   HOMEPAGE V2 — REDESIGN DRAFT
-   Preview only at /homepage-v2/ — current live homepage
-   (src/pages/index.njk, permalink: /) is untouched.
+   HOMEPAGE V2 — now the live homepage at /.
+   Previous homepage (src/pages/index.njk) moved to
+   /home-legacy/ for reference only.
    ===================================================== #}
 
 {% include "partials/navbar-v2.njk" %}
@@ -42,13 +42,16 @@ bodyClass: "v2-inter"
    ===================================================== #}
 <div class="relative overflow-x-clip" style="background-image: url('/assets/images/image.webp'); background-size: cover; background-position: top center; background-repeat: no-repeat;">
 
+{# Section starts at the very top of the document since the navbar is `fixed`
+   (out of flow, 72px tall, z-50) — pt-32/36/44 clears it before the headline,
+   matching product-v2.njk's hero (see product-v2.njk:257 comment for the same issue). #}
 <section
-  class="relative z-10 flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 pt-4 pb-4 sm:px-6 sm:pt-6 lg:px-8 lg:pt-8"
+  class="relative z-10 flex min-h-[58vh] flex-col items-center justify-center overflow-hidden px-4 pb-4 pt-32 sm:min-h-[64vh] sm:px-6 sm:pt-36 lg:min-h-[70vh] lg:px-8 lg:pt-44"
   aria-labelledby="hero-v2-heading"
 >
 
   <div
-    class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center"
+    class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center sm:-translate-y-4 lg:-translate-y-8"
     data-reveal-stagger
   >
 
@@ -63,30 +66,32 @@ bodyClass: "v2-inter"
       id="hero-v2-heading"
       class="mt-[20px] text-center text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
     >
-      We already run this live,<br />for your industry.
+      Building AI to make lives better.
     </h1>
 
-    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size).
-         Line 1 needed to be narrower ("Not a prototype. Not a pilot. Already"
-         measured ~545px — too wide), so "Already" moves back to line 2. -->
+    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size). Manual
+         two-row break (not text-balance, which was wrapping to 3 uneven rows) so
+         each row centers independently under the hero title. -->
     <p
-      class="mt-4 max-w-[500px] px-4 text-center text-balance text-[26px] font-medium leading-relaxed text-[#6B7280]"
+      class="mt-4 max-w-[380px] px-2 text-center text-[19px] font-medium leading-snug tracking-tight text-[#6B7280] sm:max-w-none sm:px-4 sm:text-[26px] sm:leading-relaxed"
     >
-      Not a prototype. Not a pilot.<br />Already running in production today.
+      Launch AI workflows across your business in days,
+      <br class="hidden sm:block" />
+      already proven in production.
     </p>
 
-    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs) -->
-    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs). Full-width stacked on mobile (easier thumb targets on a 320-390px screen), auto-width side-by-side from sm up; mobile padding bumped to py-3.5 so the tap target clears 44px. -->
+    <div class="mt-8 flex w-full max-w-[320px] flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row">
       <a
         href="/contact/"
-        class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-3.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
       >
         Get a demo
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
       </a>
       <a
         href="/contact/"
-        class="inline-flex items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-3.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
       >
         Explore the platform
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
@@ -107,32 +112,35 @@ bodyClass: "v2-inter"
    productsDetails.json.search.description, the same copy powering
    /products/search/) → circular arrow CTA on the right, on a dark
    navy-950 surface with the existing green/navy gradient bloom.
-   No new image asset for now — text-only card, per explicit
-   direction.
+   Text-only card, per explicit direction — no photographic/render
+   asset (that's Kore's approach, deliberately not copied here).
+   ASCII/glyph texture was tried and rejected (didn't read well) —
+   visual richness now comes from just the enlarged, slow-drifting
+   version of the existing green/slate bloom, behind the text, no
+   layout or DOM structure change.
 
    Links to /products/search/ — Search already has a real, fully
    built product page, so the CTA now goes straight there instead
    of the old /services/ placeholder.
    ===================================================== #}
-<section class="relative z-10 -mt-8 px-4 pb-8 sm:-mt-10 sm:px-6 sm:pb-10 lg:-mt-12 lg:px-8 lg:pb-12" data-reveal>
+<section class="relative z-10 mt-6 px-4 pb-8 sm:-mt-10 sm:px-6 sm:pb-10 lg:-mt-12 lg:px-8 lg:pb-12" data-reveal>
   <div class="mx-auto max-w-5xl">
     <a
       href="/products/search/"
-      class="group relative flex flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl bg-navy-950 p-8 transition-colors duration-200 hover:bg-navy-900 sm:p-10 md:flex-row md:items-center lg:p-12"
+      class="group relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl bg-navy-950 p-6 transition-colors duration-200 hover:bg-navy-900 sm:gap-8 sm:p-10 md:flex-row md:items-center lg:p-12"
       style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
     >
-      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10) -->
+      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10). Enlarged + slow drift vs. the original static version. -->
       <div
-        class="pointer-events-none absolute inset-0 z-0"
+        class="search-card-bloom pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
       ></div>
 
       <div class="relative z-10 min-w-0 max-w-xl">
         <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
           A Zunkiree Labs Product
         </span>
-        <h2 class="mb-3 text-[26px] font-medium leading-[1.2] text-white sm:text-[30px]">
+        <h2 class="mb-3 text-[22px] font-medium leading-[1.25] text-white sm:text-[26px] lg:text-[30px]">
           Introducing <span class="text-[#76B900]">{</span> <span class="italic">Zunkiree Search</span> <span class="text-[#76B900]">}</span>
           <span class="ml-2 inline-flex translate-y-[-0.15em] items-center rounded-full bg-[#76B900] px-2.5 py-1 align-middle text-[10px] font-semibold uppercase tracking-wider text-white">
             Live
@@ -155,6 +163,22 @@ bodyClass: "v2-inter"
     </a>
   </div>
 </section>
+
+<style>
+  .search-card-bloom {
+    background:
+      radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
+      radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
+    animation: search-card-bloom-drift 14s ease-in-out infinite;
+  }
+  @keyframes search-card-bloom-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .search-card-bloom { animation: none; }
+  }
+</style>
 
 {# =====================================================
    PLATFORM PILLARS — Website V2
@@ -420,7 +444,7 @@ bodyClass: "v2-inter"
           <span class="pointer-events-none absolute bottom-2 right-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
 
           <div class="relative mb-3">
-            <h3 class="whitespace-nowrap text-center text-[20px] font-medium leading-[1.3] text-[#111827]">
+            <h3 class="text-center text-[17px] font-medium leading-[1.3] text-[#111827] sm:text-[20px] sm:whitespace-nowrap">
               {{ pillar.title }}
             </h3>
           </div>
@@ -626,31 +650,38 @@ app = platform.init(
    Continuous scrolling client track placed immediately below mockups.
    ===================================================== #}
 {% set provenClients = [
-  { name: "Admizz", logo: "/images/clients/admizz.webp" },
-  { name: "CoreCloud365", logo: "/images/clients/corecloud365.webp" },
-  { name: "Rapid Investment", logo: "/images/clients/rapid-investment.webp" },
-  { name: "CMS Group", logo: "/images/clients/cms-group.webp" },
-  { name: "Mach24 Orbital", logo: "/images/clients/mach24orbital.webp" },
-  { name: "Khushbu Nirman Sewa", logo: "/images/clients/khushbu-nirman-sewa.webp" },
-  { name: "Prime Tiles", logo: "/images/clients/prime-tiles.webp" },
-  { name: "Khems Cleaning", logo: "/images/clients/khems-cleaning.webp" }
+  { name: "Admizz", logo: "/assets/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/assets/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/assets/images/clients/rapid-investment.svg" },
+  { name: "CMS Group", logo: "/assets/images/clients/cms-group.webp" },
+  { name: "Mach24 Orbital", logo: "/assets/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/assets/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/assets/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" }
 ] %}
 <div class="w-full pb-12 sm:pb-16 lg:pb-20 overflow-hidden relative" data-reveal>
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] mb-8">Proven with clients running in production</p>
+    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] mb-8">Trusted by teams modernizing operations with AI</p>
     <div class="w-full overflow-hidden relative py-2">
       <!-- Gradient Fade Edge Masks -->
       <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-warm-off-white/30 to-transparent z-10"></div>
       <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-warm-off-white/30 to-transparent z-10"></div>
       
-      <div class="animate-marquee flex items-center gap-16">
+      {# `gap` on the flex row (previously gap-16) applies only *between* items —
+         with 2×8 = 16 images that's 15 gaps total, so translateX(-50%) lands
+         half a gap short of where the duplicate list actually starts, producing
+         a visible stutter/gap at the loop seam once per cycle. Using mr-16 on
+         every image (including the last of each half) instead makes each half
+         a self-contained "S + 8 gaps" unit of identical width, so -50% always
+         lands exactly on the duplicate's first image — a truly seamless loop. #}
+      <div class="animate-marquee flex items-center">
         <!-- Original List -->
         {% for client in provenClients %}
-          <img src="{{ client.logo }}" alt="{{ client.name }}" class="h-6 w-auto object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
         {% endfor %}
         <!-- Duplicated List for seamless loop -->
         {% for client in provenClients %}
-          <img src="{{ client.logo }}" alt="{{ client.name }}" class="h-6 w-auto object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
         {% endfor %}
       </div>
     </div>
@@ -670,11 +701,22 @@ app = platform.init(
    yet (capability framing only); Real Estate uses the sanctioned
    capability-led variant (no CRE client exists).
 
-   CTAs route to /contact/ for now — the four vertical pages
-   (/ai-for-education/ etc., per CONTENT_SUMMARY.md §7) don't
-   exist yet and are built one section/page at a time per the
-   homepage-v2 working formula; update these once each vertical
-   page ships.
+   Card CTA routes to /industries/{id}/ — these pages now exist
+   (src/pages/industries/industry-pages.njk + src/_data/industries.js),
+   so the earlier "route to /contact/, pages don't exist yet" note
+   is stale and has been corrected here.
+
+   Card stats (2026-07-31 card redesign): Education uses its real
+   client stats (Admizz — 45% faster response, 3x satisfaction,
+   sourced from industries.js flagshipProof.stats). Agencies,
+   Healthcare, and Real Estate have no named-client metric yet
+   (Agencies is explicitly flagged "[NEEDS SADIN]" in industries.js;
+   Healthcare/Real Estate are capability-led by design) — per the
+   company-industry-context.md guardrail against fabricating client
+   metrics, those three reuse the real platform-layer stats instead
+   (99.9% Uptime SLA, 50+ Connectors — from industries.js
+   platformTieIn.stats, which describe the shared platform, not a
+   specific client).
 
    Design-token compliance (MASTER_DESIGN_SPEC.md):
    - §4 Color: `#76B900` is the ONE accent hue everywhere — the old
@@ -700,6 +742,7 @@ app = platform.init(
    ===================================================== #}
 {% set industries = [
   {
+    id: "education",
     label: "Education",
     image: "/assets/images/industries/education.jpg",
     headline: "Live for education consultancies and study-abroad recruiters.",
@@ -709,22 +752,25 @@ app = platform.init(
     statLabel: "faster response times, running live today for Admizz's education CRM deployment."
   },
   {
+    id: "agencies",
     label: "Agencies",
     image: "/assets/images/industries/agencies.jpg",
     headline: "Running our own agency operations on this exact platform.",
     iconPath: "M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM10 5h4v2h-4V5zm10 13H4V9h16v9z",
     proofType: "line",
-    proofLine: "ZunkireeLabs runs its own deal pipeline, proposals with share/print views, project cockpit, and utilization dashboards on this same platform — Mobilise runs the same infrastructure externally."
+    proofLine: "ZunkireeLabs runs its own deal pipeline, proposals, delivery, and time tracking on this same platform — Mobilise runs the same infrastructure externally."
   },
   {
+    id: "healthcare",
     label: "Healthcare",
     image: "/assets/images/industries/healthcare.jpg",
     headline: "Built for Australian healthcare providers — hospitals, aged care, community care.",
     iconPath: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
     proofType: "line",
-    proofLine: "Replacing manual shift rostering, credential tracking, staff classification, time & attendance, and workforce-to-recruitment handoff with one connected system."
+    proofLine: "Replacing manual shift rostering, credential tracking, and workforce-to-recruitment handoff with one connected system."
   },
   {
+    id: "real-estate",
     label: "Real Estate",
     image: "/assets/images/industries/real-estate.jpg",
     headline: "Built for CRE sponsor firms raising capital from investors.",
@@ -752,45 +798,107 @@ app = platform.init(
       margin-left: calc((100% - 1024px) / 2 - 2rem);
     }
   }
+
+  /* Auto-advancing tab indicator: fills left-to-right over the autoplay duration */
+  @keyframes industry-tab-timer {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+  .industry-tab-fill {
+    animation-name: industry-tab-timer;
+    animation-duration: var(--tab-timer-duration, 6000ms);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  .industry-tab-fill.is-paused {
+    animation-play-state: paused;
+  }
 </style>
 
 <section
   class="relative flex flex-col justify-center overflow-hidden py-12 sm:py-16 lg:py-20"
-  x-data="{ activeTab: 1 }"
+  x-data="{
+    activeTab: 1,
+    autoplayMs: 6000,
+    autoplayTimer: null,
+    isPaused: false,
+    startAutoplay() {
+      clearTimeout(this.autoplayTimer);
+      if (this.isPaused) return;
+      this.autoplayTimer = setTimeout(() => {
+        this.activeTab = this.activeTab >= 4 ? 1 : this.activeTab + 1;
+      }, this.autoplayMs);
+    }
+  }"
+  x-init="startAutoplay(); $watch('activeTab', () => startAutoplay())"
+  :style="'--tab-timer-duration: ' + autoplayMs + 'ms;'"
+  @mouseenter="isPaused = true; clearTimeout(autoplayTimer)"
+  @mouseleave="isPaused = false; startAutoplay()"
   aria-labelledby="industry-showcase-heading"
 >
   <!-- Header Wrapper (Centered, padded) -->
   <div class="mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8">
-    <!-- Section Header Top Row — Header left, Actions right -->
-    <div class="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" data-reveal>
-      <div class="max-w-2xl showcase-title-area">
-        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-          Industries
-        </span>
-        <h2 id="industry-showcase-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
-          Find the industry that looks like yours
-        </h2>
-        <p class="text-body-lg text-[#6B7280]">
+    <div class="mb-12 showcase-title-area" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Industries
+      </span>
+
+      <h2 id="industry-showcase-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Find the industry that looks like yours
+      </h2>
+
+      <!-- Subhead copy + Tabs Row — aligned in the same row -->
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <p class="max-w-2xl text-body-lg text-[#6B7280]">
           Four verticals, one shared platform, already running in production.
         </p>
-      </div>
 
-      <!-- Actions/CTAs -->
-      <div class="flex flex-row items-center gap-3">
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        <!-- Tabs — occupies the former Actions/CTAs slot -->
+        <div
+          role="tablist"
+          aria-label="Industries"
+          class="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-6 lg:flex-shrink-0 lg:pl-12"
         >
-          Request a demo
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
-        </a>
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-        >
-          Let's talk
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
-        </a>
+          {% for industry in industries %}
+            {% set tabIndex = loop.index %}
+            <button
+              type="button"
+              role="tab"
+              id="industry-tab-{{ loop.index0 }}"
+              :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
+              aria-controls="industry-panel-{{ tabIndex }}"
+              :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
+              @click="activeTab = {{ tabIndex }}; $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });"
+              class="group text-left focus:outline-none flex-1 lg:flex-none lg:w-auto"
+            >
+              <!-- Indicator Line: track + auto-advancing timer fill -->
+              <div
+                class="relative h-[3px] w-full min-w-[64px] overflow-hidden rounded-full transition-colors duration-300"
+                :class="activeTab === {{ tabIndex }} ? 'bg-navy-200/30' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
+              >
+                <div
+                  class="industry-tab-fill absolute inset-y-0 left-0 h-full rounded-full bg-[#76B900]"
+                  x-show="activeTab === {{ tabIndex }}"
+                  :class="isPaused ? 'is-paused' : ''"
+                  x-effect="
+                    if (activeTab === {{ tabIndex }}) {
+                      $el.style.animation = 'none';
+                      void $el.offsetWidth;
+                      $el.style.animation = '';
+                    }
+                  "
+                ></div>
+              </div>
+              <!-- Tab Label -->
+              <span
+                class="mt-3 block whitespace-nowrap font-mono text-[11px] uppercase tracking-wider text-center transition-colors duration-200"
+                :class="activeTab === {{ tabIndex }} ? 'text-navy-900 font-semibold' : 'text-navy-400 group-hover:text-navy-600'"
+              >
+                {{ industry.label }}
+              </span>
+            </button>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
@@ -805,7 +913,22 @@ app = platform.init(
     industries[0]
   ] %}
 
-  <div class="showcase-track-container relative w-full overflow-hidden" data-reveal>
+  <div
+    class="showcase-track-container relative w-full overflow-hidden cursor-grab select-none"
+    :class="isDragging ? 'cursor-grabbing' : ''"
+    data-reveal
+    x-data="{ isDragging: false, startX: 0 }"
+    @mousedown="isDragging = true; startX = $event.clientX"
+    @mousemove.window="if (isDragging) { $event.preventDefault() }"
+    @mouseup.window="
+      if (isDragging) {
+        const delta = $event.clientX - startX;
+        if (delta < -60 && activeTab < 4) activeTab++;
+        else if (delta > 60 && activeTab > 1) activeTab--;
+      }
+      isDragging = false;
+    "
+  >
     <div
       class="flex transition-transform duration-500 ease-out"
       :style="'transform: translateX(calc(var(--card-offset) - (' + activeTab + ' * (var(--card-width) + var(--card-gap))))); gap: var(--card-gap);'"
@@ -830,8 +953,9 @@ app = platform.init(
           <img
             src="{{ item.image }}"
             alt=""
-            class="absolute inset-0 h-full w-full object-cover"
+            class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
             loading="lazy"
+            draggable="false"
             width="1200"
             height="800"
           />
@@ -878,45 +1002,6 @@ app = platform.init(
 
         </div>
       {% endfor %}
-    </div>
-  </div>
-
-  <!-- Tabs Wrapper (Centered, padded) -->
-  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 mt-12">
-    <!-- Center-aligned Bottom Tabs -->
-    <div class="flex justify-center" data-reveal>
-      <div
-        role="tablist"
-        aria-label="Industries"
-        class="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-6 border-t border-navy-200/20 pt-6 w-full max-w-xl justify-center"
-      >
-        {% for industry in industries %}
-          {% set tabIndex = loop.index %}
-          <button
-            type="button"
-            role="tab"
-            id="industry-tab-{{ loop.index0 }}"
-            :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
-            aria-controls="industry-panel-{{ tabIndex }}"
-            :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
-            @click="activeTab = {{ tabIndex }}"
-            class="group text-left focus:outline-none flex-1 max-w-[120px]"
-          >
-            <!-- Indicator Line -->
-            <div
-              class="h-[3px] w-full transition-all duration-300 rounded-full"
-              :class="activeTab === {{ tabIndex }} ? 'bg-[#76B900]' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
-            ></div>
-            <!-- Tab Label -->
-            <span
-              class="mt-3 block font-mono text-[11px] uppercase tracking-wider text-center transition-colors duration-200"
-              :class="activeTab === {{ tabIndex }} ? 'text-navy-900 font-semibold' : 'text-navy-400 group-hover:text-navy-600'"
-            >
-              {{ industry.label }}
-            </span>
-          </button>
-        {% endfor %}
-      </div>
     </div>
   </div>
 </section>
@@ -1102,7 +1187,7 @@ app = platform.init(
     tags: ["Multi-tenant", "Shared infrastructure"]
   }
 } %}
-<section id="platform" class="py-12 sm:py-16 lg:py-20" aria-labelledby="platform-visual-heading" x-data="{ activeTab: 0 }">
+<section id="platform" class="scroll-mt-24 py-12 sm:py-16 lg:py-20" aria-labelledby="platform-visual-heading" x-data="{ activeTab: 0 }">
   <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
 
     <!-- Sticky left column (header + tab sidebar) + capability cards (right) — Kore.ai
@@ -1114,10 +1199,11 @@ app = platform.init(
          now active (2026-07-28); each renders its own panel below. -->
     <div class="lg:grid lg:grid-cols-[30%_1fr] lg:gap-8 lg:items-start">
 
-      <!-- Sticky left column: header + sidebar tabs. Grid (not flex) + an
-           inline style backstop for position/top, so this doesn't depend on
-           a Tailwind utility class compiling correctly. -->
-      <div class="flex flex-col gap-8 mb-8 lg:mb-0" style="position: sticky; top: 96px; align-self: start;">
+      <!-- Sticky left column: header + sidebar tabs. Sticky only from lg up
+           (a global `position: sticky` here pinned this column mid-scroll on
+           mobile too, which read as broken/stuck content on a phone) — plain
+           flow below lg, `lg:sticky` above it. -->
+      <div class="flex flex-col gap-8 mb-8 lg:sticky lg:mb-0 lg:self-start" style="top: 96px;">
         <div data-reveal>
           <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
             A Zunkiree Labs Platform
@@ -1127,7 +1213,7 @@ app = platform.init(
           </h2>
           <a
             href="/contact/"
-            class="mt-6 inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+            class="mt-6 inline-flex w-full flex-shrink-0 items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
           >
             Explore the platform
             <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
@@ -1138,7 +1224,11 @@ app = platform.init(
           {% for pillar in pillars %}
             <button
               type="button"
-              @click="activeTab = {{ loop.index0 }}"
+              @click="
+                activeTab = {{ loop.index0 }};
+                $nextTick(() => { if (window.refreshScrollTriggers) window.refreshScrollTriggers(); });
+                if (window.__lenis) { window.__lenis.scrollTo('#platform', { offset: -96 }); } else { document.getElementById('platform').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+              "
               class="flex flex-shrink-0 items-center justify-between gap-2 whitespace-nowrap rounded-lg border px-4 py-3 text-left font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 lg:whitespace-normal"
               :class="activeTab === {{ loop.index0 }} ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-navy-100 bg-white text-navy-900 hover:border-navy-300'"
               :aria-pressed="activeTab === {{ loop.index0 }}"
@@ -1164,9 +1254,6 @@ app = platform.init(
         x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
       >
         <!-- Panel heading — Kore.ai "purpose-built applications" pattern (screenshot ref, 2026-07-28).
              Subheading reuses pillars[0].description verbatim — already fact-checked (HOMEPAGE_V2_COPY.md §1). -->
@@ -1182,20 +1269,11 @@ app = platform.init(
           {% for section in platformSections %}
             <div class="flex w-full flex-col rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-md sm:p-7">
 
-              <!-- Card header — colored keyword + live/capability badge (HOMEPAGE_V2_COPY.md:194-198) -->
+              <!-- Card header -->
               <div class="mb-2 flex flex-wrap items-center gap-2.5">
                 <h3 class="text-[17px] font-semibold leading-[1.3] text-[#111827] sm:text-[18px]">
                   AI for <span class="text-[#76B900]">{{ section.label }}</span>
                 </h3>
-                {% if section.live %}
-                  <span class="inline-flex items-center rounded-full bg-[#76B900]/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#4d7a00]">
-                    Live
-                  </span>
-                {% else %}
-                  <span class="inline-flex items-center rounded-full bg-navy-100 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#6B7280]">
-                    Capability
-                  </span>
-                {% endif %}
               </div>
 
               <p class="mb-5 text-[13.5px] leading-relaxed text-[#6B7280]">
@@ -1258,9 +1336,6 @@ app = platform.init(
         x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
       >
         <!-- Panel heading — subheading reuses pillars[1].description verbatim (already fact-checked). -->
         <div class="mb-6">
@@ -1345,9 +1420,6 @@ app = platform.init(
         x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
       >
         <!-- Panel heading — subheading reuses pillars[2].description verbatim (already fact-checked). -->
         <div class="mb-6">
@@ -1456,11 +1528,11 @@ app = platform.init(
 
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-[1.4fr_1fr]" data-reveal-stagger>
       <!-- Wider card — white with faint decorative pattern in the brand accent green (#76B900) -->
-      <div class="relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-8 shadow-md sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-[#76B900]/30">
+      <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-[#76B900]/30">
         <!-- Faint card-info-01 pattern -->
         <div class="absolute inset-0 bg-cover bg-center opacity-[0.35] pointer-events-none" style="background-image: url('/assets/images/card-info-01.avif');"></div>
         <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, rgba(118, 185, 0, 0.05) 0%, transparent 60%);"></div>
-        <blockquote class="relative z-10 max-w-lg text-[22px] font-medium leading-snug text-[#111827] sm:text-[26px]">
+        <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
           "{{ testimonials[0].quote }}"
         </blockquote>
         <footer class="relative z-10 mt-8 flex items-center gap-3">
@@ -1472,11 +1544,11 @@ app = platform.init(
       </div>
 
       <!-- Narrower card — white with faint decorative pattern in sky blue (#3D8FD4) -->
-      <div class="relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-8 shadow-md sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-sky-300/30">
+      <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-sky-300/30">
         <!-- Faint card-info-03 pattern -->
         <div class="absolute inset-0 bg-cover bg-bottom opacity-[0.30] pointer-events-none" style="background-image: url('/assets/images/card-info-03.avif'); filter: invert(1);"></div>
         <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 20% 80%, rgba(61, 143, 212, 0.15) 0%, transparent 75%);"></div>
-        <blockquote class="relative z-10 max-w-lg text-[22px] font-medium leading-snug text-[#111827] sm:text-[26px]">
+        <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
           "{{ testimonials[1].quote }}"
         </blockquote>
         <footer class="relative z-10 mt-8 flex items-center gap-3">
@@ -1543,7 +1615,7 @@ app = platform.init(
       </div>
       <a
         href="/blog/"
-        class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50"
+        class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-3 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50 sm:py-2.5"
       >
         View all
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
@@ -1658,10 +1730,10 @@ app = platform.init(
     <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
       <div class="divide-y divide-navy-100" data-reveal-stagger>
         {% for item in homepageFaq %}
-          <div class="py-5">
+          <div class="py-3">
             <button
               @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
-              class="flex w-full items-center justify-between gap-4 text-left group"
+              class="flex w-full items-center justify-between gap-4 py-2 text-left group"
               :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
               aria-controls="faq-answer-{{ loop.index }}"
             >
