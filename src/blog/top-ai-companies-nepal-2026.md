@@ -1,5 +1,5 @@
 ---
-title: "Top AI Companies in Nepal 2026: Who's Building the Future"
+title: "AI Companies in Nepal: Current Leaders and Innovations" # SEOAI:TITLE
 description: "A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond."
 date: 2026-03-30
 lastUpdated: 2026-03-30
