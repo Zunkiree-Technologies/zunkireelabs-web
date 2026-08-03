@@ -35,10 +35,12 @@
     },
     lockPageScroll() {
       document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
       if (window.__lenis) window.__lenis.stop();
     },
     unlockPageScroll() {
       document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
       if (window.__lenis) window.__lenis.start();
     },
     toggleDropdown(label) {
@@ -49,11 +51,19 @@
     closeDropdown() {
       if (this.activeDropdown !== null) this.unlockPageScroll();
       this.activeDropdown = null;
+    },
+    openMobileMenu() {
+      this.mobileMenuOpen = true;
+      this.lockPageScroll();
+    },
+    closeMobileMenu() {
+      this.mobileMenuOpen = false;
+      this.unlockPageScroll();
     }
   }"
   x-init="lastScrollY = window.scrollY; handleScroll();"
   @scroll.window.throttle.50ms="handleScroll()"
-  @keydown.escape.window="closeDropdown(); mobileMenuOpen = false;"
+  @keydown.escape.window="closeDropdown(); closeMobileMenu();"
 >
   <!-- Full-viewport glass scrim behind an open mega-menu — starts at the true top of the viewport (not top: 72px)
        so it sits behind the navbar bar too; otherwise the navbar's rounded-b-2xl bottom corners cut into empty
@@ -142,7 +152,7 @@
             type="button"
             class="lg:hidden p-2 -mr-2 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
             style="color: var(--foreground);"
-            @click="mobileMenuOpen = true"
+            @click="openMobileMenu()"
             aria-label="Open menu"
             aria-controls="navbar-v2-mobile"
             :aria-expanded="mobileMenuOpen"
@@ -163,6 +173,8 @@
         <div
           class="hidden lg:block fixed top-[72px] left-0 right-0 z-40 overflow-y-auto"
           style="max-height: calc(100vh - 72px);"
+          data-lenis-prevent
+          @click.self="closeDropdown()"
           x-show="activeDropdown === '{{ item.label }}'"
           x-transition:enter="transition ease-out duration-150"
           x-transition:enter-start="opacity-0"
@@ -174,7 +186,7 @@
           role="menu"
           :aria-label="'{{ item.label }}' + ' menu'"
         >
-          <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" @click.self="closeDropdown()">
             <div class="bg-white border rounded-2xl px-4 sm:px-6 lg:px-8 py-8" style="border-color: #e2e8f0;">
               {% set mergeColumns = not item.megamenu.columns[0].header %}
 
@@ -346,6 +358,7 @@
   <div
     id="navbar-v2-mobile"
     class="lg:hidden fixed inset-0 z-[60] bg-white overflow-y-auto"
+    data-lenis-prevent
     x-show="mobileMenuOpen"
     x-transition:enter="transition ease-out duration-200"
     x-transition:enter-start="opacity-0"
@@ -359,13 +372,13 @@
     aria-label="Mobile navigation"
   >
     <div class="flex items-center justify-between h-[72px] px-4 sm:px-6 border-b border-gray-100">
-      <a href="/" class="flex items-center" @click="mobileMenuOpen = false" aria-label="Zunkiree Labs home">
+      <a href="/" class="flex items-center" @click="closeMobileMenu()" aria-label="Zunkiree Labs home">
         <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="h-6 w-auto" width="200" height="24" />
       </a>
       <button
         type="button"
         class="p-2 -mr-2 rounded-md text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-        @click="mobileMenuOpen = false"
+        @click="closeMobileMenu()"
         aria-label="Close menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -402,7 +415,7 @@
                     <a
                       href="{{ link.url }}"
                       class="flex items-center gap-3 py-2.5 text-[15px] text-navy-600 hover:text-zunkiree-600 transition-colors"
-                      @click="mobileMenuOpen = false"
+                      @click="closeMobileMenu()"
                     >
                       {% if link.icon %}
                         <span class="text-zunkiree-600">
@@ -425,7 +438,7 @@
             <a
               href="{{ item.url }}"
               class="py-4 text-base font-medium text-navy-900 border-b border-gray-100"
-              @click="mobileMenuOpen = false"
+              @click="closeMobileMenu()"
             >
               {{ item.label }}
             </a>
@@ -436,7 +449,7 @@
           <a
             href="/contact/"
             class="flex items-center justify-center gap-2 w-full py-3.5 rounded-md bg-[#76B900] text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
-            @click="mobileMenuOpen = false"
+            @click="closeMobileMenu()"
           >
             Get in touch
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -25,6 +25,11 @@ bodyClass: "v2-inter"
   .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
     opacity: 0;
   }
+
+  /* Mobile sticky platform tabs: pin just below the fixed navbar (h-[72px], z-50)
+     while scrolling through the panels — sticking at top: 0 pushed them underneath
+     the navbar      and made them invisible. */
+  .platform-sticky-tabs { top: 73px; }
 </style>
 
 {# =====================================================
@@ -80,18 +85,18 @@ bodyClass: "v2-inter"
       already proven in production.
     </p>
 
-    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs). Full-width stacked on mobile (easier thumb targets on a 320-390px screen), auto-width side-by-side from sm up; mobile padding bumped to py-3.5 so the tap target clears 44px. -->
-    <div class="mt-8 flex w-full max-w-[320px] flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row">
+    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs). Side-by-side on all screens with reduced padding on mobile to fit single row. -->
+    <div class="mt-8 flex w-full max-w-[320px] flex-row items-center justify-center gap-2 sm:max-w-none sm:gap-3">
       <a
         href="/contact/"
-        class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-3.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
+        class="inline-flex flex-1 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[#76B900] px-3 py-2.5 font-mono text-[11px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none sm:px-5 sm:py-2.5 sm:text-[13px]"
       >
         Get a demo
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
       </a>
       <a
         href="/contact/"
-        class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-3.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
+        class="inline-flex items-center justify-center gap-1.5 rounded-md border border-navy-300 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none sm:px-5 sm:py-2.5 sm:text-[13px]"
       >
         Explore the platform
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
@@ -818,19 +823,44 @@ app = platform.init(
 <section
   class="relative flex flex-col justify-center overflow-hidden py-12 sm:py-16 lg:py-20"
   x-data="{
+    pos: 2,
     activeTab: 1,
+    cycle: 0,
     autoplayMs: 6000,
     autoplayTimer: null,
     isPaused: false,
+    noTransition: false,
+    tabsOf: [2, 4, 1, 2, 3, 4, 1, 2],
     startAutoplay() {
       clearTimeout(this.autoplayTimer);
       if (this.isPaused) return;
+      this.cycle++;
       this.autoplayTimer = setTimeout(() => {
-        this.activeTab = this.activeTab >= 4 ? 1 : this.activeTab + 1;
+        this.next();
       }, this.autoplayMs);
+    },
+    next() {
+      if (this.pos >= 6) this.snapToPos(2);
+      else this.pos++;
+    },
+    prev() {
+      if (this.pos <= 1) this.snapToPos(5);
+      else this.pos--;
+    },
+    selectTab(tab) {
+      this.activeTab = tab;
+      this.pos = tab + 1;
+    },
+    snapToPos(newPos) {
+      this.noTransition = true;
+      this.pos = newPos;
+      this.$nextTick(() => {
+        if (this.$refs.industryTrack) void this.$refs.industryTrack.offsetWidth;
+        this.noTransition = false;
+      });
     }
   }"
-  x-init="startAutoplay(); $watch('activeTab', () => startAutoplay())"
+  x-init="startAutoplay(); $watch('pos', () => { activeTab = tabsOf[pos]; startAutoplay(); })"
   :style="'--tab-timer-duration: ' + autoplayMs + 'ms;'"
   @mouseenter="isPaused = true; clearTimeout(autoplayTimer)"
   @mouseleave="isPaused = false; startAutoplay()"
@@ -857,7 +887,7 @@ app = platform.init(
         <div
           role="tablist"
           aria-label="Industries"
-          class="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-6 lg:flex-shrink-0 lg:pl-12"
+          class="flex w-full flex-row items-center justify-between gap-4 overflow-x-auto pb-1 sm:w-auto sm:gap-6 lg:flex-shrink-0 lg:pl-12"
         >
           {% for industry in industries %}
             {% set tabIndex = loop.index %}
@@ -868,12 +898,12 @@ app = platform.init(
               :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
               aria-controls="industry-panel-{{ tabIndex }}"
               :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
-              @click="activeTab = {{ tabIndex }}; $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });"
-              class="group text-left focus:outline-none flex-1 lg:flex-none lg:w-auto"
+              @click="selectTab({{ tabIndex }}); $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });"
+              class="group flex-none text-left focus:outline-none sm:flex-1 lg:flex-none lg:w-auto"
             >
               <!-- Indicator Line: track + auto-advancing timer fill -->
               <div
-                class="relative h-[3px] w-full min-w-[64px] overflow-hidden rounded-full transition-colors duration-300"
+                class="relative mx-auto h-[3px] w-10 overflow-hidden rounded-full transition-colors duration-300 sm:w-12"
                 :class="activeTab === {{ tabIndex }} ? 'bg-navy-200/30' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
               >
                 <div
@@ -881,6 +911,7 @@ app = platform.init(
                   x-show="activeTab === {{ tabIndex }}"
                   :class="isPaused ? 'is-paused' : ''"
                   x-effect="
+                    cycle;
                     if (activeTab === {{ tabIndex }}) {
                       $el.style.animation = 'none';
                       void $el.offsetWidth;
@@ -905,56 +936,69 @@ app = platform.init(
 
   <!-- Centered Carousel Track with Duplicated Boundary Cards for Infinite Looping (Full Bleed, No Gaps) -->
   {% set carouselItems = [
+    industries[1],
     industries[3],
     industries[0],
     industries[1],
     industries[2],
     industries[3],
-    industries[0]
+    industries[0],
+    industries[1]
   ] %}
+  {% set cardTabs = [2, 4, 1, 2, 3, 4, 1, 2] %}
 
   <div
     class="showcase-track-container relative w-full overflow-hidden cursor-grab select-none"
     :class="isDragging ? 'cursor-grabbing' : ''"
     data-reveal
-    x-data="{ isDragging: false, startX: 0 }"
+    x-data="{ isDragging: false, startX: 0, didDrag: false }"
     @mousedown="isDragging = true; startX = $event.clientX"
     @mousemove.window="if (isDragging) { $event.preventDefault() }"
     @mouseup.window="
       if (isDragging) {
         const delta = $event.clientX - startX;
-        if (delta < -60 && activeTab < 4) activeTab++;
-        else if (delta > 60 && activeTab > 1) activeTab--;
+        if (Math.abs(delta) >= 60) {
+          didDrag = true;
+          if (delta < 0) next();
+          else prev();
+        }
       }
       isDragging = false;
     "
   >
     <div
-      class="flex transition-transform duration-500 ease-out"
-      :style="'transform: translateX(calc(var(--card-offset) - (' + activeTab + ' * (var(--card-width) + var(--card-gap))))); gap: var(--card-gap);'"
+      x-ref="industryTrack"
+      class="flex"
+      :class="noTransition ? 'transition-none' : 'transition-transform duration-500 ease-out'"
+      :style="'transform: translateX(calc(var(--card-offset) - (' + pos + ' * (var(--card-width) + var(--card-gap))))); gap: var(--card-gap);'"
     >
       {% for item in carouselItems %}
         {% set originalIndex = loop.index0 %}
-        {# Map index for click behavior: Card 0 wraps to activeTab=4 (Real Estate), Card 5 wraps to activeTab=1 (Education) #}
-        {% set targetTab = 4 if originalIndex == 0 else (1 if originalIndex == 5 else originalIndex) %}
+        {# Map each track card to its industry tab (1-4) for click/aria behavior #}
+        {% set targetTab = cardTabs[originalIndex] %}
 
         <div
           role="tabpanel"
           id="industry-panel-{{ originalIndex }}"
           aria-labelledby="industry-tab-{{ targetTab }}"
-          :aria-hidden="activeTab !== {{ targetTab }} ? 'true' : 'false'"
-          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] transition-all duration-500 opacity-100"
-          :class="activeTab === {{ targetTab }} ? 'scale-100 z-10' : 'scale-95 z-0 cursor-pointer'"
+          :aria-hidden="pos !== {{ originalIndex }} ? 'true' : 'false'"
+          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] opacity-100"
+          :class="(pos === {{ originalIndex }} ? 'scale-100 z-10' : 'scale-95 z-0 cursor-pointer') + (noTransition ? '' : ' transition-all duration-500')"
           style="width: var(--card-width);"
-          @click="activeTab = {{ targetTab }}"
-          :tabindex="activeTab === {{ targetTab }} ? 0 : -1"
+          @click="
+            if (didDrag) { didDrag = false; }
+            else if (pos === {{ originalIndex }}) { next(); }
+            else { selectTab({{ targetTab }}); }
+          "
+          :tabindex="pos === {{ originalIndex }} ? 0 : -1"
         >
           <!-- Card Background photo -->
           <img
             src="{{ item.image }}"
             alt=""
             class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
-            loading="lazy"
+            decoding="async"
+            fetchpriority="high"
             draggable="false"
             width="1200"
             height="800"
@@ -967,7 +1011,7 @@ app = platform.init(
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" aria-hidden="true"></div>
 
           <!-- Headline overlaid top-left on the image -->
-          <div class="absolute left-6 top-6 max-w-[70%] sm:left-8 sm:top-8 sm:max-w-md z-20 text-left">
+          <div class="absolute left-6 top-6 right-40 sm:left-8 sm:top-8 sm:right-auto sm:max-w-md z-20 text-left">
             <h3 class="text-[20px] font-semibold leading-[1.3] text-white sm:text-[24px] drop-shadow-md">
               {{ item.headline }}
             </h3>
@@ -986,7 +1030,7 @@ app = platform.init(
           </div>
 
           <!-- Floating stat or proof box on the bottom-right corner with glass effect -->
-          <div class="absolute right-5 bottom-5 max-w-[280px] sm:right-6 sm:bottom-6 z-20">
+          <div class="absolute inset-x-4 bottom-5 z-20 mx-auto max-w-[280px] sm:inset-x-auto sm:right-6 sm:bottom-6">
             {% if item.proofType == "stat" %}
               <div class="rounded-lg bg-black/45 p-4 border border-white/10 backdrop-blur-md shadow-lg">
                 <span class="block font-mono text-3xl font-semibold leading-none text-white sm:text-4xl">{{ item.statValue }}</span>
@@ -1187,7 +1231,21 @@ app = platform.init(
     tags: ["Multi-tenant", "Shared infrastructure"]
   }
 } %}
-<section id="platform" class="scroll-mt-24 py-12 sm:py-16 lg:py-20" aria-labelledby="platform-visual-heading" x-data="{ activeTab: 0 }">
+<section id="platform" class="scroll-mt-24 py-12 sm:py-16 lg:py-20" aria-labelledby="platform-visual-heading" x-data="{
+  activeTab: 0,
+  scrollTabIntoView(index) {
+    this.$nextTick(() => {
+      const container = this.$refs.platformMobileTabs;
+      if (!container) return;
+      const btn = container.querySelector('[data-tab-index=' + index + ']');
+      if (!btn) return;
+      const cRect = container.getBoundingClientRect();
+      const bRect = btn.getBoundingClientRect();
+      if (bRect.left >= cRect.left && bRect.right <= cRect.right) return;
+      container.scrollTo({ left: container.scrollLeft + (bRect.left - cRect.left) - 12, behavior: 'smooth' });
+    });
+  }
+}">
   <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
 
     <!-- Sticky left column (header + tab sidebar) + capability cards (right) — Kore.ai
@@ -1220,7 +1278,7 @@ app = platform.init(
           </a>
         </div>
 
-        <div class="flex flex-row gap-2 overflow-x-auto pb-1 lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
+        <div class="hidden gap-2 overflow-x-auto pb-1 lg:flex lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
           {% for pillar in pillars %}
             <button
               type="button"
@@ -1237,6 +1295,29 @@ app = platform.init(
             </button>
           {% endfor %}
         </div>
+      </div>
+
+      <!-- Mobile sticky tab row — keeps the three platform tabs visible while scrolling
+           through the panels below. The row itself stays part of the page; only its
+           bottom hairline reads as pinned once stuck. Sticks within this section only,
+           then releases naturally once the section ends. -->
+      <div x-ref="platformMobileTabs" class="platform-sticky-tabs sticky z-40 mb-6 flex flex-row gap-2 overflow-x-auto scroll-smooth scrollbar-hide border-b border-navy-100 bg-white lg:hidden">
+        {% for pillar in pillars %}
+          <button
+            type="button"
+            data-tab-index="{{ loop.index0 }}"
+            @click="
+              activeTab = {{ loop.index0 }};
+              $nextTick(() => { if (window.refreshScrollTriggers) window.refreshScrollTriggers(); });
+              scrollTabIntoView({{ loop.index0 }});
+            "
+            class="flex flex-shrink-0 items-center justify-between gap-2 whitespace-nowrap rounded-lg border px-4 py-3 text-left font-mono text-[12px] uppercase tracking-wide transition-colors duration-200"
+            :class="activeTab === {{ loop.index0 }} ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-navy-100 bg-white text-navy-900 hover:border-navy-300'"
+            :aria-pressed="activeTab === {{ loop.index0 }}"
+          >
+            <span>{{ pillar.title }}</span>
+          </button>
+        {% endfor %}
       </div>
 
       <!-- Right column — single grid item wrapping all three tab panels (fixes the
@@ -1498,7 +1579,7 @@ app = platform.init(
    bg-warm-off-white (§10 — same background already reused across
    every section on this page), one wider card with a faint
    decorative radial pattern in the brand accent, one plain white.
-   Bottom strip carries a real stat line + link into /customers/.
+    Bottom strip carries a real stat line + link into /customer-stories/.
 
    Companies are two of the confirmed real clients (CONTENT_SUMMARY.md
    §4). Quote copy and role-based attribution are illustrative
@@ -1566,7 +1647,7 @@ app = platform.init(
         Running live for <span class="font-semibold text-[#111827]">8</span> clients in production.
       </p>
       <a
-        href="/customers/"
+        href="/customer-stories/"
         class="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:text-navy-600"
       >
         Customer stories

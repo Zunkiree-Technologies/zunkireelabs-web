@@ -375,7 +375,7 @@
     "company": [
       { "label": "About Us", "url": "/about/" },
       { "label": "Team", "url": "/team/" },
-      { "label": "Customers", "url": "/customers/" },
+      { "label": "Customers", "url": "/customer-stories/" },
       { "label": "Projects", "url": "/projects/" },
       { "label": "Careers", "url": "/careers/" },
       { "label": "Contact", "url": "/contact/" },
