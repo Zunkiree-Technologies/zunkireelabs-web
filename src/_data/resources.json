@@ -32,6 +32,12 @@
       "slug": "state-of-ai-nepal-2026",
       "type": "REPORT",
       "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "ai-vs-traditional-software-kathmandu", "title": "AI vs Traditional Software: What Kathmandu Enterprises Need to Know" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa's AI Transformation" }
+      ],
       "title": "State of AI in Nepal 2026: Industry Report",
       "subtitle": "The definitive guide to AI adoption across Nepali industries",
       "description": "Nepal ranks 150th globally in AI readiness, yet adoption is accelerating. This report analyzes AI implementation across 50+ Nepali organizations, identifies key barriers, and provides a roadmap for businesses in Kathmandu and beyond.",
@@ -68,6 +74,12 @@
       "slug": "ai-search-report-2026",
       "type": "REPORT",
       "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search: A Technical Comparison" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: From Keywords to Conversations Webinar" }
+      ],
       "title": "State of AI Search 2026: Enterprise Adoption Report",
       "subtitle": "Key findings on how businesses are replacing keyword search with AI-native solutions",
       "description": "Based on research from 500+ enterprise technology leaders globally, this report reveals how organizations are transitioning from traditional keyword search to AI-native natural language understanding. Includes benchmarks, ROI data, and implementation timelines.",
@@ -102,6 +114,12 @@
       "slug": "ai-search-playbook",
       "type": "EBOOK",
       "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: AI Search Implementation Webinar" },
+        { "slug": "natural-language-processing-fundamentals", "title": "Natural Language Processing Fundamentals" }
+      ],
       "title": "The AI Search Playbook for Product Teams",
       "subtitle": "Practical guide with implementation patterns, code examples, and real results",
       "description": "A hands-on playbook for product managers and engineers implementing AI-native search. Covers everything from initial scoping to production deployment, with code snippets, architecture diagrams, and lessons learned from 20+ implementations.",
@@ -132,6 +150,12 @@
       "slug": "webinar-ai-search-implementation",
       "type": "ON DEMAND",
       "category": "webinars",
+      "badgeLabel": "On Demand",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
+        { "href": "/products/search/", "title": "Explore Zunkiree Search Product" }
+      ],
       "title": "From Keywords to Conversations: AI Search Implementation",
       "subtitle": "Learn how to integrate natural language search in under 2 hours",
       "description": "In this 45-minute on-demand webinar, our engineering team walks through a complete AI search implementation. Watch as we transform a basic keyword search into a conversational AI experience, with live coding and Q&A.",
@@ -160,6 +184,12 @@
       "slug": "ai-implementation-guide-nepal",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026: Industry Report" },
+        { "slug": "ai-vs-traditional-software-kathmandu", "title": "AI vs Traditional Software for Kathmandu Enterprises" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" }
+      ],
       "title": "AI Implementation Guide for Nepal SMEs",
       "subtitle": "From zero to production: A practical roadmap for Nepali businesses",
       "description": "56% of Nepali industries cite lack of skilled manpower as the primary barrier to AI adoption. This guide bridges that gap with practical, budget-conscious implementation strategies tailored for Nepal's market conditions.",
@@ -190,6 +220,12 @@
       "slug": "ai-native-search-nepal",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        { "slug": "nepali-language-ai-guide", "title": "Nepali Language AI: Building Chatbots & Search in Nepali" },
+        { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search" },
+        { "href": "/products/search/", "title": "Explore Zunkiree Search" }
+      ],
       "title": "AI-Native Search for Nepal: Beyond Keyword Search",
       "subtitle": "How Nepali businesses can leapfrog legacy search technology",
       "description": "Traditional keyword search fails when users don't know the exact terms. AI-native search understands intent, handles Nepali-English mixed queries, and delivers direct answers. This guide shows Nepal businesses how to implement it.",
@@ -219,6 +255,12 @@
       "slug": "khushbu-nirman-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" }
+      ],
       "title": "How Khushbu Nirman Sewa Digitized Construction Management",
       "subtitle": "AI-powered project tracking and resource optimization in Nepal's construction sector",
       "description": "Khushbu Nirman Sewa, a leading Kathmandu construction company, transformed their project management with Zunkiree's AI-powered tracking system. This case study details their journey from paper-based processes to real-time AI insights.",
@@ -243,6 +285,12 @@
       "slug": "nepali-language-ai-guide",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Technical Guide",
+      "relatedResources": [
+        { "slug": "ai-native-search-nepal", "title": "AI-Native Search for Nepal" },
+        { "slug": "natural-language-processing-fundamentals", "title": "NLP Fundamentals" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
       "title": "Nepali Language AI: Building Chatbots & Search in Nepali",
       "subtitle": "Technical guide to NLP for the Nepali language",
       "description": "Building AI systems that understand Nepali presents unique challenges: limited training data, complex morphology, and code-switching with English. This technical guide covers practical solutions for Nepali NLP in production.",
@@ -273,6 +321,12 @@
       "slug": "ai-vs-traditional-software-kathmandu",
       "type": "WHITEPAPER",
       "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" }
+      ],
       "title": "AI vs Traditional Software: What Kathmandu Enterprises Need to Know",
       "subtitle": "A decision framework for Nepal's growing tech sector",
       "description": "79% of Nepali industries are not yet ready for AI adoption. This whitepaper helps Kathmandu enterprises understand when AI adds value versus when traditional software is the right choice, with practical decision frameworks.",
@@ -302,6 +356,12 @@
       "slug": "ai-search-stack-guide",
       "type": "EBOOK",
       "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026: Enterprise Adoption Report" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: From Keywords to Conversations Webinar" }
+      ],
       "title": "The AI Search Stack for the Modern Enterprise",
       "subtitle": "A comprehensive guide to building AI-native search experiences",
       "description": "Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. This guide covers architecture patterns, implementation strategies, and real-world case studies.",
@@ -338,6 +398,12 @@
       "slug": "admizz-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" },
+        { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026 Report" }
+      ],
       "title": "How Admizz Reduced Response Time by 45%",
       "subtitle": "Transforming student inquiry management with AI search",
       "description": "Learn how Admizz Education revolutionized their student inquiry process with Zunkiree Search, dramatically improving response times and student satisfaction.",
@@ -358,6 +424,12 @@
       "slug": "corecloud365-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" },
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack Guide" }
+      ],
       "title": "Corecloud365 Achieves 60% Cost Reduction",
       "subtitle": "Optimizing cloud operations with AI-powered automation",
       "description": "Discover how Corecloud365 integrated AI-powered search and automation tools to achieve significant cost savings in their cloud management platform.",

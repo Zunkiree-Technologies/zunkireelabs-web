@@ -27,7 +27,7 @@ export default [
       interaction: {
         type: "typingSearch",
         queries: [
-          "Show me blue running shoes under $100",
+          "Show me blue shoes under $100",
           "What's our refund policy?",
           "How do I reset a password?",
           "Find the Q3 onboarding docs"

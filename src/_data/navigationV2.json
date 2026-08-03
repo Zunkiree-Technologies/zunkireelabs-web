@@ -150,9 +150,9 @@
                 "description": "Complete guide to Agentic as a Service"
               },
               {
-                "label": "Case Studies",
-                "url": "/resources/?type=case-study",
-                "icon": "briefcase",
+                "label": "Customer Stories",
+                "url": "/customer-stories/",
+                "icon": "users",
                 "description": "See how customers succeed with Zunkiree"
               },
               {
