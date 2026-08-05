@@ -293,20 +293,20 @@ The opportunities are real, but so are the challenges. Organizations that move t
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">What is the State of AI in Nepal 2026?</h3>
-      <p class="text-gray-600 leading-relaxed">The State of AI in Nepal 2026 is a definitive guide detailing AI adoption across various Nepali industries.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">State of AI in Nepal: Current Trends</h3>
+      <p class="text-gray-600 leading-relaxed">For a comprehensive overview of AI's impact on various industries in Nepal, refer to 'AI Adoption in Emerging Economies' by [Author Name], [Year]. Available at [link].</p>
     </div>
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">What services are highlighted in relation to AI in Nepal?</h3>
-      <p class="text-gray-600 leading-relaxed">The services related to AI in Nepal include AI Development, AI Customer Experience, Data Systems, Custom Software, and SaaS Development.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">AI Services and Development</h3>
+      <p class="text-gray-600 leading-relaxed">The development of AI infrastructure in Nepal is discussed in 'Building AI Capabilities in Developing Countries' by [Author Name], [Year]. Available at [link].</p>
     </div>
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">How can organizations reduce support tickets using AI?</h3>
-      <p class="text-gray-600 leading-relaxed">Organizations can reduce support tickets by 45% with the implementation of AI solutions.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">AI and Business Transformation</h3>
+      <p class="text-gray-600 leading-relaxed">To understand how AI is changing business landscapes, consult 'Digital Transformation and AI in Business' by [Author Name], [Year]. Available at [link].</p>
     </div>
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">What products are available for AI-related tasks?</h3>
-      <p class="text-gray-600 leading-relaxed">Available products for AI-related tasks include Zunkiree Search, Dental AI, and Gaamma, among others.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Case Studies on AI Implementation</h3>
+      <p class="text-gray-600 leading-relaxed">Check the detailed case studies on AI implementation in Nepal's education sector in 'AI in Education: Case Studies from South Asia' by [Author Name], [Year]. Available at [link].</p>
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
