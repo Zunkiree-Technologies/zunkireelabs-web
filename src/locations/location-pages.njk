@@ -7,8 +7,8 @@ pagination:
 layout: location.njk
 permalink: /locations/{{ location.id }}/
 eleventyComputed:
-  title: "{{ location.title }}"
-  description: "{{ location.description }}"
+  title: "{{ location.title | safe }}"
+  description: "{{ location.description | safe }}"
   locationId: "{{ location.id }}"
 ---
 
