@@ -1,5 +1,5 @@
 ---
-title: "Explore Dental AI Secretary Solutions for Dental Practices" # SEOAI:TITLE
+title: "Dental AI Secretary Solutions for Practices" # SEOAI:TITLE
 description: "Explore the revolutionary role of dental AI secretaries in modern dental practices, their benefits, functionalities, and what to consider when integrating them into your office."
 date: "2026-07-26"
 ---
