@@ -833,8 +833,8 @@ app = platform.init(
     tabsOf: [2, 4, 1, 2, 3, 4, 1, 2],
     startAutoplay() {
       clearTimeout(this.autoplayTimer);
-      if (this.isPaused) return;
       this.cycle++;
+      if (this.isPaused) return;
       this.autoplayTimer = setTimeout(() => {
         this.next();
       }, this.autoplayMs);
