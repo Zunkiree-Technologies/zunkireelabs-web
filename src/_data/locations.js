@@ -100,7 +100,13 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
           "Ongoing maintenance and support"
-        ]
+        ],
+        reviewSchema: {
+          "@type": "Article",
+          "@context": "https://schema.org",
+          "headline": "Web Development Services in Kathmandu",
+          "articleBody": "Our Kathmandu web development team builds fast, SEO-optimized websites using modern frameworks like Next.js, Eleventy, and Tailwind CSS. We deliver sub-second page load times, mobile-first responsive design, built-in SEO and AEO optimization, and ongoing maintenance and support."
+        }
       },
       "custom-software": {
         title: "Custom Software Development in Kathmandu",
@@ -133,7 +139,13 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Subscription and billing integration",
           "Scalable cloud infrastructure",
           "Security and compliance ready"
-        ]
+        ],
+        reviewSchema: {
+          "@type": "Article",
+          "@context": "https://schema.org",
+          "headline": "SaaS Development Services in Kathmandu",
+          "articleBody": "Our Kathmandu team specializes in building scalable SaaS platforms with multi-tenant architecture, subscription billing, and enterprise features. We bring multi-tenant architecture expertise, subscription and billing integration, scalable cloud infrastructure, and security and compliance readiness."
+        }
       },
       "app-development": {
         title: "Mobile App Development in Kathmandu",
@@ -183,7 +195,49 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         question: "Can you meet at our Lalitpur office?",
         answer: "Absolutely. We're happy to meet at your Lalitpur location for project discussions, requirements gathering, and ongoing collaboration."
       }
-    ]
+    ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Development Services in Lalitpur | Zunkiree Labs",
+      "description": "Zunkiree Labs serves clients in Lalitpur (Patan) from our Kathmandu headquarters, just minutes away. We work with businesses across Lalitpur's thriving commercial districts on AI development, custom software, and digital solutions."
+    },
+
+    services: {
+      "web-development": {
+        title: "Web Development Services in Lalitpur",
+        description: "High-performance website development for Lalitpur businesses, delivered by our Kathmandu-based team. Modern frameworks, responsive design, and SEO optimization.",
+        intro: "We build fast, SEO-optimized websites for Lalitpur businesses using modern frameworks like Next.js, Eleventy, and Tailwind CSS — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Sub-second page load times",
+          "Mobile-first responsive design",
+          "Built-in SEO and AEO optimization",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      },
+      "app-development": {
+        title: "Mobile App Development in Lalitpur",
+        description: "iOS and Android app development for Lalitpur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Lalitpur clients — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      },
+      "custom-software": {
+        title: "Custom Software Development in Lalitpur",
+        description: "Enterprise software development for Lalitpur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
+        intro: "We build custom enterprise applications and business systems tailored to Lalitpur businesses' workflows — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Full-stack development team based in Kathmandu",
+          "Experience with enterprise integrations",
+          "Agile development methodology",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      }
+    }
   },
   {
     id: "bhaktapur",
@@ -205,7 +259,32 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         question: "Do you work with Bhaktapur businesses?",
         answer: "Yes, we serve businesses throughout Bhaktapur district from our Kathmandu office. The proximity within the Kathmandu Valley makes collaboration easy."
       }
-    ]
+    ],
+
+    services: {
+      "custom-software": {
+        title: "Custom Software Development in Bhaktapur",
+        description: "Enterprise software development for Bhaktapur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
+        intro: "We build custom enterprise applications and business systems for Bhaktapur businesses — delivered by our Kathmandu team, within easy reach across the Kathmandu Valley.",
+        highlights: [
+          "Full-stack development team based in Kathmandu",
+          "Experience with enterprise integrations",
+          "Agile development methodology",
+          "Easy in-person collaboration within the Kathmandu Valley"
+        ]
+      },
+      "app-development": {
+        title: "Mobile App Development in Bhaktapur",
+        description: "iOS and Android app development for Bhaktapur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Bhaktapur clients — delivered by our Kathmandu team.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Easy in-person collaboration within the Kathmandu Valley"
+        ]
+      }
+    }
   },
   {
     id: "pokhara",
@@ -231,6 +310,20 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         question: "Do you have an office in Pokhara?",
         answer: "Our headquarters is in Kathmandu, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones."
       }
-    ]
+    ],
+
+    services: {
+      "app-development": {
+        title: "Mobile App Development in Pokhara",
+        description: "iOS and Android app development for Pokhara businesses, delivered remotely by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Pokhara clients through remote collaboration from our Kathmandu headquarters.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Remote collaboration, with travel available for key project milestones"
+        ]
+      }
+    }
   }
 ];

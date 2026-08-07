@@ -92,7 +92,13 @@ export default [
       zunkiree: "Teams wanting AI search without infrastructure complexity. Customer support, internal tools, and knowledge management.",
       competitor: "Engineering teams with DevOps resources who need full control over search infrastructure and complex custom queries."
     },
-    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
+    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control.",
+    reviewSchema: {
+      "name": "Zunkiree Search vs Elasticsearch | Search Comparison | Zunkiree Labs",
+      "@type": "WebPage",
+      "@context": "https://schema.org",
+      "description": "Zunkiree Search is a fully managed, AI-native SaaS with built-in LLM and RAG, natural-language querying, and automatic scaling — set up in hours with zero ongoing ops. Elasticsearch is self-hosted or Elastic Cloud, requires custom AI integration and manual cluster management, and takes days to weeks to set up. Choose Zunkiree Search for AI-powered search without the operational burden; choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
+    }
   },
   {
     id: "zunkiree-vs-typesense",
