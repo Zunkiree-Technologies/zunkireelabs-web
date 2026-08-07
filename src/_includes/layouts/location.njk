@@ -51,6 +51,17 @@ layout: base.njk
 </script>
 
 {# =====================================================
+   REVIEW / AGGREGATE RATING SCHEMA (AI-managed — written by the Action Center)
+   Only rendered when location.reviewSchema is present; never fabricated
+   here or by the generator that writes it — see server/generators/schema.js.
+   ===================================================== #}
+{% if location.reviewSchema %}
+<script type="application/ld+json">
+{{ location.reviewSchema | dump | safe }}
+</script>
+{% endif %}
+
+{# =====================================================
    HERO SECTION
    ===================================================== #}
 <section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
