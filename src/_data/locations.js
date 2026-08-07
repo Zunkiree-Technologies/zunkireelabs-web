@@ -201,6 +201,42 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       "@context": "https://schema.org",
       "headline": "AI Development Services in Lalitpur | Zunkiree Labs",
       "description": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
+    },
+
+    services: {
+      "web-development": {
+        title: "Web Development Services in Lalitpur",
+        description: "High-performance website development for Lalitpur businesses, delivered by our Kathmandu-based team. Modern frameworks, responsive design, and SEO optimization.",
+        intro: "We build fast, SEO-optimized websites for Lalitpur businesses using modern frameworks like Next.js, Eleventy, and Tailwind CSS — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Sub-second page load times",
+          "Mobile-first responsive design",
+          "Built-in SEO and AEO optimization",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      },
+      "app-development": {
+        title: "Mobile App Development in Lalitpur",
+        description: "iOS and Android app development for Lalitpur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Lalitpur clients — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      },
+      "custom-software": {
+        title: "Custom Software Development in Lalitpur",
+        description: "Enterprise software development for Lalitpur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
+        intro: "We build custom enterprise applications and business systems tailored to Lalitpur businesses' workflows — delivered by our team just minutes away in Kathmandu.",
+        highlights: [
+          "Full-stack development team based in Kathmandu",
+          "Experience with enterprise integrations",
+          "Agile development methodology",
+          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+        ]
+      }
     }
   },
   {
@@ -223,7 +259,32 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         question: "Do you work with Bhaktapur businesses?",
         answer: "Yes, we serve businesses throughout Bhaktapur district from our Kathmandu office. The proximity within the Kathmandu Valley makes collaboration easy."
       }
-    ]
+    ],
+
+    services: {
+      "custom-software": {
+        title: "Custom Software Development in Bhaktapur",
+        description: "Enterprise software development for Bhaktapur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
+        intro: "We build custom enterprise applications and business systems for Bhaktapur businesses — delivered by our Kathmandu team, within easy reach across the Kathmandu Valley.",
+        highlights: [
+          "Full-stack development team based in Kathmandu",
+          "Experience with enterprise integrations",
+          "Agile development methodology",
+          "Easy in-person collaboration within the Kathmandu Valley"
+        ]
+      },
+      "app-development": {
+        title: "Mobile App Development in Bhaktapur",
+        description: "iOS and Android app development for Bhaktapur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Bhaktapur clients — delivered by our Kathmandu team.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Easy in-person collaboration within the Kathmandu Valley"
+        ]
+      }
+    }
   },
   {
     id: "pokhara",
@@ -249,6 +310,20 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         question: "Do you have an office in Pokhara?",
         answer: "Our headquarters is in Kathmandu, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones."
       }
-    ]
+    ],
+
+    services: {
+      "app-development": {
+        title: "Mobile App Development in Pokhara",
+        description: "iOS and Android app development for Pokhara businesses, delivered remotely by our Kathmandu-based team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Pokhara clients through remote collaboration from our Kathmandu headquarters.",
+        highlights: [
+          "Native iOS and Android development",
+          "Cross-platform with React Native/Flutter",
+          "Backend API integration",
+          "Remote collaboration, with travel available for key project milestones"
+        ]
+      }
+    }
   }
 ];
