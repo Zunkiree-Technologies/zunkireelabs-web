@@ -271,6 +271,12 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Easy in-person collaboration within the Kathmandu Valley"
         ]
   }
+    },
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Development Services in Bhaktapur | Zunkiree Labs",
+      "articleBody": "Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation. We offer custom AI systems using RAG pipelines, LLM integration, and intelligent automation aimed at solving specific business problems. Additionally, we provide AI-powered support systems that reduce support tickets by 40%. Our AI Ecommerce Solutions include agentic commerce systems specialized for the Nepal market, as well as data systems for analytics infrastructure built for AI workloads. We also specialize in custom software, SaaS development, web development, app development, and AEO & SEO optimization."
     }
   },
   {
