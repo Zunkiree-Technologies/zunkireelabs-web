@@ -35,16 +35,8 @@ If your front desk spends real time on the phone answering the same handful of q
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Virtual Assistant vs. Generic Chatbot</h3>
-      <p class="text-gray-600 leading-relaxed">A generic chatbot answers from general web knowledge and often gets specifics wrong. A dental AI virtual assistant answers from the practice's own procedure list, pricing, insurance acceptance, and live schedule, which is what makes its answers reliable enough for patients to act on.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Patient-Facing Use Cases</h3>
-      <p class="text-gray-600 leading-relaxed">Procedure and pricing questions, insurance verification, appointment booking and rescheduling, and reminders are the core of what patients use a dental AI virtual assistant for — the questions that otherwise queue up for the front desk.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">When It Hands Off to a Human</h3>
-      <p class="text-gray-600 leading-relaxed">Clinical advice, emergencies, and complex or upset-patient situations are routed to staff rather than handled by the assistant — the goal is absorbing routine volume, not replacing judgment calls that need a person.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <p class="text-gray-600 leading-relaxed"><a href="https://www.revenuewell.com/dental-ai-receptionist">Dental AI Receptionist</a>, <a href="https://pankey.org/the-era-of-the-ai-virtual-assistants-in-dentistry/">The Era of the AI Virtual Assistants in Dentistry</a>, <a href="https://mconsent.net/blog/transform-dental-practice-virtual-assistant/">Transform Your Dental Practice with the Power of a Virtual ...</a></p>
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->

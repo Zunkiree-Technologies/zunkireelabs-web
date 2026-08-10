@@ -37,16 +37,10 @@ Testimonials and case studies matter because they shift the burden of proof from
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">What Separates a Case Study from Marketing Copy</h3>
-      <p class="text-gray-600 leading-relaxed">A case study names the customer, states the situation before the product was adopted, and reports a specific, measured result. Marketing copy describes the product in the abstract without any of those three anchors.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Admizz Education: Student Inquiry Management</h3>
-      <p class="text-gray-600 leading-relaxed">Admizz deployed Zunkiree Search to help students self-serve answers instead of routing every question to support staff, resulting in 45% faster response times and a 3x improvement in satisfaction scores.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Corecloud365: Cloud Operations</h3>
-      <p class="text-gray-600 leading-relaxed">Corecloud365 used AI-powered search and automation to cut operational costs by 60% while improving issue resolution speed by 80% and maintaining 99.9% uptime.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <p class="text-gray-600 leading-relaxed"><a href="https://zunkireelabs.com/customers/">Customer Stories</a>
+
+<a href="https://zunkireelabs.com/services/ai-customer-experience/">AI Customer Experience: Intelligent Support Systems</a></p>
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
