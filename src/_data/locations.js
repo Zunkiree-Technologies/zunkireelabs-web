@@ -78,13 +78,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with GPT-4, Claude, and open-source LLMs",
           "Production deployments across healthcare, finance, and manufacturing",
           "40% cost advantage over US-based AI development"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "AI Development Services in Kathmandu",
-      "articleBody": "AI & Data in Kathmandu AI Development Services in Kathmandu Our Kathmandu-based AI engineering team builds production-grade AI systems including RAG pipelines, LLM integrations, document AI, and custom machine learning solutions. Get Started Learn More About AI Development Why Choose Us for AI Development in Kathmandu 15+ AI engineers based in Kathmandu Experience with GPT-4, Claude, and open-source LLMs Production deployments across healthcare, finance, and manufacturing 40% cost advantage over US-based AI development Other Services in Kathmandu AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO AI Development in Other Locations Lalitpur Bhaktapur Pokhara Ready for AI Development in Kathmandu? Let's discuss your project requirements. Contact Us"
-    }
+        ]
   },
       "ai-customer-experience": {
         title: "AI Customer Experience Services in Kathmandu",
@@ -95,13 +89,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Integration with existing CRM and helpdesk systems",
           "45% average reduction in support tickets",
           "24/7 AI-powered customer assistance"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "AI Customer Experience Services in Kathmandu",
-      "articleBody": "AI & Data in Kathmandu AI Customer Experience Services in Kathmandu From our Kathmandu office, we build AI customer experience systems that automate support, answer questions instantly, and improve customer satisfaction. Get Started Learn More About AI Customer Experience Why Choose Us for AI Customer Experience in Kathmandu Multilingual support including Nepali and English Integration with existing CRM and helpdesk systems 45% average reduction in support tickets 24/7 AI-powered customer assistance Other Services in Kathmandu AI Development AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO AI Customer Experience in Other Locations Lalitpur Bhaktapur Pokhara Ready for AI Customer Experience in Kathmandu? Let's discuss your project requirements. Contact Us"
-    }
+        ]
   },
       "web-development": {
         title: "Web Development Services in Kathmandu",
@@ -112,13 +100,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
           "Ongoing maintenance and support"
-        ],
-        reviewSchema: {
-          "@type": "Article",
-          "@context": "https://schema.org",
-          "headline": "Web Development Services in Kathmandu",
-          "articleBody": "Our Kathmandu web development team builds fast, SEO-optimized websites using modern frameworks like Next.js, Eleventy, and Tailwind CSS. We deliver sub-second page load times, mobile-first responsive design, built-in SEO and AEO optimization, and ongoing maintenance and support."
-        }
+        ]
       },
       "custom-software": {
         title: "Custom Software Development in Kathmandu",
@@ -129,13 +111,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Long-term maintenance and support"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Custom Software Development in Kathmandu",
-      "articleBody": "Development in Kathmandu Custom Software Development in Kathmandu Our Kathmandu software engineers build custom enterprise applications, internal tools, and business systems tailored to your specific workflows. Get Started Learn More About Custom Software Why Choose Us for Custom Software in Kathmandu Full-stack development team in Kathmandu Experience with enterprise integrations Agile development methodology Long-term maintenance and support Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems SaaS Development Web Development App Development AEO & SEO Custom Software in Other Locations Lalitpur Bhaktapur Pokhara Ready for Custom Software in Kathmandu? Let's discuss your project requirements. Contact Us"
-    }
+        ]
   },
       "data-systems": {
         title: "Data Engineering Services in Kathmandu",
@@ -157,13 +133,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Subscription and billing integration",
           "Scalable cloud infrastructure",
           "Security and compliance ready"
-        ],
-        reviewSchema: {
-          "@type": "Article",
-          "@context": "https://schema.org",
-          "headline": "SaaS Development Services in Kathmandu",
-          "articleBody": "Our Kathmandu team specializes in building scalable SaaS platforms with multi-tenant architecture, subscription billing, and enterprise features. We bring multi-tenant architecture expertise, subscription and billing integration, scalable cloud infrastructure, and security and compliance readiness."
-        }
+        ]
       },
       "app-development": {
         title: "Mobile App Development in Kathmandu",
@@ -174,13 +144,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "App Store optimization and launch"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Mobile App Development in Kathmandu",
-      "articleBody": "Development in Kathmandu Mobile App Development in Kathmandu Our Kathmandu mobile development team builds native iOS and Android apps, as well as cross-platform solutions using React Native and Flutter. Get Started Learn More About App Development Why Choose Us for App Development in Kathmandu Native iOS and Android development Cross-platform with React Native/Flutter Backend API integration App Store optimization and launch Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development AEO & SEO App Development in Other Locations Lalitpur Bhaktapur Pokhara Ready for App Development in Kathmandu? Let's discuss your project requirements. Contact Us"
-    }
+        ]
   },
       "aeo-seo": {
         title: "SEO & AEO Services in Kathmandu",
@@ -191,14 +155,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "SEO & AEO Services in Kathmandu",
-      "articleBody": "Marketing in Kathmandu SEO & AEO Services in Kathmandu Our Kathmandu digital marketing team optimizes your content for traditional search engines and AI systems like ChatGPT, Perplexity, and Google AI Overviews. Get Started Learn More About AEO & SEO Why Choose Us for AEO & SEO in Kathmandu Technical SEO audits and fixes AI visibility optimization (AEO) Content strategy and creation Local SEO for Nepal businesses Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO in Other Locations Lalitpur Bhaktapur Pokhara Ready for AEO & SEO in Kathmandu? Let's discuss your project requirements. Contact Us",
-      "description": "Our Kathmandu digital marketing team optimizes your content for traditional search engines and AI systems like ChatGPT, Perplexity, and Google AI Overviews."
-    }
+        ]
   }
     }
   },
@@ -227,13 +184,6 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         answer: "Absolutely. We're happy to meet at your Lalitpur location for project discussions, requirements gathering, and ongoing collaboration."
       }
     ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "AI Development Services in Lalitpur | Zunkiree Labs",
-      "description": "Zunkiree Labs serves clients in Lalitpur (Patan) from our Kathmandu headquarters, just minutes away. We work with businesses across Lalitpur's thriving commercial districts on AI development, custom software, and digital solutions."
-    },
-
     services: {
       "web-development": {
         title: "Web Development Services in Lalitpur",
@@ -244,13 +194,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
           "Delivered by our Kathmandu-based team, minutes from Lalitpur"
-        ],
-    reviewSchema: {
-      "body": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call",
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Web Development Services in Lalitpur"
-    }
+        ]
   },
       "app-development": {
         title: "Mobile App Development in Lalitpur",
@@ -261,13 +205,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "Delivered by our Kathmandu-based team, minutes from Lalitpur"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Mobile App Development in Lalitpur",
-      "articleBody": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
-    }
+        ]
   },
       "custom-software": {
         title: "Custom Software Development in Lalitpur",
@@ -278,13 +216,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Delivered by our Kathmandu-based team, minutes from Lalitpur"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Custom Software Development in Lalitpur",
-      "articleBody": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
-    }
+        ]
   }
     }
   },
@@ -320,13 +252,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Easy in-person collaboration within the Kathmandu Valley"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Custom Software Development in Bhaktapur",
-      "articleBody": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
-    }
+        ]
   },
       "app-development": {
         title: "Mobile App Development in Bhaktapur",
@@ -337,13 +263,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "Easy in-person collaboration within the Kathmandu Valley"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Mobile App Development in Bhaktapur",
-      "articleBody": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
-    }
+        ]
   }
     }
   },
@@ -383,13 +303,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "Remote collaboration, with travel available for key project milestones"
-        ],
-    reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Mobile App Development in Pokhara",
-      "articleBody": "Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call"
-    }
+        ]
   }
     }
   }
