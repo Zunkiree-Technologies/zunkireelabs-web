@@ -129,8 +129,14 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Long-term maintenance and support"
-        ]
-      },
+        ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "Custom Software Development in Kathmandu",
+      "articleBody": "Development in Kathmandu Custom Software Development in Kathmandu Our Kathmandu software engineers build custom enterprise applications, internal tools, and business systems tailored to your specific workflows. Get Started Learn More About Custom Software Why Choose Us for Custom Software in Kathmandu Full-stack development team in Kathmandu Experience with enterprise integrations Agile development methodology Long-term maintenance and support Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems SaaS Development Web Development App Development AEO & SEO Custom Software in Other Locations Lalitpur Bhaktapur Pokhara Ready for Custom Software in Kathmandu? Let's discuss your project requirements. Contact Us"
+    }
+  },
       "data-systems": {
         title: "Data Engineering Services in Kathmandu",
         description: "Data pipelines and analytics infrastructure from Kathmandu. Get your data AI-ready with our data engineering team.",
