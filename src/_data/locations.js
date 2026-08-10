@@ -162,8 +162,14 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "App Store optimization and launch"
-        ]
-      },
+        ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "Mobile App Development in Kathmandu",
+      "articleBody": "Development in Kathmandu Mobile App Development in Kathmandu Our Kathmandu mobile development team builds native iOS and Android apps, as well as cross-platform solutions using React Native and Flutter. Get Started Learn More About App Development Why Choose Us for App Development in Kathmandu Native iOS and Android development Cross-platform with React Native/Flutter Backend API integration App Store optimization and launch Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development AEO & SEO App Development in Other Locations Lalitpur Bhaktapur Pokhara Ready for App Development in Kathmandu? Let's discuss your project requirements. Contact Us"
+    }
+  },
       "aeo-seo": {
         title: "SEO & AEO Services in Kathmandu",
         description: "Search engine and AI optimization services from Kathmandu. Get found by Google and AI assistants.",
