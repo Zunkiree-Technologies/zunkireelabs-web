@@ -124,11 +124,11 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Data quality and governance"
         ],
     reviewSchema: {
-      "@type": "Article",
-      "@context": "https://schema.org",
-      "headline": "Data Engineering Services in Kathmandu",
-      "articleBody": "Our Kathmandu data engineering team builds scalable data pipelines, warehouses, and analytics infrastructure that powers AI and business intelligence. Why Choose Us for Data Systems in Kathmandu Modern data stack expertise Cloud-native architecture Real-time and batch processing Data quality and governance Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Custom Software SaaS Development Web Development App Development AEO & SEO Data Systems in Other Locations Lalitpur Bhaktapur Pokhara Ready for Data Systems in Kathmandu? Let's discuss your project requirements."
-    }
+    "@type": "Article",
+    "@context": "https://schema.org",
+    "headline": "Data Engineering Services in Kathmandu",
+    "articleBody": "AI & Data in Kathmandu Data Engineering Services in Kathmandu Our Kathmandu data engineering team builds scalable data pipelines, warehouses, and analytics infrastructure that powers AI and business intelligence. Get Started Learn More About Data Systems Why Choose Us for Data Systems in Kathmandu Modern data stack expertise Cloud-native architecture Real-time and batch processing Data quality and governance Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Custom Software SaaS Development Web Development App Development AEO & SEO Data Systems in Other Locations Lalitpur Bhaktapur Pokhara Ready for Data Systems in Kathmandu? Let's discuss your project requirements. Contact Us"
+  }
   },
       "saas-development": {
         title: "SaaS Development Services in Kathmandu",
