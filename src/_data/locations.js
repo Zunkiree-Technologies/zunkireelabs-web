@@ -179,8 +179,15 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ]
-      }
+        ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "SEO & AEO Services in Kathmandu",
+      "articleBody": "Marketing in Kathmandu SEO & AEO Services in Kathmandu Our Kathmandu digital marketing team optimizes your content for traditional search engines and AI systems like ChatGPT, Perplexity, and Google AI Overviews. Get Started Learn More About AEO & SEO Why Choose Us for AEO & SEO in Kathmandu Technical SEO audits and fixes AI visibility optimization (AEO) Content strategy and creation Local SEO for Nepal businesses Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO in Other Locations Lalitpur Bhaktapur Pokhara Ready for AEO & SEO in Kathmandu? Let's discuss your project requirements. Contact Us",
+      "description": "Our Kathmandu digital marketing team optimizes your content for traditional search engines and AI systems like ChatGPT, Perplexity, and Google AI Overviews."
+    }
+  }
     }
   },
   {
