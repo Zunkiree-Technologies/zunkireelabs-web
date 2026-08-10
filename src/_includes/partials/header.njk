@@ -162,6 +162,7 @@
 
     <!-- Mega Menu Dropdowns -->
     {% for item in navigation.main %}
+      {% set navItemIndex = loop.index %}
       {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
         <div
           class="hidden lg:block absolute top-14 left-0 right-0"
@@ -185,6 +186,7 @@
 
                 {# Render each column #}
                 {% for column in item.megamenu.columns %}
+                  {% set navColumnIndex = loop.index %}
                   <div class="{% if colCount == 2 and hasFeature %}col-span-4{% elif colCount == 3 and hasFeature %}col-span-3{% else %}{% endif %}">
 
                     {# Column Header #}
@@ -214,7 +216,8 @@
                             <div class="flex-1 min-w-0">
                               <div class="flex items-center gap-2">
                                 <span class="text-[15px] font-medium transition-colors group-hover:text-zunkiree-600" style="color: var(--foreground);">
-                                  {{ link.label }}{% if link.aiPowered %}<svg class="inline-block w-3 h-3 -mt-2 ml-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z" fill="url(#aiGradient)"/><defs><linearGradient id="aiGradient" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient></defs></svg>{% endif %}{% if link.subLabel %}<span class="text-[11px] font-normal opacity-60 ml-1">{{ link.subLabel }}</span>{% endif %}
+                                  {% set aiGradientId = "aiGradient-" ~ navItemIndex ~ "-" ~ navColumnIndex ~ "-" ~ loop.index %}
+                                  {{ link.label }}{% if link.aiPowered %}<svg class="inline-block w-3 h-3 -mt-2 ml-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z" fill="url(#{{ aiGradientId }})"/><defs><linearGradient id="{{ aiGradientId }}" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient></defs></svg>{% endif %}{% if link.subLabel %}<span class="text-[11px] font-normal opacity-60 ml-1">{{ link.subLabel }}</span>{% endif %}
                                 </span>
                                 {% if link.badge %}
                                   <span class="px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide bg-zunkiree-100 text-zunkiree-700 rounded">
@@ -324,6 +327,7 @@
     <div class="px-4 py-4">
       <div class="flex flex-col">
         {% for item in navigation.main %}
+          {% set navItemIndexMobile = loop.index %}
           {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
             <div x-data="{ open: false }">
               <button
@@ -339,6 +343,7 @@
 
               <div x-show="open" x-collapse class="pb-2">
                 {% for column in item.megamenu.columns %}
+                  {% set navColumnIndexMobile = loop.index %}
                   {% if column.header %}
                     <p class="text-[10px] font-semibold uppercase tracking-wider px-2 pt-4 pb-2" style="color: var(--foreground-subtle);">
                       {{ column.header }}
@@ -357,7 +362,8 @@
                           {% include "components/nav-icon.njk" %}
                         </span>
                       {% endif %}
-                      <span>{{ link.label }}{% if link.aiPowered %}<svg class="inline-block w-3 h-3 -mt-2 ml-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z" fill="url(#aiGradientMobile)"/><defs><linearGradient id="aiGradientMobile" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient></defs></svg>{% endif %}{% if link.subLabel %}<span class="text-[11px] opacity-60 ml-1">{{ link.subLabel }}</span>{% endif %}</span>
+                      {% set aiGradientMobileId = "aiGradientMobile-" ~ navItemIndexMobile ~ "-" ~ navColumnIndexMobile ~ "-" ~ loop.index %}
+                      <span>{{ link.label }}{% if link.aiPowered %}<svg class="inline-block w-3 h-3 -mt-2 ml-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z" fill="url(#{{ aiGradientMobileId }})"/><defs><linearGradient id="{{ aiGradientMobileId }}" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient></defs></svg>{% endif %}{% if link.subLabel %}<span class="text-[11px] opacity-60 ml-1">{{ link.subLabel }}</span>{% endif %}</span>
                       {% if link.badge %}
                         <span class="ml-auto px-1.5 py-0.5 text-[9px] font-medium uppercase bg-zunkiree-100 text-zunkiree-700 rounded">
                           {{ link.badge }}
