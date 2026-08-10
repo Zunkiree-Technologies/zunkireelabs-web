@@ -271,20 +271,11 @@ The key is matching your specific needs—technical requirements, communication 
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Industry Reports</h3>
-      <p class="text-gray-600 leading-relaxed">For comprehensive insights on AI adoption in Nepal, refer to the latest industry reports by [Authoritative Source 1]. Replace this placeholder with the name or website of a reputable industry report provider on AI.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Market Analysis</h3>
-      <p class="text-gray-600 leading-relaxed">The current landscape of AI companies in Nepal is extensively analyzed by [Authoritative Source 2]. This could be an academic journal or market research firm known for its focus on technology trends.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">AI Innovations</h3>
-      <p class="text-gray-600 leading-relaxed">Innovative AI applications in Nepal are discussed in detail by [Authoritative Source 3]. Consider a technology news outlet or blog specializing in AI that aligns with this subject.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Government Initiatives</h3>
-      <p class="text-gray-600 leading-relaxed">[Authoritative Source 4] provides an overview of government policies supporting AI development in Nepal. Search for governmental publications or policy analysis reports for credibility.</p>
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <p class="text-gray-600 leading-relaxed"><a href="https://github.com/amitness/ml-companies-in-nepal">Curated list of AI / ML Companies in Nepal</a>
+<a href="https://techbehemoths.com/companies/artificial-intelligence/nepal">Top 20+ Artificial Intelligence Companies in Nepal (2026)</a>
+<a href="https://clutch.co/np/developers/artificial-intelligence">Top Artificial Intelligence Companies in Nepal</a>
+<a href="https://reason.com/2026/06/10/the-next-ai-success-story-might-be-nepal/">The next AI success story might be Nepal</a></p>
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
