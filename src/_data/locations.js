@@ -95,8 +95,14 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Integration with existing CRM and helpdesk systems",
           "45% average reduction in support tickets",
           "24/7 AI-powered customer assistance"
-        ]
-      },
+        ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Customer Experience Services in Kathmandu",
+      "articleBody": "AI & Data in Kathmandu AI Customer Experience Services in Kathmandu From our Kathmandu office, we build AI customer experience systems that automate support, answer questions instantly, and improve customer satisfaction. Get Started Learn More About AI Customer Experience Why Choose Us for AI Customer Experience in Kathmandu Multilingual support including Nepali and English Integration with existing CRM and helpdesk systems 45% average reduction in support tickets 24/7 AI-powered customer assistance Other Services in Kathmandu AI Development AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO AI Customer Experience in Other Locations Lalitpur Bhaktapur Pokhara Ready for AI Customer Experience in Kathmandu? Let's discuss your project requirements. Contact Us"
+    }
+  },
       "web-development": {
         title: "Web Development Services in Kathmandu",
         description: "High-performance website development from Kathmandu, Nepal. Modern frameworks, responsive design, and SEO optimization.",
