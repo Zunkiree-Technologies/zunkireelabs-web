@@ -78,8 +78,14 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with GPT-4, Claude, and open-source LLMs",
           "Production deployments across healthcare, finance, and manufacturing",
           "40% cost advantage over US-based AI development"
-        ]
-      },
+        ],
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Development Services in Kathmandu",
+      "articleBody": "AI & Data in Kathmandu AI Development Services in Kathmandu Our Kathmandu-based AI engineering team builds production-grade AI systems including RAG pipelines, LLM integrations, document AI, and custom machine learning solutions. Get Started Learn More About AI Development Why Choose Us for AI Development in Kathmandu 15+ AI engineers based in Kathmandu Experience with GPT-4, Claude, and open-source LLMs Production deployments across healthcare, finance, and manufacturing 40% cost advantage over US-based AI development Other Services in Kathmandu AI Customer Experience AI Ecommerce Solutions Data Systems Custom Software SaaS Development Web Development App Development AEO & SEO AI Development in Other Locations Lalitpur Bhaktapur Pokhara Ready for AI Development in Kathmandu? Let's discuss your project requirements. Contact Us"
+    }
+  },
       "ai-customer-experience": {
         title: "AI Customer Experience Services in Kathmandu",
         description: "AI-powered customer support systems built in Kathmandu. Reduce support tickets by 40% with intelligent chatbots and automation.",
