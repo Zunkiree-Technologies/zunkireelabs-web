@@ -726,7 +726,7 @@ Backed by IME Group, Sparrow Pay/IME Pay leverages remittance infrastructure for
 
 **Why they made the list**: Innovative approach linking remittance and digital payments.
 
-**Website**: [imepay.com.np](https://imepay.com.np)
+**Website**: imepay.com.np
 
 ### CellPay
 
