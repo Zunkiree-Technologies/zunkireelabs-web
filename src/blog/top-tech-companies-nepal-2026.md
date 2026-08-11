@@ -450,7 +450,7 @@ Dailo focuses on mobile application development, with expertise in both native a
 
 **Why they made the list**: Mobile specialization with strong technical capabilities.
 
-**Website**: [dailotech.com](https://dailotech.com)
+**Website**: dailotech.com
 
 ### Incessant Rain Studios
 
