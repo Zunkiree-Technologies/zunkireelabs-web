@@ -68,22 +68,70 @@ Building a GaaS application isn't primarily a model-selection problem — it's a
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does GaaS mean in the context of building an application?","@type":"Question","acceptedAnswer":{"text":"In this context, GaaS means Agentic as a Service — a delivery model where autonomous AI agents are deployed as a managed service to execute business tasks independently, priced on Cost-per-Outcome rather than per-seat licensing.","@type":"Answer"}},{"name":"What is the manager/worker agent pattern?","@type":"Question","acceptedAnswer":{"text":"A manager agent breaks a larger goal into subtasks and coordinates specialized worker agents, each handling a narrower piece of the job — similar to how a human team divides work, which keeps individual agent output easier to verify.","@type":"Answer"}},{"name":"Why do GaaS applications need Human-in-the-Loop gates?","@type":"Question","acceptedAnswer":{"text":"High-risk or irreversible actions, like pushing to production or processing a refund, should require human approval before executing, which keeps agent autonomy bounded rather than open-ended.","@type":"Answer"}},{"name":"What is sandboxed execution in a GaaS application?","@type":"Question","acceptedAnswer":{"text":"Sandboxed execution means agents perform their work in an isolated, ephemeral environment rather than acting directly on production systems, so mistakes are contained.","@type":"Answer"}},{"name":"What industries use GaaS applications today?","@type":"Question","acceptedAnswer":{"text":"Software development, customer service, data operations, legal, and healthcare are common areas, since they involve well-defined, high-volume tasks that consume disproportionate human time relative to the judgment they require.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>What does GaaS stand for in this guide?</h3></summary>
-    <p>Agentic as a Service — autonomous AI agents deployed as a managed service to execute tasks independently, not "Game as a Service."</p>
-  </details>
-  <details>
-    <summary><h3>How is a GaaS application priced?</h3></summary>
-    <p>Typically on Cost-per-Outcome: you pay for a completed task rather than a per-seat license, regardless of whether that seat is actively used.</p>
-  </details>
-  <details>
-    <summary><h3>What should I decide before building a GaaS application?</h3></summary>
-    <p>Scope the task narrowly, decide which actions need human approval versus which can run automatically, and define a measurable definition of "done" for the task.</p>
-  </details>
-  <details>
-    <summary><h3>How does Zunkiree Labs' GaaS platform handle safety?</h3></summary>
-    <p>Through sandboxed execution environments, Human-in-the-Loop approval gates for high-risk actions, and comprehensive audit logging of every agent decision.</p>
-  </details>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What does GaaS stand for in this guide?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Agentic as a Service — autonomous AI agents deployed as a managed service to execute tasks independently, not &quot;Game as a Service.&quot;</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How is a GaaS application priced?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Typically on Cost-per-Outcome: you pay for a completed task rather than a per-seat license, regardless of whether that seat is actively used.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What should I decide before building a GaaS application?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Scope the task narrowly, decide which actions need human approval versus which can run automatically, and define a measurable definition of &quot;done&quot; for the task.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does Zunkiree Labs' GaaS platform handle safety?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Through sandboxed execution environments, Human-in-the-Loop approval gates for high-risk actions, and comprehensive audit logging of every agent decision.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
