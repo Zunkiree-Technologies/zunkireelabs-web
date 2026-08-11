@@ -314,7 +314,7 @@ Deerwalk builds healthcare software for the US market, specializing in populatio
 
 **Why they made the list**: One of Nepal's largest tech employers. Deep healthcare domain expertise.
 
-**Website**: [deerwalk.com](https://deerwalk.com)
+**Website**: deerwalk.com
 
 ### Verisk Nepal (formerly ISO Nepal)
 
@@ -450,7 +450,7 @@ Dailo focuses on mobile application development, with expertise in both native a
 
 **Why they made the list**: Mobile specialization with strong technical capabilities.
 
-**Website**: [dailotech.com](https://dailotech.com)
+**Website**: dailotech.com
 
 ### Incessant Rain Studios
 
@@ -467,7 +467,7 @@ One of Nepal's few game development studios, Incessant Rain creates games and in
 
 **Why they made the list**: Unique specialization in game development from Nepal.
 
-**Website**: [irsgames.com](https://irsgames.com)
+**Website**: irsgames.com
 
 ### Kazi Studios
 
@@ -658,7 +658,7 @@ Tootle created Nepal's motorcycle ride-hailing market and expanded into deliveri
 
 **Why they made the list**: Created a new market category in Nepal.
 
-**Website**: [tootle.today](https://tootle.today)
+**Website**: tootle.today
 
 ### Sastodeal
 
@@ -726,7 +726,7 @@ Backed by IME Group, Sparrow Pay/IME Pay leverages remittance infrastructure for
 
 **Why they made the list**: Innovative approach linking remittance and digital payments.
 
-**Website**: [imepay.com.np](https://imepay.com.np)
+**Website**: imepay.com.np
 
 ### CellPay
 
@@ -743,7 +743,7 @@ CellPay focuses on QR-based payments and merchant services in the growing digita
 
 **Why they made the list**: Growing rapidly in competitive payments market.
 
-**Website**: [cellpay.com.np](https://cellpay.com.np)
+**Website**: cellpay.com.np
 
 ### PickMyParcel (PMP Nepal)
 
@@ -760,7 +760,7 @@ PMP Nepal provides e-commerce logistics, connecting sellers with delivery infras
 
 **Why they made the list**: Essential infrastructure for Nepal's e-commerce growth.
 
-**Website**: [pickmyparcel.com.np](https://pickmyparcel.com.np)
+**Website**: pickmyparcel.com.np
 
 ### Locus Nepal
 
