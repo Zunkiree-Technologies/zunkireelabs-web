@@ -122,8 +122,14 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cloud-native architecture",
           "Real-time and batch processing",
           "Data quality and governance"
-        ]
-      },
+        ],
+    reviewSchema: {
+    "@type": "Article",
+    "@context": "https://schema.org",
+    "headline": "Data Engineering Services in Kathmandu",
+    "articleBody": "AI & Data in Kathmandu Data Engineering Services in Kathmandu Our Kathmandu data engineering team builds scalable data pipelines, warehouses, and analytics infrastructure that powers AI and business intelligence. Get Started Learn More About Data Systems Why Choose Us for Data Systems in Kathmandu Modern data stack expertise Cloud-native architecture Real-time and batch processing Data quality and governance Other Services in Kathmandu AI Development AI Customer Experience AI Ecommerce Solutions Custom Software SaaS Development Web Development App Development AEO & SEO Data Systems in Other Locations Lalitpur Bhaktapur Pokhara Ready for Data Systems in Kathmandu? Let's discuss your project requirements. Contact Us"
+  }
+  },
       "saas-development": {
         title: "SaaS Development Services in Kathmandu",
         description: "Multi-tenant SaaS platform development from Kathmandu. Launch your software product faster with our experienced team.",
@@ -157,7 +163,13 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Local SEO for Nepal businesses"
         ]
   }
-    }
+    },
+    reviewSchema: {
+    "@type": "Article",
+    "@context": "https://schema.org",
+    "headline": "Zunkiree Labs - Expert AI Solutions in Kathmandu",
+    "articleBody": "Headquarters AI Development in Kathmandu Zunkiree Labs is headquartered in Kathmandu, Nepal's capital and technology hub. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally. Contact Us View Services Contact Information Kathmandu, Nepal +977-9849839728 contact@zunkireelabs.com Business Hours Monday - Friday 9:00 AM - 6:00 PM Saturday 10:00 AM - 4:00 PM Sunday Closed About Zunkiree Labs in Kathmandu Kathmandu is the center of Nepal's growing technology industry, home to thousands of software engineers and a rapidly expanding AI ecosystem. As one of Kathmandu's pioneering AI companies, Zunkiree Labs combines deep technical expertise with local market knowledge to deliver AI solutions that work. Our Kathmandu office serves as the headquarters for all operations, housing our core engineering team, project management, and client services. From here, we've delivered AI systems to clients across healthcare, finance, manufacturing, and professional services. Working with a Kathmandu-based AI company offers distinct advantages: competitive rates compared to US or European firms, a large pool of English-speaking engineers, and time zone overlap with both Asian and European markets. Services in Kathmandu AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Where is Zunkiree Labs located in Kathmandu? Zunkiree Labs is headquartered in Thamel, Kathmandu, Nepal's capital city. Our office is easily accessible."
+  }
   },
   {
     id: "lalitpur",
@@ -265,6 +277,12 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Easy in-person collaboration within the Kathmandu Valley"
         ]
   }
+    },
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Development Services in Bhaktapur | Zunkiree Labs",
+      "articleBody": "Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation. We offer custom AI systems using RAG pipelines, LLM integration, and intelligent automation aimed at solving specific business problems. Additionally, we provide AI-powered support systems that reduce support tickets by 40%. Our AI Ecommerce Solutions include agentic commerce systems specialized for the Nepal market, as well as data systems for analytics infrastructure built for AI workloads. We also specialize in custom software, SaaS development, web development, app development, and AEO & SEO optimization."
     }
   },
   {
@@ -305,6 +323,12 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Remote collaboration, with travel available for key project milestones"
         ]
   }
+    },
+    reviewSchema: {
+      "@type": "Article",
+      "@context": "https://schema.org",
+      "headline": "AI Development Services in Pokhara | Zunkiree Labs",
+      "articleBody": "Service Area AI Development in Pokhara Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our Kathmandu headquarters. We've worked with tourism, hospitality, and local businesses in the Pokhara region. Contact Us View Services Contact Information +977-9849839728 contact@zunkireelabs.com Services in Pokhara AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Can you work with clients in Pokhara? Yes, we work with Pokhara clients remotely and can travel for key meetings. Our experience with international remote clients means seamless collaboration regardless of location. Do you have an office in Pokhara? Our headquarters is in Kathmandu, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones. Also Serving Kathmandu Ready to build with AI in Pokhara? Let's discuss how AI can transform your business. Schedule a Discovery Call"
     }
   }
 ];
