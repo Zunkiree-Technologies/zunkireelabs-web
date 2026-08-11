@@ -75,4 +75,4 @@ Complex availability isn't a scheduling edge case — it's the default reality f
     <p>Yes — Zenly pairs complex availability handling with AI-powered reminders, which together reduce no-show rates by an average of 35%.</p>
   </details>
 </div><!-- SEOAI:QACONTENT:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Understanding Complex Availability in Scheduling","articleBody":"Complex availability in scheduling occurs when a booking depends on multiple resources being available at once — a provider, a room, equipment, buffer time, and stakeholder preferences — rather than a single calendar being free or busy. Basic calendar tools struggle with it because it's a combinatorial matching problem. Zunkiree Labs' Zenly AI Booking Engine handles multi-resource bookings and automatic conflict resolution through natural language, and its AI-powered reminders reduce no-shows by 35%."}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
