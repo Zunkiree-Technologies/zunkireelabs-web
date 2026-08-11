@@ -760,7 +760,7 @@ PMP Nepal provides e-commerce logistics, connecting sellers with delivery infras
 
 **Why they made the list**: Essential infrastructure for Nepal's e-commerce growth.
 
-**Website**: [pickmyparcel.com.np](https://pickmyparcel.com.np)
+**Website**: pickmyparcel.com.np
 
 ### Locus Nepal
 
