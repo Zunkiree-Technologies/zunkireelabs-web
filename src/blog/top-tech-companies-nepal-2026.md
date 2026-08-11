@@ -658,7 +658,7 @@ Tootle created Nepal's motorcycle ride-hailing market and expanded into deliveri
 
 **Why they made the list**: Created a new market category in Nepal.
 
-**Website**: [tootle.today](https://tootle.today)
+**Website**: tootle.today
 
 ### Sastodeal
 
