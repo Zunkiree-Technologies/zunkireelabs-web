@@ -314,7 +314,7 @@ Deerwalk builds healthcare software for the US market, specializing in populatio
 
 **Why they made the list**: One of Nepal's largest tech employers. Deep healthcare domain expertise.
 
-**Website**: [deerwalk.com](https://deerwalk.com)
+**Website**: deerwalk.com
 
 ### Verisk Nepal (formerly ISO Nepal)
 
