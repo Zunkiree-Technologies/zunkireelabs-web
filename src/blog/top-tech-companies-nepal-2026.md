@@ -467,7 +467,7 @@ One of Nepal's few game development studios, Incessant Rain creates games and in
 
 **Why they made the list**: Unique specialization in game development from Nepal.
 
-**Website**: [irsgames.com](https://irsgames.com)
+**Website**: irsgames.com
 
 ### Kazi Studios
 
