@@ -294,25 +294,82 @@ The key is matching your specific needs—technical requirements, communication 
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs Team","@type":"Organization"},"@context":"https://schema.org","headline":"AI Companies in Nepal: Current Leaders and Innovations","articleBody":"A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond. Nepal's AI industry has grown significantly over the past five years. What started as a handful of companies experimenting with machine learning has evolved into a thriving ecosystem of AI-focused firms serving both local and international clients. In 2026, Nepali AI companies are building everything from natural language processing systems to computer vision applications, competing effectively with global players while offering cost advantages and specialized expertise.","dateModified":"2026-03-30","datePublished":"2026-03-30"}</script><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>What types of AI solutions are companies in Nepal focusing on?</h3></summary>
-    <p>Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
-  </details>
-  <details>
-    <summary><h3>Which companies are recognized as leaders in AI innovation in Nepal?</h3></summary>
-    <p>Leading AI companies in Nepal include Zunkiree Labs, Fusemachines, Leapfrog Technology, and Cotiviti Nepal, each offering specialized AI solutions across various sectors.</p>
-  </details>
-  <details>
-    <summary><h3>How has the AI industry in Nepal evolved over recent years?</h3></summary>
-    <p>The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
-  </details>
-  <details>
-    <summary><h3>What notable achievements have these AI companies made?</h3></summary>
-    <p>For instance, Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45%, while Fusemachines has trained thousands of AI practitioners and delivered custom enterprise machine learning solutions.</p>
-  </details>
-  <details>
-    <summary><h3>What is the focus of CloudFactory in the AI sector?</h3></summary>
-    <p>CloudFactory specializes in AI training data and human-in-the-loop services, establishing a workforce dedicated to AI data labeling and quality assurance.</p>
-  </details>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What types of AI solutions are companies in Nepal focusing on?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Which companies are recognized as leaders in AI innovation in Nepal?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Leading AI companies in Nepal include Zunkiree Labs, Fusemachines, Leapfrog Technology, and Cotiviti Nepal, each offering specialized AI solutions across various sectors.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How has the AI industry in Nepal evolved over recent years?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What notable achievements have these AI companies made?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">For instance, Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45%, while Fusemachines has trained thousands of AI practitioners and delivered custom enterprise machine learning solutions.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is the focus of CloudFactory in the AI sector?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">CloudFactory specializes in AI training data and human-in-the-loop services, establishing a workforce dedicated to AI data labeling and quality assurance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:QACONTENT:END -->

@@ -42,22 +42,70 @@ If your front desk spends real time on the phone answering the same handful of q
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a dental AI virtual assistant?","@type":"Question","acceptedAnswer":{"text":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, using the practice's own data, instead of a patient having to call or wait for a callback.","@type":"Answer"}},{"name":"How is it different from a generic chatbot?","@type":"Question","acceptedAnswer":{"text":"A generic chatbot answers from general web knowledge and can get dental specifics wrong. A dental-specific virtual assistant answers using the practice's actual procedure list, pricing, insurance acceptance, and live schedule.","@type":"Answer"}},{"name":"Can a dental AI virtual assistant book appointments?","@type":"Question","acceptedAnswer":{"text":"Yes. It can check availability, book, and reschedule appointments while accounting for real appointment length and provider availability.","@type":"Answer"}},{"name":"Does it give clinical advice?","@type":"Question","acceptedAnswer":{"text":"No. It's built to handle routine administrative and informational questions and is designed to hand off clinical questions, emergencies, and complex situations to practice staff.","@type":"Answer"}},{"name":"Is there a dental AI virtual assistant available from Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Yes — Zunkiree Labs' Dental AI Assistant provides always-on patient communication, intelligent scheduling, and automated follow-up built specifically for dental practices.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>What can a dental AI virtual assistant answer for patients?</h3></summary>
-    <p>It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
-  </details>
-  <details>
-    <summary><h3>Is a dental AI virtual assistant the same as a general chatbot?</h3></summary>
-    <p>No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
-  </details>
-  <details>
-    <summary><h3>Will it try to give medical advice?</h3></summary>
-    <p>No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
-  </details>
-  <details>
-    <summary><h3>Is it available outside office hours?</h3></summary>
-    <p>Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
-  </details>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What can a dental AI virtual assistant answer for patients?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Is a dental AI virtual assistant the same as a general chatbot?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Will it try to give medical advice?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Is it available outside office hours?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"What is a Dental AI Virtual Assistant?","articleBody":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, grounded in the practice's own data, instead of routing everything through the front desk. Unlike a generic chatbot, it's built specifically around dental practice questions and hands off clinical advice, emergencies, and complex situations to staff. Zunkiree Labs' Dental AI Assistant provides this always-on patient communication alongside intelligent scheduling and automated follow-up."}</script><!-- SEOAI:SCHEMA:END -->

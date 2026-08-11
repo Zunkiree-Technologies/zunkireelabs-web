@@ -321,26 +321,83 @@ The opportunities are real, but so are the challenges. Organizations that move t
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers instead of links, enhancing customer experience.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can start a free trial of Zunkiree Search to see how it delivers direct answers.","@type":"Answer"}},{"name":"What types of services does your company offer?","@type":"Question","acceptedAnswer":{"text":"Our services include AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, Web & App Development, and AEO & SEO.","@type":"Answer"}},{"name":"What industries do you serve?","@type":"Question","acceptedAnswer":{"text":"We serve various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services for various tasks and workflows.","@type":"Answer"}},{"name":"Are there any case studies available?","@type":"Question","acceptedAnswer":{"text":"Yes, there are case studies highlighting how our AI-powered solutions have transformed businesses, such as how Admizz reduced response time by 45%.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>What is the current state of AI in Nepal?</h3></summary>
-    <p>The state of AI in Nepal is rapidly evolving, with various industries beginning to adopt AI technologies tailored to improve efficiency and customer experiences.</p>
-  </details>
-  <details>
-    <summary><h3>What AI products are available in Nepal?</h3></summary>
-    <p>In Nepal, several AI products are offered, including Zunkiree Search for natural language processing, dental AI for patient communication, and business analytics platforms like Gaamma.</p>
-  </details>
-  <details>
-    <summary><h3>How can businesses in Nepal benefit from AI?</h3></summary>
-    <p>Businesses in Nepal can benefit from AI by utilizing custom AI systems, enhancing customer experiences with intelligent chatbots, and leveraging analytics for data-driven decisions.</p>
-  </details>
-  <details>
-    <summary><h3>Is there a report on AI adoption in Nepal?</h3></summary>
-    <p>Yes, there is a featured report titled 'State of AI in Nepal 2026' that serves as a definitive guide to AI adoption across various Nepali industries.</p>
-  </details>
-  <details>
-    <summary><h3>What services does Zunkiree offer related to AI?</h3></summary>
-    <p>Zunkiree offers a range of AI services including AI development, customer experience solutions, data systems, and custom software development designed to meet specific business needs.</p>
-  </details>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is the current state of AI in Nepal?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The state of AI in Nepal is rapidly evolving, with various industries beginning to adopt AI technologies tailored to improve efficiency and customer experiences.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What AI products are available in Nepal?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">In Nepal, several AI products are offered, including Zunkiree Search for natural language processing, dental AI for patient communication, and business analytics platforms like Gaamma.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can businesses in Nepal benefit from AI?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Businesses in Nepal can benefit from AI by utilizing custom AI systems, enhancing customer experiences with intelligent chatbots, and leveraging analytics for data-driven decisions.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Is there a report on AI adoption in Nepal?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Yes, there is a featured report titled 'State of AI in Nepal 2026' that serves as a definitive guide to AI adoption across various Nepali industries.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What services does Zunkiree offer related to AI?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree offers a range of AI services including AI development, customer experience solutions, data systems, and custom software development designed to meet specific business needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs Team","@type":"Organization"},"@context":"https://schema.org","headline":"State of AI in Nepal: Overview as of Today","articleBody":"An analysis of Nepal's AI landscape in 2026. Explore adoption trends, challenges, opportunities, and predictions for the future of artificial intelligence in Nepal. Nepal's AI industry has reached an inflection point in 2026. After years of gradual development, we're seeing accelerated adoption across sectors, increased investment, and a maturing talent ecosystem. This report examines the current state of AI in Nepal, highlighting key trends, challenges, and opportunities for businesses and technologists. Key Findings AI Adoption is Accelerating 62% of large Nepali enterprises are now using or piloting AI solutions 3.5x increase in AI project spending since 2023 Healthcare, finance, and e-commerce lead in adoption rates Customer service automation is the most common use case The Talent Gap is Narrowing 2,400+ AI/ML practitioners in Nepal (up from 800 in 2022) 15 universities now offering AI-related courses 35% of AI professionals are women (above regional average) Salary growth of 40% for senior AI engineers since 2024 Local Companies are Going Global Nepali AI companies now serve clients in 28 countries $45M in AI services exported in 2025 Three Nepali AI startups have raised international funding AI Adoption by Sector Healthcare: Leading the Way Nepal's healthcare sector has embraced AI more quickly than many expected: Current Applications: Diagnostic imaging analysis (X-rays, CT scans) Patient triage and symptom checking Medical records digitization and search Drug interaction checking Adoption Rate: 48% of major hospitals using at least one AI system Key Driver: Shortage of specialists, especially outside Kathmandu Valley Financial Services: Rapid Transformation Banks and financial institutions are deploying AI for: Current Applications: Fraud detection and prevention Credit scoring and risk assessment Customer service chatbots Document processing automation Adoption Rate: 71% of commercial banks have active AI initiatives Key Driver: Competition from fintech and digital payment providers E-commerce and Retail: Personalization at Scale Current Applications: Product recommendations Search optimization Inventory forecasting Customer support automation Adoption Rate: 55% of major e-commerce platforms using AI Key Driver: Customer experience differentiation Manufacturing: Early Stages Current Applications: Quality control (visual inspection) Predictive maintenance Supply chain optimization Adoption Rate: 23% of large manufacturers piloting AI Key Challenge: Legacy systems and data infrastructure Challenges Facing AI Adoption 1. Data Infrastructure The Problem: Many organizations lack the data infrastructure needed for AI: Siloed data across departments Poor data quality and inconsistent formats Limited historical data for training Privacy and governance concerns Impact: 67% of failed AI projects cite data","dateModified":"2026-03-30","datePublished":"2026-03-30"}</script><!-- SEOAI:SCHEMA:END -->

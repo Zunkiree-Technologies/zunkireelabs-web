@@ -46,22 +46,70 @@ Testimonials and case studies matter because they shift the burden of proof from
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Why do testimonials and case studies matter when evaluating an AI vendor?","@type":"Question","acceptedAnswer":{"text":"They shift the burden of proof from a vendor's own description of their product to a named customer's attributable, checkable result — which is harder to fake than marketing copy.","@type":"Answer"}},{"name":"What results has Admizz Education seen using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Admizz saw 45% faster response times, a 3x improvement in student satisfaction scores, and a 60% reduction in manual inquiry handling after deploying Zunkiree Search.","@type":"Answer"}},{"name":"What results has Corecloud365 seen using Zunkiree's AI tools?","@type":"Question","acceptedAnswer":{"text":"Corecloud365 achieved a 60% reduction in operational costs, 80% faster issue resolution, and 99.9% system uptime.","@type":"Answer"}},{"name":"What should I look for in a vendor's case study?","@type":"Question","acceptedAnswer":{"text":"Look for a named customer, a specific industry, and a measured, checkable result — not a vague claim of improved efficiency without any attribution.","@type":"Answer"}},{"name":"Where can I see Zunkiree Labs' full case study library?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs' projects and case studies page lists published client results, with more added as additional deployments reach measurable outcomes.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>Why do case studies matter more than product descriptions?</h3></summary>
-    <p>A case study is a claim a named customer is willing to stand behind, with a specific measured result — which is harder to fake than a vendor's own description of their product.</p>
-  </details>
-  <details>
-    <summary><h3>What happened when Admizz Education adopted Zunkiree Search?</h3></summary>
-    <p>Admizz saw 45% faster response times, a 3x improvement in student satisfaction, and a 60% reduction in manual inquiry handling.</p>
-  </details>
-  <details>
-    <summary><h3>What happened when Corecloud365 adopted Zunkiree's AI tools?</h3></summary>
-    <p>Corecloud365 reduced operational costs by 60%, resolved issues 80% faster, and maintained 99.9% system uptime.</p>
-  </details>
-  <details>
-    <summary><h3>How can I tell a real testimonial from a vague one?</h3></summary>
-    <p>A real testimonial names the customer and industry and reports a specific, checkable result. A vague one describes a feeling ("game-changing") without any attribution or number behind it.</p>
-  </details>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Why do case studies matter more than product descriptions?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">A case study is a claim a named customer is willing to stand behind, with a specific measured result — which is harder to fake than a vendor's own description of their product.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What happened when Admizz Education adopted Zunkiree Search?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Admizz saw 45% faster response times, a 3x improvement in student satisfaction, and a 60% reduction in manual inquiry handling.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What happened when Corecloud365 adopted Zunkiree's AI tools?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Corecloud365 reduced operational costs by 60%, resolved issues 80% faster, and maintained 99.9% system uptime.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can I tell a real testimonial from a vague one?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">A real testimonial names the customer and industry and reports a specific, checkable result. A vague one describes a feeling (&quot;game-changing&quot;) without any attribution or number behind it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Why User Testimonials Matter: Real Voices from Zunkiree Labs","articleBody":"Testimonials and case studies matter in B2B AI buying because they shift the burden of proof from a vendor's own product description to a named customer's attributable, checkable result. Zunkiree Labs publishes measured outcomes rather than vague claims: Admizz Education saw 45% faster response times and a 3x improvement in student satisfaction after deploying Zunkiree Search, while Corecloud365 achieved a 60% reduction in operational costs and 99.9% system uptime using Zunkiree's AI-powered automation."}</script><!-- SEOAI:SCHEMA:END -->
