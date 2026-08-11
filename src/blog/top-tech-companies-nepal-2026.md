@@ -743,7 +743,7 @@ CellPay focuses on QR-based payments and merchant services in the growing digita
 
 **Why they made the list**: Growing rapidly in competitive payments market.
 
-**Website**: [cellpay.com.np](https://cellpay.com.np)
+**Website**: cellpay.com.np
 
 ### PickMyParcel (PMP Nepal)
 
