@@ -72,4 +72,4 @@ A dental AI secretary doesn't change what a dental practice does — it changes 
     <p>Practices using Zunkiree Labs' Dental AI Assistant see a 35% reduction in no-shows, 15+ hours of admin time saved weekly, and about 90% of routine questions resolved without staff involvement.</p>
   </details>
 </div><!-- SEOAI:QACONTENT:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Dental AI Secretary Solutions for Practices","articleBody":"A dental AI secretary is software that handles routine front-desk tasks for a dental practice — scheduling, reminders, and common patient questions about pricing, insurance, and hours — so staff can focus on in-office patients. Zunkiree Labs' Dental AI Assistant provides always-on patient communication, intelligent scheduling, automated follow-up, and review management, reducing no-shows by 35%, saving 15+ hours of admin time weekly, and resolving about 90% of routine questions without staff involvement."}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
