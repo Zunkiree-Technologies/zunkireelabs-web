@@ -143,7 +143,21 @@ export default [
       zunkiree: "Businesses wanting intelligent search that understands intent and provides direct answers to customer questions.",
       competitor: "Developers who want a self-hosted, open-source alternative to Algolia for traditional search."
     },
-    verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search."
+    verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search.",
+    reviewSchema: {
+      "@type": "Review",
+      "author": {
+        "name": "Zunkiree Labs",
+        "@type": "Organization"
+      },
+      "@context": "https://schema.org",
+      "reviewBody": "Comparison Zunkiree Search vs Typesense Compare Zunkiree Search and Typesense. See how AI-native search compares to open-source instant search. Feature comparison Feature Zunkiree Search Typesense Search Approach Semantic + AI Keyword + typo tolerance Hosting Fully managed Self-hosted or cloud AI Features Native LLM integration None built-in Response Type Answers with citations Ranked results Natural Language Full support Basic query parsing Enterprise Features SSO, analytics, API Basic analytics Open Source No Yes (GPL-3.0) Zunkiree Search AI-native search that provides answers Semantic understanding AI-generated answers Zero infrastructure Conversational search Enterprise-ready T Typesense Open-source, typo-tolerant search engine alternative to Algolia Strengths Open-source and self-hostable Fast typo-tolerant search Simple to set up Cost-effective Limitations Keyword-based, limited semantics No built-in AI features Self-hosting requires ops Returns links, not answers When to choose each Choose Zunkiree Search when: Businesses wanting intelligent search that understands intent and provides direct answers to customer questions. Choose Typesense when: Developers who want a self-hosted, open-source alternative to Algolia for traditional search. Our verdict Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search. Ready to try Zunkiree Search? See how AI-native search can transform your customer experience. Explore Zunkiree Search Talk to Sales Other comparisons Zunkiree Search vs Algolia Zunkiree Search vs Elasticsearch Agentic Commerce vs Traditional Ecommerce.",
+      "itemReviewed": {
+        "name": "Zunkiree Search",
+        "@type": "Product",
+        "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
+      }
+    }
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
