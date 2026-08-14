@@ -208,6 +208,38 @@ layout: base.njk
 </section>
 
 {# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when comp.expandedContent is present; never fabricated
+   here or by the generator that writes it — see server/generators/
+   expand-content.js. Already a fully rendered HTML block (wrapper + rows),
+   not raw text — see server/implementers/lib/marker-merge.js's
+   renderExpandedHtml, the same renderer a per-file template's marker
+   splice uses.
+   ===================================================== #}
+{% if comp.expandedContent %}
+{{ comp.expandedContent | safe }}
+{% endif %}
+
+{# =====================================================
+   Q&A CONTENT (AI-managed — written by the Action Center)
+   Only rendered when comp.qaContentHtml is present; same rendering
+   pipeline as FAQ above but a distinct field/marker — see
+   server/generators/qa-content.js.
+   ===================================================== #}
+{% if comp.qaContentHtml %}
+{{ comp.qaContentHtml | safe }}
+{% endif %}
+
+{# =====================================================
+   RELATED / INTERNAL LINKS (AI-managed — written by the Action Center)
+   Only rendered when comp.internalLinksHtml is present — see
+   server/generators/internal-links.js.
+   ===================================================== #}
+{% if comp.internalLinksHtml %}
+{{ comp.internalLinksHtml | safe }}
+{% endif %}
+
+{# =====================================================
    CTA SECTION
    ===================================================== #}
 <section class="py-16 md:py-24 bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 text-white">
