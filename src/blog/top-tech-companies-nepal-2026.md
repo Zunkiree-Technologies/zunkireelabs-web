@@ -157,7 +157,7 @@ Braindigit provides ML services for banking, telecom, and enterprise clients. Th
 
 **Why they made the list**: Strong track record in traditional ML applications for local enterprises.
 
-**Website**: [braindigit.com](https://braindigit.com)
+**Website**: braindigit.com
 
 ### Numeric Mind
 
