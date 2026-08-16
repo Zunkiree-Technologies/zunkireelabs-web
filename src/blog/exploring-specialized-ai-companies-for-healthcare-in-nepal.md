@@ -125,3 +125,18 @@ Summarize insights and encourage stakeholders to consider investing in or suppor
     </div>
   </div>
 </section><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 last:mb-0">
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <p class="text-gray-600 leading-relaxed"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7538016/">Artificial Intelligence and Health in Nepal - PMC - NIH</a> 
+<a href="https://www.umassmed.edu/medicine/clinical-medicine/clinical-care-news/prakash-paudel-introduces-ai-tool-in-nepal-to-enhance-healthcare-delivery/">Prakash Paudel Introduces AI Tool in Nepal to Enhance ...</a> 
+<a href="https://www.facebook.com/nepalitimes/posts/ai-is-revolutionising-nepals-healthcare-sector-with-companies-like-techkraft-and/1324934029639232/">AI widens scope for IT exports</a> 
+<a href="https://medicalfuturist.com/top-artificial-intelligence-companies-in-healthcare/">Top Artificial Intelligence Companies in Healthcare</a> 
+<a href="https://www.researchgate.net/publication/360215491_Artificial_intelligence_in_healthcare_in_Nepal">Artificial intelligence in healthcare in Nepal</a> 
+<a href="https://myfluiditi.com/best-ai-in-healthcare-company-in-nepal">Best AI In Healthcare Company in Nepal</a> 
+<a href="https://menlovc.com/perspective/2025-the-state-of-ai-in-healthcare/">2025: The State of AI in Healthcare | Menlo Ventures</a> 
+<a href="https://nepmed.nhrc.gov.np/entities/publication/ba516c86-a871-4049-aa7f-0dd40cccfc36/full">Exploring the Challenges and Opportunities of Implementing ...</a></p>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
