@@ -98,7 +98,8 @@ export default [
       "@type": "WebPage",
       "@context": "https://schema.org",
       "description": "Zunkiree Search is a fully managed, AI-native SaaS with built-in LLM and RAG, natural-language querying, and automatic scaling — set up in hours with zero ongoing ops. Elasticsearch is self-hosted or Elastic Cloud, requires custom AI integration and manual cluster management, and takes days to weeks to set up. Choose Zunkiree Search for AI-powered search without the operational burden; choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
-    }
+    },
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-elasticsearch/\">Zunkiree Search vs Elasticsearch | Search Comparison</a>\n\n<a href=\"https://www.elastic.co/enterprise-search\">Elasticsearch: The open source platform for high- ...</a></p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "zunkiree-vs-typesense",
