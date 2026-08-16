@@ -124,3 +124,15 @@ Summarize the key points discussed and encourage dental practices to consider AI
     </div>
   </div>
 </section><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 last:mb-0">
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <p class="text-gray-600 leading-relaxed"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11426822/">The Applications of Artificial Intelligence in Dental Health Care</a>
+<a href="https://www.cda.org/newsroom/newsroom-archives/transforming-dental-operations-the-role-of-ai-in-streamlining-back-office-functions/">Transforming dental operations: The role of AI in ...</a>
+<a href="https://hellopearl.com/blog/5-ways-ai-can-boost-efficiency-in-your-dental-practice-pearl-ai">5 Ways AI Can Boost Efficiency in Your Dental Practice</a>
+<a href="https://adanews.ada.org/huddles/ai-powered-shift-in-dental-care-has-arrived/">AI powered shift in dental care has arrived - ADA News</a>
+<a href="https://www.dentalproductshopper.com/blog/how-ai-is-changing-the-game-in-dental-practice-management-with-an-emphasis-on-efficiency-and-care">How AI is Changing the Game in | DPS</a></p>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
