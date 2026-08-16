@@ -161,7 +161,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ]
+        ],
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://np.linkedin.com/in/sudarshan-regmi-b04b08160\">Sudarshan Regmi - Seo expert in Nepal | AEO and GEO</a>\n<a href=\"https://saddam.com.np/\">Saddam — SEO, AEO &amp; GEO Expert in Nepal | Get Found on</a>\n<a href=\"https://www.upwork.com/freelancers/~01a3ab0c784d4100da\">Arbind S. - Top Technical SEO Specialist | AEO</a>\n<a href=\"https://arjankc.com.np/\">Digital Marketing Expert Nepal | SEO, PPC &amp; Strategy</a>\n<a href=\"https://makuracreations.com/ai-seo-agency-in-nepal/\">AI SEO Agency in Nepal</a>\n<a href=\"https://np.linkedin.com/in/aryan-miya-mansoor-0b8b95324\">Aryan Miya Mansoor - AI SEO Expert In Nepal | AEO | GEO</a>\n<a href=\"https://seoexpertsnepal.com/\">SEO Experts Nepal | Pranish Shakya (SEO Freelancer)</a>\n<a href=\"https://aviralacharya.com.np/\">SEO expert in Nepal | Abiral Acharya | SEO Consultant</a>\n<a href=\"https://www.kamalsubedi.com/\">Kamal Subedi | #1 SEO Expert in Nepal | Digital Marketing</a></p>\n    </div>\n  </div>\n</section>"
   }
     },
     reviewSchema: {
