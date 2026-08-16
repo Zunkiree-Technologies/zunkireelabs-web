@@ -157,7 +157,7 @@ Braindigit provides ML services for banking, telecom, and enterprise clients. Th
 
 **Why they made the list**: Strong track record in traditional ML applications for local enterprises.
 
-**Website**: braindigit.com
+**Website**: [braindigit.com](https://braindigit.com)
 
 ### Numeric Mind
 
@@ -569,7 +569,7 @@ Truemark specializes in building MVPs and products for startups, with a focus on
 
 **Why they made the list**: Startup-focused model resonating with international founders.
 
-**Website**: truemark.dev
+**Website**: [truemark.dev](https://truemark.dev)
 
 ### Cotiviti Technologies Nepal
 
