@@ -159,7 +159,7 @@ export default [
         "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
       }
     },
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-typesense/\">Zunkiree Search vs Typesense | Search Comparison</a></p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Last Updated</h3>\n      <p class=\"text-gray-600 leading-relaxed\">This page was last updated on 2026-08-16.</p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
