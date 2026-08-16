@@ -569,7 +569,7 @@ Truemark specializes in building MVPs and products for startups, with a focus on
 
 **Why they made the list**: Startup-focused model resonating with international founders.
 
-**Website**: [truemark.dev](https://truemark.dev)
+**Website**: truemark.dev
 
 ### Cotiviti Technologies Nepal
 
