@@ -174,7 +174,7 @@ Numeric Mind combines statistical consulting with machine learning services. The
 
 **Why they made the list**: Specialized expertise bridging traditional statistics and modern ML.
 
-**Website**: [numericmind.com](https://numericmind.com)
+**Website**: numericmind.com
 
 ### Programiz (MeroPaper)
 
