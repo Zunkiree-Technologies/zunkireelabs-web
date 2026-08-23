@@ -828,7 +828,7 @@ Beed connects users with home service providers like plumbers, electricians, and
 
 **Why they made the list**: Technology approach to fragmented local services market.
 
-**Website**: [beed.com.np](https://beed.com.np)
+**Website**: beed.com.np
 
 ### MeroShare / CDS Nepal
 
