@@ -123,7 +123,7 @@ Genese combines cloud consulting with AI implementation services. They're a Goog
 
 **Why they made the list**: Strong cloud partnerships provide infrastructure expertise that many AI projects require.
 
-**Website**: [genesesolution.com](https://genesesolution.com)
+**Website**: genesesolution.com
 
 ### Paaila Technology
 
