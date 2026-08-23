@@ -675,7 +675,7 @@ One of Nepal's early e-commerce players, Sastodeal has built significant retail 
 
 **Why they made the list**: E-commerce pioneer with sustained operation.
 
-**Website**: [sastodeal.com](https://sastodeal.com)
+**Website**: sastodeal.com
 
 ### Pathao Nepal
 
