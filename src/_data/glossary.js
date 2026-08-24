@@ -126,8 +126,8 @@ export default [
   },
   {
     id: "retrieval-system",
-    term: "Retrieval System",
-    shortDef: "A system that finds and returns relevant information from a knowledge base in response to queries.",
+    term: "Understanding RX Retrieval Systems and Their Functionality",
+    shortDef: "Explore RX retrieval systems designed to find relevant information through keyword and semantic search techniques, enhancing the quality of query responses.",
     definition: "A retrieval system is a component that finds and returns relevant information from a knowledge base in response to user queries. In AI applications, retrieval systems combine multiple techniques: keyword search (BM25), semantic search (vector similarity), and hybrid approaches. The retrieval quality directly impacts RAG system performance—if irrelevant documents are retrieved, the AI will generate poor responses. Modern retrieval systems use reranking, query expansion, and metadata filtering to improve accuracy.",
     relatedService: "ai-development",
     category: "AI Architecture"
