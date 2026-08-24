@@ -6,6 +6,7 @@
 export default [
   {
     id: "zunkiree-vs-algolia",
+    expandedContent: '',
     title: "Zunkiree Search vs Algolia",
     description: "Compare Zunkiree Search and Algolia for your search needs. See how AI-native search differs from traditional search-as-a-service.",
     competitor: {

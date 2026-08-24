@@ -216,6 +216,24 @@ layout: base.njk
    renderExpandedHtml, the same renderer a per-file template's marker
    splice uses.
    ===================================================== #}
+{# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when comp.expandedContent is present; never fabricated
+   here or by the generator that writes it — see server/generators/
+   expand-content.js. Already a fully rendered HTML block (wrapper + rows),
+   not raw text — see server/implementers/lib/marker-merge.js's
+   renderExpandedHtml, the same renderer a per-file template's marker
+   splice uses.
+   ===================================================== #}
+{# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when comp.expandedContent is present; never fabricated
+   here or by the generator that writes it — see server/generators/
+   expand-content.js. Already a fully rendered HTML block (wrapper + rows),
+   not raw text — see server/implementers/lib/marker-merge.js's
+   renderExpandedHtml, the same renderer a per-file template's marker
+   splice uses.
+   ===================================================== #}
 {% if comp.expandedContent %}
 {{ comp.expandedContent | safe }}
 {% endif %}
