@@ -228,7 +228,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Delivered by our Kathmandu-based team, minutes from Lalitpur"
-        ]
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-27.</p></div>\n  </section>\n</div>"
   }
     }
   },
