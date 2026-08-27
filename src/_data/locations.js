@@ -100,8 +100,9 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
           "Ongoing maintenance and support"
-        ]
-      },
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">References</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p><a href=\"https://clutch.co/np/web-developers\">Top Web Development Companies in Nepal</a>, <a href=\"https://www.facebook.com/fb-answers/web-development-companies-in-kathmandu/\">Web Development Companies in Kathmandu</a></p></div>\n  </section>\n</div>"
+  },
       "custom-software": {
         title: "Custom Software Development in Kathmandu",
         description: "Enterprise software development from Kathmandu. Internal tools, business applications, and workflow automation.",
