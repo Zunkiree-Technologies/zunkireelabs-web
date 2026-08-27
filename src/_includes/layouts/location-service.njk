@@ -63,6 +63,134 @@ layout: base.njk
 {% endif %}
 
 {# =====================================================
+   SERVICES GRID
+   ===================================================== #}
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+      Services in {{ serviceContent.name }}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% for service in services %}
+      <a href="/locations/{{ serviceContent.id }}/{{ service.id }}/" class="group block p-6 bg-gray-50 rounded-lg hover:bg-zunkiree-600 transition-colors">
+        <h3 class="font-medium text-gray-900 group-hover:text-white mb-2">
+          {{ service.title }}
+        </h3>
+        <p class="text-sm text-gray-600 group-hover:text-white/80 line-clamp-2">
+          {{ service.description }}
+        </p>
+        <div class="mt-4 flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:text-white">
+          Learn more
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   FAQs
+   ===================================================== #}
+{% if serviceContent.faqs and serviceContent.faqs.length > 0 %}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="max-w-3xl" x-data="{ activeIndex: null }">
+      {% for faq in serviceContent.faqs %}
+      <div class="border-b border-gray-200">
+        <button
+          @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
+          class="w-full py-5 flex items-center justify-between text-left"
+        >
+          <span class="font-medium text-gray-900 pr-4">{{ faq.question }}</span>
+          <svg
+            class="w-5 h-5 text-gray-400 transition-transform"
+            :class="{ 'rotate-180': activeIndex === {{ loop.index }} }"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          x-show="activeIndex === {{ loop.index }}"
+          x-transition
+          class="pb-5 text-gray-600"
+        >
+          {{ faq.answer }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# FAQPage Schema for location FAQs #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in serviceContent.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{# =====================================================
+   NEARBY LOCATIONS
+   ===================================================== #}
+{% if serviceContent.nearbyCities and serviceContent.nearbyCities.length > 0 %}
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl font-normal text-gray-900 mb-6">
+      Also Serving
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      {% for cityId in serviceContent.nearbyCities %}
+        {% for loc in locations %}
+          {% if loc.id == cityId %}
+          <a href="/locations/{{ loc.id }}/" class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-zunkiree-100 hover:text-zunkiree-700 transition-colors">
+            {{ loc.name }}
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when serviceContent.expandedContent is present; never
+   fabricated here or by the generator that writes it — see
+   server/generators/expand-content.js. Already a fully rendered HTML
+   block (wrapper + rows), not raw text.
+   ===================================================== #}
+{% if serviceContent.expandedContent %}
+{{ serviceContent.expandedContent | safe }}
+{% endif %}
+
+
+{# =====================================================
    HERO SECTION
    ===================================================== #}
 <section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
