@@ -288,7 +288,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       "headline": "AI Development Services in Bhaktapur | Zunkiree Labs",
       "articleBody": "Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation. We offer custom AI systems using RAG pipelines, LLM integration, and intelligent automation aimed at solving specific business problems. Additionally, we provide AI-powered support systems that reduce support tickets by 40%. Our AI Ecommerce Solutions include agentic commerce systems specialized for the Nepal market, as well as data systems for analytics infrastructure built for AI workloads. We also specialize in custom software, SaaS development, web development, app development, and AEO & SEO optimization."
     },
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-28.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "pokhara",
