@@ -326,7 +326,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "Remote collaboration, with travel available for key project milestones"
-        ]
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   }
     },
     reviewSchema: {
