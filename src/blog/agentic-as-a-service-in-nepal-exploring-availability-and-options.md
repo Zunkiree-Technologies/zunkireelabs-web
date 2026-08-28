@@ -47,34 +47,23 @@ Summarize the findings, reiterate the potential of Agentic-as-a-Service in Nepal
 - [Explore top tech companies in Nepal](https://zunkireelabs.com/blog/top-tech-companies-nepal-2026/)
 <!-- SEOAI:EXPANDEDCONTENT:START --><div class="py-12 md:py-20 py-12 md:py-20">
   <section class="gap-3">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">Agentic-as-a-Service vs Traditional IT Solutions</h2>
-    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p>When considering the implementation of innovative technologies like Agentic-as-a-Service, businesses often weigh it against traditional IT solutions. Below is a comparison between these two approaches:
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">References</h2>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p><a href="https://zunkireelabs.com/blog/">AI &amp; Technology Blog | Insights from Zunkiree Labs</a>
 
-| Feature                     | Agentic-as-a-Service        | Traditional IT Solutions       |
-|-----------------------------|------------------------------|--------------------------------|
-| Scalability                 | Highly scalable              | Limited scalability            |
-| Cost Structure              | Pay-as-you-go pricing        | Fixed costs                    |
-| Implementation Time         | Quick setup and deployment   | Lengthy implementation cycles   |
-| Maintenance                 | Managed service              | In-house maintenance required   |
-| Technical Expertise Needed   | Minimal technical expertise   | High level of expertise needed  |
-| Flexibility                 | High flexibility and adaptability | Rigid structures               |
-| Use Cases                   | AI-driven automation         | Standard IT processes           |
+<a href="https://www.leewayhertz.com/agentic-ai-in-customer-service/">Agentic AI in Customer Service: Use cases and Applications</a>
 
-This comparison highlights the dynamic nature of Agentic-as-a-Service, showcasing its adaptability and modern approach to business needs in contrast to traditional methods.</p></div>
-  </section>
-  <section class="gap-3">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">Agentic-as-a-Service vs Other AI Services</h2>
-    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p>In the vast landscape of AI services, Agentic-as-a-Service stands out. Here's how it compares to other AI offerings in the market:
+<a href="https://mitsloan.mit.edu/ideas-made-to-matter/agentic-ai-explained">Agentic AI, explained</a>
 
-| Feature                     | Agentic-as-a-Service        | Other AI Services               |
-|-----------------------------|------------------------------|--------------------------------|
-| Focus                       | Agent-based automation       | Various AI applications         |
-| Target Users                | Businesses seeking efficiency | Broad user base                |
-| Customization               | High level of customization  | Varies widely                   |
-| User Interaction            | Direct interaction with agents | Indirect interaction            |
-| Impact on Workflows         | Streamlines workflows        | Varies; may require overhaul   |
-| Industry Adoption           | Emerging in tech-centric industries | Well-established in many sectors |
+<a href="https://www.opentext.com/what-is/agentic-ai">What is Agentic AI? How OpenText Powers Enterprise ...</a>
 
-This comparison demonstrates the unique position of Agentic-as-a-Service in enhancing business processes compared to other existing AI services.</p></div>
+<a href="https://www.facebook.com/groups/itsnporg/posts/1892716824843072/">Who in Nepal is building autonomous AI agents?</a>
+
+<a href="https://www.linkedin.com/posts/kevin-ichhpurani-92822b1_the-transformative-potential-of-agentic-ai-activity-7351643611819618304-mKxF">Agentic AI will create a ~$1 trillion global market ...</a>
+
+<a href="https://www.reddit.com/r/technepal/comments/1sqf0va/ai_agents_adoption_in_nepal/">AI agents adoption in Nepal : r/technepal</a>
+
+<a href="https://aws.amazon.com/what-is/agentic-ai/">What is Agentic AI?</a>
+
+<a href="https://www.infor.com/platform/enterprise-ai/agentic-ai-vs-generative-ai">Agentic AI vs. Generative AI | What's the Difference?</a></p></div>
   </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
