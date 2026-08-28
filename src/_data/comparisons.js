@@ -48,7 +48,7 @@ export default [
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
     verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-28.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "zunkiree-vs-elasticsearch",
