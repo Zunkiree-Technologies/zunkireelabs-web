@@ -176,8 +176,11 @@ layout: base.njk
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-normal text-gray-900 mb-8">Explore more AI terms</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {# Sorted by id, not term — id is never edited by content drafts, so
+         renaming one term's title can't reshuffle which terms show up here
+         on every other glossary page (see rendering-validation gate). #}
       {% set count = 0 %}
-      {% for t in glossary | sort(attribute='term') %}
+      {% for t in glossary | sort(attribute='id') %}
         {% if t.id != currentTerm.id and count < 8 %}
           {% set count = count + 1 %}
           <a href="/glossary/{{ t.id }}/" class="group block bg-white border border-gray-200 p-4 hover:border-zunkiree-400 transition-colors">
