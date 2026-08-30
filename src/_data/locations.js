@@ -213,7 +213,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
           "Delivered by our Kathmandu-based team, minutes from Lalitpur"
-        ]
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Comparison of Web Development Services</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>When considering web development services, there are a few key factors that differentiate our offerings from alternatives available in the market. Here are some aspects to consider:</p></div>\n  </section>\n</div>"
   },
       "app-development": {
         title: "Mobile App Development in Lalitpur",
