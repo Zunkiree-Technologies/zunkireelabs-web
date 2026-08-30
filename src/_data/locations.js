@@ -273,7 +273,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Easy in-person collaboration within the Kathmandu Valley"
-        ]
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Comparison with Other Development Options</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>When considering custom software development in Bhaktapur, it's important to understand how our services stack up against other options available in the region. Below, we compare our offerings against generic solutions and in-house alternatives to help you make an informed decision.</p><table><thead><tr><th>Feature</th><th>Alternative</th><th>Zunkiree Labs</th></tr></thead><tbody><tr><td>Type of Development</td><td>Generic software solutions that may not fit unique business requirements</td><td>Custom software tailored to specific business needs</td></tr><tr><td>Collaboration</td><td>Remote development teams with less face-to-face interaction</td><td>In-person collaboration with a Kathmandu-based team</td></tr><tr><td>Speed of Deployment</td><td>Longer timelines for traditional software solutions</td><td>Quick launch timelines for custom SaaS products</td></tr><tr><td>Market Specialization</td><td>General ecommerce platforms with no local adaptations</td><td>Specialized AI ecommerce solutions for the Nepal market</td></tr></tbody></table></div>\n  </section>\n</div>"
   },
       "app-development": {
         title: "Mobile App Development in Bhaktapur",
