@@ -66,7 +66,8 @@ export default [
     shortDef: "Search platforms built from the ground up with AI, delivering direct answers instead of links.",
     definition: "AI-native search refers to search platforms designed with artificial intelligence as the core architecture, not an afterthought. Unlike traditional search that returns a list of links, AI-native search understands natural language queries and provides direct answers synthesized from your content. These systems combine semantic search, RAG, and conversational AI to create search experiences that feel like talking to an expert. Zunkiree Search is an example of AI-native search built for businesses.",
     relatedService: "ai-customer-experience",
-    category: "Search Technology"
+    category: "Search Technology",
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-30.</p></div>\n  </section>\n</div>"
   },
   {
     id: "fine-tuning",
