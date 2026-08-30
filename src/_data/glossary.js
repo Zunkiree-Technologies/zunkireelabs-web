@@ -11,7 +11,7 @@ export default [
     definition: "Agentic commerce is an emerging ecommerce paradigm where AI agents autonomously handle shopping tasks on behalf of customers. Unlike traditional online shopping that requires manual browsing, comparison, and checkout, agentic commerce systems understand customer intent through natural language, search across multiple platforms, compare options, and execute purchases automatically. These AI agents integrate with payment gateways, track orders, and handle support—transforming ecommerce from a self-service experience to an AI-assisted one. In Nepal, agentic commerce platforms integrate with eSewa, Khalti, and local marketplaces to provide seamless autonomous shopping.",
     relatedService: "ai-ecommerce",
     category: "AI Commerce",
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-30.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "rag",
