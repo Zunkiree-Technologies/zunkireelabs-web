@@ -28,7 +28,7 @@ export default [
     definition: "A Large Language Model (LLM) is a type of artificial intelligence trained on billions of words from books, websites, and documents. LLMs like GPT-4, Claude, and Llama can understand context, answer questions, write content, and assist with complex tasks. They work by predicting the most likely next word in a sequence, but at scale, this creates emergent capabilities like reasoning and code generation. Businesses use LLMs for customer support, content creation, code assistance, and process automation.",
     relatedService: "ai-development",
     category: "AI Models",
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Comparing LLMs to Other AI Models</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>When considering AI models, it's important to understand the unique capabilities and use cases of LLMs compared to other types of AI models. Specifically, LLMs are distinguished by their training on extensive datasets, enabling them to perform a diverse range of tasks that can enhance business operations.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "vector-database",
