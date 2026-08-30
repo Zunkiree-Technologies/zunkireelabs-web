@@ -37,7 +37,7 @@ A dental AI secretary doesn't change what a dental practice does — it changes 
     <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">References</h2>
     <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p><a href="https://dentina.ai/">Dentina — AI Dental Receptionist Built by a Dentist</a>
 <a href="https://www.videa.ai/">Dental AI Assistant for DSOs &amp; Practices | Videa</a>
-<a href="https://pankey.org/the-era-of-the-ai-virtual-assistants-in-dentistry/">The Era of the AI Virtual Assistants in Dentistry</a></p></div>
+The Era of the AI Virtual Assistants in Dentistry</p></div>
   </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
