@@ -78,7 +78,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with GPT-4, Claude, and open-source LLMs",
           "Production deployments across healthcare, finance, and manufacturing",
           "40% cost advantage over US-based AI development"
-        ]
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Comparison of AI Development Services in Kathmandu</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>When considering AI development services in Kathmandu, it's essential to evaluate how our offerings stand against alternative options in the region. Below are the key features of our AI services compared to other potential providers.</p></div>\n  </section>\n</div>"
   },
       "ai-customer-experience": {
         title: "AI Customer Experience Services in Kathmandu",
