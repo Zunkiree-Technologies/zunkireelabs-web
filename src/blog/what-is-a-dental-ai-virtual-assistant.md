@@ -60,4 +60,4 @@ If your front desk spends real time on the phone answering the same handful of q
     <p>Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
   </details>
 </div><!-- SEOAI:QACONTENT:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"What is a Dental AI Virtual Assistant?","articleBody":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, grounded in the practice's own data, instead of routing everything through the front desk. Unlike a generic chatbot, it's built specifically around dental practice questions and hands off clinical advice, emergencies, and complex situations to staff. Zunkiree Labs' Dental AI Assistant provides this always-on patient communication alongside intelligent scheduling and automated follow-up."}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
