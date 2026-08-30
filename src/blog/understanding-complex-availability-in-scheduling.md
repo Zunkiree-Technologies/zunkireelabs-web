@@ -51,70 +51,26 @@ Complex availability isn't a scheduling edge case — it's the default reality f
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does 'complex availability' mean in scheduling?","@type":"Question","acceptedAnswer":{"text":"Complex availability refers to booking scenarios where more than one resource — such as a provider, a room, and equipment — must be available at the same time, along with buffer time and stakeholder preferences, rather than a single calendar simply being free or busy.","@type":"Answer"}},{"name":"Why do simple calendar tools struggle with complex availability?","@type":"Question","acceptedAnswer":{"text":"Generic calendar tools check one resource's free/busy status at a time. Complex availability requires matching multiple resources and constraints simultaneously, which is a combinatorial matching problem that basic calendar logic isn't built to solve.","@type":"Answer"}},{"name":"What product handles complex availability scheduling?","@type":"Question","acceptedAnswer":{"text":"Zenly, Zunkiree Labs' AI Booking Engine, is built specifically to handle complex availability — managing multi-resource bookings and automatic conflict resolution through natural language scheduling requests.","@type":"Answer"}},{"name":"How does Zenly reduce no-shows?","@type":"Question","acceptedAnswer":{"text":"Zenly sends AI-powered reminders tailored to each booking, which reduces no-show rates by an average of 35% for businesses using it.","@type":"Answer"}},{"name":"Which industries deal with complex availability most often?","@type":"Question","acceptedAnswer":{"text":"Healthcare practices, professional services firms, and any service business that books technicians or equipment alongside providers all deal with complex availability, since each booking depends on multiple resources being free at once.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
-        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is complex availability in scheduling?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Complex availability is a booking scenario where multiple resources — such as a provider, a room, and equipment — need to be free at the same time, rather than a single calendar simply being free or busy.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Why can't a basic calendar app handle complex availability?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Basic calendar tools are built to check one resource at a time. Complex availability requires matching several resources and constraints together, which is a matching problem, not a simple lookup.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does Zenly AI Booking Engine handle multi-resource bookings?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zenly evaluates provider, resource, and timing constraints together and automatically resolves conflicts, using natural language to understand booking requests instead of rigid forms.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Does solving complex availability also reduce no-shows?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Yes — Zenly pairs complex availability handling with AI-powered reminders, which together reduce no-show rates by an average of 35%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><div class="container-custom py-12 md:py-20">
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">What factors contribute to making scheduling complex?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Several factors contribute to complex scheduling, including the need for multiple resources per booking, variable appointment durations and required buffers, stakeholder preferences, and the impact of cascading changes due to cancellations or rescheduling.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">How do AI-powered scheduling systems differ from traditional calendar tools?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">AI-powered scheduling systems differ from traditional calendar tools by treating each booking request as a constraint-satisfaction problem, allowing them to check provider availability, resource availability, buffer requirements, and preferences simultaneously, and automatically resolving conflicts.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">What is an example of complex availability in scheduling?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">An example of complex availability is a dental practice that needs to coordinate a dentist with an available chair and a free hygienist, requiring multiple resources to be available at the same time.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">Why do simple calendar tools break under complex availability?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Simple calendar tools break under complex availability because they are designed for single-resource, fixed-duration bookings and cannot handle the multitude of constraints and combinations required in complex scheduling situations.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">How does Zenly AI Booking Engine address complex availability?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Zenly AI Booking Engine addresses complex availability by managing multi-resource bookings and using natural language understanding to interpret scheduling requests, thus automating the conflict resolution process.</div>
+  </details>
+</div><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
