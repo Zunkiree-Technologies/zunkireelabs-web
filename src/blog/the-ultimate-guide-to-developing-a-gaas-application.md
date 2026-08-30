@@ -68,70 +68,27 @@ Building a GaaS application isn't primarily a model-selection problem — it's a
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does GaaS mean in the context of building an application?","@type":"Question","acceptedAnswer":{"text":"In this context, GaaS means Agentic as a Service — a delivery model where autonomous AI agents are deployed as a managed service to execute business tasks independently, priced on Cost-per-Outcome rather than per-seat licensing.","@type":"Answer"}},{"name":"What is the manager/worker agent pattern?","@type":"Question","acceptedAnswer":{"text":"A manager agent breaks a larger goal into subtasks and coordinates specialized worker agents, each handling a narrower piece of the job — similar to how a human team divides work, which keeps individual agent output easier to verify.","@type":"Answer"}},{"name":"Why do GaaS applications need Human-in-the-Loop gates?","@type":"Question","acceptedAnswer":{"text":"High-risk or irreversible actions, like pushing to production or processing a refund, should require human approval before executing, which keeps agent autonomy bounded rather than open-ended.","@type":"Answer"}},{"name":"What is sandboxed execution in a GaaS application?","@type":"Question","acceptedAnswer":{"text":"Sandboxed execution means agents perform their work in an isolated, ephemeral environment rather than acting directly on production systems, so mistakes are contained.","@type":"Answer"}},{"name":"What industries use GaaS applications today?","@type":"Question","acceptedAnswer":{"text":"Software development, customer service, data operations, legal, and healthcare are common areas, since they involve well-defined, high-volume tasks that consume disproportionate human time relative to the judgment they require.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
-        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What does GaaS stand for in this guide?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Agentic as a Service — autonomous AI agents deployed as a managed service to execute tasks independently, not &quot;Game as a Service.&quot;</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How is a GaaS application priced?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Typically on Cost-per-Outcome: you pay for a completed task rather than a per-seat license, regardless of whether that seat is actively used.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What should I decide before building a GaaS application?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Scope the task narrowly, decide which actions need human approval versus which can run automatically, and define a measurable definition of &quot;done&quot; for the task.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does Zunkiree Labs' GaaS platform handle safety?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Through sandboxed execution environments, Human-in-the-Loop approval gates for high-risk actions, and comprehensive audit logging of every agent decision.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><div class="container-custom py-12 md:py-20">
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">What are the key components of a GaaS application?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">A GaaS application is built around several key components: manager and worker agents that coordinate tasks, sandboxed execution environments to limit risks, Human-in-the-Loop (HITL) gates for approval on high-stakes actions, and audit logging for accountability and compliance.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">How does GaaS differ from traditional SaaS models?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Unlike traditional SaaS, which provides software tools operated by humans and charged per seat, GaaS offers autonomous AI agents that receive goals, act independently, and are priced based on outcomes achieved rather than usage frequency.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">What role do Human-in-the-Loop gates play in a GaaS application?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Human-in-the-Loop gates serve as approval checkpoints for high-risk or costly actions proposed by an agent, ensuring that such actions are verified by a human before execution, thereby preventing potential liabilities.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">Why are sandboxed execution environments important in GaaS?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Sandboxed execution environments are crucial because they allow agents to perform tasks with minimized risk, preventing direct and unsupervised access to production systems, thus containing the impact of any errors.</div>
+  </details>
+  <details class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow gap-3">
+    <summary class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">What does Cost-per-Outcome pricing mean in the context of GaaS?</summary>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">Cost-per-Outcome pricing in GaaS means that users pay for specific outcomes achieved by the agent, such as leads generated or documents processed, rather than a flat fee for access, thus aligning costs with actual performance.</div>
+  </details>
+</div>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are the key components of a GaaS application?","@type":"Question","acceptedAnswer":{"text":"A GaaS application is built around several key components: manager and worker agents that coordinate tasks, sandboxed execution environments to limit risks, Human-in-the-Loop (HITL) gates for approval on high-stakes actions, and audit logging for accountability and compliance.","@type":"Answer"}},{"name":"How does GaaS differ from traditional SaaS models?","@type":"Question","acceptedAnswer":{"text":"Unlike traditional SaaS, which provides software tools operated by humans and charged per seat, GaaS offers autonomous AI agents that receive goals, act independently, and are priced based on outcomes achieved rather than usage frequency.","@type":"Answer"}},{"name":"What role do Human-in-the-Loop gates play in a GaaS application?","@type":"Question","acceptedAnswer":{"text":"Human-in-the-Loop gates serve as approval checkpoints for high-risk or costly actions proposed by an agent, ensuring that such actions are verified by a human before execution, thereby preventing potential liabilities.","@type":"Answer"}},{"name":"Why are sandboxed execution environments important in GaaS?","@type":"Question","acceptedAnswer":{"text":"Sandboxed execution environments are crucial because they allow agents to perform tasks with minimized risk, preventing direct and unsupervised access to production systems, thus containing the impact of any errors.","@type":"Answer"}},{"name":"What does Cost-per-Outcome pricing mean in the context of GaaS?","@type":"Question","acceptedAnswer":{"text":"Cost-per-Outcome pricing in GaaS means that users pay for specific outcomes achieved by the agent, such as leads generated or documents processed, rather than a flat fee for access, thus aligning costs with actual performance.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
