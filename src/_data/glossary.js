@@ -91,7 +91,7 @@ export default [
     definition: "AI Engine Optimization (AEO) is the practice of optimizing content to be discovered, understood, and cited by AI assistants and search engines. As users increasingly get answers from ChatGPT, Perplexity, Google AI Overviews, and Claude, businesses need their content to be selected as authoritative sources. AEO techniques include writing self-contained definitions, using clear structure, providing statistics with sources, and creating FAQ content that matches how people ask questions.",
     relatedService: "aeo-seo",
     category: "Marketing",
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-30.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "nlp",
