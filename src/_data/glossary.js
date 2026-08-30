@@ -119,7 +119,7 @@ export default [
     definition: "Multi-tenant Software-as-a-Service (SaaS) is an architecture where one application instance serves multiple customers (tenants) while keeping their data logically separated. Each tenant gets their own isolated environment within the shared infrastructure, reducing costs and simplifying maintenance. Key considerations include data isolation, customization options, and scalable resource allocation. This model powers most modern SaaS products, from CRMs to project management tools.",
     relatedService: "saas-development",
     category: "Software Architecture",
-    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">Last Updated</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>This page was last updated on 2026-08-30.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "ai-orchestration",
