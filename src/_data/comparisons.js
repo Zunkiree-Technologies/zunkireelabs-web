@@ -47,7 +47,8 @@ export default [
       zunkiree: "Businesses wanting AI-powered customer support, knowledge bases, and conversational search experiences.",
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
-    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries."
+    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">References</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p></div>\n  </section>\n</div>"
   },
   {
     id: "zunkiree-vs-elasticsearch",
@@ -92,7 +93,8 @@ export default [
       zunkiree: "Teams wanting AI search without infrastructure complexity. Customer support, internal tools, and knowledge management.",
       competitor: "Engineering teams with DevOps resources who need full control over search infrastructure and complex custom queries."
     },
-    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
+    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control.",
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">References</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-elasticsearch/\">Zunkiree Search vs Elasticsearch | Search Comparison</a>\n<a href=\"https://zunkireelabs.com/products/search/\">AI-Native Search &amp; Interaction Solutions</a>\n<a href=\"https://www.elastic.co/enterprise-search\">The open source engine for high-performance search, ...</a></p></div>\n  </section>\n</div>"
   },
   {
     id: "zunkiree-vs-typesense",
@@ -205,6 +207,7 @@ export default [
     },
     verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
     ctaProduct: "ai-commerce-agent",
-    ctaService: "ai-ecommerce"
+    ctaService: "ai-ecommerce",
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">About the Author</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   }
 ];
