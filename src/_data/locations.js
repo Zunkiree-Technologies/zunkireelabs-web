@@ -140,8 +140,9 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Subscription and billing integration",
           "Scalable cloud infrastructure",
           "Security and compliance ready"
-        ]
-      },
+        ],
+    expandedContent: "<div class=\"py-12 md:py-20 py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8\">SaaS Development: Our Offerings Compared to Other Approaches</h2>\n    <div class=\"text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6\"><p>When considering SaaS development services, it’s essential to weigh our offerings against other available approaches. Our expertise in multi-tenant architecture and tailored solutions sets us apart in meeting specific business needs.</p></div>\n  </section>\n</div>"
+  },
       "app-development": {
         title: "Mobile App Development in Kathmandu",
         description: "iOS and Android app development from Kathmandu. Native and cross-platform mobile applications.",
