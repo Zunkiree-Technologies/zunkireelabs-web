@@ -35,26 +35,20 @@ Complex availability scheduling shows up wherever more than one resource has to 
 
 Complex availability isn't a scheduling edge case — it's the default reality for any business that books more than one resource per appointment. Tools designed for single-calendar booking will always struggle with it because the underlying problem is a matching problem, not a lookup problem. Purpose-built AI scheduling, like [Zenly](/products/ai-booking-engine/), treats it as the matching problem it actually is and resolves it automatically, which is what turns a scheduling headache into a booking flow nobody has to think about. If you're evaluating options, our team can walk you through what a complex-availability setup would look like for your business — [get in touch](/contact/) to talk it through.
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Complex Availability vs. Simple Scheduling</h3>
-      <p class="text-gray-600 leading-relaxed">Simple scheduling checks one calendar for a free slot. Complex availability requires matching a provider, a resource (room, equipment, or seat), buffer time, and stakeholder preferences all at once — which is why generic calendar tools struggle with it as booking volume grows.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Multi-Resource Booking</h3>
-      <p class="text-gray-600 leading-relaxed">Any booking that depends on more than one resource being free at the same time — a provider and a room, a technician and a piece of equipment — is a multi-resource booking problem, and it's the most common source of complex availability.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Automated Conflict Resolution</h3>
-      <p class="text-gray-600 leading-relaxed">Rather than surfacing a scheduling conflict for a human to manually resolve, AI booking systems like Zenly evaluate all valid combinations of resources and timing automatically and propose the best available option.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Reducing No-Shows Alongside Complexity</h3>
-      <p class="text-gray-600 leading-relaxed">Handling complex availability well is only half the problem — appointments still need to happen. AI-powered reminders that adapt to each booking cut no-show rates by an average of 35% in Zenly deployments.</p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="py-12 md:py-20 py-12 md:py-20">
+  <section class="gap-3">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">References</h2>
+    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p><a href="https://veleda.ca/scheduling-why-is-it-so-difficult/">Scheduling - why is it so difficult? - Veleda Services</a>
+
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8913063/">Appointment Scheduling Problem in Complexity Systems of ...</a>
+
+<a href="https://whennot.com/blog/understanding-group-scheduling-explained">Understanding Group Scheduling Explained for Easy ...</a>
+
+<a href="https://www.myshyft.com/blog/availability-based-scheduling-2/">Mastering Availability-Based Employee Scheduling For ...</a>
+
+<a href="https://blog.teamup.com/real-ways-to-make-booking-and-availability-more-efficient/">Real Ways to Make Booking and Availability More Efficient</a></p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does 'complex availability' mean in scheduling?","@type":"Question","acceptedAnswer":{"text":"Complex availability refers to booking scenarios where more than one resource — such as a provider, a room, and equipment — must be available at the same time, along with buffer time and stakeholder preferences, rather than a single calendar simply being free or busy.","@type":"Answer"}},{"name":"Why do simple calendar tools struggle with complex availability?","@type":"Question","acceptedAnswer":{"text":"Generic calendar tools check one resource's free/busy status at a time. Complex availability requires matching multiple resources and constraints simultaneously, which is a combinatorial matching problem that basic calendar logic isn't built to solve.","@type":"Answer"}},{"name":"What product handles complex availability scheduling?","@type":"Question","acceptedAnswer":{"text":"Zenly, Zunkiree Labs' AI Booking Engine, is built specifically to handle complex availability — managing multi-resource bookings and automatic conflict resolution through natural language scheduling requests.","@type":"Answer"}},{"name":"How does Zenly reduce no-shows?","@type":"Question","acceptedAnswer":{"text":"Zenly sends AI-powered reminders tailored to each booking, which reduces no-show rates by an average of 35% for businesses using it.","@type":"Answer"}},{"name":"Which industries deal with complex availability most often?","@type":"Question","acceptedAnswer":{"text":"Healthcare practices, professional services firms, and any service business that books technicians or equipment alongside providers all deal with complex availability, since each booking depends on multiple resources being free at once.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
