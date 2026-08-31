@@ -1,5 +1,5 @@
 ---
-title: "Top 50 Tech, Software & AI Companies in Nepal 2026"
+title: "Top Tech Companies in Nepal 2026: AI & Software Leaders" # SEOAI:TITLE
 description: "The definitive guide to Nepal's leading technology companies. Discover top AI companies, software development firms, and rising tech startups in Kathmandu."
 date: 2026-03-30
 lastUpdated: 2026-03-30
