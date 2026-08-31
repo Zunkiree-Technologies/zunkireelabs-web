@@ -1,12 +1,9 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Navigating Challenges: The Struggles of AI Companies in Nepal"
 description: "Explore the various challenges faced by AI companies in Nepal, including talent shortages, regulatory obstacles, and technological barriers."
 date: "2026-08-31"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction
 
@@ -35,5 +32,3 @@ The cultural perception of AI also presents unique challenges for successful imp
 ## Conclusion
 
 AI companies in Nepal stand at a critical juncture, where the potential for transformative change is met with significant challenges ranging from talent shortages to regulatory hurdles. While companies like Zunkiree Labs are paving the way with innovative AI solutions, a collective effort is necessary to overcome the obstacles faced in this rapidly evolving industry. Collaboration among stakeholders, investment in education, and infrastructure improvements are essential to create a nurturing environment for AI development. By addressing these challenges strategically and leveraging the existing talent and resources, Nepal’s AI sector can thrive, ultimately contributing to the country's economic growth and long-term technological advancement. As the industry continues to evolve, it will be vital for all involved to adapt to the challenges, ensuring not only the survival of individual companies but the advancement of the entire sector.
-
-</div>

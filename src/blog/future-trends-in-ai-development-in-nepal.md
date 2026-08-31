@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Future Trends in AI Development in Nepal"
 description: "Explore the future trends shaping AI development in Nepal, including advancements in technology, applications in industries, and the impact on local businesses."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/8294657/pexels-photo-8294657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "A sleek modern robot toy standing against a colorful gradient backdrop, offering ample copy space."
+featuredImage: "https://images.pexels.com/photos/8294657/pexels-photo-8294657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A sleek modern robot toy standing against a colorful gradient backdrop, offering ample copy space."
 image_credit: "Photo by Pavel Danilyuk on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## The Emerging AI Landscape in Nepal
 
@@ -34,5 +31,3 @@ Collaboration among various stakeholders, including tech companies, educational 
 ## Looking Ahead: The Next Five Years
 
 Looking towards 2026, the possibilities for AI in Nepal are vast. With continued investment, both local and international, we can expect significant advancements in AI applications that address specific challenges faced by Nepali citizens. The rise of AI-driven solutions across multiple sectors will not only enhance operational efficiency but also promote innovation and entrepreneurship. As companies like Zunkiree Labs lead the charge, we can anticipate a future where AI becomes a crucial enabler of economic growth and social progress in the country, ensuring that Nepal not only keeps pace with global technology trends but also establishes itself as a unique player in the AI landscape. With the right combination of talent, policy, and collaboration, Nepal is on track to become a hub for AI innovation in South Asia. Emphasizing local needs while integrating global best practices will be vital in maximizing the impact of AI solutions, ultimately contributing to improving the quality of life for all Nepali citizens. As we forge this path ahead, the emphasis must remain on responsible AI practices that promote equality and accessibility.
-
-</div>

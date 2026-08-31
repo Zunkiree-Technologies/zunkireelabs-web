@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Exploring AI Services in Nepal: A Look at the Landscape"
 description: "Discover the range of AI services offered by companies in Nepal, focusing on custom AI development, mobile and web applications, and advanced data engineering solutions."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/15207604/pexels-photo-15207604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "A lone figure in a hoodie gazes at a turquoise lake with majestic snow-capped mountains."
+featuredImage: "https://images.pexels.com/photos/15207604/pexels-photo-15207604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A lone figure in a hoodie gazes at a turquoise lake with majestic snow-capped mountains."
 image_credit: "Photo by Pulkit Pithva on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## The Rise of AI in Nepal
 
@@ -38,5 +35,3 @@ As companies increasingly embrace digital transformation, advanced cloud solutio
 ## Conclusion: The Future of AI Services in Nepal
 
 The future of AI services in Nepal looks exceptionally promising, characterized by ongoing advancements and an increasing number of companies investing in AI technology. As organizations continue to recognize the transformative potential of AI in driving innovation and operational efficiency, we can expect an expansion of services tailored to meet specific business needs. From innovative custom AI solutions and powerful data engineering capabilities to intuitive mobile and web applications, the landscape is undeniably rich with opportunities for growth and development. Companies like Zunkiree Labs are at the forefront of this transformative change, skillfully propelling Nepal into a new era of technological advancement. With their dedicated efforts, Nepal is not only likely to realize its potential as an AI powerhouse but also to play a significant role in the global AI market, contributing innovative solutions and captivating technologies.
-
-</div>

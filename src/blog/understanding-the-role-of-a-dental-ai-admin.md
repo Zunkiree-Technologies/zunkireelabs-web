@@ -41,23 +41,13 @@ Summarize the importance of the Dental AI Admin role and encourage dental practi
 
 - [Dental AI Products](https://zunkireelabs.com/products/dental-ai/)
 - [AI Development Services](https://zunkireelabs.com/services/ai-development/)
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Industry Reports</h3>
-      <p class="text-gray-600 leading-relaxed">Annual reports on AI adoption and integration in the dental industry, to be sourced from authoritative analytics firms.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Peer-Reviewed Journals</h3>
-      <p class="text-gray-600 leading-relaxed">Articles from peer-reviewed medical and dental journals detailing the impact of AI on dental practice management, for which URLs should be updated manually.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Vendor Documentation</h3>
-      <p class="text-gray-600 leading-relaxed">Official documentation and case studies from AI technology vendors that outline features and success metrics related to dental AI solutions.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Webinars and Conferences</h3>
-      <p class="text-gray-600 leading-relaxed">Recordings and publications from industry conferences focusing on AI in healthcare, particularly dental applications; URLs to be added by editor.</p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>Industry Reports</h2>
+<p class="text-gray-600 leading-relaxed">Annual reports on AI adoption and integration in the dental industry, to be sourced from authoritative analytics firms.</p>
+<h2>Peer-Reviewed Journals</h2>
+<p class="text-gray-600 leading-relaxed">Articles from peer-reviewed medical and dental journals detailing the impact of AI on dental practice management, for which URLs should be updated manually.</p>
+<h2>Vendor Documentation</h2>
+<p class="text-gray-600 leading-relaxed">Official documentation and case studies from AI technology vendors that outline features and success metrics related to dental AI solutions.</p>
+<h2>Webinars and Conferences</h2>
+<p class="text-gray-600 leading-relaxed">Recordings and publications from industry conferences focusing on AI in healthcare, particularly dental applications; URLs to be added by editor.</p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

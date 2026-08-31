@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Rising Tech Startups in Nepal: Innovating for the Future"
 description: "Explore the innovative tech startups in Nepal that are shaping the future with cutting-edge technology and solutions."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/6829539/pexels-photo-6829539.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Two colleagues engage in a tech-savvy business meeting using virtual reality and laptops indoors."
+featuredImage: "https://images.pexels.com/photos/6829539/pexels-photo-6829539.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Two colleagues engage in a tech-savvy business meeting using virtual reality and laptops indoors."
 image_credit: "Photo by Kampus Production on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to Nepal's Tech Scene
 
@@ -38,5 +35,3 @@ The future of tech startups in Nepal looks promising, with numerous opportunitie
 ## Conclusion
 
 As we witness the ascent of the tech startup landscape in Nepal, it becomes evident that these enterprises are not just contributors to the economy but also catalysts for broader social change. Through their innovative solutions, they are redefining the business landscape and creating new job opportunities in the country. The blend of youthful energy, creativity, and technological advancement sets the groundwork for a robust future. The potential for economic impact extends beyond just monetary gains, as startups also create avenues for social development, addressing various societal challenges through their products. With ongoing support and strategic initiatives, the Nepali tech startup ecosystem is poised to flourish, making a considerable mark in the global tech arena. By fostering creativity, nurturing talent, and promoting collaboration, Nepal could emerge as a key player in the global tech industry, putting forth innovations that resonate with a diverse range of audiences.
-
-</div>

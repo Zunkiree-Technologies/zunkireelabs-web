@@ -32,32 +32,20 @@ A virtual assistant is built to absorb the routine, repetitive share of patient 
 
 If your front desk spends real time on the phone answering the same handful of questions — pricing, insurance, availability — a virtual assistant handles that volume without adding headcount, and it does it outside office hours too, which is when a lot of that demand actually shows up. [See how Dental AI Assistant works](/products/dental-ai/) or [reach out to our team](/contact/) if you want to talk through what it would look like for your practice specifically.
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
-      <p class="text-gray-600 leading-relaxed"><a href="https://www.revenuewell.com/dental-ai-receptionist">Dental AI Receptionist</a>, <a href="https://pankey.org/the-era-of-the-ai-virtual-assistants-in-dentistry/">The Era of the AI Virtual Assistants in Dentistry</a>, <a href="https://mconsent.net/blog/transform-dental-practice-virtual-assistant/">Transform Your Dental Practice with the Power of a Virtual ...</a></p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>References</h2>
+<p class="text-gray-600 leading-relaxed"><a href="https://www.revenuewell.com/dental-ai-receptionist">Dental AI Receptionist</a>, <a href="https://pankey.org/the-era-of-the-ai-virtual-assistants-in-dentistry/">The Era of the AI Virtual Assistants in Dentistry</a>, <a href="https://mconsent.net/blog/transform-dental-practice-virtual-assistant/">Transform Your Dental Practice with the Power of a Virtual ...</a></p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a dental AI virtual assistant?","@type":"Question","acceptedAnswer":{"text":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, using the practice's own data, instead of a patient having to call or wait for a callback.","@type":"Answer"}},{"name":"How is it different from a generic chatbot?","@type":"Question","acceptedAnswer":{"text":"A generic chatbot answers from general web knowledge and can get dental specifics wrong. A dental-specific virtual assistant answers using the practice's actual procedure list, pricing, insurance acceptance, and live schedule.","@type":"Answer"}},{"name":"Can a dental AI virtual assistant book appointments?","@type":"Question","acceptedAnswer":{"text":"Yes. It can check availability, book, and reschedule appointments while accounting for real appointment length and provider availability.","@type":"Answer"}},{"name":"Does it give clinical advice?","@type":"Question","acceptedAnswer":{"text":"No. It's built to handle routine administrative and informational questions and is designed to hand off clinical questions, emergencies, and complex situations to practice staff.","@type":"Answer"}},{"name":"Is there a dental AI virtual assistant available from Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Yes — Zunkiree Labs' Dental AI Assistant provides always-on patient communication, intelligent scheduling, and automated follow-up built specifically for dental practices.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div class="qa-content">
-  <details>
-    <summary><h3>What can a dental AI virtual assistant answer for patients?</h3></summary>
-    <p>It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
-  </details>
-  <details>
-    <summary><h3>Is a dental AI virtual assistant the same as a general chatbot?</h3></summary>
-    <p>No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
-  </details>
-  <details>
-    <summary><h3>Will it try to give medical advice?</h3></summary>
-    <p>No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
-  </details>
-  <details>
-    <summary><h3>Is it available outside office hours?</h3></summary>
-    <p>Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
-  </details>
+<!-- SEOAI:QACONTENT:START --><div>
+<h3>What can a dental AI virtual assistant answer for patients?</h3>
+<p>It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
+<h3>Is a dental AI virtual assistant the same as a general chatbot?</h3>
+<p>No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
+<h3>Will it try to give medical advice?</h3>
+<p>No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
+<h3>Is it available outside office hours?</h3>
+<p>Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
 </div><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"What is a Dental AI Virtual Assistant?","articleBody":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, grounded in the practice's own data, instead of routing everything through the front desk. Unlike a generic chatbot, it's built specifically around dental practice questions and hands off clinical advice, emergencies, and complex situations to staff. Zunkiree Labs' Dental AI Assistant provides this always-on patient communication alongside intelligent scheduling and automated follow-up."}</script><!-- SEOAI:SCHEMA:END -->

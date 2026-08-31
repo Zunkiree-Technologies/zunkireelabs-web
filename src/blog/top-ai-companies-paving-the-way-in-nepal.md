@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Top AI Companies Paving the Way in Nepal"
 description: "Explore the leading AI companies in Nepal that are revolutionizing industries with innovative solutions. Discover key players like Zunkiree Labs and their impactful technologies."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Minimalist display of OpenAI logo on a screen, set against a gradient blue background."
+featuredImage: "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Minimalist display of OpenAI logo on a screen, set against a gradient blue background."
 image_credit: "Photo by Andrew Neel on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction
 
@@ -38,5 +35,3 @@ As AI technologies continue to evolve, the potential for growth in Nepal's AI se
 ## Conclusion
 
 In conclusion, the rise of AI companies in Nepal, particularly Zunkiree Labs, reflects a promising shift towards leveraging technology for enhanced business solutions. With their diversified offerings and commitment to quality, these companies are not only contributing to their respective sectors but also positioning Nepal on the map as an emerging hub for AI innovation. As we look ahead, continued focus on AI development and the integration of these technologies into various industries will be essential for maintaining progress in this dynamic field. The journey towards advanced AI implementations will undoubtedly bring challenges, but it also offers vast opportunities, particularly for businesses that are willing to learn, adapt, and innovate. By cultivating a supportive ecosystem for AI growth, Nepal can ensure its place in the future of technology and foster a thriving environment for entrepreneurs and enterprises alike.
-
-</div>

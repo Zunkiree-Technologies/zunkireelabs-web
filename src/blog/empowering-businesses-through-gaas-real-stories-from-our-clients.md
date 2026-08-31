@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Empowering Businesses Through GaaS: Real Stories from Our Clients"
 description: "Discover how Zunkiree Labs’ GaaS (Genuine as a Service) solutions are transforming businesses. Explore real customer testimonials and case studies showcasing impactful results."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/30004354/pexels-photo-30004354.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Diverse group of professionals posing confidently in modern office environment."
+featuredImage: "https://images.pexels.com/photos/30004354/pexels-photo-30004354.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Diverse group of professionals posing confidently in modern office environment."
 image_credit: "Photo by Daniel & Hannah Snipes on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to GaaS
 
@@ -34,5 +31,3 @@ A manufacturing company partnered with us to upgrade their application architect
 ## Conclusion: Your Partner in Innovation
 
 At Zunkiree Labs, our commitment to engineering excellence and innovation drives every solution we provide. The testimonials and case studies shared here reflect just a glimpse of how our GaaS offerings create meaningful change for businesses across various industries. Every success story represents not just the achievement of our clients but also our dedication in harnessing technology to address real-world challenges. As technology continues to evolve at a rapid pace, we are dedicated to being at the forefront of AI and cloud solutions that enable our clients to thrive in an increasingly competitive market. If you're keen on transforming your operations or enhancing customer experiences, we encourage you to reach out to us to explore how our custom solutions can align with your business goals and help you seize new opportunities for success. Together, let's revolutionize your operations and elevate your business to new heights in the digital age.
-
-</div>

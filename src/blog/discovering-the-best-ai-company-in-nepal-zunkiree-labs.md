@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Discovering the Best AI Company in Nepal: Zunkiree Labs"
 description: "Explore why Zunkiree Labs is the leading AI company in Nepal, offering innovative AI solutions, expert services, and a focus on infrastructure-level AI systems."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Minimalist display of OpenAI logo on a screen, set against a gradient blue background."
+featuredImage: "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Minimalist display of OpenAI logo on a screen, set against a gradient blue background."
 image_credit: "Photo by Andrew Neel on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to AI in Nepal
 
@@ -34,5 +31,3 @@ Zunkiree Labs does not merely stop at providing cutting-edge services; they also
 ## Conclusion
 
 As businesses in Nepal continue to expand their digital footprint in an increasingly competitive global market, Zunkiree Labs stands as a beacon of innovation, excellence, and leadership in the AI domain. Their unwavering commitment to building infrastructure-level solutions, which are technically sound yet tailored to meet the unique requirements of local businesses, firmly establishes them as a leader in the industry. For companies looking to embark on their own AI journeys, partnering with Zunkiree Labs could represent a pivotal first step towards achieving smarter, data-driven decisions and operational successes. As AI technology continues to evolve and shape the future of business operations, staying connected with industry leaders like Zunkiree Labs ensures that organizations remain well-equipped to navigate upcoming challenges and opportunities. Ultimately, the foresight and expertise of Zunkiree Labs not only drive individual business success but also contribute significantly to the overall technological advancement within Nepal.
-
-</div>
