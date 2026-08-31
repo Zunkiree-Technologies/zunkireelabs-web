@@ -1,5 +1,5 @@
 ---
-title: "Understanding Complex Availability in Scheduling"
+title: "Understanding the Meaning of Complex Availability in Scheduling" # SEOAI:TITLE
 description: "What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zenly resolve it automatically."
 date: "2026-07-26"
 ---
