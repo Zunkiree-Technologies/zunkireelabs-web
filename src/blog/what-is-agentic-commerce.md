@@ -180,10 +180,9 @@ The companies that adopt agentic commerce early will capture customers who expec
 Zunkiree Labs builds custom agentic commerce solutions for Nepal businesses. Our AI Commerce Agent platform integrates with eSewa, Khalti, and major marketplaces.
 
 [Learn about AI Commerce Agent](/products/ai-commerce-agent/) | [Get a Free Consultation](/contact/)
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="py-12 md:py-20 py-12 md:py-20">
-  <section class="gap-3">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">References</h2>
-    <div class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6"><p><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2025/agentic-commerce-explainer.html">What is agentic commerce? Your guide to AI-assisted retail</a>
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>References</h2>
+<p><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2025/agentic-commerce-explainer.html">What is agentic commerce? Your guide to AI-assisted retail</a>
 
 <a href="https://www.channable.com/blog/agentic-commerce">Agentic commerce explained: The future of AI eCommerce</a>
 
@@ -191,6 +190,5 @@ Zunkiree Labs builds custom agentic commerce solutions for Nepal businesses. Our
 
 <a href="https://www.salesforce.com/commerce/ai/agentic-commerce/">What Is Agentic Commerce? (2026)</a>
 
-<a href="https://www.ibm.com/think/topics/agentic-commerce">What Is Agentic Commerce?</a></p></div>
-  </section>
+<a href="https://www.ibm.com/think/topics/agentic-commerce">What Is Agentic Commerce?</a></p>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

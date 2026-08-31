@@ -46,26 +46,16 @@ GaaS applies wherever repetitive cognitive work exists at volume: software devel
 
 Building a GaaS application isn't primarily a model-selection problem — it's an architecture and governance problem: how you decompose a goal across manager and worker agents, where you draw the HITL line, and how tightly you scope what the agent can touch. Get that right and the autonomy pays off in genuinely delegated work rather than work you still have to babysit. If you're planning a GaaS deployment for your business, [talk to our team](/contact/) about what the architecture would look like for your specific workflow, or start with our [beginner's guide to GaaS](/resources/what-is-gaas/) if you're still evaluating whether it's the right fit.
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Manager/Worker Agent Design</h3>
-      <p class="text-gray-600 leading-relaxed">A manager agent breaks a goal into subtasks and coordinates specialized worker agents, each with a narrow scope — the same division of labor a human team would use, which keeps any individual agent's output easier to verify.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Cost-per-Outcome vs. Per-Seat Pricing</h3>
-      <p class="text-gray-600 leading-relaxed">Traditional SaaS charges per user seat regardless of usage. GaaS applications are typically priced on Cost-per-Outcome — you pay for a completed task, which aligns the vendor's incentives with your actual results.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Human-in-the-Loop Gates</h3>
-      <p class="text-gray-600 leading-relaxed">High-risk or irreversible actions should route through a human approval gate before executing. Designing this gate policy — what's automatic vs. what needs sign-off — is the core governance decision in any GaaS deployment.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Sandboxed Execution</h3>
-      <p class="text-gray-600 leading-relaxed">Agents should act inside ephemeral, sandboxed environments rather than directly against production systems, so a mistake is contained rather than immediately live.</p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>Manager/Worker Agent Design</h2>
+<p class="text-gray-600 leading-relaxed">A manager agent breaks a goal into subtasks and coordinates specialized worker agents, each with a narrow scope — the same division of labor a human team would use, which keeps any individual agent's output easier to verify.</p>
+<h2>Cost-per-Outcome vs. Per-Seat Pricing</h2>
+<p class="text-gray-600 leading-relaxed">Traditional SaaS charges per user seat regardless of usage. GaaS applications are typically priced on Cost-per-Outcome — you pay for a completed task, which aligns the vendor's incentives with your actual results.</p>
+<h2>Human-in-the-Loop Gates</h2>
+<p class="text-gray-600 leading-relaxed">High-risk or irreversible actions should route through a human approval gate before executing. Designing this gate policy — what's automatic vs. what needs sign-off — is the core governance decision in any GaaS deployment.</p>
+<h2>Sandboxed Execution</h2>
+<p class="text-gray-600 leading-relaxed">Agents should act inside ephemeral, sandboxed environments rather than directly against production systems, so a mistake is contained rather than immediately live.</p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does GaaS mean in the context of building an application?","@type":"Question","acceptedAnswer":{"text":"In this context, GaaS means Agentic as a Service — a delivery model where autonomous AI agents are deployed as a managed service to execute business tasks independently, priced on Cost-per-Outcome rather than per-seat licensing.","@type":"Answer"}},{"name":"What is the manager/worker agent pattern?","@type":"Question","acceptedAnswer":{"text":"A manager agent breaks a larger goal into subtasks and coordinates specialized worker agents, each handling a narrower piece of the job — similar to how a human team divides work, which keeps individual agent output easier to verify.","@type":"Answer"}},{"name":"Why do GaaS applications need Human-in-the-Loop gates?","@type":"Question","acceptedAnswer":{"text":"High-risk or irreversible actions, like pushing to production or processing a refund, should require human approval before executing, which keeps agent autonomy bounded rather than open-ended.","@type":"Answer"}},{"name":"What is sandboxed execution in a GaaS application?","@type":"Question","acceptedAnswer":{"text":"Sandboxed execution means agents perform their work in an isolated, ephemeral environment rather than acting directly on production systems, so mistakes are contained.","@type":"Answer"}},{"name":"What industries use GaaS applications today?","@type":"Question","acceptedAnswer":{"text":"Software development, customer service, data operations, legal, and healthcare are common areas, since they involve well-defined, high-volume tasks that consume disproportionate human time relative to the judgment they require.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">

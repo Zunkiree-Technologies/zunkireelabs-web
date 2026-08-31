@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "The Expertise Behind Zunkiree Labs: A Deep Dive into Our Team Qualifications"
 description: "Discover the qualifications and expertise of the talented team at Zunkiree Labs, the AI-first technology company driving innovation across various industries."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/13051108/pexels-photo-13051108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Silhouette of a diver surrounded by bubbles underwater at Farasan Island, Saudi Arabia."
+featuredImage: "https://images.pexels.com/photos/13051108/pexels-photo-13051108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Silhouette of a diver surrounded by bubbles underwater at Farasan Island, Saudi Arabia."
 image_credit: "Photo by Francesco Ungaro on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to Our Team's Expertise
 
@@ -42,5 +39,3 @@ Ultimately, the qualifications and expertise of our team are underscored by a sh
 ## Conclusion
 
 At Zunkiree Labs, we recognize that talent is the bedrock of our success. Our dedicated and skilled team is what enables us to deliver robust, AI-native systems that are transforming businesses worldwide. If you are looking for a trusted partner to accelerate your AI journey, we invite you to explore our services or contact us directly. Let us show you how our expertise can empower your organization to harness the full potential of AI technologies, driving innovation and efficiency in your operations. Together, we can navigate the complexities of the digital age and uncover new opportunities for growth and success.
-
-</div>

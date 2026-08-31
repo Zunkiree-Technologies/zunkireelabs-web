@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Navigating the Tech Landscape of Nepal: A Comprehensive Guide"
 description: "Explore how to find rich information about Nepal's tech sector, including key resources, industry insights, and the tech companies shaping the future."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/38271/ipad-map-tablet-internet-38271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Hands using a digital map on a tablet in an urban setting at night, illustrating navigation and technology."
+featuredImage: "https://images.pexels.com/photos/38271/ipad-map-tablet-internet-38271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Hands using a digital map on a tablet in an urban setting at night, illustrating navigation and technology."
 image_credit: "Photo by Pixabay on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Understanding Nepal's Technology Sector
 
@@ -38,5 +35,3 @@ Social media platforms are another valuable resource for staying connected with 
 ## Conclusion
 
 With the rapid growth of Nepal's tech sector, there are numerous ways to gather information and stay informed about new developments. By leveraging online resources, engaging with local tech communities, keeping track of government support initiatives, and utilizing social media, anyone interested in Nepal's technology landscape can find valuable insights. The interplay of innovation, local entrepreneurship, and government backing breathes new life into its economy, positioning the tech sector as a frontier for innovation and development in Nepal. This vibrant ecosystem not only contributes to the nation’s GDP but also empowers a new generation aspiring to impact the global tech scene. As Nepal continues to evolve, the tech sector presents exciting opportunities and challenges, making it an area worth monitoring closely in the coming years.
-
-</div>
