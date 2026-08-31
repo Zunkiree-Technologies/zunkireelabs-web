@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Exploring Real-World Case Studies of GaaS Implementations"
 description: "Uncover how businesses successfully leverage GaaS (Agentic as a Service) through real-world case studies that demonstrate the transformative power of AI in various industries."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/5729787/pexels-photo-5729787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Close-up of COVID-19 global statistics showing confirmed cases and deaths, reported to WHO."
+featuredImage: "https://images.pexels.com/photos/5729787/pexels-photo-5729787.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of COVID-19 global statistics showing confirmed cases and deaths, reported to WHO."
 image_credit: "Photo by CARTIST . on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Understanding GaaS: A Brief Introduction
 
@@ -34,5 +31,3 @@ A tech startup grappling with inefficiencies in its internal operations turned t
 ## The Future of GaaS and Its Broader Implications
 
 As the landscape of business technology continues to evolve rapidly, the implementation of GaaS is likely to become increasingly prevalent across diverse sectors. The case studies presented here reveal just a fraction of the immense potential GaaS holds for transforming businesses through intelligent, scalable solutions tailored to specific operational needs. Industries ranging from healthcare to e-commerce are witnessing significant advancements and innovation by embracing GaaS, enabling them to navigate complex challenges and seize new opportunities in a competitive marketplace. Looking ahead, organizations that proactively adopt GaaS will not only enhance their operational efficiency but also improve customer experiences, which are critical for achieving sustainable success. In a world where agility and responsiveness are paramount, GaaS stands out as a game-changer, positioning businesses to thrive in an increasingly digital and interconnected economy.
-
-</div>

@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Unlocking Funding Opportunities for AI Companies in Nepal"
 description: "Explore the various funding opportunities available for AI companies in Nepal, from government initiatives to private investments, and learn how to navigate this growing landscape."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/29222872/pexels-photo-29222872.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "A mysterious scene of keys floating above an open hand against a dark background."
+featuredImage: "https://images.pexels.com/photos/29222872/pexels-photo-29222872.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A mysterious scene of keys floating above an open hand against a dark background."
 image_credit: "Photo by Bastian Riccardi on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## The Growing AI Landscape in Nepal
 
@@ -34,5 +31,3 @@ Another avenue for funding that AI companies in Nepal can explore is crowdfundin
 ## Navigating the Funding Landscape
 
 Successfully obtaining funding in Nepal's evolving AI landscape requires a thoughtful and strategic approach. Entrepreneurs must cultivate a robust network within the tech community while remaining informed about the latest funding opportunities and industry trends. Participating in local tech meetups, workshops, and conferences can provide valuable insights and connections crucial for fundraising endeavors. Engaging with organizations like Zunkiree Labs, which actively participates in the AI sector, can provide entrepreneurs with knowledge, resources, and mentoring. Additionally, creating a comprehensive business plan that outlines the AI products or services offered, the specific market needs being addressed, and clear financial forecasts will be instrumental when approaching potential funders. Understanding the regulatory environment is equally important; staying connected to developments in regulatory policies enhances a business's credibility, positioning it favorably among investors who are keen on supporting compliant and responsible ventures. Overall, a proactive and informed approach can significantly increase the likelihood of securing the necessary funds to drive innovation and growth in Nepal's AI sector.
-
-</div>

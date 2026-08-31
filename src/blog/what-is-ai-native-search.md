@@ -159,16 +159,12 @@ For businesses drowning in documentation that customers can't navigate, AI-nativ
 *Building AI-native search for your organization? [Contact Zunkiree Labs](/contact/) to discuss your requirements.*
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is AI-native product search?","@type":"Question","acceptedAnswer":{"text":"AI-native product search is a type of search that understands natural language and is designed to deliver direct answers instead of just links.","@type":"Answer"}},{"name":"How does AI-native search improve customer experience?","@type":"Question","acceptedAnswer":{"text":"AI-native search improves customer experience by transforming how users interact with products, allowing for more intuitive and accurate search results.","@type":"Answer"}},{"name":"What are some key features of Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search delivers direct answers and enhances the customer experience by utilizing AI to understand natural language queries.","@type":"Answer"}},{"name":"What benefits does AI-native search offer over traditional keyword search?","@type":"Question","acceptedAnswer":{"text":"AI-native search offers the benefit of understanding natural language, resulting in more relevant and precise answers to customer queries compared to traditional keyword searches.","@type":"Answer"}},{"name":"Is there a trial available for Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Yes, you can try Zunkiree Search for free to see how AI search delivers direct answers.","@type":"Answer"}},{"name":"What types of businesses can utilize Zunkiree's AI products?","@type":"Question","acceptedAnswer":{"text":"Zunkiree's AI products can be utilized by various businesses, including those in ecommerce, healthcare, and analytics sectors, as they provide tools like AI-powered search and patient communication.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
-      <p class="text-gray-600 leading-relaxed"><a href="https://zunkireelabs.com/blog/what-is-ai-native-search/">What is AI-Native Search? How It Differs from Keyword ...</a>  
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>References</h2>
+<p class="text-gray-600 leading-relaxed"><a href="https://zunkireelabs.com/blog/what-is-ai-native-search/">What is AI-Native Search? How It Differs from Keyword ...</a>  
 <a href="https://denser.ai/blog/ai-native-search-engine/">AI-Native Search Engines: Smarter, Intent-Aware Results</a>  
 <a href="https://www.fluidtopics.com/keyword-search-vs-semantic-search/">Keyword vs Semantic Search &amp; Why Hybrid is the Way to Go</a>  
 <a href="https://www.velebit.ai/blog/ai-search-vs-traditional-search/">AI Vector Search vs Keyword Search: E-commerce Guide</a>  
 <a href="https://www.couchbase.com/blog/semantic-search-vs-keyword-search-whats-the-difference/">Semantic Search vs Keyword Search: What's the Difference?</a>  
 <a href="https://www.mindstudio.ai/blog/semantic-search-vs-keyword-search-ai-agents">Semantic Search vs Keyword Search for AI Agents</a></p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

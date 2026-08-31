@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Comprehensive Overview of Services Offered by Zunkiree Labs"
 description: "Explore the extensive range of services provided by Zunkiree Labs, including AI development, software solutions, and data engineering tailored to empower modern businesses."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/7947968/pexels-photo-7947968.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Close-up of a smartphone showing business plan charts on a wooden table with feasibility stage graphic."
+featuredImage: "https://images.pexels.com/photos/7947968/pexels-photo-7947968.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of a smartphone showing business plan charts on a wooden table with feasibility stage graphic."
 image_credit: "Photo by RDNE Stock project on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## AI Development Services
 
@@ -42,5 +39,3 @@ SEO and AI Optimized Content Creation are also integral to our offerings, as we 
 ## A Commitment to Engineering Excellence
 
 Overall, Zunkiree Labs is steadfast in its dedication to building infrastructure-level AI systems that provide lasting value to our clients. We strive for engineering excellence across every layer of our services, ensuring that our solutions compound value over time, delivering both immediate improvements and fostering long-term success. Our diverse offerings span various industries, including healthcare, manufacturing, legal, and education, which showcases our ability to adapt and provide specialized solutions to meet the unique demands of each sector. By prioritizing quality and innovation in our service offerings, we empower our clients to stay competitive in a rapidly evolving digital landscape, reinforcing our commitment to being at the forefront of technological progress.
-
-</div>

@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Zunkiree Labs: Building Towards a Future of AI Innovation"
 description: "Explore Zunkiree Labs' strategic roadmap and future plans as an AI-first technology company, focusing on innovative solutions and expansion into new markets."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Two engineers collaborating on testing a futuristic robotic prototype in a modern indoor lab."
+featuredImage: "https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Two engineers collaborating on testing a futuristic robotic prototype in a modern indoor lab."
 image_credit: "Photo by ThisIsEngineering on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to Zunkiree Labs
 
@@ -34,5 +31,3 @@ As part of its commitment to responsible AI development, Zunkiree Labs plans to 
 ## Conclusion: A Vision for the Future
 
 Zunkiree Labs is poised for a future filled with innovation and growth in the AI technology sector. With comprehensive plans to enhance its service offerings, capitalize on market opportunities, and invest in educational programs, the company is positioned not just to adapt to the changing technological landscape, but to lead it. As Zunkiree Labs continues to develop infrastructure-level AI systems tailored to specific business needs, clients can expect a committed partner dedicated to driving their success through intelligent technology solutions. The journey ahead is one marked by excitement and immense potential. As Zunkiree Labs prepares to embrace future challenges and opportunities, it remains steadfast in its mission to redefine the possibilities of AI, not just for itself, but for businesses far and wide, ultimately contributing to a more connected and intelligent world.
-
-</div>

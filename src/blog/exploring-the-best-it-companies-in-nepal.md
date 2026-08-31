@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Exploring the Best IT Companies in Nepal"
 description: "Discover the top IT companies operating in Nepal, showcasing their innovative services in AI, web, and mobile development."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/26570336/pexels-photo-26570336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Spectacular view of snow-capped Machhapuchchhre peak surrounded by clouds in Nepal."
+featuredImage: "https://images.pexels.com/photos/26570336/pexels-photo-26570336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Spectacular view of snow-capped Machhapuchchhre peak surrounded by clouds in Nepal."
 image_credit: "Photo by Abdul Kayum on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Overview of Nepal's IT Landscape
 
@@ -30,5 +27,3 @@ As the world moves towards a more digitized economy, the future of IT in Nepal l
 ## Conclusion
 
 In conclusion, the IT sector in Nepal is thriving, with various companies making significant strides in technology and innovation. The presence of firms like Zunkiree Labs illustrates the potential for robust solutions tailored to both local and international markets. The ongoing advancements in technology, coupled with the agile nature of these companies, allow them to respond to market needs effectively and efficiently. As businesses continue to seek digital transformation to improve efficiencies and service delivery, the importance of having reliable IT partners will only grow. The exciting landscape of IT in Nepal presents countless opportunities for current and future tech innovators, creating an encouraging environment for growth and development in the coming years. Moreover, as the industry continues to mature, it is likely that we will see even more collaboration across sectors, fostering a spirit of innovation that propels the nation into a technologically advanced future. With its rich talent pool and a burgeoning ecosystem, Nepal's IT sector is well-positioned to make its mark on the global stage.
-
-</div>

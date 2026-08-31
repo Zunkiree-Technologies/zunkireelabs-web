@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "The Best Software Solutions from Leading IT Companies in Nepal"
 description: "Explore top-notch software solutions offered by leading IT companies in Nepal, featuring AI development, web and mobile applications, and custom enterprise solutions."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/36706460/pexels-photo-36706460.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Software developer coding on dual monitors in a well-lit modern office, focused and engaged."
+featuredImage: "https://images.pexels.com/photos/36706460/pexels-photo-36706460.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Software developer coding on dual monitors in a well-lit modern office, focused and engaged."
 image_credit: "Photo by Zayed Hossain on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction
 
@@ -42,5 +39,3 @@ Cloud computing is reshaping the way organizations operate, with IT companies in
 ## Conclusion
 
 With the increasing reliance on technology in business operations, the software solutions offered by IT companies in Nepal have become indispensable for organizations seeking to grow and adapt. From sophisticated AI-driven applications that enhance customer experiences to custom software solutions designed for specific operational needs, the importance of selecting the right IT partner cannot be understated. As the IT sector in Nepal continues to thrive, both local and international businesses stand to benefit from innovative technologies that can propel them forward in an increasingly competitive landscape. The ever-evolving software offerings from Nepal's top tech companies illustrate the nation's potential as a significant player in the global IT market. For those interested in exploring more about the leading tech companies in Nepal and their offerings, be sure to check out our detailed guide on the subject.
-
-</div>

@@ -20,7 +20,13 @@ schemaType: article
   "@id": "{{ site.url }}{{ page.url }}#article",
   "headline": "{{ title }}",
   "description": "{{ description }}",
-  "image": "{{ site.url }}{{ featuredImage | default(site.meta.ogImage) }}",
+  {# featuredImage may be a site-relative path (/assets/images/blog/x.jpg, how
+     hand-written posts set it) or an already-absolute URL (a remote image
+     credited in the front matter). Prefixing site.url onto an absolute URL
+     produced "https://zunkireelabs.comhttps://images.pexels.com/..." in the
+     Article schema, which is not a resolvable image for any consumer. #}
+  {%- set schemaImage = featuredImage | default(site.meta.ogImage) -%}
+  "image": "{% if "://" in schemaImage %}{{ schemaImage }}{% else %}{{ site.url }}{{ schemaImage }}{% endif %}",
   "datePublished": "{{ date | date('%Y-%m-%d') }}",
   "dateModified": "{{ lastUpdated | default(date) | date('%Y-%m-%d') }}",
   "author": {

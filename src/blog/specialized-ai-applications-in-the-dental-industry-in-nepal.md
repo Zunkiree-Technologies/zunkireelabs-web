@@ -1,15 +1,12 @@
 ---
 templateEngineOverride: "njk, md"
-layout: "base.njk"
 title: "Specialized AI Applications in the Dental Industry in Nepal"
 description: "Discover the innovative AI solutions transforming the dental industry in Nepal, enhancing patient care and operational efficiency."
 date: "2026-08-31"
-image: "https://images.pexels.com/photos/6529118/pexels-photo-6529118.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Close-up of various dental equipment in a dentist's clinic showcasing tools and models."
+featuredImage: "https://images.pexels.com/photos/6529118/pexels-photo-6529118.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of various dental equipment in a dentist's clinic showcasing tools and models."
 image_credit: "Photo by cottonbro studio on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20 py-12 md:py-20">
 
 ## Introduction to AI in the Dental Industry
 
@@ -38,5 +35,3 @@ Despite the promising prospects of AI in dentistry, several challenges remain co
 ## Conclusion
 
 The specialized applications of AI in the dental industry in Nepal hold immense potential to transform patient care and operational effectiveness. By implementing AI-driven diagnostic tools and management systems, dental practices can not only enhance treatment outcomes but also improve operational workflows. With local innovators like Zunkiree Labs paving the way for tailored solutions, the future of dental care in Nepal seems promising. As AI technologies continue to evolve, ongoing education and overcoming implementation challenges will be key to realizing the full benefits of these advancements in dental health. As more practitioners embrace these technologies, the cumulative effect could lead to a significant uplift in the standard of dental care offered across the region, leading to healthier communities and improved overall public health outcomes.
-
-</div>
