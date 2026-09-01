@@ -1,9 +1,99 @@
 ---
 layout: service.njk
-title: "SaaS Development: Multi-Tenant Platform Engineering | Zunkiree Labs"
+title: "Multi-Tenant SaaS Development in Calgary | Zunkiree Labs" # SEOAI:TITLE
 description: "Multi-tenant SaaS platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in 3-6 months, not years."
 permalink: /services/saas-development/
 serviceId: saas-development
 ---
 
 {# SaaS Development Service Page - Content pulled from servicesDetails.json via serviceId #}
+
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What are the benefits of launching a multi-tenant SaaS product?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Launching a multi-tenant SaaS product can significantly reduce time to market, allowing you to launch your MVP in months rather than years. Additionally, our pre-built patterns for user authentication, billing, and tenant management streamline development, ensuring that scaling does not require extensive rewrites.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can we handle billing complexity in a multi-tenant SaaS solution?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Billing complexity is addressed from day one by integrating with platforms like Stripe to manage subscription plans, usage-based pricing, trials, and prorations. This ensures that even the most intricate billing scenarios are handled seamlessly.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What technology stack does Zunkiree Labs use for SaaS development?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs utilizes a modern technology stack including Next.js for the frontend, PostgreSQL for database management, Auth0 for identity management, and AWS for cloud infrastructure, ensuring both performance and scalability.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Can multi-tenant architecture handle a large number of tenants efficiently?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Yes, our multi-tenant architecture is specifically designed to scale efficiently, accommodating thousands of tenants without requiring foundational rewrites. It employs strategies like database-per-tenant options and horizontal scaling to manage growth.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What kind of use cases does Zunkiree Labs cover in multi-tenant SaaS development?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">We cater to a variety of use cases including B2B SaaS marketplaces, API products, and industry-specific vertical SaaS solutions. Each use case is designed with unique features tailored to its specific market requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are the benefits of launching a multi-tenant SaaS product?","@type":"Question","acceptedAnswer":{"text":"Launching a multi-tenant SaaS product can significantly reduce time to market, allowing you to launch your MVP in months rather than years. Additionally, our pre-built patterns for user authentication, billing, and tenant management streamline development, ensuring that scaling does not require extensive rewrites.","@type":"Answer"}},{"name":"How can we handle billing complexity in a multi-tenant SaaS solution?","@type":"Question","acceptedAnswer":{"text":"Billing complexity is addressed from day one by integrating with platforms like Stripe to manage subscription plans, usage-based pricing, trials, and prorations. This ensures that even the most intricate billing scenarios are handled seamlessly.","@type":"Answer"}},{"name":"What technology stack does Zunkiree Labs use for SaaS development?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs utilizes a modern technology stack including Next.js for the frontend, PostgreSQL for database management, Auth0 for identity management, and AWS for cloud infrastructure, ensuring both performance and scalability.","@type":"Answer"}},{"name":"Can multi-tenant architecture handle a large number of tenants efficiently?","@type":"Question","acceptedAnswer":{"text":"Yes, our multi-tenant architecture is specifically designed to scale efficiently, accommodating thousands of tenants without requiring foundational rewrites. It employs strategies like database-per-tenant options and horizontal scaling to manage growth.","@type":"Answer"}},{"name":"What kind of use cases does Zunkiree Labs cover in multi-tenant SaaS development?","@type":"Question","acceptedAnswer":{"text":"We cater to a variety of use cases including B2B SaaS marketplaces, API products, and industry-specific vertical SaaS solutions. Each use case is designed with unique features tailored to its specific market requirements.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
+
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 last:mb-0">
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Last Updated</h3>
+      <div class="text-gray-600 leading-relaxed"><p>This page was last updated on 2026-09-01.</p></div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->

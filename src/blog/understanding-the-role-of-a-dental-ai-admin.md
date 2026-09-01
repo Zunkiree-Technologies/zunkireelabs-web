@@ -2,6 +2,9 @@
 title: "Understanding the Role of a Dental AI Admin"
 description: "Explore the essential responsibilities and skills of a Dental AI Administrator and how they contribute to modern dental practices."
 date: "2026-07-27"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## Introduction to Dental AI Administration

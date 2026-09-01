@@ -2,6 +2,9 @@
 title: "Understanding the Meaning of Complex Availability in Scheduling" # SEOAI:TITLE
 description: "What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zenly resolve it automatically."
 date: "2026-07-26"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## What "Complex Availability" Actually Means
@@ -43,7 +46,7 @@ Complex availability isn't a scheduling edge case — it's the default reality f
 
 <a href="https://whennot.com/blog/understanding-group-scheduling-explained">Understanding Group Scheduling Explained for Easy ...</a>
 
-<a href="https://www.myshyft.com/blog/availability-based-scheduling-2/">Mastering Availability-Based Employee Scheduling For ...</a>
+Mastering Availability-Based Employee Scheduling For ...
 
 <a href="https://blog.teamup.com/real-ways-to-make-booking-and-availability-more-efficient/">Real Ways to Make Booking and Availability More Efficient</a></p>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

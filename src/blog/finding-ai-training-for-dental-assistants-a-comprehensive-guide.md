@@ -3,6 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Finding AI Training for Dental Assistants: A Comprehensive Guide"
 description: "Explore various resources and platforms for discovering AI training tailored for dental assistants. Enhance your skills with the latest technology and improve your dental practice."
 date: "2026-08-10"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## The Growing Need for AI in Dentistry
