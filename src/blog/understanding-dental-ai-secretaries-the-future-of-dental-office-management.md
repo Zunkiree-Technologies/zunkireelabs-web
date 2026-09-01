@@ -2,6 +2,9 @@
 title: "Dental AI Secretary Solutions for Practices"
 description: "How AI-powered dental secretaries handle scheduling, reminders, and front-desk communication — and what dental practices can expect from adopting one."
 date: "2026-07-26"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## What Is a Dental AI Secretary?
