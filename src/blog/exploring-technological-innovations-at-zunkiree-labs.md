@@ -43,3 +43,11 @@ Summarize the key points discussed in the blog post. Encourage readers to stay i
 - [Check out our AI products](https://zunkireelabs.com/products/)
 - [Explore the state of AI in Nepal](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/)
 - [Learn more about Agentic as a Service](https://zunkireelabs.com/agentic-as-a-service/)
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 last:mb-0">
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <div class="text-gray-600 leading-relaxed"><p><a href="https://zunkireelabs.com/about">About Zunkiree Labs | Top AI &amp; Software Company in Nepal | Founded 2018</a></p></div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
