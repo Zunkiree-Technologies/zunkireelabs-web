@@ -2,6 +2,9 @@
 title: "Exploring Job Opportunities in AI and Chatbots in Kathmandu"
 description: "Discover the growing job market for AI and chatbots in Kathmandu. Learn about top companies, roles available, and how to get started in this thriving sector."
 date: "2026-07-26"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## Introduction to AI and Chatbot Opportunities in Kathmandu
