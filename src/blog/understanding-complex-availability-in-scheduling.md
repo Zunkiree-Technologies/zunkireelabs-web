@@ -46,7 +46,7 @@ Complex availability isn't a scheduling edge case — it's the default reality f
 
 <a href="https://whennot.com/blog/understanding-group-scheduling-explained">Understanding Group Scheduling Explained for Easy ...</a>
 
-<a href="https://www.myshyft.com/blog/availability-based-scheduling-2/">Mastering Availability-Based Employee Scheduling For ...</a>
+Mastering Availability-Based Employee Scheduling For ...
 
 <a href="https://blog.teamup.com/real-ways-to-make-booking-and-availability-more-efficient/">Real Ways to Make Booking and Availability More Efficient</a></p>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
