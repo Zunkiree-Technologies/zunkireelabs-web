@@ -50,16 +50,15 @@ Summarize the opportunities and encourage readers to consider a career in AI and
 - [State of AI in Nepal](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/)
 - [AI Resources](https://zunkireelabs.com/resources/)
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><div>
-<h2>AI and Chatbot Roles vs Traditional Tech Jobs</h2>
-<p>As the job landscape evolves, it's essential to understand how AI and chatbot roles differ from traditional tech jobs. AI and chatbot positions often focus on machine learning, natural language processing, and data analytics, while traditional tech jobs may center around software development and IT support. Here's a comparison:</p>
-<h2>Job Growth in AI vs Other Sectors</h2>
-<p>The job growth in the AI sector in Kathmandu is notably outpacing traditional sectors. While sectors like IT support and web development experience steady growth, AI positions are projected to expand exponentially. This comparative analysis highlights the advantages for career seekers in entering the AI field.</p>
-<h2>Skills Required: AI Careers vs Traditional Roles</h2>
-<p>Skills demand in AI roles, such as expertise in machine learning and natural language processing, is quite different from what is typically required in traditional tech roles, which may focus more on coding languages and system administration. Here’s a closer look:</p>
-<h2>AI Job Market vs General Job Market</h2>
-<p>In examining the current job market trends for AI and chatbots versus the general job market in Kathmandu, we see that AI-specific positions are rising due to increased company investments and technological advancements. This can influence salary expectations and job availability, making it a more lucrative field for job seekers.</p>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 last:mb-0">
+      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
+      <div class="text-gray-600 leading-relaxed"><p><a href="https://zunkireelabs.com/blog/exploring-job-opportunities-in-ai-and-chatbots-in-kathmandu">Exploring Job Opportunities in AI and Chatbots in Kathmandu</a>  
+<a href="https://www.kumarijob.com/blog/career-resources/scope-of-artificial-intelligence-in-nepal">Scope of Artificial Intelligence: AI Opportunities in Nepal</a></p></div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:QACONTENT:START --><div>
 <h3>What are the current job market trends for AI and chatbots in Kathmandu?</h3>
 <p>The current job market for AI and chatbots in Kathmandu is experiencing significant growth, with rising demand highlighted by statistics and trends that underscore the expanding opportunities in this sector.</p>
