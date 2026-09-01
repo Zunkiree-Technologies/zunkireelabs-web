@@ -89,7 +89,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Integration with existing CRM and helpdesk systems",
           "45% average reduction in support tickets",
           "24/7 AI-powered customer assistance"
-        ]
+        ],
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><p><a href=\"https://www.instagram.com/p/DYG3M1nEkqY?hl=en\">Kathmandu Metropolitan City Ward 17 has launched an AI ...</a>\n\n<a href=\"https://voyageritnepal.com\">Voyager IT — Technology &amp; Digital Solutions Company</a>\n\n<a href=\"https://www.nucamp.co/blog/coding-bootcamp-nepal-npl-customer-service-top-10-ai-tools-every-customer-service-professional-in-nepal-should-know-in-2025\">Top 10 AI Tools Every Customer Service Professional in ...</a></p></div>\n    </div>\n  </div>\n</section>"
   },
       "web-development": {
         title: "Web Development Services in Kathmandu",
