@@ -2,6 +2,9 @@
 title: "Agentic-as-a-Service in Nepal: Exploring Availability and Options"
 description: "Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region."
 date: "2026-07-27"
+featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## Introduction to Agentic-as-a-Service
