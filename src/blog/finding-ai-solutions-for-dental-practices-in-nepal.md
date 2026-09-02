@@ -3,9 +3,10 @@ templateEngineOverride: "njk, md"
 title: "Finding AI Solutions for Dental Practices in Nepal"
 description: "Discover the best AI solutions for dental practices in Nepal, focusing on innovative technology options and specialized services to enhance patient care."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImage: "https://images.pexels.com/photos/20553948/pexels-photo-20553948.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "High-quality image of a dental procedure in progress, highlighting modern dental practices."
 image_credit: "Photo by Markus Winkler on Pexels"
+featuredImageCredit: "Photo by Ông Ngọc Dư on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
