@@ -10,9 +10,10 @@ tags:
   - AI Companies
   - Software Companies
   - Tech Startups
-featuredImage: /assets/images/blog/nepal-tech-companies.jpg
-featuredImageAlt: Kathmandu tech hub with modern office buildings
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 readTime: 18
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions.
