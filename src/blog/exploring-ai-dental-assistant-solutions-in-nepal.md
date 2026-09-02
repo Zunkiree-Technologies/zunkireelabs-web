@@ -5,7 +5,6 @@ description: "Learn about the availability and benefits of AI dental assistant s
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/3881292/pexels-photo-3881292.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Young female dentist in medical mask and latex gloves curing teeth of patient with assistant using medical instruments in modern dental clinic"
-image_credit: "Photo by Markus Winkler on Pexels"
 featuredImageCredit: "Photo by Andrea Piacquadio on Pexels"
 ---
 

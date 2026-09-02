@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Navigating Local AEO Expertise in Nepal: Your Guide to Consultants"
 description: "Discover the landscape of local AEO experts and consultants in Nepal. Explore their roles, benefits, and how they can elevate your business's online presence."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Abstract visualization of data analytics with graphs and charts showing dynamic growth."
+featuredImageCredit: "Photo by Negative Space on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Finding the Best IT Company in Nepal for Software Development"
 description: "Explore what makes Zunkiree Labs a top choice for software development in Nepal, offering cutting-edge solutions across various industries."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/6804073/pexels-photo-6804073.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Group of young professionals working on software development in a creative indoor workspace."
+featuredImageCredit: "Photo by cottonbro studio on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

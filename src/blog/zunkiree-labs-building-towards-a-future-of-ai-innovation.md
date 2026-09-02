@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Zunkiree Labs: Building Towards a Future of AI Innovation"
 description: "Explore Zunkiree Labs' strategic roadmap and future plans as an AI-first technology company, focusing on innovative solutions and expansion into new markets."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Two engineers collaborating on testing a futuristic robotic prototype in a modern indoor lab."
-image_credit: "Photo by ThisIsEngineering on Pexels"
+featuredImage: "https://images.pexels.com/photos/8386357/pexels-photo-8386357.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A robotic hand reaching towards a bright light on a white background symbolizing innovation."
+featuredImageCredit: "Photo by Tara Winstead on Pexels"
 ---
 
 ## Introduction to Zunkiree Labs

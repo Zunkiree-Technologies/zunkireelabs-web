@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Key Considerations When Choosing a Software Company in Nepal"
 description: "Explore crucial factors to consider when selecting a software company in Nepal that aligns with your business needs and vision."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/29870940/pexels-photo-29870940.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Vibrant cityscape of Kathmandu, Nepal showcasing urban sprawl under a clear sky."
+featuredImageCredit: "Photo by Masum Saieed on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

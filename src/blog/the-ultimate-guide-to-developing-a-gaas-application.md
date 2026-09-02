@@ -2,9 +2,9 @@
 title: "The Ultimate Guide to Building an Agentic as a Service (GaaS) Application"
 description: "How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business."
 date: "2026-08-07"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of colorful programming code displayed on a computer monitor with a dark background."
+featuredImageCredit: "Photo by Nemuel Sereti on Pexels"
 ---
 
 ## What "GaaS" Means Here

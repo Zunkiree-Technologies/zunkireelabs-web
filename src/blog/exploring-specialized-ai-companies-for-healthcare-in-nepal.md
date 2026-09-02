@@ -2,9 +2,9 @@
 title: "Exploring Specialized AI Companies for Healthcare in Nepal"
 description: "Discover the emerging landscape of specialized AI companies in the healthcare sector of Nepal, their contributions, and potential impact on healthcare delivery."
 date: "2026-07-27"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/6129691/pexels-photo-6129691.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up image of an IV drip and hand in a hospital room, illustrating medical care."
+featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ---
 
 ## Introduction

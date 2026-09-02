@@ -10,10 +10,10 @@ tags:
   - LLM
   - AI Development
   - Tutorial
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
+featuredImage: "https://images.pexels.com/photos/34803988/pexels-photo-34803988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Detailed view of code and file structure in a software development environment."
 readTime: 12
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImageCredit: "Photo by Daniil Komov on Pexels"
 ---
 
 ## What is a RAG Pipeline?

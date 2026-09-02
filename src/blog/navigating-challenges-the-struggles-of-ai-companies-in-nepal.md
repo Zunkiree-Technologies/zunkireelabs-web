@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Navigating Challenges: The Struggles of AI Companies in Nepal"
 description: "Explore the various challenges faced by AI companies in Nepal, including talent shortages, regulatory obstacles, and technological barriers."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/11597470/pexels-photo-11597470.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A person in a wheelchair navigating stairs with a handrail indoors, representing accessibility challenges."
+featuredImageCredit: "Photo by Nadiia Doloh on Pexels"
 ---
 
 ## Introduction

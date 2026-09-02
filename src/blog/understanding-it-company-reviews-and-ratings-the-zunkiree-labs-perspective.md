@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Understanding IT Company Reviews and Ratings: The Zunkiree Labs Perspective"
 description: "Explore the importance of IT company reviews and ratings, especially in the context of Zunkiree Labs, an AI-focused technology company, to understand customer perspectives on IT services."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/11370617/pexels-photo-11370617.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Bright yellow stars arranged on a vivid orange and blue background with copy space."
-image_credit: "Photo by Towfiqu barbhuiya on Pexels"
+featuredImage: "https://images.pexels.com/photos/10325707/pexels-photo-10325707.png?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Vibrant orange lines and dots form an abstract network on a dark background, evoking technology and connectivity."
+featuredImageCredit: "Photo by U.Lucas Dubé-Cantin on Pexels"
 ---
 
 ## The Significance of Customer Reviews in IT Services

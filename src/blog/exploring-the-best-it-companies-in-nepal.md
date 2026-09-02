@@ -5,7 +5,6 @@ description: "Discover the leading IT companies in Nepal that are shaping the te
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/26570336/pexels-photo-26570336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Spectacular view of snow-capped Machhapuchchhre peak surrounded by clouds in Nepal."
-image_credit: "Photo by Markus Winkler on Pexels"
 featuredImageCredit: "Photo by Abdul Kayum on Pexels"
 ---
 

@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unlocking the Advantages of AI in Dental Practices in Nepal"
 description: "Discover how AI can transform dental practices in Nepal, enhancing patient care, improving operational efficiency, and ultimately reshaping the industry."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/6809648/pexels-photo-6809648.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of advanced dental equipment in a clinic setting, showcasing technology."
+featuredImageCredit: "Photo by Pavel Danilyuk on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

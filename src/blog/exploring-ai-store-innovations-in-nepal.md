@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring AI Store Innovations in Nepal"
 description: "Discover how AI stores are transforming the e-commerce landscape in Nepal with examples of innovative applications and successful implementations."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/36918611/pexels-photo-36918611.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Charming street market with locals chatting outside a rustic store in a rural setting."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Clinton Weaver on Pexels"
+featuredImage: "https://images.pexels.com/photos/20019341/pexels-photo-20019341.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Asian woman smiling from a store window in Namche, Nepal, surrounded by colorful goods."
+featuredImageCredit: "Photo by Marina Zvada on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

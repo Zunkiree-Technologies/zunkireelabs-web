@@ -2,9 +2,9 @@
 title: "What is a Dental AI Virtual Assistant?"
 description: "What a dental AI virtual assistant is from a patient's perspective, what it can answer on its own, and where it hands off to your dental team."
 date: "2026-07-27"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/30479281/pexels-photo-30479281.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of a smartphone with DeepSeek virtual assistant on screen, placed on a wooden surface."
+featuredImageCredit: "Photo by Airam Dato-on on Pexels"
 ---
 
 ## What Is a Dental AI Virtual Assistant?

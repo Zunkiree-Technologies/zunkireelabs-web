@@ -9,10 +9,10 @@ tags:
   - AI Companies
   - Nepal Tech
   - AI Industry
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
+featuredImage: "https://images.pexels.com/photos/19891030/pexels-photo-19891030.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Scrabble tiles spelling 'Analytics' on a wooden surface, symbolizing data analytics concept."
 readTime: 6
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImageCredit: "Photo by Markus Winkler on Pexels"
 ---
 
 ## The State of AI in Nepal

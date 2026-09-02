@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Top IT Companies to Work for in Nepal: Opportunities and Growth"
 description: "What to look for in a Nepali IT employer — work culture, growth paths, and the kind of technical projects that actually build a career. A look at the market, and at what working on AI infrastructure at Zunkiree Labs involves."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/39204858/pexels-photo-39204858.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Diverse team of professionals working diligently in a modern open office setting."
+featuredImageCredit: "Photo by Vitaly Gariev on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

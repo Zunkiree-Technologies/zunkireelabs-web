@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring the Top AI Companies in Nepal: A Comprehensive List"
 description: "Discover the leading AI companies in Nepal that are shaping the future of technology. From AI development to data engineering, learn about their innovative solutions and services."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/37411522/pexels-photo-37411522.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Vibrant street life scene from Kathmandu, Nepal showcasing bustling activities and local architecture."
+featuredImageCredit: "Photo by Sherine on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

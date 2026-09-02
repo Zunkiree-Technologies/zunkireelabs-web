@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "AI Startups in Nepal Worth Checking Out"
 description: "Explore innovative AI startups in Nepal that are transforming industries with cutting-edge technology and solutions. Discover key players and what they offer."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/6914070/pexels-photo-6914070.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of 'Startup' written on a glass panel in an office setting."
+featuredImageCredit: "Photo by Tima Miroshnichenko on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

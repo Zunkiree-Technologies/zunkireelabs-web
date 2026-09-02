@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Specialized AI Applications in the Dental Industry in Nepal"
 description: "Discover the innovative AI solutions transforming the dental industry in Nepal, enhancing patient care and operational efficiency."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/6529118/pexels-photo-6529118.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Close-up of various dental equipment in a dentist's clinic showcasing tools and models."
-image_credit: "Photo by cottonbro studio on Pexels"
+featuredImage: "https://images.pexels.com/photos/6812525/pexels-photo-6812525.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of dentists working on a patient with specialized dental instruments."
+featuredImageCredit: "Photo by Pavel Danilyuk on Pexels"
 ---
 
 ## Introduction to AI in the Dental Industry

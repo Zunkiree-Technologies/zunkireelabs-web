@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unlocking Funding Opportunities for AI Companies in Nepal"
 description: "Explore the various funding opportunities available for AI companies in Nepal, from government initiatives to private investments, and learn how to navigate this growing landscape."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/29222872/pexels-photo-29222872.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A mysterious scene of keys floating above an open hand against a dark background."
-image_credit: "Photo by Bastian Riccardi on Pexels"
+featuredImage: "https://images.pexels.com/photos/5918208/pexels-photo-5918208.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Two individuals analyzing a finance report chart at a business meeting in an office setting."
+featuredImageCredit: "Photo by Jack Sparrow on Pexels"
 ---
 
 ## The Growing AI Landscape in Nepal

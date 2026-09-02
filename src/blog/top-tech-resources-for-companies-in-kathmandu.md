@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Top Tech Resources for Companies in Kathmandu"
 description: "Explore essential tech resources for companies in Kathmandu, ranging from AI infrastructure to web development, designed to accelerate your business growth."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/33981159/pexels-photo-33981159.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Colorful aerial view of a vibrant city with distant mountains in Nepal."
+featuredImageCredit: "Photo by mero ghar on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

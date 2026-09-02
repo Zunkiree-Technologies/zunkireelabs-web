@@ -5,7 +5,6 @@ description: "Discover the best AI solutions for dental practices in Nepal, focu
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/20553948/pexels-photo-20553948.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "High-quality image of a dental procedure in progress, highlighting modern dental practices."
-image_credit: "Photo by Markus Winkler on Pexels"
 featuredImageCredit: "Photo by Ông Ngọc Dư on Pexels"
 ---
 

@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Leading AI Companies in Nepal: A Guide to Zunkiree Labs and Others"
 description: "Explore the top AI companies in Nepal, focusing on Zunkiree Labs and their innovative offerings in AI infrastructure, web development, and more."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/36564710/pexels-photo-36564710.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Explore the bustling street market with shops and local architecture in Kathmandu, Nepal."
+featuredImageCredit: "Photo by Mr Dr3igeteilt on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unlocking the Future: The Benefits of Using an AI Assistant for Your Business in Nepal"
 description: "Discover how an AI assistant can streamline operations, enhance customer experience, and support business growth in Nepal."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A modern humanoid robot with digital face and luminescent screen, symbolizing innovation in technology."
-image_credit: "Photo by Kindel Media on Pexels"
+featuredImage: "https://images.pexels.com/photos/7414304/pexels-photo-7414304.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A group of diverse colleagues joyfully celebrate a successful meeting in a modern office setting."
+featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ---
 
 ## Revolutionizing Business Operations

@@ -9,10 +9,10 @@ tags:
   - AI Industry
   - Nepal Tech
   - Market Analysis
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
+featuredImage: "https://images.pexels.com/photos/218717/pexels-photo-218717.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of a tablet displaying Google's search screen, emphasizing technology and internet browsing."
 readTime: 10
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImageCredit: "Photo by AS Photography on Pexels"
 ---
 
 ## Executive Summary

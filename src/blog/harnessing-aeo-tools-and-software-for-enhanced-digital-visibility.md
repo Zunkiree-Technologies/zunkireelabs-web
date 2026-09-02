@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Harnessing AEO Tools and Software for Enhanced Digital Visibility"
 description: "Discover the essential AEO tools and software that can elevate your content's visibility across traditional and AI-driven search platforms."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/270669/pexels-photo-270669.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A modern tablet displaying a search engine logo next to a wireless keyboard on a wooden desk."
+featuredImageCredit: "Photo by Pixabay on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

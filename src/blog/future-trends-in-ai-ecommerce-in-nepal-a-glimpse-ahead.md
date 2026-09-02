@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Future Trends in AI Ecommerce in Nepal: A Glimpse Ahead"
 description: "Explore the future trends shaping AI ecommerce in Nepal, focusing on integration, user experience, and local market dynamics with Zunkiree Labs."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/6214474/pexels-photo-6214474.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Laptop displaying online shopping with boxes and cart, representing ecommerce."
+featuredImageCredit: "Photo by Nataliya Vaitkevich on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -5,7 +5,6 @@ description: "Discover the advancements in dental AI assistant services in Nepal
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/6502541/pexels-photo-6502541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Close-up of a child undergoing a dental exam at a clinic, highlighting dental care procedures."
-image_credit: "Photo by Markus Winkler on Pexels"
 featuredImageCredit: "Photo by cottonbro studio on Pexels"
 ---
 

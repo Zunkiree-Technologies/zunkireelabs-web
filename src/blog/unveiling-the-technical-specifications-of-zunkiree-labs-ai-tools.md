@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unveiling the Technical Specifications of Zunkiree Labs' AI Tools"
 description: "Discover the advanced technical specifications of Zunkiree Labs' AI tools, designed to empower businesses with robust infrastructure-level solutions and intelligent automation."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/16023919/pexels-photo-16023919.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "HTML code displayed on a screen, demonstrating web structure and syntax."
+featuredImageCredit: "Photo by anshul kumar on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring Top Software Companies to Partner With in Nepal"
 description: "Discover the best software companies in Nepal for strategic partnerships, focusing on AI development, web development, mobile applications, and innovative technology solutions."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/36524167/pexels-photo-36524167.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Stunning sunset view of Kathmandu Valley with the Himalayas in the background in Nepal."
+featuredImageCredit: "Photo by Volker Meyer on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

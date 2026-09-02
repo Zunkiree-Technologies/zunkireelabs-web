@@ -3,10 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Transforming Businesses in Pokhara: Case Studies and Client Testimonials"
 description: "Discover how Zunkiree Labs is propelling businesses in Pokhara through cutting-edge AI solutions and hear firsthand testimonials from our satisfied clients."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
-image_credit: "Photo by Markus Winkler on Pexels"
-featuredImageCredit: "Photo by Alex Knight on Pexels"
+featuredImage: "https://images.pexels.com/photos/15847641/pexels-photo-15847641.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Colorful prayer flags adorn a busy street scene in Kathmandu, Nepal, showcasing urban life and cultural vibrancy."
+featuredImageCredit: "Photo by Mick Latter on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
