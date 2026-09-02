@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Overcoming the Challenges of Implementing GaaS"
 description: "Explore the common challenges businesses face when implementing GaaS (Gears as a Service), and how to navigate them for successful adoption."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/9115404/pexels-photo-9115404.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Strong message on a board symbolizing overcoming COVID-19 challenges with vibrant colors."
+featuredImageCredit: "Photo by Brett Sayles on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

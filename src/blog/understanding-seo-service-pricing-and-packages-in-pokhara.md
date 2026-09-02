@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Understanding SEO Service Pricing and Packages in Pokhara"
 description: "Explore the various pricing and packages for SEO services offered in Pokhara. Learn what to expect in terms of costs, deliverables, and value."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/13628541/pexels-photo-13628541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of the Google homepage on a screen showing search options."
+featuredImageCredit: "Photo by Sarah Blocksidge on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

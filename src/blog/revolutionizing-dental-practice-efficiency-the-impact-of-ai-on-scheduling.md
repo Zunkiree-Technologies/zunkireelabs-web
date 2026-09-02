@@ -2,9 +2,9 @@
 title: "Revolutionizing Dental Practice Efficiency: The Impact of AI on Scheduling"
 description: "Discover how AI can enhance scheduling in dental practices, leading to improved efficiency, reduced no-shows, and better patient experiences."
 date: "2026-07-27"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/305567/pexels-photo-305567.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Bright and clean modern dental clinic room with advanced dental equipment."
+featuredImageCredit: "Photo by Daniel Frank on Pexels"
 ---
 
 ## Introduction

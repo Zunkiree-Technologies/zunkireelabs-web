@@ -9,9 +9,10 @@ tags:
   - AI Industry
   - Nepal Tech
   - Market Analysis
-featuredImage: /assets/images/blog/state-of-ai-nepal.jpg
-featuredImageAlt: Nepal AI industry visualization
+featuredImage: "https://images.pexels.com/photos/218717/pexels-photo-218717.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of a tablet displaying Google's search screen, emphasizing technology and internet browsing."
 readTime: 10
+featuredImageCredit: "Photo by AS Photography on Pexels"
 ---
 
 ## Executive Summary

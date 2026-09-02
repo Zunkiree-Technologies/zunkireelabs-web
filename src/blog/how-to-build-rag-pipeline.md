@@ -10,9 +10,10 @@ tags:
   - LLM
   - AI Development
   - Tutorial
-featuredImage: /assets/images/blog/rag-pipeline-architecture.jpg
-featuredImageAlt: RAG pipeline architecture diagram
+featuredImage: "https://images.pexels.com/photos/34803988/pexels-photo-34803988.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Detailed view of code and file structure in a software development environment."
 readTime: 12
+featuredImageCredit: "Photo by Daniil Komov on Pexels"
 ---
 
 ## What is a RAG Pipeline?

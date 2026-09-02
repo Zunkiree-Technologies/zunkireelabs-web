@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Top AI Companies Paving the Way in Nepal"
 description: "Explore the leading AI companies in Nepal that are revolutionizing industries with innovative solutions. Discover key players like Zunkiree Labs and their impactful technologies."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Minimalist display of OpenAI logo on a screen, set against a gradient blue background."
-image_credit: "Photo by Andrew Neel on Pexels"
+featuredImage: "https://images.pexels.com/photos/11757458/pexels-photo-11757458.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Pashupatinath Temple with devotees by the Bagmati River in Kathmandu, Nepal."
+featuredImageCredit: "Photo by Mehmet Turgut  Kirkgoz on Pexels"
 ---
 
 ## Introduction

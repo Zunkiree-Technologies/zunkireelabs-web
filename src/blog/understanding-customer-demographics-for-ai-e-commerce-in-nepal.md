@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Understanding Customer Demographics for AI E-commerce in Nepal"
 description: "Explore the customer demographics for AI e-commerce in Nepal. Discover insights on shopping behavior, preferences, and the role of AI in transforming the online retail landscape."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/6214360/pexels-photo-6214360.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Flat lay of credit card and 'Online Shopping' text on green background, symbolizing ecommerce."
+featuredImageCredit: "Photo by Nataliya Vaitkevich on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

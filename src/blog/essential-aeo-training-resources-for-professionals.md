@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Essential AEO Training Resources for Professionals"
 description: "Explore comprehensive AEO training resources designed to enhance your skills in search engine optimization and AI-driven content strategies. Discover where to find training, best practices, and effective tools."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/39204832/pexels-photo-39204832.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Corporate training session in a bright, modern office setting with diverse professionals engaged in discussion."
+featuredImageCredit: "Photo by Vitaly Gariev on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

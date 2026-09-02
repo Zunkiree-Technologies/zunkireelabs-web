@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "The Expertise Behind Zunkiree Labs: A Deep Dive into Our Team Qualifications"
 description: "Discover the qualifications and expertise of the talented team at Zunkiree Labs, the AI-first technology company driving innovation across various industries."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/13051108/pexels-photo-13051108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Silhouette of a diver surrounded by bubbles underwater at Farasan Island, Saudi Arabia."
-image_credit: "Photo by Francesco Ungaro on Pexels"
+featuredImage: "https://images.pexels.com/photos/7793177/pexels-photo-7793177.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A focused team working together in a modern office setting, brainstorming and collaborating."
+featuredImageCredit: "Photo by Yan Krukau on Pexels"
 ---
 
 ## Introduction to Our Team's Expertise

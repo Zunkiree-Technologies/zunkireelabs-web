@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Future Trends in AI Development in Nepal"
 description: "Explore the future trends shaping AI development in Nepal, including advancements in technology, applications in industries, and the impact on local businesses."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/8294657/pexels-photo-8294657.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A sleek modern robot toy standing against a colorful gradient backdrop, offering ample copy space."
-image_credit: "Photo by Pavel Danilyuk on Pexels"
+featuredImage: "https://images.pexels.com/photos/7413910/pexels-photo-7413910.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A person presents a startup idea on a whiteboard in an office setting, emphasizing entrepreneurship."
+featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ---
 
 ## The Emerging AI Landscape in Nepal

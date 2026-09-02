@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Celebrating Success: Awards and Recognition for Zunkiree Labs"
 description: "Explore the accolades and recognition that Zunkiree Labs has achieved in the AI technology landscape, showcasing its dedication to innovation and excellence."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/6345332/pexels-photo-6345332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A collection of trophies and medals displayed on a white desk, symbolizing success and victory."
-image_credit: "Photo by https://kaboompics.com/ on Pexels"
+featuredImage: "https://images.pexels.com/photos/8112177/pexels-photo-8112177.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Three business professionals engage in a formal handshake in a modern office setting."
+featuredImageCredit: "Photo by Pavel Danilyuk on Pexels"
 ---
 
 ## The Importance of Awards in the Tech Industry

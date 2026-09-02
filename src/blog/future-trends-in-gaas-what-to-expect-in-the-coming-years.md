@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Future Trends in GaaS: What to Expect in the Coming Years"
 description: "Explore upcoming trends in GaaS (Gaming as a Service) and discover how innovations like AI integration, subscription models, and data analysis are shaping the future of gaming."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/12969085/pexels-photo-12969085.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A young woman wearing a VR headset interacts with a digital interface in a futuristic setting."
-image_credit: "Photo by Atlantic Ambience on Pexels"
+featuredImage: "https://images.pexels.com/photos/7495615/pexels-photo-7495615.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Diverse group discussing startup ideas in a creative office environment."
+featuredImageCredit: "Photo by Moe Magners on Pexels"
 ---
 
 ## The Evolution of Gaming as a Service

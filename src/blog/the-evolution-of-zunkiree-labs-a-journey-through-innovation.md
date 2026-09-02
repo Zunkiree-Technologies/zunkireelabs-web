@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "The Evolution of Zunkiree Labs: A Journey Through Innovation"
 description: "Explore the rich history and development of Zunkiree Labs, an AI-first technology company dedicated to building infrastructure-level AI systems tailored for modern businesses."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/6120220/pexels-photo-6120220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Close-up of letter dice spelling 'change' on a grid notepad, symbolizing transformation."
-image_credit: "Photo by Nataliya Vaitkevich on Pexels"
+featuredImage: "https://images.pexels.com/photos/6914066/pexels-photo-6914066.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A young professional woman standing in a startup office with creative elements."
+featuredImageCredit: "Photo by Tima Miroshnichenko on Pexels"
 ---
 
 ## The Founding Vision

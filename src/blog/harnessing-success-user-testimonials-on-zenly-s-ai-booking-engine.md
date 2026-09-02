@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Harnessing Success: User Testimonials on Zenly's AI Booking Engine"
 description: "Discover how Zenly's AI Booking Engine transforms user experience through real-life success stories and testimonials, illustrating its impact across various industries."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/6170652/pexels-photo-6170652.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A woman marks important dates on her desk calendar, planning upcoming events."
+featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

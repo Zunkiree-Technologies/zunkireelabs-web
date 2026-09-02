@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Top AI Companies in Kathmandu: Innovating the Future"
 description: "Discover the best AI companies in Kathmandu leading the technology revolution. From intelligent search solutions to data engineering, explore what they offer."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-image_credit: "Photo by Markus Winkler on Pexels"
+featuredImage: "https://images.pexels.com/photos/39205127/pexels-photo-39205127.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Two colleagues brainstorm ideas on a chalkboard in a modern office setting, discussing strategies and plans."
+featuredImageCredit: "Photo by Vitaly Gariev on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

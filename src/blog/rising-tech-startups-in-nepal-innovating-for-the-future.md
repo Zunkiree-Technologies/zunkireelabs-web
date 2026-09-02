@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Rising Tech Startups in Nepal: Innovating for the Future"
 description: "Explore the innovative tech startups in Nepal that are shaping the future with cutting-edge technology and solutions."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/6829539/pexels-photo-6829539.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Two colleagues engage in a tech-savvy business meeting using virtual reality and laptops indoors."
-image_credit: "Photo by Kampus Production on Pexels"
+featuredImage: "https://images.pexels.com/photos/7413848/pexels-photo-7413848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A diverse group of adults working around a table in a startup office, planning and discussing ideas."
+featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ---
 
 ## Introduction to Nepal's Tech Scene
