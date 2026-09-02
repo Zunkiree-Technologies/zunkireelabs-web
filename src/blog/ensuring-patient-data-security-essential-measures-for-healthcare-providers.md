@@ -3,9 +3,10 @@ templateEngineOverride: "njk, md"
 title: "Ensuring Patient Data Security: Essential Measures for Healthcare Providers"
 description: "Explore vital protocols and measures for ensuring patient data security, focusing on compliance, encryption, and continuous risk assessment in healthcare settings."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 image_credit: "Photo by Markus Winkler on Pexels"
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
