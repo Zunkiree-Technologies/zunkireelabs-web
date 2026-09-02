@@ -3,9 +3,10 @@ templateEngineOverride: "njk, md"
 title: "Exploring the Best IT Companies in Nepal"
 description: "Discover the leading IT companies in Nepal that are shaping the tech landscape with innovative solutions. Find out how they contribute to the industry and drive success."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImage: "https://images.pexels.com/photos/26570336/pexels-photo-26570336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Spectacular view of snow-capped Machhapuchchhre peak surrounded by clouds in Nepal."
 image_credit: "Photo by Markus Winkler on Pexels"
+featuredImageCredit: "Photo by Abdul Kayum on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
