@@ -9,9 +9,10 @@ tags:
   - AI Search
   - Natural Language Processing
   - Enterprise AI
-featuredImage: /assets/images/blog/ai-native-search-hero.jpg
-featuredImageAlt: AI-native search interface showing natural language query
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 readTime: 8
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 ## What is AI-Native Search?
