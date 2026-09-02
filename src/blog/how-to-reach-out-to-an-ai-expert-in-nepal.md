@@ -3,9 +3,10 @@ templateEngineOverride: "njk, md"
 title: "How to Reach Out to an AI Expert in Nepal"
 description: "Discover how to contact AI experts in Nepal, understand their service offerings, and take the next step towards AI integration for your business."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 image_credit: "Photo by Markus Winkler on Pexels"
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
