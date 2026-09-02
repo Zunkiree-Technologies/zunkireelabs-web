@@ -9,9 +9,10 @@ tags:
   - AI Industry
   - Nepal Tech
   - Market Analysis
-featuredImage: /assets/images/blog/state-of-ai-nepal.jpg
-featuredImageAlt: Nepal AI industry visualization
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 readTime: 10
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 ## Executive Summary
