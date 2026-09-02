@@ -10,9 +10,10 @@ tags:
   - AI Ecommerce
   - Nepal Business
   - AI Agents
-featuredImage: /assets/images/blog/agentic-commerce-hero.jpg
-featuredImageAlt: AI agent handling ecommerce transactions autonomously
+featuredImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A futuristic humanoid robot in an indoor Tokyo setting, showcasing modern technology."
 readTime: 10
+featuredImageCredit: "Photo by Alex Knight on Pexels"
 ---
 
 ## What is Agentic Commerce?
