@@ -3,9 +3,10 @@ templateEngineOverride: "njk, md"
 title: "Exploring Dental AI Assistants in Nepal: A New Era for Dental Care"
 description: "Discover the advancements in dental AI assistant services in Nepal, exploring how these technologies can enhance dental care delivery and improve patient experiences."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
+featuredImage: "https://images.pexels.com/photos/6502541/pexels-photo-6502541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Close-up of a child undergoing a dental exam at a clinic, highlighting dental care procedures."
 image_credit: "Photo by Markus Winkler on Pexels"
+featuredImageCredit: "Photo by cottonbro studio on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
