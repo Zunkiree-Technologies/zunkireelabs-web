@@ -328,7 +328,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Backend API integration",
           "Remote collaboration, with travel available for key project milestones"
         ],
-    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">References</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p><a href=\"https://yhhits.com/insights/mobile-app-development-in-pokhara\">Mobile App Development in Pokhara | YHH IT Solutions</a>  \n<a href=\"https://duplextech.com/mobile-app-development-company-in-pokhara-nepal.html\">Mobile App Development Company in Pokhara Nepal</a>  \n<a href=\"https://clutch.co/np/app-developers\">Top App Developers in Nepal - Aug 2026 Rankings | Clutch.co</a></p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Comparison of Mobile App Development Services</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>When considering mobile app development services in Pokhara, it's essential to evaluate different service providers based on specific features and capabilities. The following comparison highlights how our mobile app development stands out in key areas like technology stack, remote collaboration, and integration options.</p></div>\n  </section>\n</div>"
   }
     },
     reviewSchema: {
