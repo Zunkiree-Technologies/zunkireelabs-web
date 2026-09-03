@@ -90,7 +90,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "45% average reduction in support tickets",
           "24/7 AI-powered customer assistance"
         ],
-    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Last Updated</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>This page was last updated on 2026-09-03.</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
       "web-development": {
         title: "Web Development Services in Kathmandu",
