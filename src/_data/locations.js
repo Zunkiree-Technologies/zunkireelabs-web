@@ -90,7 +90,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "45% average reduction in support tickets",
           "24/7 AI-powered customer assistance"
         ],
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><p>By the Zunkiree Labs Team</p></div>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
       "web-development": {
         title: "Web Development Services in Kathmandu",
@@ -328,7 +328,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Backend API integration",
           "Remote collaboration, with travel available for key project milestones"
         ],
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Last Updated</h3>\n      <p class=\"text-gray-600 leading-relaxed\">This page was last updated on 2026-08-28.</p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Comparison of Mobile App Development Services</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>When considering mobile app development services in Pokhara, it's essential to evaluate different service providers based on specific features and capabilities. The following comparison highlights how our mobile app development stands out in key areas like technology stack, remote collaboration, and integration options.</p></div>\n  </section>\n</div>"
   }
     },
     reviewSchema: {

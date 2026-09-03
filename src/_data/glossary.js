@@ -154,7 +154,8 @@ export default [
     shortDef: "The maximum amount of text an AI model can process in a single request, measured in tokens.",
     definition: "A context window is the maximum amount of text (measured in tokens) that an AI model can process in a single request. GPT-4 Turbo has a 128K token context window (roughly 100,000 words), while Claude offers up to 200K tokens. Larger context windows enable processing longer documents, maintaining conversation history, and providing more context for accurate responses. Context window size is a key differentiator between AI models and affects architecture decisions for RAG systems.",
     relatedService: "ai-development",
-    category: "AI Fundamentals"
+    category: "AI Fundamentals",
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "zero-shot-learning",
