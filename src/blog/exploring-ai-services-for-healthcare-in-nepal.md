@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring AI Services for Healthcare in Nepal"
 description: "Discover how Zunkiree Labs is revolutionizing healthcare in Nepal with advanced AI solutions tailored to medical needs, enhancing efficiency and patient care."
 date: "2026-09-04"
-featuredImage: "https://images.pexels.com/photos/36519466/pexels-photo-36519466.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Election authorities managing ballot box during Nepal election."
-featuredImageCredit: "Photo by CP Khanal on Pexels"
+featuredImage: "https://images.pexels.com/photos/12203715/pexels-photo-12203715.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Caucasian man smiling while using automated healthcare booth for blood pressure and health checks."
+featuredImageCredit: "Photo by MedPoint 24 on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
