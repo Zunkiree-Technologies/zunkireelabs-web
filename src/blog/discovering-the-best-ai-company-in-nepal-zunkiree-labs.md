@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Discovering the Best AI Company in Nepal: Zunkiree Labs"
 description: "Explore why Zunkiree Labs is the leading AI company in Nepal, offering innovative AI solutions, expert services, and a focus on infrastructure-level AI systems."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/28159677/pexels-photo-28159677.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "High-rise buildings under twilight sky in Kathmandu, Nepal."
-featuredImageCredit: "Photo by sahil sharma on Pexels"
+featuredImage: "https://images.pexels.com/photos/36706459/pexels-photo-36706459.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A software developer working on code at a dual monitor setup in a modern office."
+featuredImageCredit: "Photo by Zayed Hossain on Pexels"
 ---
 
 ## Introduction to AI in Nepal

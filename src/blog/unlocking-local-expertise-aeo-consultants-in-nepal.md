@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unlocking Local Expertise: AEO Consultants in Nepal"
 description: "Discover the role of local AEO experts in Nepal and how their specialized knowledge can enhance your digital presence. Learn about key consultants and services available."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/37500230/pexels-photo-37500230.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A vibrant street scene in Kathmandu, Nepal, showcasing local culture and bustling market life."
-featuredImageCredit: "Photo by Clinton Weaver on Pexels"
+featuredImage: "https://images.pexels.com/photos/12662875/pexels-photo-12662875.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Person typing on a laptop with coding stickers, symbolizing remote work and freelancing."
+featuredImageCredit: "Photo by Anna Shvets on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">

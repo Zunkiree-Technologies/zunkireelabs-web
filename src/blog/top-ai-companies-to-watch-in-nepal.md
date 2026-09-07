@@ -2,9 +2,9 @@
 title: "Top AI Companies to Watch in Nepal"
 description: "Discover the best AI companies in Nepal, their innovative solutions, and how they're contributing to the tech landscape in 2026."
 date: "2026-07-27"
-featuredImage: "https://images.pexels.com/photos/2177708/pexels-photo-2177708.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Vibrant street scene in Kathmandu, Nepal showcasing historical architecture and a diverse crowd."
-featuredImageCredit: "Photo by Bimal  Ranabhat on Pexels"
+featuredImage: "https://images.pexels.com/photos/5474300/pexels-photo-5474300.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Hands typing code on a laptop in a workspace. Indoor setting focused on software development."
+featuredImageCredit: "Photo by cottonbro studio on Pexels"
 ---
 
 ## Introduction
