@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "The Best Software Solutions from Leading IT Companies in Nepal"
 description: "Explore top-notch software solutions offered by leading IT companies in Nepal, featuring AI development, web and mobile applications, and custom enterprise solutions."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/39014970/pexels-photo-39014970.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Colorful stupa and prayer flags in Kathmandu, Nepal, during a bright day."
-featuredImageCredit: "Photo by Sharon Maharjan on Pexels"
+featuredImage: "https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A person typing code on a laptop with a focus on cybersecurity and software development."
+featuredImageCredit: "Photo by cottonbro studio on Pexels"
 ---
 
 ## Introduction

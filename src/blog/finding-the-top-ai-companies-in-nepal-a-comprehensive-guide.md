@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Finding the Top AI Companies in Nepal: A Comprehensive Guide"
 description: "Discover how to identify the leading AI companies in Nepal, including insights into services, technologies, and market positioning that define the local AI landscape."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/34349802/pexels-photo-34349802.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Aerial view of Kathmandu city through a circular window with a mountainous backdrop."
-featuredImageCredit: "Photo by Sattya P Joshi on Pexels"
+featuredImage: "https://images.pexels.com/photos/3862599/pexels-photo-3862599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A woman engineer focuses on software analysis using a laptop indoors."
+featuredImageCredit: "Photo by ThisIsEngineering on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
