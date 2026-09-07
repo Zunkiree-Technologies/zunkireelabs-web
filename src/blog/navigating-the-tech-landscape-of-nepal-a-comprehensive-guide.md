@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Navigating the Tech Landscape of Nepal: A Comprehensive Guide"
 description: "Explore how to find rich information about Nepal's tech sector, including key resources, industry insights, and the tech companies shaping the future."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/15537050/pexels-photo-15537050.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A scenic view of Banepa, Nepal featuring foggy mountains and urban landscape."
-featuredImageCredit: "Photo by Shishir  Pandey on Pexels"
+featuredImage: "https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A female engineer works on code in a contemporary office setting, showcasing software development."
+featuredImageCredit: "Photo by ThisIsEngineering on Pexels"
 ---
 
 ## Understanding Nepal's Technology Sector
