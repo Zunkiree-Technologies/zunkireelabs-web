@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring AI Services in Nepal: A Look at the Landscape"
 description: "Discover the range of AI services offered by companies in Nepal, focusing on custom AI development, mobile and web applications, and advanced data engineering solutions."
 date: "2026-08-31"
-featuredImage: "https://images.pexels.com/photos/6657591/pexels-photo-6657591.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Explore the breathtaking Himalayan mountain landscape, showcasing rugged peaks and natural beauty in Nepal."
-featuredImageCredit: "Photo by janam thapa on Pexels"
+featuredImage: "https://images.pexels.com/photos/109399/pexels-photo-109399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A breathtaking aerial view of a lush landscape with hills, forests, and clear skies."
+featuredImageCredit: "Photo by Markus Spiske on Pexels"
 ---
 
 ## The Rise of AI in Nepal
