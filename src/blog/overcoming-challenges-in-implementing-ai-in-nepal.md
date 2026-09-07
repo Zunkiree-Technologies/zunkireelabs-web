@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Overcoming Challenges in Implementing AI in Nepal"
 description: "Explore the unique challenges businesses face when implementing AI solutions in Nepal and discover how to navigate them for successful integration."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/37584969/pexels-photo-37584969.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Bustling urban scene along Bagmati River in Kathmandu, Nepal capturing local life and architecture."
-featuredImageCredit: "Photo by Roman Saienko on Pexels"
+featuredImage: "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Person coding on a laptop with HTML code on screen, showcasing development work."
+featuredImageCredit: "Photo by Lukas Blazek on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
