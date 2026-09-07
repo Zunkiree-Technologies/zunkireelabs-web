@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Exploring the Best IT Companies in Nepal"
 description: "Discover the leading IT companies in Nepal that are shaping the tech landscape with innovative solutions. Find out how they contribute to the industry and drive success."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/38525298/pexels-photo-38525298.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Exterior view of a Seattle's Best Coffee shop featuring bold red logo."
-featuredImageCredit: "Photo by Jeffrey Ligan on Pexels"
+featuredImage: "https://images.pexels.com/photos/18935831/pexels-photo-18935831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A programmer coding on a laptop and monitor in a stylish office setup."
+featuredImageCredit: "Photo by Cláudio Emanuel on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
