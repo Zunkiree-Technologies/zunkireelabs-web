@@ -73,7 +73,7 @@ layout: base.njk
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {% for service in services %}
-      <a href="/locations/{{ serviceContent.id }}/{{ service.id }}/" class="group block p-6 bg-gray-50 rounded-lg hover:bg-zunkiree-600 transition-colors">
+      <a href="/locations/{{ location.id }}/{{ service.id }}/" class="group block p-6 bg-gray-50 rounded-lg hover:bg-zunkiree-600 transition-colors">
         <h3 class="font-medium text-gray-900 group-hover:text-white mb-2">
           {{ service.title }}
         </h3>
