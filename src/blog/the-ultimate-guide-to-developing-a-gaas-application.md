@@ -1,5 +1,5 @@
 ---
-title: "The Ultimate Guide to Building an Agentic as a Service (GaaS) Application"
+title: "Understanding GaaS: Agentic as a Service Explained" # SEOAI:TITLE
 description: "How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business."
 date: "2026-08-07"
 featuredImage: "https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
