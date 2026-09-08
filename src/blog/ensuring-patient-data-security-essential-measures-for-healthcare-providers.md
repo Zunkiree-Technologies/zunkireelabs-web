@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Ensuring Patient Data Security: Essential Measures for Healthcare Providers"
+title: "Patient Data Security: Key Measures for Healthcare Providers" # SEOAI:TITLE
 description: "Explore vital protocols and measures for ensuring patient data security, focusing on compliance, encryption, and continuous risk assessment in healthcare settings."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
