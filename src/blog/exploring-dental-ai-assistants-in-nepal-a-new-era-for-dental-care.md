@@ -35,3 +35,13 @@ Despite the evident advantages of implementing AI assistants within dental setti
 The potential for dental AI assistants to revolutionize dental care in Nepal is extensive and compelling, bolstered by the ongoing technological advancements driven by innovative companies like Zunkiree Labs. As the landscape continues to evolve, it will be fascinating to observe how dental practices adapt to these emerging technologies, enhancing their operational capabilities while simultaneously improving patient care. While dedicated dental AI assistant services are still in their early stages, the foundational efforts being made by current AI initiatives suggest a bright and promising future for this sector. As we anticipate the continued evolution of dental services through technology, collaboration among tech developers, dental professionals, and regulatory bodies will be critical. Such partnerships will not only facilitate the successful integration of AI solutions but also help to harness their full potential in enhancing patient experiences and improving overall dental health services in Nepal.
 
 </div>
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+  <section class="gap-2">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p><a href="https://zunkireelabs.com/blog/exploring-dental-ai-assistants-in-nepal-a-new-era-for-dental-care">Exploring Dental AI Assistants in Nepal: A New Era for Dental Care</a>  
+This article discusses the potential of dental AI assistants to revolutionize dental care in Nepal and the role of companies like Zunkiree Labs in advancing AI technology.  
+
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10748804">A New Era of Dental Care: Harnessing Artificial Intelligence for Better Diagnosis and Treatment</a>  
+This paper examines the impact of AI in dental care, focusing on applications in diagnosis, treatment planning, and patient engagement.</p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
