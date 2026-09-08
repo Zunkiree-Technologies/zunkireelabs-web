@@ -3,12 +3,10 @@ templateEngineOverride: "njk, md"
 title: "Unlocking Potential: The Expertise of AI Companies in Nepal"
 description: "Discover how AI companies in Nepal, such as Zunkiree Lab, provide innovative solutions across industries, enhancing efficiency and decision-making with cutting-edge technology."
 date: "2026-09-07"
-image: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-image_alt: "Abstract illustration of AI with silhouette head full of eyes, symbolizing observation and technology."
-image_credit: "Photo by Tara Winstead on Pexels"
+featuredImage: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Abstract illustration of AI with silhouette head full of eyes, symbolizing observation and technology."
+featuredImageCredit: "Photo by Tara Winstead on Pexels"
 ---
-
-<div class="container-custom py-12 md:py-20">
 
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">The AI Landscape in Nepal</h2>
 
@@ -33,5 +31,3 @@ image_credit: "Photo by Tara Winstead on Pexels"
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Future of AI in Nepal</h2>
 
 <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">As the AI ecosystem in Nepal continues to expand, with a steadily increasing number of startups and established companies, Zunkiree Lab remains at the forefront, driving innovation and excellence in technology solutions. The potential for AI in various sectors is immense, and as more companies recognize the benefits of adopting AI-driven solutions, the market is expected to grow even further. Zunkiree Lab's dedication to building robust AI systems positions it well to lead this transformation, providing the necessary infrastructure to support businesses in their AI journey. With ongoing advancements in AI technology and an increasing pool of talent emerging from local universities and tech institutes, the future of AI in Nepal looks promising, paving the way for smarter, more efficient business practices across the country. This momentum in the AI sector not only holds potential for economic growth but can also serve as a catalyst for social development, enhancing quality of life in Nepal through better healthcare, education, and business services.</p>
-
-</div>
