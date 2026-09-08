@@ -3,6 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Unlocking Potential: The Expertise of AI Companies in Nepal"
 description: "Discover how AI companies in Nepal, such as Zunkiree Lab, provide innovative solutions across industries, enhancing efficiency and decision-making with cutting-edge technology."
 date: "2026-09-07"
+image: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+image_alt: "Abstract illustration of AI with silhouette head full of eyes, symbolizing observation and technology."
+image_credit: "Photo by Tara Winstead on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
