@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Exploring the Top AI Companies in Nepal: A Comprehensive List"
+title: "Leading AI Companies in Nepal Driving Technological Growth" # SEOAI:TITLE
 description: "Discover the leading AI companies in Nepal that are shaping the future of technology. From AI development to data engineering, learn about their innovative solutions and services."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
